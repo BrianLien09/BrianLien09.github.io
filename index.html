@@ -1,0 +1,1133 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-TW"  
+    
+      data-theme-mode="true"
+    
+  >
+  <head>
+  
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":"複製成功(*^▽^*)","fail":"複製失敗 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版權：本部落格所有文章除特別聲明外，均採用 BY-NC-SA 許可協議。轉載請註明出處！"}};window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  
+  <title>
+    
+    冥夜小站
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="冥夜小站">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="冥夜小站">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="http://example.com/images/banner.webp">
+<meta property="article:author" content="Brianlien">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/banner.webp">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/cc.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+    
+      <link rel="preload" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈禱中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">首頁</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">歸檔</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">關於</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">友鏈</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 訂閱" target="_blank"></a>
+    
+    
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋"></a>
+    
+  </nav>
+  
+</div>
+<header id="header">
+  
+    
+      <picture>
+        
+          
+            <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
+          
+            <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
+          
+            <source media="(min-width: 800px)" srcset="/images/banner.jpg">
+          
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="">
+        
+      </picture>
+      
+        <img alt="" style="visibility: hidden;">
+      
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">冥夜小站</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+            <a href="/" id="subtitle">想要睡飽的學生</a>
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="sidebar-left"  >
+          <aside id="sidebar">
+  
+  
+  
+  <div class="sidebar-wrapper ">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-author">
+  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <div class="sidebar-author-name">Brianlien</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">32</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分類</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>標籤</div>
+    <div class="sidebar-state-number">9</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首頁</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">歸檔</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">關於</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友鏈"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友鏈</div>
+      </div>
+    
+  
+</div>
+
+      
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+    
+      
+  <div class="widget-wrapper">
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">分類</h3>
+      <div class="widget">
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/2024-AIS3-junior/">2024 AIS3 junior</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/FinTech-Summer-CAMP/">FinTech Summer CAMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/class-note/">class note</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/development-plan-study/">development plan study</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/security-class/">security class</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E6%B3%95%E5%AD%B8%E7%BF%92/">文法學習</a></li></ul>
+      </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrapper">
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">標籤</h3>
+      <div class="widget">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/writeup/" rel="tag">writeup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" rel="tag">共筆筆記</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%8B%E6%96%87/" rel="tag">國文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" rel="tag">密碼學</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" rel="tag">網路漏洞</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" rel="tag">逆向工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%B2%E9%9A%8E%E6%96%87%E6%B3%95/" rel="tag">進階文法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%87%91%E8%9E%8D/" rel="tag">金融</a></li></ul>
+      </div>
+    </div>
+  </div>
+
+
+    
+  
+  </div>
+  
+</aside>
+
+          <section id="main">
+  
+    <div class="post-categories-wrapper" data-aos="fade-up">
+      
+        
+        <div class="post-categories-wrap">
+          
+          <a class="post-link" href="/categories/hexo" aria-label=""></a>
+          <div class="post-categories-cover">
+            
+              
+              
+                <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="hexo" class="lazyload">
+              
+            
+            <h2>hexo</h2>
+            <h3>1 篇文章</h3>
+          </div>
+        </div>
+        
+      
+        
+        <div class="post-categories-wrap">
+          
+          <a class="post-link" href="/categories/development-plan-study" aria-label=""></a>
+          <div class="post-categories-cover">
+            
+              <img data-src="https://i.imgur.com/V0BYE13.jpeg" data-sizes="auto" alt="development-plan-study" class="lazyload">
+            
+            <h2>development-plan-study</h2>
+            <h3>0 篇文章</h3>
+          </div>
+        </div>
+        
+      
+    </div>
+  
+  
+    
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/26/hexo/hexo%E7%A7%BB%E6%A9%9F%E6%95%99%E5%AD%B8/" aria-label="hexo移機教學"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="hexo移機教學" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-26</span>
+        <span><span class="icon-pencil"></span>312 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">hexo移機教學</h2>
+      <article class="post-article">
+        
+          第一步：安裝 將之前在github備份的原始碼下載下來第二步：安裝 Node.js 、Git
+點選Node.js官網，點選安裝最新版本的Node.js
+點選Git官網，點選安裝最新版本的Git
+安裝完畢後，開啟命令提示字元node -v，git –version，，輸入以下指令，確認Node.js和Git是否安裝成功
+
+ps 需要將git與github帳號綁定，才能使用git指令
+詳情請閱讀CM喂飯 部落格文章
+
+第三步：安裝 Hexo
+開啟命令提示字元，輸入以下指令：
+
+1npm install -g hexo-cli
+
+安裝完畢後，輸入hexo -v，確認Hexo是否安裝成功
+
+第四步：設
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/" aria-label="老莊選讀"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="老莊選讀" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-12-19</span>
+        <span><span class="icon-pencil"></span>244 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">老莊選讀</h2>
+      <article class="post-article">
+        
+          江海所以能為百谷王&amp;#x2F;老子主旨: 江海之所以能為百谷王，以其…手法:興(聯想) 
+論據(闡述優劣):聖人
+言語謙卑
+行為不爭搶、不炫耀&amp;#x3D;&amp;gt;利處: 不重(負擔)、不害(妨害)、不厭(厭棄)
+
+論點(呼應論據): 不爭莊子 (南華真人)思想
+順應自然
+萬物其一
+逍遙、忘我
+追求絕對精神自由
+
+莊子 (同名專輯)別稱: 南華真經寓言、譬喻、文采麗
+
+內: 莊子本人寫篇名: 逍遙遊&amp;#x3D;&amp;gt;忘我、 齊物論&amp;#x3D;&amp;gt;人物並生(赤壁賦) 、養生主 、人世間 、德充符&amp;#x3D;&amp;gt;傷殘人士發揮潛能的精神 、大宗師&amp;#x3D;&amp;gt;順應自然 、 應帝王&amp;#x
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/11/12/%E9%80%B2%E9%9A%8E%E6%96%87%E6%B3%95W7/" aria-label="進階文法W7"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="進階文法W7" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-11-12</span>
+        <span><span class="icon-pencil"></span>1.1k 字</span>
+        <span><span class="icon-clock"></span>6 分鐘</span>
+      </div>
+      <h2 class="post-title">進階文法W7</h2>
+      <article class="post-article">
+        
+          進階文法W7PRETEST: What do I already know?
+It’s so noisy right now. Everyone shouting and making a lot of noise in the halls. (Ch. 1)  
+
+I haven’t been in this town very long. I just get here two weeks ago. (Ch. 2)  
+
+I’m really glad you to come to my hometown next year. (Ch. 3)  
+
+Why were you deciding
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/10/07/AIS3%20junior/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/" aria-label="AIS3 junior DAY2 網頁安全 writeup"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY2 網頁安全 writeup" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-10-07</span>
+        <span><span class="icon-pencil"></span>1.5k 字</span>
+        <span><span class="icon-clock"></span>6 分鐘</span>
+      </div>
+      <h2 class="post-title">AIS3 junior DAY2 網頁安全 writeup</h2>
+      <article class="post-article">
+        
+          AIS3 junior DAY2 上午 網頁安全[TOC]
+01 - Broken Access ControlBAC01隨便打一個名子login查看url http://ctfd-ais3.crazyfirelee.tw:9001/user將user改成admin
+
+AIS3_Junior{FirstBROKENAccessControl;}
+
+BAC02到Product List裡面觀察每個 View Details的 url 發現後面都有編號且唯獨少了4將4打上去url試試看 http://ctfd-ais3.crazyfirelee.tw:9002/product/4點buy進去拿到f
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/08/18/AIS3%20junior/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/" aria-label="AIS3 junior DAY1-網路概論"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY1-網路概論" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-18</span>
+        <span><span class="icon-pencil"></span>1.2k 字</span>
+        <span><span class="icon-clock"></span>4 分鐘</span>
+      </div>
+      <h2 class="post-title">AIS3 junior DAY1-網路概論</h2>
+      <article class="post-article">
+        
+          甚麼是資訊安全
+資安三要素
+C 機密性
+看到不該看的
+
+
+I 完整性
+資料是錯誤的
+
+
+A 可用性
+讓你用不了服務
+
+
+
+
+
+甚麼是駭客
+熱衷於電腦系統技術研究的專家
+白帽
+協助確認組織弱點
+主動告知弱點所在
+專注弱點修復技術
+
+
+灰帽
+介於白與黑之間
+專注於利益與目標
+
+
+黑帽
+竊取機密
+惡意攻擊
+侵害隱私
+
+
+容易成為攻擊目標的原因
+商業利益
+好玩 &amp;#x2F; 挑戰性
+政治因素
+研究目的
+個資
+
+
+駭客的攻擊目標
+人
+社交工程：針對人性漏洞造成的危害
+例如：釣魚、詐騙
+
+
+系統
+
+
+被攻擊後的影響
+資料外洩 &amp;#x2F; 系統受損
+名聲受損
+
+
+
+資安事件烏俄戰爭
+展現出了第四大戰場 –
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/08/18/AIS3%20junior/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/" aria-label="AIS3 junior DAY2-網頁安全"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY2-網頁安全" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-18</span>
+        <span><span class="icon-pencil"></span>747 字</span>
+        <span><span class="icon-clock"></span>3 分鐘</span>
+      </div>
+      <h2 class="post-title">AIS3 junior DAY2-網頁安全</h2>
+      <article class="post-article">
+        
+          Basic Web Securityintro
+網頁的表達方式
+router based
+透過程式控制頁面切換，不重新加載整個網站
+
+
+file based
+每個網頁文件對應一個 URL
+
+
+
+
+
+Broken Access Control網頁未成功執行身份驗證機制就是 Broken Access Control（訪問控制破壞）
+
+影響：影響完整性、RCE
+
+RCE(Remote Code&amp;#x2F;Command Execution)Webshell透過網頁執行系統命令達成RCE
+
+體積小、隱蔽性高
+功能強大、易植入
+透過上傳檔案來部屬
+常見的繞過方式
+使用未禁止的副檔名
+PHP: pht,
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/08/18/AIS3%20junior/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/" aria-label="AIS3 junior DAY3-AI 應用安全實務"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY3-AI 應用安全實務" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-18</span>
+        <span><span class="icon-pencil"></span>1k 字</span>
+        <span><span class="icon-clock"></span>4 分鐘</span>
+      </div>
+      <h2 class="post-title">AIS3 junior DAY3-AI 應用安全實務</h2>
+      <article class="post-article">
+        
+          LLM &amp;amp; transformer
+LLM:大型語言模型
+無監督學習
+利用注意力機制預訓練模型Attention Is All You Need 
+transformer
+一開始是用來翻譯
+Input –&amp;gt; Encoder(編碼) –&amp;gt; Decoder(解碼) –&amp;gt; Output
+
+
+
+transformer
+原始文本 –&amp;gt; token –&amp;gt; token ID
+詞向量（Word vector）：每個詞彙都以一個向量表示，利用不同詞彙在向量空間中的距離，賦予詞彙相關性
+例如 king 就和 man 比較近， queen 和 woman 比較近
+
+
+
+Self
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/08/18/AIS3%20junior/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/" aria-label="AIS3 junior DAY3 下午-AI 應用安全實務 writeup"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY3 下午-AI 應用安全實務 writeup" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-18</span>
+        <span><span class="icon-pencil"></span>868 字</span>
+        <span><span class="icon-clock"></span>3 分鐘</span>
+      </div>
+      <h2 class="post-title">AIS3 junior DAY3 下午-AI 應用安全實務 writeup</h2>
+      <article class="post-article">
+        
+          LLM 探討說話的藝術感受GPTㄉ魔力吧code: 
+123456789101112131415161718192021222324252627282930#!/usr/bin/env python3import osimport stringFLAG = open(&amp;#x27;./flag&amp;#x27;, &amp;#x27;r&amp;#x27;).read()def meowmeow_encode(byte):    binary_string = bin(byte)[2:].zfill(8)    meow  = &amp;quot;meowmeow&amp;quot;    meowmeow = &amp;quot;&amp;quo
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/08/07/FinTech%20Summer%20CAMP/FinTech-Summer-CAMP-Day1-%E9%87%91%E8%9E%8D%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98-%E4%B8%8B%E5%8D%88/" aria-label="FinTech Summer CAMP Day1 金融基礎知識"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="FinTech Summer CAMP Day1 金融基礎知識" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-07</span>
+        <span><span class="icon-pencil"></span>3.7k 字</span>
+        <span><span class="icon-clock"></span>12 分鐘</span>
+      </div>
+      <h2 class="post-title">FinTech Summer CAMP Day1 金融基礎知識</h2>
+      <article class="post-article">
+        
+          目錄
+貨幣型態演進及代幣問世
+央行貨幣政策對經濟金融之影響
+臺灣金融市場之類型、功能及架構
+銀行授信、貸款項目與審查原則
+
+貨幣型態演進及代幣問世貨幣型態演進及代幣問世-1遠古人類最初過著自給自足的經濟生活，隨著生產力提高和社會分工的需要，出現了「以物易物」的行為，解決物資供需。交易媒介包括珠玉、皮革、齒角、金屬、穀類、布帛、飾品、牲畜等，這種以物品作為交易媒介的稱為「商品貨幣」或「實體貨幣」。
+隨著交易活動頻繁，部分物品發揮貨幣功能，如中國的海貝（貝幣）、美索不達米亞和埃及的金、銀、青銅等貴金屬。商品貨幣因來源無法有效控制、數量有限、不便計數等因素，逐漸被金、銀、銅、鐵等金屬取代。金屬貨幣未
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2024/08/05/security%20class/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" aria-label="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-05</span>
+        <span><span class="icon-pencil"></span>433 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</h2>
+      <article class="post-article">
+        
+          
+課程筆記基礎 Linux 操作終端機基礎操作
+
+打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。
+
+命令行提示（Prompt）自定義
+
+終端機上，可以⽤來輸入指令的地⽅
+指令執⾏結束後，會再次跳出 Prompt
+此時才能繼續輸入下個指令
+
+
+
+快捷鍵操作
+
+自動補全：輸入命令時按 Tab 鍵。
+歷史指令：使用上箭頭鍵訪問之前輸入的命令。
+
+常用Linux命令示例
+
+列出當前目錄下的文件和文件夾：ls
+更改文件權限，例如給予所有用戶對文件的讀寫執行權限：chmod 777 filename
+查看文件類型：file filename
+下載文件：wget http://example.
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+  
+
+
+  <nav id="page-nav" data-aos="fade-up">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一頁 &raquo;</a>
+  </nav>
+
+
+</section>
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      
+      
+      
+        2025
+      
+      <span class="footer-info-sep rotate"></span>
+      Brianlien
+    </div>
+    
+      <div>
+        基於&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        20.1k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        01:07
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">總訪問量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">總訪客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-author">
+  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <div class="sidebar-author-name">Brianlien</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">32</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分類</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>標籤</div>
+    <div class="sidebar-state-number">9</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首頁</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">歸檔</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">關於</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友鏈"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友鏈</div>
+      </div>
+    
+  
+</div>
+
+    
+  </div>
+  
+</nav>
+
+    </div>
+    
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+    
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+  
+<script src="https://npm.webcache.cn/material-theme@1.0.0/dist/material-theme.umd.js" integrity="sha384-vLev0II0HKFaxkcm+&#x2F;7kX5IGwVFBASkGchU311wmU&#x2F;veIj2bB0UcBkQbW6yw2asK" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+       
+    
+    
+      
+    
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.8.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+  </html>
+
