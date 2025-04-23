@@ -306,9 +306,9 @@
       
   <div class="widget-wrapper">
     <div class="widget-wrap" data-aos="fade-up">
-      <h3 class="widget-title">標籤</h3>
-      <div class="widget">
-        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/writeup/" rel="tag">writeup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" rel="tag">共筆筆記</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%8B%E6%96%87/" rel="tag">國文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" rel="tag">密碼學</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" rel="tag">網路漏洞</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" rel="tag">逆向工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%B2%E9%9A%8E%E6%96%87%E6%B3%95/" rel="tag">進階文法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%87%91%E8%9E%8D/" rel="tag">金融</a></li></ul>
+      <h3 class="widget-title">標籤雲</h3>
+      <div class="widget tagcloud">
+        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/writeup/" style="font-size: 13.33px;">writeup</a> <a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" style="font-size: 16.67px;">共筆筆記</a> <a href="/tags/%E5%9C%8B%E6%96%87/" style="font-size: 10px;">國文</a> <a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 13.33px;">密碼學</a> <a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 20px;">網路漏洞</a> <a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" style="font-size: 10px;">逆向工程</a> <a href="/tags/%E9%80%B2%E9%9A%8E%E6%96%87%E6%B3%95/" style="font-size: 10px;">進階文法</a> <a href="/tags/%E9%87%91%E8%9E%8D/" style="font-size: 10px;">金融</a>
       </div>
     </div>
   </div>
@@ -347,10 +347,10 @@
           <a class="post-link" href="/categories/development-plan-study" aria-label=""></a>
           <div class="post-categories-cover">
             
-              <img data-src="https://i.imgur.com/V0BYE13.jpeg" data-sizes="auto" alt="development-plan-study" class="lazyload">
+              <img data-src="https://i.imgur.com/V0BYE13.jpeg" data-sizes="auto" alt="development plan study" class="lazyload">
             
-            <h2>development-plan-study</h2>
-            <h3>0 篇文章</h3>
+            <h2>development plan study</h2>
+            <h3>20 篇文章</h3>
           </div>
         </div>
         
@@ -1048,6 +1048,142 @@ support_user可以通過Base64編碼自定義的JSON對象，將自己的身份�
 
 
 
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  <script>
+    function loadScripts(scripts, index) {
+      if (index < scripts.length) {
+        const script = scripts[index];
+        const src = script.getAttribute('src');
+
+        const loadScript = (scriptContent) => {
+          return new Promise((resolve, reject) => {
+            const scriptElement = document.createElement('script');
+            if (script.type) {
+              scriptElement.type = script.type;
+            }
+            if (script.src) {
+              scriptElement.src = script.src;
+              scriptElement.onload = resolve;
+              scriptElement.onerror = reject;
+            }
+            if (scriptContent) {
+              scriptElement.text = scriptContent;
+            }
+            document.head.appendChild(scriptElement);
+            if (!script.src) {
+              resolve();
+            }
+          })
+          
+        }
+
+        ;(src ? loadScript() : loadScript(script.text))
+          .then(() => loadScripts(scripts, index + 1))
+          .catch(error => {
+            console.error(`Failed to load script: ${src || 'inline script'}`, error);
+            loadScripts(scripts, index + 1);
+          });
+      }
+    }
+    if (window.Pjax) {
+      Pjax.prototype.getElements = function() {
+        const i18nLanguages = window.REIMU_CONFIG.i18n_languages;
+        const baseUrl = window.REIMU_CONFIG.base;
+        let basePathname = new URL(baseUrl).pathname;
+        if (!basePathname.endsWith('/')) {
+          basePathname += '/';  
+        }
+        const currentUrl = window.location.href;
+        const currentPathname = new URL(currentUrl).pathname.replace(basePathname, '');
+        const aLinks = document.querySelectorAll('a[href]');
+        const pjaxLinks = [];
+        for(let i = 0; i < aLinks.length; i++) {
+          const aLink = aLinks[i];
+          const aLinkHref = aLink.getAttribute('href');
+          const isExternal = aLink.getAttribute('target') === '_blank' || aLink.getAttribute('rel')?.includes('noopener');
+          if (isExternal || aLinkHref.startsWith('mailto:') || aLinkHref.startsWith('tel:') || aLinkHref.startsWith('javascript:') || aLinkHref.startsWith("data:") || aLinkHref.startsWith("vbscript:")) {
+            continue;
+          }
+          if (!i18nLanguages) {
+            // 多语言功能未打开
+            pjaxLinks.push(aLink);
+            continue;
+          }
+
+          const absoluteUrl = new URL(aLinkHref, currentUrl).href;
+          const absolutePathname = new URL(absoluteUrl).pathname.replace(basePathname, '');
+
+          if (!absolutePathname || !currentPathname) {
+            pjaxLinks.push(aLink);
+            continue;
+          }
+
+          const currentLangIndex = i18nLanguages.findIndex(lang => currentPathname.startsWith(lang));
+          if (currentLangIndex > -1) {
+            // 当前属于多语言站点
+            const absoluteLangIndex = i18nLanguages.findIndex(lang => absolutePathname.startsWith(lang));
+            if (absoluteLangIndex === currentLangIndex) {
+              // 同一语言站点，可以使用 pjax
+              pjaxLinks.push(aLink);
+            }
+          } else {
+            // 当前属于默认语言站点
+            const absoluteLangIndex = i18nLanguages.findIndex(lang => absolutePathname.startsWith(lang));
+            if (absoluteLangIndex === -1) {
+              // 同一语言站点，可以使用 pjax
+              pjaxLinks.push(aLink);
+            }
+          }
+        }
+        return pjaxLinks;
+      }
+    }
+    window.Pjax && new window.Pjax({
+      selectors: [
+        "#header>img",
+        "#header>picture",
+        "head title",
+        "#header-title",
+        "#subtitle-wrap",
+        "#main",
+        "#content",
+        ".sidebar-widget",
+        ".sidebar-wrapper",
+        '#mobile-nav',
+        '#lazy-script',
+        '#i18n-nav'
+      ],
+      switches: {
+        "#content": function(oldEl, newEl) {
+          // for sidebar change
+          oldEl.className = newEl.className;
+          this.onSwitch();
+        },
+        "#header-title": Pjax.switches.outerHTML,
+        "#subtitle-wrap": Pjax.switches.outerHTML,
+        "#main": function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.outerHTML = newEl.outerHTML
+          this.onSwitch()
+        },
+        "#mobile-nav": Pjax.switches.outerHTML,
+        '#lazy-script': function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.innerHTML = newEl.innerHTML
+          this.onSwitch()
+        },
+      },
+      cacheBust: false
+    })
+  </script>
+  
+<script src="/js/pjax.js"></script>
+
+
 
 
 
@@ -1122,7 +1258,7 @@ support_user可以通過Base64編碼自定義的JSON對象，將自己的身份�
       const ap = new APlayer({
         theme: "var(--color-link)",
         container: document.getElementById('aplayer'),
-        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"music/Bunnyi_11_-_心有所念.mp3"}] || [],
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"music/Bunnyi_11_-_心有所念.mp3","cover":"images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"music/单依纯-踮起脚尖愛.mp3","cover":"images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"music/張遠-看著我的眼睛說.mp3","cover":"images/cc.jpg"}] || [],
         fixed: isMobile ? true : (false || false),
         autoplay: false || false,
         loop: 'all' || 'all',
