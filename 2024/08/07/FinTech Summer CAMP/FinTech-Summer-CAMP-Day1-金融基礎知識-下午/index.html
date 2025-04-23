@@ -80,6 +80,10 @@
 
   
   
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+
+  
   
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -218,6 +222,8 @@
         <div id="content" class="sidebar-left"  >
           <aside id="sidebar">
   
+  
+    <div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div>
   
   
   <div class="sidebar-wrapper wrap-sticky">
@@ -1281,6 +1287,40 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
+
+  
+    <script>
+      var isMobile = window.matchMedia('(max-width: 959px)').matches;
+      if (isMobile) {
+      const aplayer = _$('#aplayer');
+        if (aplayer) {
+          const aside = aplayer.parentNode;
+          if (aside?.tagName === 'ASIDE') {
+            aplayer.removeAttribute('data-aos');
+            aside.removeChild(aplayer);
+            document.body.appendChild(aplayer);
+          }
+        }
+      }
+      const ap = new APlayer({
+        theme: "var(--color-link)",
+        container: document.getElementById('aplayer'),
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"music/Bunnyi_11_-_心有所念.mp3"}] || [],
+        fixed: isMobile ? true : (false || false),
+        autoplay: false || false,
+        loop: 'all' || 'all',
+        order: 'list' || 'list',
+        preload: 'auto' || 'auto',
+        volume: 0.7 || 0.7,
+        mutex: true || true,
+        listFolded: false || false,
+        lrcType: 0 || 0,
+      });
+    </script>
+  
 
 
 
