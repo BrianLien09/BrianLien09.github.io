@@ -9,6 +9,18 @@
   
   <meta charset="utf-8">
   
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
 
   
 
@@ -36,10 +48,12 @@
 
   
   
-    <meta property="og:type" content="website">
+    <meta name="description" content="一個想要睡飽的學生">
+<meta property="og:type" content="website">
 <meta property="og:title" content="冥夜小站">
 <meta property="og:url" content="http://example.com/404.html">
 <meta property="og:site_name" content="冥夜小站">
+<meta property="og:description" content="一個想要睡飽的學生">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://example.com/images/banner.webp">
 <meta property="article:author" content="Brianlien">
@@ -50,7 +64,7 @@
     <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/dd.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -129,18 +143,9 @@
     
       <picture>
         
-          
-            <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
-          
-            <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
-          
-            <source media="(min-width: 800px)" srcset="/images/banner.jpg">
-          
-          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="">
-        
       </picture>
       
-        <img alt="" style="visibility: hidden;">
+        <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="">
       
     
   
@@ -380,6 +385,17 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">

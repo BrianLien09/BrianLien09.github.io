@@ -9,6 +9,18 @@
   
   <meta charset="utf-8">
   
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
 
   
 
@@ -54,7 +66,7 @@
     <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/dd.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -183,18 +195,9 @@
       
         <picture>
           
-            
-              <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
-            
-              <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
-            
-              <source media="(min-width: 800px)" srcset="/images/banner.jpg">
-            
-            <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="hexo移機教學">
-          
         </picture>
         
-          <img alt="hexo移機教學" style="visibility: hidden;">
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="hexo移機教學">
         
       
     
@@ -234,15 +237,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-%E5%B0%87%E4%B9%8B%E5%89%8D%E5%9C%A8github%E5%82%99%E4%BB%BD%E7%9A%84%E5%8E%9F%E5%A7%8B%E7%A2%BC%E4%B8%8B%E8%BC%89%E4%B8%8B%E4%BE%86"><span class="toc-number">1.</span> <span class="toc-text">第一步：安裝 將之前在github備份的原始碼下載下來</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Node-js-%E3%80%81Git"><span class="toc-number">2.</span> <span class="toc-text">第二步：安裝 Node.js 、Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ps-%E9%9C%80%E8%A6%81%E5%B0%87git%E8%88%87github%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A%EF%BC%8C%E6%89%8D%E8%83%BD%E4%BD%BF%E7%94%A8git%E6%8C%87%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">ps 需要將git與github帳號綁定，才能使用git指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Hexo"><span class="toc-number">3.</span> <span class="toc-text">第三步：安裝 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E8%A8%AD%E5%AE%9A-Hexo"><span class="toc-number">4.</span> <span class="toc-text">第四步：設定 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%9D-theme-anzhiyu"><span class="toc-number">5.</span> <span class="toc-text">第五步：重新安裝 theme anzhiyu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number">6.</span> <span class="toc-text">參考資料</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-%E5%B0%87%E4%B9%8B%E5%89%8D%E5%9C%A8github%E5%82%99%E4%BB%BD%E7%9A%84%E5%8E%9F%E5%A7%8B%E7%A2%BC%E4%B8%8B%E8%BC%89%E4%B8%8B%E4%BE%86"><span class="toc-text">第一步：安裝 將之前在github備份的原始碼下載下來</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Node-js-%E3%80%81Git"><span class="toc-text">第二步：安裝 Node.js 、Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ps-%E9%9C%80%E8%A6%81%E5%B0%87git%E8%88%87github%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A%EF%BC%8C%E6%89%8D%E8%83%BD%E4%BD%BF%E7%94%A8git%E6%8C%87%E4%BB%A4"><span class="toc-text">ps 需要將git與github帳號綁定，才能使用git指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Hexo"><span class="toc-text">第三步：安裝 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E8%A8%AD%E5%AE%9A-Hexo"><span class="toc-text">第四步：設定 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%9D-theme-anzhiyu"><span class="toc-text">第五步：重新安裝 theme anzhiyu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a></li></ol>
       
   </div>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -261,11 +264,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -449,7 +456,7 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">说些什么吧！</h2>
+      <h2 class="comment-title">說些什么吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -533,15 +540,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-%E5%B0%87%E4%B9%8B%E5%89%8D%E5%9C%A8github%E5%82%99%E4%BB%BD%E7%9A%84%E5%8E%9F%E5%A7%8B%E7%A2%BC%E4%B8%8B%E8%BC%89%E4%B8%8B%E4%BE%86"><span class="toc-number">1.</span> <span class="toc-text">第一步：安裝 將之前在github備份的原始碼下載下來</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Node-js-%E3%80%81Git"><span class="toc-number">2.</span> <span class="toc-text">第二步：安裝 Node.js 、Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ps-%E9%9C%80%E8%A6%81%E5%B0%87git%E8%88%87github%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A%EF%BC%8C%E6%89%8D%E8%83%BD%E4%BD%BF%E7%94%A8git%E6%8C%87%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">ps 需要將git與github帳號綁定，才能使用git指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Hexo"><span class="toc-number">3.</span> <span class="toc-text">第三步：安裝 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E8%A8%AD%E5%AE%9A-Hexo"><span class="toc-number">4.</span> <span class="toc-text">第四步：設定 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%9D-theme-anzhiyu"><span class="toc-number">5.</span> <span class="toc-text">第五步：重新安裝 theme anzhiyu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number">6.</span> <span class="toc-text">參考資料</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-%E5%B0%87%E4%B9%8B%E5%89%8D%E5%9C%A8github%E5%82%99%E4%BB%BD%E7%9A%84%E5%8E%9F%E5%A7%8B%E7%A2%BC%E4%B8%8B%E8%BC%89%E4%B8%8B%E4%BE%86"><span class="toc-text">第一步：安裝 將之前在github備份的原始碼下載下來</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Node-js-%E3%80%81Git"><span class="toc-text">第二步：安裝 Node.js 、Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ps-%E9%9C%80%E8%A6%81%E5%B0%87git%E8%88%87github%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A%EF%BC%8C%E6%89%8D%E8%83%BD%E4%BD%BF%E7%94%A8git%E6%8C%87%E4%BB%A4"><span class="toc-text">ps 需要將git與github帳號綁定，才能使用git指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%9D-Hexo"><span class="toc-text">第三步：安裝 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E8%A8%AD%E5%AE%9A-Hexo"><span class="toc-text">第四步：設定 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%9D-theme-anzhiyu"><span class="toc-text">第五步：重新安裝 theme anzhiyu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a></li></ol>
       
   </div>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -560,11 +567,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -832,6 +843,17 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">

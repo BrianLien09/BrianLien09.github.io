@@ -129,6 +129,9 @@
 .icon-facebook:before {
   content: "\e60e";
 }
+.icon-youtube:before {
+  content: "\e62d";
+}
 .icon-email:before {
   content: "\e63c";
 }

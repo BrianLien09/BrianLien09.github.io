@@ -9,6 +9,18 @@
   
   <meta charset="utf-8">
   
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
 
   
 
@@ -82,7 +94,7 @@
     <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/dd.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -211,18 +223,9 @@
       
         <picture>
           
-            
-              <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
-            
-              <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
-            
-              <source media="(min-width: 800px)" srcset="/images/banner.jpg">
-            
-            <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY3 下午-AI 應用安全實務 writeup">
-          
         </picture>
         
-          <img alt="AIS3 junior DAY3 下午-AI 應用安全實務 writeup" style="visibility: hidden;">
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY3 下午-AI 應用安全實務 writeup">
         
       
     
@@ -262,15 +265,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LLM-%E6%8E%A2%E8%A8%8E%E8%AA%AA%E8%A9%B1%E7%9A%84%E8%97%9D%E8%A1%93"><span class="toc-number">1.</span> <span class="toc-text">LLM 探討說話的藝術</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E5%8F%97GPT%E3%84%89%E9%AD%94%E5%8A%9B%E5%90%A7"><span class="toc-number">1.1.</span> <span class="toc-text">感受GPTㄉ魔力吧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E9%A3%9F%E8%AD%9C%E5%A4%A7%E5%B8%AB"><span class="toc-number">1.2.</span> <span class="toc-text">AI 食譜大師</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E5%B1%A5%E6%AD%B7%E5%81%A5%E6%AA%A2"><span class="toc-number">1.3.</span> <span class="toc-text">AI 履歷健檢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B2%93%E8%B2%93%E7%B7%9A%E4%B8%8A%E5%95%86%E5%93%81%E5%B0%88%E6%AB%83"><span class="toc-number">1.4.</span> <span class="toc-text">貓貓線上商品專櫃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B8%E5%AD%B8%E5%B0%8F%E5%B9%AB%E6%89%8B"><span class="toc-number">1.5.</span> <span class="toc-text">數學小幫手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-Markdown-%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AD%AF"><span class="toc-number">1.6.</span> <span class="toc-text">AI Markdown 文章翻譯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#adversarial-attack"><span class="toc-number">2.</span> <span class="toc-text">adversarial attack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FGSM"><span class="toc-number">2.1.</span> <span class="toc-text">FGSM</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LLM-%E6%8E%A2%E8%A8%8E%E8%AA%AA%E8%A9%B1%E7%9A%84%E8%97%9D%E8%A1%93"><span class="toc-text">LLM 探討說話的藝術</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E5%8F%97GPT%E3%84%89%E9%AD%94%E5%8A%9B%E5%90%A7"><span class="toc-text">感受GPTㄉ魔力吧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E9%A3%9F%E8%AD%9C%E5%A4%A7%E5%B8%AB"><span class="toc-text">AI 食譜大師</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E5%B1%A5%E6%AD%B7%E5%81%A5%E6%AA%A2"><span class="toc-text">AI 履歷健檢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B2%93%E8%B2%93%E7%B7%9A%E4%B8%8A%E5%95%86%E5%93%81%E5%B0%88%E6%AB%83"><span class="toc-text">貓貓線上商品專櫃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B8%E5%AD%B8%E5%B0%8F%E5%B9%AB%E6%89%8B"><span class="toc-text">數學小幫手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-Markdown-%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AD%AF"><span class="toc-text">AI Markdown 文章翻譯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#adversarial-attack"><span class="toc-text">adversarial attack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FGSM"><span class="toc-text">FGSM</span></a></li></ol></li></ol>
       
   </div>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -289,11 +292,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -581,7 +588,7 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">说些什么吧！</h2>
+      <h2 class="comment-title">說些什么吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -665,15 +672,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LLM-%E6%8E%A2%E8%A8%8E%E8%AA%AA%E8%A9%B1%E7%9A%84%E8%97%9D%E8%A1%93"><span class="toc-number">1.</span> <span class="toc-text">LLM 探討說話的藝術</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E5%8F%97GPT%E3%84%89%E9%AD%94%E5%8A%9B%E5%90%A7"><span class="toc-number">1.1.</span> <span class="toc-text">感受GPTㄉ魔力吧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E9%A3%9F%E8%AD%9C%E5%A4%A7%E5%B8%AB"><span class="toc-number">1.2.</span> <span class="toc-text">AI 食譜大師</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E5%B1%A5%E6%AD%B7%E5%81%A5%E6%AA%A2"><span class="toc-number">1.3.</span> <span class="toc-text">AI 履歷健檢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B2%93%E8%B2%93%E7%B7%9A%E4%B8%8A%E5%95%86%E5%93%81%E5%B0%88%E6%AB%83"><span class="toc-number">1.4.</span> <span class="toc-text">貓貓線上商品專櫃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B8%E5%AD%B8%E5%B0%8F%E5%B9%AB%E6%89%8B"><span class="toc-number">1.5.</span> <span class="toc-text">數學小幫手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-Markdown-%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AD%AF"><span class="toc-number">1.6.</span> <span class="toc-text">AI Markdown 文章翻譯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#adversarial-attack"><span class="toc-number">2.</span> <span class="toc-text">adversarial attack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FGSM"><span class="toc-number">2.1.</span> <span class="toc-text">FGSM</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LLM-%E6%8E%A2%E8%A8%8E%E8%AA%AA%E8%A9%B1%E7%9A%84%E8%97%9D%E8%A1%93"><span class="toc-text">LLM 探討說話的藝術</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E5%8F%97GPT%E3%84%89%E9%AD%94%E5%8A%9B%E5%90%A7"><span class="toc-text">感受GPTㄉ魔力吧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E9%A3%9F%E8%AD%9C%E5%A4%A7%E5%B8%AB"><span class="toc-text">AI 食譜大師</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-%E5%B1%A5%E6%AD%B7%E5%81%A5%E6%AA%A2"><span class="toc-text">AI 履歷健檢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B2%93%E8%B2%93%E7%B7%9A%E4%B8%8A%E5%95%86%E5%93%81%E5%B0%88%E6%AB%83"><span class="toc-text">貓貓線上商品專櫃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B8%E5%AD%B8%E5%B0%8F%E5%B9%AB%E6%89%8B"><span class="toc-text">數學小幫手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-Markdown-%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AD%AF"><span class="toc-text">AI Markdown 文章翻譯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#adversarial-attack"><span class="toc-text">adversarial attack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FGSM"><span class="toc-text">FGSM</span></a></li></ol></li></ol>
       
   </div>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -692,11 +699,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -964,6 +975,17 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">

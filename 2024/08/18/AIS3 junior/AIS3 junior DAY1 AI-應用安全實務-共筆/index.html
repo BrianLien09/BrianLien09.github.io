@@ -9,6 +9,18 @@
   
   <meta charset="utf-8">
   
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
 
   
 
@@ -73,7 +85,7 @@
     <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/dd.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -202,18 +214,9 @@
       
         <picture>
           
-            
-              <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
-            
-              <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
-            
-              <source media="(min-width: 800px)" srcset="/images/banner.jpg">
-            
-            <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY3-AI 應用安全實務">
-          
         </picture>
         
-          <img alt="AIS3 junior DAY3-AI 應用安全實務" style="visibility: hidden;">
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY3-AI 應用安全實務">
         
       
     
@@ -253,15 +256,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM-transformer"><span class="toc-number">1.</span> <span class="toc-text">LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-number">1.1.</span> <span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Self-Attention"><span class="toc-number">1.2.</span> <span class="toc-text">Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decoder-%E8%99%95%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text">Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-number">1.4.</span> <span class="toc-text">Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ChatGPT"><span class="toc-number">1.5.</span> <span class="toc-text">ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.6.</span> <span class="toc-text">Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Method-of-attack-LLM-web-and-secure"><span class="toc-number">2.</span> <span class="toc-text">Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Injection"><span class="toc-number">3.1.</span> <span class="toc-text">Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-methods"><span class="toc-number">3.1.1.</span> <span class="toc-text">Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Excessive-Agency"><span class="toc-number">3.2.</span> <span class="toc-text">Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unauthorized-Code-Execution"><span class="toc-number">3.3.</span> <span class="toc-text">Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-number">4.</span> <span class="toc-text">推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Day-3-AI%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-number">6.</span> <span class="toc-text">Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF-CNN"><span class="toc-number">7.</span> <span class="toc-text">卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text">影像辨識的原理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM-transformer"><span class="toc-text">LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Self-Attention"><span class="toc-text">Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decoder-%E8%99%95%E7%90%86"><span class="toc-text">Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-text">Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ChatGPT"><span class="toc-text">ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-text">Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Method-of-attack-LLM-web-and-secure"><span class="toc-text">Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-text">攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Injection"><span class="toc-text">Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-methods"><span class="toc-text">Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Excessive-Agency"><span class="toc-text">Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unauthorized-Code-Execution"><span class="toc-text">Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-text">推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Day-3-AI%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-text">Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF-CNN"><span class="toc-text">卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">影像辨識的原理</span></a></li></ol></li></ol>
       
   </div>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -280,11 +283,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -554,7 +561,7 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">说些什么吧！</h2>
+      <h2 class="comment-title">說些什么吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -638,15 +645,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM-transformer"><span class="toc-number">1.</span> <span class="toc-text">LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-number">1.1.</span> <span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Self-Attention"><span class="toc-number">1.2.</span> <span class="toc-text">Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decoder-%E8%99%95%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text">Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-number">1.4.</span> <span class="toc-text">Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ChatGPT"><span class="toc-number">1.5.</span> <span class="toc-text">ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.6.</span> <span class="toc-text">Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Method-of-attack-LLM-web-and-secure"><span class="toc-number">2.</span> <span class="toc-text">Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Injection"><span class="toc-number">3.1.</span> <span class="toc-text">Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-methods"><span class="toc-number">3.1.1.</span> <span class="toc-text">Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Excessive-Agency"><span class="toc-number">3.2.</span> <span class="toc-text">Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unauthorized-Code-Execution"><span class="toc-number">3.3.</span> <span class="toc-text">Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-number">4.</span> <span class="toc-text">推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Day-3-AI%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-number">6.</span> <span class="toc-text">Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF-CNN"><span class="toc-number">7.</span> <span class="toc-text">卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text">影像辨識的原理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM-transformer"><span class="toc-text">LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Self-Attention"><span class="toc-text">Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decoder-%E8%99%95%E7%90%86"><span class="toc-text">Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-text">Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ChatGPT"><span class="toc-text">ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-text">Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Method-of-attack-LLM-web-and-secure"><span class="toc-text">Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-text">攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prompt-Injection"><span class="toc-text">Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-methods"><span class="toc-text">Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Excessive-Agency"><span class="toc-text">Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unauthorized-Code-Execution"><span class="toc-text">Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-text">推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text">reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Day-3-AI%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-text">Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF-CNN"><span class="toc-text">卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">影像辨識的原理</span></a></li></ol></li></ol>
       
   </div>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -665,11 +672,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -937,6 +948,17 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">

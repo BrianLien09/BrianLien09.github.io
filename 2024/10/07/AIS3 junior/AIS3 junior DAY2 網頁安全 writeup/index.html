@@ -9,6 +9,18 @@
   
   <meta charset="utf-8">
   
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
 
   
 
@@ -101,7 +113,7 @@
     <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/dd.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -230,18 +242,9 @@
       
         <picture>
           
-            
-              <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
-            
-              <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
-            
-              <source media="(min-width: 800px)" srcset="/images/banner.jpg">
-            
-            <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY2 網頁安全 writeup">
-          
         </picture>
         
-          <img alt="AIS3 junior DAY2 網頁安全 writeup" style="visibility: hidden;">
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY2 網頁安全 writeup">
         
       
     
@@ -281,15 +284,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-number">1.</span> <span class="toc-text">AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-Broken-Access-Control"><span class="toc-number">1.1.</span> <span class="toc-text">01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC01"><span class="toc-number">1.1.1.</span> <span class="toc-text">BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC02"><span class="toc-number">1.1.2.</span> <span class="toc-text">BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC03"><span class="toc-number">1.1.3.</span> <span class="toc-text">BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-File-Upload"><span class="toc-number">1.2.</span> <span class="toc-text">02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL01"><span class="toc-number">1.2.1.</span> <span class="toc-text">FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL02"><span class="toc-number">1.2.2.</span> <span class="toc-text">FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-Local-File-Inclusion"><span class="toc-number">1.3.</span> <span class="toc-text">03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI01"><span class="toc-number">1.3.1.</span> <span class="toc-text">LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI02"><span class="toc-number">1.3.2.</span> <span class="toc-text">LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-Command-Injection"><span class="toc-number">1.4.</span> <span class="toc-text">05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD01"><span class="toc-number">1.4.1.</span> <span class="toc-text">CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD02"><span class="toc-number">1.4.2.</span> <span class="toc-text">CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD03"><span class="toc-number">1.4.3.</span> <span class="toc-text">CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-CMD06"><span class="toc-number">1.4.4.</span> <span class="toc-text">[Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-SQL-Injection"><span class="toc-number">1.5.</span> <span class="toc-text">06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL1"><span class="toc-number">1.5.1.</span> <span class="toc-text">SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL2"><span class="toc-number">1.5.2.</span> <span class="toc-text">SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-Server-Side-Template-Injection"><span class="toc-number">1.6.</span> <span class="toc-text">07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STI01"><span class="toc-number">1.6.1.</span> <span class="toc-text">STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STI02"><span class="toc-number">1.6.2.</span> <span class="toc-text">STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-Server-Side-Request-Forgery"><span class="toc-number">1.7.</span> <span class="toc-text">08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF01"><span class="toc-number">1.7.1.</span> <span class="toc-text">SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF02"><span class="toc-number">1.7.2.</span> <span class="toc-text">SRF02</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-text">AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-Broken-Access-Control"><span class="toc-text">01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC01"><span class="toc-text">BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC02"><span class="toc-text">BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC03"><span class="toc-text">BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-File-Upload"><span class="toc-text">02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL01"><span class="toc-text">FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL02"><span class="toc-text">FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-Local-File-Inclusion"><span class="toc-text">03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI01"><span class="toc-text">LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI02"><span class="toc-text">LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-Command-Injection"><span class="toc-text">05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD01"><span class="toc-text">CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD02"><span class="toc-text">CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD03"><span class="toc-text">CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-CMD06"><span class="toc-text">[Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-SQL-Injection"><span class="toc-text">06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL1"><span class="toc-text">SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL2"><span class="toc-text">SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-Server-Side-Template-Injection"><span class="toc-text">07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STI01"><span class="toc-text">STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STI02"><span class="toc-text">STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-Server-Side-Request-Forgery"><span class="toc-text">08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF01"><span class="toc-text">SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF02"><span class="toc-text">SRF02</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -308,11 +311,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -673,7 +680,7 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">说些什么吧！</h2>
+      <h2 class="comment-title">說些什么吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -757,15 +764,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-number">1.</span> <span class="toc-text">AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-Broken-Access-Control"><span class="toc-number">1.1.</span> <span class="toc-text">01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC01"><span class="toc-number">1.1.1.</span> <span class="toc-text">BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC02"><span class="toc-number">1.1.2.</span> <span class="toc-text">BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC03"><span class="toc-number">1.1.3.</span> <span class="toc-text">BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-File-Upload"><span class="toc-number">1.2.</span> <span class="toc-text">02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL01"><span class="toc-number">1.2.1.</span> <span class="toc-text">FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL02"><span class="toc-number">1.2.2.</span> <span class="toc-text">FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-Local-File-Inclusion"><span class="toc-number">1.3.</span> <span class="toc-text">03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI01"><span class="toc-number">1.3.1.</span> <span class="toc-text">LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI02"><span class="toc-number">1.3.2.</span> <span class="toc-text">LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-Command-Injection"><span class="toc-number">1.4.</span> <span class="toc-text">05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD01"><span class="toc-number">1.4.1.</span> <span class="toc-text">CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD02"><span class="toc-number">1.4.2.</span> <span class="toc-text">CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD03"><span class="toc-number">1.4.3.</span> <span class="toc-text">CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-CMD06"><span class="toc-number">1.4.4.</span> <span class="toc-text">[Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-SQL-Injection"><span class="toc-number">1.5.</span> <span class="toc-text">06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL1"><span class="toc-number">1.5.1.</span> <span class="toc-text">SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL2"><span class="toc-number">1.5.2.</span> <span class="toc-text">SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-Server-Side-Template-Injection"><span class="toc-number">1.6.</span> <span class="toc-text">07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STI01"><span class="toc-number">1.6.1.</span> <span class="toc-text">STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STI02"><span class="toc-number">1.6.2.</span> <span class="toc-text">STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-Server-Side-Request-Forgery"><span class="toc-number">1.7.</span> <span class="toc-text">08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF01"><span class="toc-number">1.7.1.</span> <span class="toc-text">SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF02"><span class="toc-number">1.7.2.</span> <span class="toc-text">SRF02</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-text">AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-Broken-Access-Control"><span class="toc-text">01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC01"><span class="toc-text">BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC02"><span class="toc-text">BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC03"><span class="toc-text">BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-File-Upload"><span class="toc-text">02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL01"><span class="toc-text">FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL02"><span class="toc-text">FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-Local-File-Inclusion"><span class="toc-text">03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI01"><span class="toc-text">LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI02"><span class="toc-text">LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-Command-Injection"><span class="toc-text">05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD01"><span class="toc-text">CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD02"><span class="toc-text">CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD03"><span class="toc-text">CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-CMD06"><span class="toc-text">[Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-SQL-Injection"><span class="toc-text">06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL1"><span class="toc-text">SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL2"><span class="toc-text">SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-Server-Side-Template-Injection"><span class="toc-text">07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STI01"><span class="toc-text">STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STI02"><span class="toc-text">STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-Server-Side-Request-Forgery"><span class="toc-text">08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF01"><span class="toc-text">SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF02"><span class="toc-text">SRF02</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -784,11 +791,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -1056,6 +1067,17 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">

@@ -9,6 +9,18 @@
   
   <meta charset="utf-8">
   
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
 
   
 
@@ -56,7 +68,7 @@
     <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/dd.png">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -185,18 +197,9 @@
       
         <picture>
           
-            
-              <source media="(max-width: 479px)" srcset="/images/banner-600x600.webp">
-            
-              <source media="(max-width: 799px)" srcset="/images/banner-800x800.webp">
-            
-              <source media="(min-width: 800px)" srcset="/images/banner.jpg">
-            
-            <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY2-網頁安全">
-          
         </picture>
         
-          <img alt="AIS3 junior DAY2-網頁安全" style="visibility: hidden;">
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.jpg" alt="AIS3 junior DAY2-網頁安全">
         
       
     
@@ -236,15 +239,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Web-Security"><span class="toc-number">1.</span> <span class="toc-text">Basic Web Security</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#intro"><span class="toc-number">1.1.</span> <span class="toc-text">intro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broken-Access-Control"><span class="toc-number">1.2.</span> <span class="toc-text">Broken Access Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RCE-Remote-Code-Command-Execution"><span class="toc-number">1.3.</span> <span class="toc-text">RCE(Remote Code&#x2F;Command Execution)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webshell"><span class="toc-number">1.4.</span> <span class="toc-text">Webshell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-file-inclusion"><span class="toc-number">1.5.</span> <span class="toc-text">Local file inclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RFI"><span class="toc-number">1.6.</span> <span class="toc-text">RFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS"><span class="toc-number">1.7.</span> <span class="toc-text">XSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Injection"><span class="toc-number">2.</span> <span class="toc-text">Command Injection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Injection"><span class="toc-number">3.</span> <span class="toc-text">SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-Injection-%E5%BF%85%E5%82%99%E8%AA%9E%E6%B3%95%E7%9F%A5%E8%AD%98-101"><span class="toc-number">3.1.</span> <span class="toc-text">MySQL Injection 必備語法知識 101</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%80%8B%E6%9C%80%E5%9F%BA%E7%A4%8E%E7%9A%84-SQL-Injection"><span class="toc-number">3.2.</span> <span class="toc-text">一個最基礎的 SQL Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arbitrary-File-Read"><span class="toc-number">3.3.</span> <span class="toc-text">Arbitrary File Read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BlackList-Evasion"><span class="toc-number">3.4.</span> <span class="toc-text">BlackList Evasion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Server-Side-Template-Injection"><span class="toc-number">4.</span> <span class="toc-text">Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Template"><span class="toc-number">4.1.</span> <span class="toc-text">What is Template</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSRF"><span class="toc-number">5.</span> <span class="toc-text">SSRF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-HTTPS"><span class="toc-number">5.1.</span> <span class="toc-text">HTTP&#x2F;HTTPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-number">5.2.</span> <span class="toc-text">File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gopher"><span class="toc-number">5.3.</span> <span class="toc-text">Gopher</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bind-Shell"><span class="toc-number">6.</span> <span class="toc-text">Bind Shell</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM"><span class="toc-number"></span> <span class="toc-text">LLM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-number">1.</span> <span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%90%8D%E7%9A%84LLM"><span class="toc-number">2.</span> <span class="toc-text">有名的LLM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">原理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Web-Security"><span class="toc-text">Basic Web Security</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#intro"><span class="toc-text">intro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broken-Access-Control"><span class="toc-text">Broken Access Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RCE-Remote-Code-Command-Execution"><span class="toc-text">RCE(Remote Code&#x2F;Command Execution)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webshell"><span class="toc-text">Webshell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-file-inclusion"><span class="toc-text">Local file inclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RFI"><span class="toc-text">RFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS"><span class="toc-text">XSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Injection"><span class="toc-text">Command Injection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Injection"><span class="toc-text">SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-Injection-%E5%BF%85%E5%82%99%E8%AA%9E%E6%B3%95%E7%9F%A5%E8%AD%98-101"><span class="toc-text">MySQL Injection 必備語法知識 101</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%80%8B%E6%9C%80%E5%9F%BA%E7%A4%8E%E7%9A%84-SQL-Injection"><span class="toc-text">一個最基礎的 SQL Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arbitrary-File-Read"><span class="toc-text">Arbitrary File Read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BlackList-Evasion"><span class="toc-text">BlackList Evasion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Server-Side-Template-Injection"><span class="toc-text">Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Template"><span class="toc-text">What is Template</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSRF"><span class="toc-text">SSRF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-HTTPS"><span class="toc-text">HTTP&#x2F;HTTPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-text">File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gopher"><span class="toc-text">Gopher</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bind-Shell"><span class="toc-text">Bind Shell</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM"><span class="toc-text">LLM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%90%8D%E7%9A%84LLM"><span class="toc-text">有名的LLM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理</span></a></li></ol>
       
   </div>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -263,11 +266,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -583,7 +590,7 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">说些什么吧！</h2>
+      <h2 class="comment-title">說些什么吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -667,15 +674,15 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Web-Security"><span class="toc-number">1.</span> <span class="toc-text">Basic Web Security</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#intro"><span class="toc-number">1.1.</span> <span class="toc-text">intro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broken-Access-Control"><span class="toc-number">1.2.</span> <span class="toc-text">Broken Access Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RCE-Remote-Code-Command-Execution"><span class="toc-number">1.3.</span> <span class="toc-text">RCE(Remote Code&#x2F;Command Execution)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webshell"><span class="toc-number">1.4.</span> <span class="toc-text">Webshell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-file-inclusion"><span class="toc-number">1.5.</span> <span class="toc-text">Local file inclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RFI"><span class="toc-number">1.6.</span> <span class="toc-text">RFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS"><span class="toc-number">1.7.</span> <span class="toc-text">XSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Injection"><span class="toc-number">2.</span> <span class="toc-text">Command Injection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Injection"><span class="toc-number">3.</span> <span class="toc-text">SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-Injection-%E5%BF%85%E5%82%99%E8%AA%9E%E6%B3%95%E7%9F%A5%E8%AD%98-101"><span class="toc-number">3.1.</span> <span class="toc-text">MySQL Injection 必備語法知識 101</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%80%8B%E6%9C%80%E5%9F%BA%E7%A4%8E%E7%9A%84-SQL-Injection"><span class="toc-number">3.2.</span> <span class="toc-text">一個最基礎的 SQL Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arbitrary-File-Read"><span class="toc-number">3.3.</span> <span class="toc-text">Arbitrary File Read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BlackList-Evasion"><span class="toc-number">3.4.</span> <span class="toc-text">BlackList Evasion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Server-Side-Template-Injection"><span class="toc-number">4.</span> <span class="toc-text">Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Template"><span class="toc-number">4.1.</span> <span class="toc-text">What is Template</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSRF"><span class="toc-number">5.</span> <span class="toc-text">SSRF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-HTTPS"><span class="toc-number">5.1.</span> <span class="toc-text">HTTP&#x2F;HTTPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-number">5.2.</span> <span class="toc-text">File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gopher"><span class="toc-number">5.3.</span> <span class="toc-text">Gopher</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bind-Shell"><span class="toc-number">6.</span> <span class="toc-text">Bind Shell</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM"><span class="toc-number"></span> <span class="toc-text">LLM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-number">1.</span> <span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%90%8D%E7%9A%84LLM"><span class="toc-number">2.</span> <span class="toc-text">有名的LLM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">原理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Web-Security"><span class="toc-text">Basic Web Security</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#intro"><span class="toc-text">intro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broken-Access-Control"><span class="toc-text">Broken Access Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RCE-Remote-Code-Command-Execution"><span class="toc-text">RCE(Remote Code&#x2F;Command Execution)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webshell"><span class="toc-text">Webshell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-file-inclusion"><span class="toc-text">Local file inclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RFI"><span class="toc-text">RFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS"><span class="toc-text">XSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Injection"><span class="toc-text">Command Injection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Injection"><span class="toc-text">SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-Injection-%E5%BF%85%E5%82%99%E8%AA%9E%E6%B3%95%E7%9F%A5%E8%AD%98-101"><span class="toc-text">MySQL Injection 必備語法知識 101</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%80%8B%E6%9C%80%E5%9F%BA%E7%A4%8E%E7%9A%84-SQL-Injection"><span class="toc-text">一個最基礎的 SQL Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arbitrary-File-Read"><span class="toc-text">Arbitrary File Read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BlackList-Evasion"><span class="toc-text">BlackList Evasion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Server-Side-Template-Injection"><span class="toc-text">Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Template"><span class="toc-text">What is Template</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSRF"><span class="toc-text">SSRF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-HTTPS"><span class="toc-text">HTTP&#x2F;HTTPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-text">File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gopher"><span class="toc-text">Gopher</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bind-Shell"><span class="toc-text">Bind Shell</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LLM"><span class="toc-text">LLM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-text">transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%90%8D%E7%9A%84LLM"><span class="toc-text">有名的LLM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理</span></a></li></ol>
       
   </div>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/dd.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Brianlien" class="lazyload">
   <div class="sidebar-author-name">Brianlien</div>
-  <div class="sidebar-description"></div>
+  <div class="sidebar-description">一個想要睡飽的學生</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
@@ -694,11 +701,15 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
       <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -966,6 +977,17 @@
 
 
 
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">

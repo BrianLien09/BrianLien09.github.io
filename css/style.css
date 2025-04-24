@@ -491,6 +491,9 @@ body [data-aos='zoom-in'] {
 .icon-facebook:before {
   content: "\e60e";
 }
+.icon-youtube:before {
+  content: "\e62d";
+}
 .icon-email:before {
   content: "\e63c";
 }
@@ -3308,6 +3311,9 @@ pre .javascript .function {
 }
 [data-theme="dark"] .icon-github {
   color: #bc88ff;
+}
+.icon-youtube {
+  color: #f00;
 }
 .sidebar-menu-icon,
 .sidebar-menu-link {
