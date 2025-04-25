@@ -250,15 +250,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -354,16 +354,18 @@
 <li>漏洞範例：文件中以一個個人財務追蹤應用程式（Finance Tracker App）為例，示範了沒有後端API的授權檢查如何導致不安全的直接物件參考。</li>
 <li>漏洞後果：任何登入的使用者都可以透過修改URL請求中的使用者ID參數來請求和存取其他使用者的個人資料。</li>
 <li>漏洞演示：文件中展示了攻擊者如何利用這個漏洞存取應用程式中其他使用者的財務資料。</li>
-<li>預防措施：<ul>
+<li>預防措施：
+<ul>
 <li>確保行動裝置呼叫的後端API使用適當的存取控制來存取相關端點。</li>
 <li>如果適用，請對具有不同授權等級的使用者進行測試。</li>
 </ul>
 </li>
 </ol>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.user:</span><br><span class="line"></span><br><span class="line">student_score_details = ExamScore.objects.get(<span class="built_in">id</span>=score_id)</span><br></pre></td></tr></table></figure>
+<h4 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子:</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.user:</span><br><span class="line"></span><br><span class="line">student_score_details = ExamScore.objects.get(<span class="built_in">id</span>=score_id)</span><br></pre></td></tr></table></figure>
 <p>這段程式碼沒有顯示任何授權檢查，這意味著任何登入的使用者都可能存取任何分數記錄，只要他們知道或猜測到正確的 score_id。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student_score_details = ExamScore.objects.get(user=request.user, <span class="built_in">id</span>=score_id)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>確保只有當使用者要求自己的考試分數時，才能檢索到相應的記錄。透過將 user&#x3D;request.user 作為查詢條件之一，它限制了查詢結果，只傳回目前登入使用者所擁有的考試分數記錄。</p>
+<p>確保只有當使用者要求自己的考試分數時，才能檢索到相應的記錄。透過將 user=request.user 作為查詢條件之一，它限制了查詢結果，只傳回目前登入使用者所擁有的考試分數記錄。</p>
 
       
     </div>
@@ -505,10 +507,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -554,15 +556,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">

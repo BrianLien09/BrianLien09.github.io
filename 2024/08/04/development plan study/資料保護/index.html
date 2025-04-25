@@ -49,12 +49,12 @@
 
   
   
-    <meta name="description" content="數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。 數據保護示例： PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。 使用TLS保護通訊，防止流量被嗅探。 信用卡號不完整顯示，防止肩窺攻擊。 關閉快取，避免快取數據。 使用強算法（如Argon2）加密存儲在數據庫中的信用卡號。     未採取預防措施的數據保護漏洞： 如果PayBuddy公司未採">
+    <meta name="description" content="數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。 數據保護示例：  PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。  使用TLS保護通訊，防止流量被嗅探。 信用卡號不完整顯示，防止肩窺攻擊。 關閉快取，避免快取數據。 使用強算法（如Argon2）加密存儲在數據庫中的信用卡號。     未採取預防措施的數據保護漏洞：  如果PayBuddy公">
 <meta property="og:type" content="article">
 <meta property="og:title" content="資料保護">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。 數據保護示例： PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。 使用TLS保護通訊，防止流量被嗅探。 信用卡號不完整顯示，防止肩窺攻擊。 關閉快取，避免快取數據。 使用強算法（如Argon2）加密存儲在數據庫中的信用卡號。     未採取預防措施的數據保護漏洞： 如果PayBuddy公司未採">
+<meta property="og:description" content="數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。 數據保護示例：  PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。  使用TLS保護通訊，防止流量被嗅探。 信用卡號不完整顯示，防止肩窺攻擊。 關閉快取，避免快取數據。 使用強算法（如Argon2）加密存儲在數據庫中的信用卡號。     未採取預防措施的數據保護漏洞：  如果PayBuddy公">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T09:36:06.000Z">
 <meta property="article:modified_time" content="2025-04-24T15:45:15.412Z">
@@ -250,15 +250,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -350,8 +350,10 @@
       
         <ol>
 <li>數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。</li>
-<li>數據保護示例：<ul>
-<li>PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。<ul>
+<li>數據保護示例：
+<ul>
+<li>PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。
+<ul>
 <li>使用TLS保護通訊，防止流量被嗅探。</li>
 <li>信用卡號不完整顯示，防止肩窺攻擊。</li>
 <li>關閉快取，避免快取數據。</li>
@@ -360,13 +362,15 @@
 </li>
 </ul>
 </li>
-<li>未採取預防措施的數據保護漏洞：<ul>
+<li>未採取預防措施的數據保護漏洞：
+<ul>
 <li>如果PayBuddy公司未採取適當措施，通訊可能未受保護，攻擊者可以輕易嗅探流量，竊取信用卡號等敏感信息。</li>
 <li>信用卡號在應用中完整顯示，增加了被肩窺的風險。</li>
 <li>數據庫中信用卡號未加密，攻擊者可讀取明文信息。</li>
 </ul>
 </li>
-<li>源代碼保護：<ul>
+<li>源代碼保護：
+<ul>
 <li>一個軟件公司非常小心地保護其移動應用的源代碼。</li>
 <li>源代碼存儲在加密硬體上，位於安全的服務器室。</li>
 <li>僅限內部網絡訪問源代碼庫。</li>
@@ -374,31 +378,36 @@
 <li>生產環境中對應用程序應用了重混淆技術。</li>
 </ul>
 </li>
-<li>未實施源代碼保護的後果：<ul>
+<li>未實施源代碼保護的後果：
+<ul>
 <li>存儲在物理可訪問的服務器上的源代碼庫。</li>
 <li>本地攻擊者可以複製明文存儲的代碼。</li>
 <li>源代碼庫公開可訪問，容易被攻擊者攻擊。</li>
 <li>未混淆的應用程序可被用戶反編譯，源代碼可能被修改和重新打包出售。</li>
 </ul>
 </li>
-<li>用戶隱私保護：<ul>
+<li>用戶隱私保護：
+<ul>
 <li>一個Web應用程序允許用戶創建包含姓名、性別、出生日期、宗教和位置等個人信息的個人資料。</li>
 <li>用戶的私有信息安全地存儲在數據庫中，訪問受限。</li>
 <li>只有數據庫管理員可以訪問數據庫和信息。</li>
 <li>數據庫管理員需簽署保密協議以保護數據。</li>
 </ul>
 </li>
-<li>不尊重用戶隱私的後果：<ul>
+<li>不尊重用戶隱私的後果：
+<ul>
 <li>例如，新版本發布前，數據庫內容可能被複製到開發環境進行測試。</li>
 <li>所有開發人員都可以在開發數據庫中查看用戶的私人信息，這明顯會導致隱私問題。</li>
 </ul>
 </li>
-<li>未實施數據保護措施的負面影響：<ul>
+<li>未實施數據保護措施的負面影響：
+<ul>
 <li>攻擊者可能通過竊取日誌文件、快取、中間人攻擊或其他手段獲取敏感和私人信息。</li>
 <li>這不僅危及公司，也危及所有用戶的隱私。</li>
 </ul>
 </li>
-<li>預防數據保護漏洞的重要規則：<ul>
+<li>預防數據保護漏洞的重要規則：
+<ul>
 <li>僅在絕對需要時存儲私人信息。</li>
 <li>永遠不要在源代碼中硬編碼秘密信息。</li>
 <li>不要在明文中存儲數據庫憑據或加密密鑰。</li>
@@ -549,10 +558,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -598,15 +607,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -913,7 +922,7 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/",
           excerpt: "",
           description: "",
-          stripContent: " 數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。 數據保護示例： PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。 使用TLS保護通訊，防止流量被嗅探。 信用卡號不完整顯示，防止肩窺攻擊。 關閉快取，避免快取數據。 使用強算法（如Argon2）加密存儲在數據庫中的信用卡號。     未採取預防措施的數據保護漏洞： 如果PayBuddy公司未採取適當措施，通訊可能未受保護，攻擊者可以輕易嗅探流量，竊取信用卡號等敏感信息。 信用卡號在應用中完整",
+          stripContent: " 數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。 數據保護示例：  PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。  使用TLS保護通訊，防止流量被嗅探。 信用卡號不完整顯示，防止肩窺攻擊。 關閉快取，避免快取數據。 使用強算法（如Argon2）加密存儲在數據庫中的信用卡號。     未採取預防措施的數據保護漏洞：  如果PayBuddy公司未採取適當措施，通訊可能未受保護，攻擊者可以輕易嗅探流量，竊取信用卡號等敏感信息。 信用卡號在應用",
           date: "Sun Aug 04 2024 17:36:06 GMT+0800",
           updated: "Thu Apr 24 2025 23:45:15 GMT+0800",
           cover: "/images/banner.jpg",

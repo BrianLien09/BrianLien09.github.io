@@ -49,12 +49,12 @@
 
   
   
-    <meta name="description" content="跨站點請求偽造(CSRF 攻擊) CSRF 攻擊定義： 跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。   CSRF 攻擊原因： 當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。   CSRF 攻擊後果： 成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改">
+    <meta name="description" content="跨站點請求偽造(CSRF 攻擊)  CSRF 攻擊定義：  跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。   CSRF 攻擊原因：  當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。   CSRF 攻擊後果：  成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSRF 攻擊">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/CSRF-%E6%94%BB%E6%93%8A/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="跨站點請求偽造(CSRF 攻擊) CSRF 攻擊定義： 跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。   CSRF 攻擊原因： 當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。   CSRF 攻擊後果： 成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改">
+<meta property="og:description" content="跨站點請求偽造(CSRF 攻擊)  CSRF 攻擊定義：  跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。   CSRF 攻擊原因：  當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。   CSRF 攻擊後果：  成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T07:52:43.000Z">
 <meta property="article:modified_time" content="2025-04-24T15:45:25.959Z">
@@ -237,7 +237,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%A8%E7%AB%99%E9%BB%9E%E8%AB%8B%E6%B1%82%E5%81%BD%E9%80%A0-CSRF-%E6%94%BB%E6%93%8A"><span class="toc-text">跨站點請求偽造(CSRF 攻擊)</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%A8%E7%AB%99%E9%BB%9E%E8%AB%8B%E6%B1%82%E5%81%BD%E9%80%A0csrf-%E6%94%BB%E6%93%8A"><span class="toc-text"> 跨站點請求偽造(CSRF 攻擊)</span></a></li></ol>
       
   </div>
 </div>
@@ -250,15 +250,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -348,28 +348,35 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h1 id="跨站點請求偽造-CSRF-攻擊"><a href="#跨站點請求偽造-CSRF-攻擊" class="headerlink" title="跨站點請求偽造(CSRF 攻擊)"></a>跨站點請求偽造(CSRF 攻擊)</h1><ol>
-<li>CSRF 攻擊定義：<ul>
+        <h1 id="跨站點請求偽造csrf-攻擊"><a class="markdownIt-Anchor" href="#跨站點請求偽造csrf-攻擊"></a> 跨站點請求偽造(CSRF 攻擊)</h1>
+<ol>
+<li>CSRF 攻擊定義：
+<ul>
 <li>跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。</li>
 </ul>
 </li>
-<li>CSRF 攻擊原因：<ul>
+<li>CSRF 攻擊原因：
+<ul>
 <li>當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。</li>
 </ul>
 </li>
-<li>CSRF 攻擊後果：<ul>
+<li>CSRF 攻擊後果：
+<ul>
 <li>成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。</li>
 </ul>
 </li>
-<li>CSRF 攻擊示例：<ul>
-<li>受害者登錄銀行網站，瀏覽器中設置了 bank.com 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
+<li>CSRF 攻擊示例：
+<ul>
+<li>受害者登錄銀行網站，瀏覽器中設置了 <a target="_blank" rel="noopener" href="http://bank.com">bank.com</a> 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
 </ul>
 </li>
-<li>CSRF 攻擊預防措施：<ul>
+<li>CSRF 攻擊預防措施：
+<ul>
 <li>應保護狀態改變操作，使用 CSRF 令牌。該令牌是一個安全、隨機的值，與用戶和會話相關聯。應作為隱藏字段添加到表單中，並在提交時由服務器檢查。或者，可以在敏感操作中實現重新驗證。</li>
 </ul>
 </li>
-<li>CSRF 攻擊預防錯誤：<ul>
+<li>CSRF 攻擊預防錯誤：
+<ul>
 <li>驗證請求是否由用戶意圖執行。</li>
 <li>為每個請求附加 CSRF 令牌。令牌應該是長、獨特、隨機的，每個用戶和每個會話都不同。</li>
 <li>另外，對敏感操作實施挑戰-響應機制，如 CAPTCHA、一次性密碼或重新驗證。</li>
@@ -517,10 +524,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -553,7 +560,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%A8%E7%AB%99%E9%BB%9E%E8%AB%8B%E6%B1%82%E5%81%BD%E9%80%A0-CSRF-%E6%94%BB%E6%93%8A"><span class="toc-text">跨站點請求偽造(CSRF 攻擊)</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%A8%E7%AB%99%E9%BB%9E%E8%AB%8B%E6%B1%82%E5%81%BD%E9%80%A0csrf-%E6%94%BB%E6%93%8A"><span class="toc-text"> 跨站點請求偽造(CSRF 攻擊)</span></a></li></ol>
       
   </div>
 </div>
@@ -566,15 +573,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -881,7 +888,7 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/CSRF-%E6%94%BB%E6%93%8A/",
           excerpt: "",
           description: "",
-          stripContent: "跨站點請求偽造(CSRF 攻擊) CSRF 攻擊定義： 跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。   CSRF 攻擊原因： 當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。   CSRF 攻擊後果： 成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。   CSRF 攻擊示例： 受害者登錄銀行網站，瀏覽器中設置了",
+          stripContent: " 跨站點請求偽造(CSRF 攻擊)  CSRF 攻擊定義：  跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。   CSRF 攻擊原因：  當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。   CSRF 攻擊後果：  成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。   CSRF 攻擊示例：  受害者登錄銀行網站，瀏",
           date: "Sun Aug 04 2024 15:52:43 GMT+0800",
           updated: "Thu Apr 24 2025 23:45:25 GMT+0800",
           cover: "/images/banner.jpg",

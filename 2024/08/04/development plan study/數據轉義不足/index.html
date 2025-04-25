@@ -49,12 +49,12 @@
 
   
   
-    <meta name="description" content="資料轉義是什麼？ 資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。 例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。  資料轉義漏洞的原因： 當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。  示例： XPath注入：">
+    <meta name="description" content="資料轉義是什麼？  資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。 例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。   資料轉義漏洞的原因：  當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。   示例：  XP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="數據轉義不足">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="資料轉義是什麼？ 資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。 例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。  資料轉義漏洞的原因： 當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。  示例： XPath注入：">
+<meta property="og:description" content="資料轉義是什麼？  資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。 例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。   資料轉義漏洞的原因：  當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。   示例：  XP">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T08:37:10.000Z">
 <meta property="article:modified_time" content="2025-04-24T15:45:00.914Z">
@@ -250,15 +250,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -348,27 +348,33 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h4 id="資料轉義是什麼？"><a href="#資料轉義是什麼？" class="headerlink" title="資料轉義是什麼？"></a>資料轉義是什麼？</h4><ul>
+        <h4 id="資料轉義是什麼"><a class="markdownIt-Anchor" href="#資料轉義是什麼"></a> 資料轉義是什麼？</h4>
+<ul>
 <li>資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。</li>
 <li>例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。</li>
 </ul>
-<h4 id="資料轉義漏洞的原因："><a href="#資料轉義漏洞的原因：" class="headerlink" title="資料轉義漏洞的原因："></a>資料轉義漏洞的原因：</h4><ul>
+<h4 id="資料轉義漏洞的原因"><a class="markdownIt-Anchor" href="#資料轉義漏洞的原因"></a> 資料轉義漏洞的原因：</h4>
+<ul>
 <li>當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。</li>
 </ul>
-<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><ol>
+<h4 id="示例"><a class="markdownIt-Anchor" href="#示例"></a> 示例：</h4>
+<ol>
 <li>XPath注入：攻擊者通過操縱XML查詢來嘗試執行XPath注入，繞過認證機制。</li>
 <li>跨站腳本攻擊（XSS）：攻擊者發送包含惡意腳本的電子郵件，利用未轉義的腳本在用戶瀏覽器中執行，重定向到釣魚網站。</li>
 </ol>
-<h4 id="資料轉義漏洞的潛在影響："><a href="#資料轉義漏洞的潛在影響：" class="headerlink" title="資料轉義漏洞的潛在影響："></a>資料轉義漏洞的潛在影響：</h4><ul>
+<h4 id="資料轉義漏洞的潛在影響"><a class="markdownIt-Anchor" href="#資料轉義漏洞的潛在影響"></a> 資料轉義漏洞的潛在影響：</h4>
+<ul>
 <li>輸入編碼不足可能導致SQL注入，進而導致認證繞過和欺詐行為。</li>
 <li>代碼注入可能導致進一步的升級，例如在應用程序服務器上執行命令注入。</li>
 </ul>
-<h4 id="預防措施："><a href="#預防措施：" class="headerlink" title="預防措施："></a>預防措施：</h4><ul>
+<h4 id="預防措施"><a class="markdownIt-Anchor" href="#預防措施"></a> 預防措施：</h4>
+<ul>
 <li>對所有來自外部來源的資料執行編碼和轉義。</li>
 <li>確定將使用資料的解釋器類型，以及應該編碼哪些字符。</li>
 <li>作為一般規則，永遠不要信任用戶輸入。</li>
 <li>對所有外部資料始終應用應用程序範圍的編碼。</li>
-<li>開發者應該：<ul>
+<li>開發者應該：
+<ul>
 <li>確定使用資料的解釋器。</li>
 <li>在不同的框架中存在庫。</li>
 <li>最後，始終考慮輸入和輸出。</li>
@@ -516,10 +522,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -565,15 +571,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -880,7 +886,7 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/",
           excerpt: "",
           description: "",
-          stripContent: "資料轉義是什麼？ 資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。 例如，將小於號（&amp;lt;）和大於號（&amp;gt;）轉換成&amp;lt;和&amp;gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。  資料轉義漏洞的原因： 當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。  示例： XPath注入：攻擊者通過操縱XML查詢來嘗試執行XPath注入，繞過認證機制。 跨站腳本攻擊（XSS）：攻擊者發送",
+          stripContent: " 資料轉義是什麼？  資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。 例如，將小於號（&amp;lt;）和大於號（&amp;gt;）轉換成&amp;lt;和&amp;gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。   資料轉義漏洞的原因：  當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。   示例：  XPath注入：攻擊者通過操縱XML查詢來嘗試執行XPath注入，繞過認證機制。 跨站腳本攻擊（XSS）",
           date: "Sun Aug 04 2024 16:37:10 GMT+0800",
           updated: "Thu Apr 24 2025 23:45:00 GMT+0800",
           cover: "/images/banner.jpg",

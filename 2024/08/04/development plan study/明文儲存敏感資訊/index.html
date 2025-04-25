@@ -49,12 +49,12 @@
 
   
   
-    <meta name="description" content="明文存儲定義： 明文存儲是指將個人信息以純文本格式存儲的漏洞。   敏感數據範例： 文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。   問題原因： 敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。   漏洞風險： 黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。   漏洞後果： 黑客可以利用個">
+    <meta name="description" content="明文存儲定義：  明文存儲是指將個人信息以純文本格式存儲的漏洞。   敏感數據範例：  文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。   問題原因：  敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。   漏洞風險：  黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。   漏洞後果：  黑客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="明文儲存敏感資訊">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="明文存儲定義： 明文存儲是指將個人信息以純文本格式存儲的漏洞。   敏感數據範例： 文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。   問題原因： 敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。   漏洞風險： 黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。   漏洞後果： 黑客可以利用個">
+<meta property="og:description" content="明文存儲定義：  明文存儲是指將個人信息以純文本格式存儲的漏洞。   敏感數據範例：  文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。   問題原因：  敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。   漏洞風險：  黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。   漏洞後果：  黑客">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T08:19:13.000Z">
 <meta property="article:modified_time" content="2025-04-24T15:44:57.504Z">
@@ -250,15 +250,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -349,32 +349,39 @@
       
       
         <ol>
-<li>明文存儲定義：<ul>
+<li>明文存儲定義：
+<ul>
 <li>明文存儲是指將個人信息以純文本格式存儲的漏洞。</li>
 </ul>
 </li>
-<li>敏感數據範例：<ul>
+<li>敏感數據範例：
+<ul>
 <li>文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。</li>
 </ul>
 </li>
-<li>問題原因：<ul>
+<li>問題原因：
+<ul>
 <li>敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。</li>
 </ul>
 </li>
-<li>漏洞風險：<ul>
+<li>漏洞風險：
+<ul>
 <li>黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。</li>
 </ul>
 </li>
-<li>漏洞後果：<ul>
+<li>漏洞後果：
+<ul>
 <li>黑客可以利用個人數據在任何地方冒充用戶，例如在銀行網站上申請信用卡。</li>
 </ul>
 </li>
-<li>預防措施：<ul>
+<li>預防措施：
+<ul>
 <li>開發人員應該確保在存儲之前，使用強大的算法對敏感數據和個人細節進行適當的加密。</li>
 </ul>
 </li>
 </ol>
-<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">username = form.cleaned_data.get(<span class="string">&#x27;username&#x27;</span>)</span><br><span class="line">password = form.cleaned_data.get(<span class="string">&#x27;password&#x27;</span>)</span><br><span class="line">new_user = User.create(username, password)</span><br><span class="line">new_user.save()</span><br></pre></td></tr></table></figure>
+<h4 id="範例"><a class="markdownIt-Anchor" href="#範例"></a> 範例</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">username = form.cleaned_data.get(<span class="string">&#x27;username&#x27;</span>)</span><br><span class="line">password = form.cleaned_data.get(<span class="string">&#x27;password&#x27;</span>)</span><br><span class="line">new_user = User.create(username, password)</span><br><span class="line">new_user.save()</span><br></pre></td></tr></table></figure>
 <p>需要注意的是，這段代碼沒有顯示密碼加密的過程</p>
 
       
@@ -517,10 +524,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -566,15 +573,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -881,7 +888,7 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/",
           excerpt: "",
           description: "",
-          stripContent: " 明文存儲定義： 明文存儲是指將個人信息以純文本格式存儲的漏洞。   敏感數據範例： 文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。   問題原因： 敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。   漏洞風險： 黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。   漏洞後果： 黑客可以利用個人數據在任何地方冒充用戶，例如在銀行網站上申請信用卡。   預防措施： 開發人員應該確保在存儲之前，",
+          stripContent: " 明文存儲定義：  明文存儲是指將個人信息以純文本格式存儲的漏洞。   敏感數據範例：  文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。   問題原因：  敏感數據可能因為使用方便或被視為安全而被明文存儲，或僅僅是被忽略了。   漏洞風險：  黑客能夠訪問存有未加密個人數據的生產數據庫，並使用這些數據來冒充用戶。   漏洞後果：  黑客可以利用個人數據在任何地方冒充用戶，例如在銀行網站上申請信用卡。   預防措施：  開發人員應該確保",
           date: "Sun Aug 04 2024 16:19:13 GMT+0800",
           updated: "Thu Apr 24 2025 23:44:57 GMT+0800",
           cover: "/images/banner.jpg",

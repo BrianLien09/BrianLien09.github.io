@@ -49,12 +49,12 @@
 
   
   
-    <meta name="description" content="Url 快取漏洞URL 緩存漏洞（Cache Leak）： 當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。 緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。  漏洞示例： 如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。  漏洞風險： 例如，在辦公室中，一個用戶在頁面上輸入了他">
+    <meta name="description" content="Url 快取漏洞  URL 緩存漏洞（Cache Leak）：  當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。 緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。   漏洞示例：  如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。   漏洞風險：  例如，在辦公室中，一個用戶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Url 快取漏洞">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/Url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="Url 快取漏洞URL 緩存漏洞（Cache Leak）： 當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。 緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。  漏洞示例： 如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。  漏洞風險： 例如，在辦公室中，一個用戶在頁面上輸入了他">
+<meta property="og:description" content="Url 快取漏洞  URL 緩存漏洞（Cache Leak）：  當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。 緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。   漏洞示例：  如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。   漏洞風險：  例如，在辦公室中，一個用戶">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T07:47:43.000Z">
 <meta property="article:modified_time" content="2025-04-24T15:45:32.294Z">
@@ -237,7 +237,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E"><span class="toc-text">Url 快取漏洞</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E"><span class="toc-text"> Url 快取漏洞</span></a></li></ol>
       
   </div>
 </div>
@@ -250,15 +250,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -348,26 +348,33 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h1 id="Url-快取漏洞"><a href="#Url-快取漏洞" class="headerlink" title="Url 快取漏洞"></a>Url 快取漏洞</h1><h4 id="URL-緩存漏洞（Cache-Leak）："><a href="#URL-緩存漏洞（Cache-Leak）：" class="headerlink" title="URL 緩存漏洞（Cache Leak）："></a>URL 緩存漏洞（Cache Leak）：</h4><ul>
+        <h1 id="url-快取漏洞"><a class="markdownIt-Anchor" href="#url-快取漏洞"></a> Url 快取漏洞</h1>
+<h4 id="url-緩存漏洞cache-leak"><a class="markdownIt-Anchor" href="#url-緩存漏洞cache-leak"></a> URL 緩存漏洞（Cache Leak）：</h4>
+<ul>
 <li>當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。</li>
 <li>緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。</li>
 </ul>
-<h4 id="漏洞示例："><a href="#漏洞示例：" class="headerlink" title="漏洞示例："></a>漏洞示例：</h4><ul>
+<h4 id="漏洞示例"><a class="markdownIt-Anchor" href="#漏洞示例"></a> 漏洞示例：</h4>
+<ul>
 <li>如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。</li>
 </ul>
-<h4 id="漏洞風險："><a href="#漏洞風險：" class="headerlink" title="漏洞風險："></a>漏洞風險：</h4><ul>
+<h4 id="漏洞風險"><a class="markdownIt-Anchor" href="#漏洞風險"></a> 漏洞風險：</h4>
+<ul>
 <li>例如，在辦公室中，一個用戶在頁面上輸入了他們的地址信息後，如果該信息被緩存，之後使用同一台電腦的另一個用戶可以通過點擊瀏覽器的「後退」按鈕來查看之前用戶留下的地址信息。</li>
 </ul>
-<h4 id="預防措施："><a href="#預防措施：" class="headerlink" title="預防措施："></a>預防措施：</h4><ul>
-<li>開發者應該：<ol>
+<h4 id="預防措施"><a class="markdownIt-Anchor" href="#預防措施"></a> 預防措施：</h4>
+<ul>
+<li>開發者應該：
+<ol>
 <li>避免在緩存中不必要地存儲敏感信息。</li>
 <li>如果必須存儲敏感數據，考慮使用加密。</li>
 <li>始終使用適當的緩存控制頭部（cache-control headers）。</li>
 </ol>
 </li>
 </ul>
-<h4 id="緩存控制頭部示例："><a href="#緩存控制頭部示例：" class="headerlink" title="緩存控制頭部示例："></a>緩存控制頭部示例：</h4><ul>
-<li>頁面的緩存控制頭部設置為 “public” 且沒有指定過期時間（max-age&#x3D;14400），這可能導致敏感信息被緩存。</li>
+<h4 id="緩存控制頭部示例"><a class="markdownIt-Anchor" href="#緩存控制頭部示例"></a> 緩存控制頭部示例：</h4>
+<ul>
+<li>頁面的緩存控制頭部設置為 “public” 且沒有指定過期時間（max-age=14400），這可能導致敏感信息被緩存。</li>
 </ul>
 
       
@@ -510,10 +517,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        19.9k
+        20.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:06
+        01:07
       </div>
     
     
@@ -546,7 +553,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E"><span class="toc-text">Url 快取漏洞</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E"><span class="toc-text"> Url 快取漏洞</span></a></li></ol>
       
   </div>
 </div>
@@ -559,15 +566,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">31</div>
+    <div class="sidebar-state-number">33</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">10</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -874,7 +881,7 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/Url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E/",
           excerpt: "",
           description: "",
-          stripContent: "Url 快取漏洞URL 緩存漏洞（Cache Leak）： 當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。 緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。  漏洞示例： 如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。  漏洞風險： 例如，在辦公室中，一個用戶在頁面上輸入了他們的地址信息後，如果該信息被緩存，之後使用同一台電腦的另一個用戶可以通過點擊瀏覽器的「後退」按鈕來查",
+          stripContent: " Url 快取漏洞  URL 緩存漏洞（Cache Leak）：  當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。 緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。   漏洞示例：  如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。   漏洞風險：  例如，在辦公室中，一個用戶在頁面上輸入了他們的地址信息後，如果該信息被緩存，之後使用同一台電腦的另一個用戶可以通過點擊瀏覽器的",
           date: "Sun Aug 04 2024 15:47:43 GMT+0800",
           updated: "Thu Apr 24 2025 23:45:32 GMT+0800",
           cover: "/images/banner.jpg",

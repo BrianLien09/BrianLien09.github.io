@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-12-29T08:52:47.826Z</updated>
+  <updated>2025-04-25T11:32:37.505Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Acer Swift Go 14 Touchpad is updating 充滿屏幕問題</title>
+    <link href="http://example.com/2025/04/25/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84Acer-Swift/"/>
+    <id>http://example.com/2025/04/25/%E9%97%9C%E6%96%BC%E6%88%91%E7%9A%84Acer-Swift/</id>
+    <published>2025-04-25T10:05:54.000Z</published>
+    <updated>2025-04-25T11:32:37.505Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文針對 Acer Swift Go 14 屏幕充滿 Touchpad is updating 的問題進行解決&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Acer筆電" scheme="http://example.com/categories/Acer%E7%AD%86%E9%9B%BB/"/>
+    
+    
+    <category term="Acer筆電" scheme="http://example.com/tags/Acer%E7%AD%86%E9%9B%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo常用指令</title>
+    <link href="http://example.com/2025/04/25/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>http://example.com/2025/04/25/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+    <published>2025-04-25T09:56:37.000Z</published>
+    <updated>2025-04-25T11:08:30.014Z</updated>
+    
+    
+    <summary type="html">hexo 你不可不知的最基礎常用指令</summary>
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    
+    
+    <category term="hexo教學" scheme="http://example.com/tags/hexo%E6%95%99%E5%AD%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo移機教學</title>
@@ -28,7 +66,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;第一步：安裝-將之前在github備份的原始碼下載下來&quot;&gt;&lt;a href=&quot;#第一步：安裝-將之前在github備份的原始碼下載下來&quot; class=&quot;headerlink&quot; title=&quot;第一步：安裝</summary>
+    <summary type="html">&lt;h2 id=&quot;第一步安裝-將之前在github備份的原始碼下載下來&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#第一步安裝-將之前在github備份的原始碼下載下來&quot;&gt;&lt;/a&gt; 第一步：安裝</summary>
         
       
     
@@ -53,7 +91,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;進階文法W7&quot;&gt;&lt;a href=&quot;#進階文法W7&quot; class=&quot;headerlink&quot; title=&quot;進階文法W7&quot;&gt;&lt;/a&gt;進階文法W7&lt;/h1&gt;&lt;h2 id=&quot;PRETEST-What-do-I-already-know&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;進階文法w7&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#進階文法w7&quot;&gt;&lt;/a&gt; 進階文法W7&lt;/h1&gt;
+&lt;h2 id=&quot;pretest-what-do-i-already-know&quot;&gt;&lt;a</summary>
         
       
     
@@ -78,7 +117,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;AIS3-junior-DAY2-上午-網頁安全&quot;&gt;&lt;a href=&quot;#AIS3-junior-DAY2-上午-網頁安全&quot; class=&quot;headerlink&quot; title=&quot;AIS3 junior DAY2 上午 網頁安全&quot;&gt;&lt;/a&gt;AIS3 junior</summary>
+    <summary type="html">&lt;h1 id=&quot;ais3-junior-day2-上午-網頁安全&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#ais3-junior-day2-上午-網頁安全&quot;&gt;&lt;/a&gt; AIS3 junior DAY2 上午</summary>
         
       
     
@@ -103,8 +142,10 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;甚麼是資訊安全&quot;&gt;&lt;a href=&quot;#甚麼是資訊安全&quot; class=&quot;headerlink&quot; title=&quot;甚麼是資訊安全&quot;&gt;&lt;/a&gt;甚麼是資訊安全&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;資安三要素&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;甚麼是資訊安全&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#甚麼是資訊安全&quot;&gt;&lt;/a&gt; 甚麼是資訊安全&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;資安三要素
+&lt;ul&gt;
 &lt;li&gt;C</summary>
         
       
@@ -130,7 +171,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Basic-Web-Security&quot;&gt;&lt;a href=&quot;#Basic-Web-Security&quot; class=&quot;headerlink&quot; title=&quot;Basic Web Security&quot;&gt;&lt;/a&gt;Basic Web Security&lt;/h2&gt;&lt;h3</summary>
+    <summary type="html">&lt;h2 id=&quot;basic-web-security&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#basic-web-security&quot;&gt;&lt;/a&gt; Basic Web Security&lt;/h2&gt;
+&lt;h3 id=&quot;intro&quot;&gt;&lt;a</summary>
         
       
     
@@ -155,7 +197,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;LLM-transformer&quot;&gt;&lt;a href=&quot;#LLM-transformer&quot; class=&quot;headerlink&quot; title=&quot;LLM &amp;amp; transformer&quot;&gt;&lt;/a&gt;LLM &amp;amp;</summary>
+    <summary type="html">&lt;h1 id=&quot;llm-transformer&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#llm-transformer&quot;&gt;&lt;/a&gt; LLM &amp;amp;</summary>
         
       
     
@@ -180,7 +222,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;LLM-探討說話的藝術&quot;&gt;&lt;a href=&quot;#LLM-探討說話的藝術&quot; class=&quot;headerlink&quot; title=&quot;LLM 探討說話的藝術&quot;&gt;&lt;/a&gt;LLM 探討說話的藝術&lt;/h2&gt;&lt;h3 id=&quot;感受GPTㄉ魔力吧&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;llm-探討說話的藝術&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#llm-探討說話的藝術&quot;&gt;&lt;/a&gt; LLM 探討說話的藝術&lt;/h2&gt;
+&lt;h3 id=&quot;感受gptㄉ魔力吧&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -205,7 +248,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;目錄&quot;&gt;&lt;a href=&quot;#目錄&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;目錄&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#目錄&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -230,8 +273,8 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/fK2cMA6.png&quot; alt=&quot;enter image description here&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;課程筆記&quot;&gt;&lt;a href=&quot;#課程筆記&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/fK2cMA6.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;課程筆記&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -258,9 +301,11 @@
         
     <summary type="html">&lt;ol&gt;
 &lt;li&gt;數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。&lt;/li&gt;
-&lt;li&gt;數據保護示例：&lt;ul&gt;
-&lt;li&gt;PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。&lt;ul&gt;
-&lt;li&gt;使用TLS保護通訊，防止流量被嗅探。&lt;/l</summary>
+&lt;li&gt;數據保護示例：
+&lt;ul&gt;
+&lt;li&gt;PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。
+&lt;ul&gt;
+&lt;li&gt;使用TLS保護通訊，防止流量被嗅探。&lt;</summary>
         
       
     
@@ -285,7 +330,7 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;資料轉義是什麼？&quot;&gt;&lt;a href=&quot;#資料轉義是什麼？&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h4 id=&quot;資料轉義是什麼&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#資料轉義是什麼&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -310,7 +355,7 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;什麼是「故障時的安全性」的概念？&quot;&gt;&lt;a href=&quot;#什麼是「故障時的安全性」的概念？&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h4 id=&quot;什麼是故障時的安全性的概念&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#什麼是故障時的安全性的概念&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -335,7 +380,7 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;1-CSP（內容安全策略）&quot;&gt;&lt;a href=&quot;#1-CSP（內容安全策略）&quot; class=&quot;headerlink&quot; title=&quot;1. CSP（內容安全策略）&quot;&gt;&lt;/a&gt;1.</summary>
+    <summary type="html">&lt;h4 id=&quot;1-csp內容安全策略&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-csp內容安全策略&quot;&gt;&lt;/a&gt; 1.</summary>
         
       
     
@@ -389,9 +434,10 @@
         
         
     <summary type="html">&lt;ol&gt;
-&lt;li&gt;路徑穿越漏洞定義：&lt;ul&gt;
+&lt;li&gt;路徑穿越漏洞定義：
+&lt;ul&gt;
 &lt;li&gt;攻擊者利用路徑穿越漏洞來訪問網絡服務器或應用程序文件系統中的文件或目錄，這些文件或目錄位於網絡根目錄之外。&lt;/li&gt;
-&lt;li&gt;攻擊者通過操縱網絡應用程序的URL路徑輸入來實現，使用如..&amp;#x2F;序列、雙重URL編碼或直接文</summary>
+&lt;li&gt;攻擊者通過操縱網絡應用程序的URL路徑輸入來實現，使用如…/序列、雙重URL編碼或直接文件路徑。&lt;</summary>
         
       
     
@@ -417,13 +463,15 @@
         
         
     <summary type="html">&lt;ol&gt;
-&lt;li&gt;漏洞定義：&lt;ul&gt;
+&lt;li&gt;漏洞定義：
+&lt;ul&gt;
 &lt;li&gt;不安全的密碼更改功能是一種認證漏洞，影響需要通過自助「更改密碼」功能創建新密碼的用戶。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;風險解釋：&lt;ul&gt;
+&lt;li&gt;風險解釋：
+&lt;ul&gt;
 &lt;li&gt;這種漏洞可能導致未經授權的密碼更改，從而導致帳戶被入侵。&lt;/li&gt;
-&lt;/ul</summary>
+&lt;/</summary>
         
       
     
@@ -449,12 +497,14 @@
         
         
     <summary type="html">&lt;ol&gt;
-&lt;li&gt;不當身份驗證的定義：&lt;ul&gt;
+&lt;li&gt;不當身份驗證的定義：
+&lt;ul&gt;
 &lt;li&gt;應用程序未能正確驗證用戶身份，可能導致資源或功能暴露給未授權的使用者，從而洩露敏感信息。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;多使用者應用程序的風險：&lt;ul&gt;
-&lt;li&gt;所有使用不同權限級別的多用戶應用程序都可能受到此漏</summary>
+&lt;li&gt;多使用者應用程序的風險：
+&lt;ul&gt;
+&lt;li&gt;所有使用不同權限級別的多用戶應用程序都可能受到</summary>
         
       
     
@@ -480,71 +530,14 @@
         
         
     <summary type="html">&lt;ol&gt;
-&lt;li&gt;明文存儲定義：&lt;ul&gt;
+&lt;li&gt;明文存儲定義：
+&lt;ul&gt;
 &lt;li&gt;明文存儲是指將個人信息以純文本格式存儲的漏洞。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;敏感數據範例：&lt;ul&gt;
-&lt;li&gt;文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼等。</summary>
-        
-      
-    
-    
-    
-    <category term="安全達人養成計劃" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
-    
-    
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不安全的密碼術 - 對憑證的保護不足</title>
-    <link href="http://example.com/2024/08/04/development%20plan%20study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/"/>
-    <id>http://example.com/2024/08/04/development%20plan%20study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</id>
-    <published>2024-08-04T08:18:25.000Z</published>
-    <updated>2025-04-24T15:44:20.653Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;漏洞定義：&lt;ul&gt;
-&lt;li&gt;「保護不足的憑證」漏洞指的是憑證未得到適當保護，這可能包括以純文本形式存儲或使用弱加密的憑證。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;漏洞風險：&lt;ul&gt;
-&lt;li&gt;如果攻擊者能夠訪問存儲憑證的地方，他們就能恢復這些憑證。&lt;/li&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="安全達人養成計劃" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
-    
-    
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大量賦值漏洞</title>
-    <link href="http://example.com/2024/08/04/development%20plan%20study/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/"/>
-    <id>http://example.com/2024/08/04/development%20plan%20study/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/</id>
-    <published>2024-08-04T08:17:07.000Z</published>
-    <updated>2025-04-24T15:44:42.814Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;什麼是大量賦值漏洞？&lt;br&gt;大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。&lt;/li&gt;
-&lt;li&gt;漏洞如何發生？&lt;br&gt;當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變</summary>
+&lt;li&gt;敏感數據範例：
+&lt;ul&gt;
+&lt;li&gt;文件中提供了一個用戶信息的例子，包括名字、出生日期、聯繫方式、電子郵件地址、地址、銀行賬號和社會保障號碼</summary>
         
       
     
