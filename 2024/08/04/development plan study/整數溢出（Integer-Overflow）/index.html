@@ -9,24 +9,12 @@
   
   <meta charset="utf-8">
   
-  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
-  <script data-pjax>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'true');
-  </script>
-
 
   
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":"複製成功(*^▽^*)","fail":"複製失敗 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版權：本部落格所有文章除特別聲明外，均採用 BY-NC-SA 許可協議。轉載請註明出處！"}};window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   
   <title>
     整數溢出（Integer Overflow） |
@@ -49,15 +37,15 @@
 
   
   
-    <meta name="description" content="整數溢出是什麼？  整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。   引起整數溢出的原因：  當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。   示例：  用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。   整數溢出可">
+    <meta name="description" content="整數溢出是什麼？  整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。   引起整數溢出的原因：  當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。   範例：  用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。   整數溢出可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="整數溢出（Integer Overflow）">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%EF%BC%88Integer-Overflow%EF%BC%89/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="整數溢出是什麼？  整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。   引起整數溢出的原因：  當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。   示例：  用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。   整數溢出可">
+<meta property="og:description" content="整數溢出是什麼？  整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。   引起整數溢出的原因：  當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。   範例：  用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。   整數溢出可">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T08:12:24.000Z">
-<meta property="article:modified_time" content="2025-04-24T15:45:09.762Z">
+<meta property="article:modified_time" content="2025-04-30T01:05:19.927Z">
 <meta property="article:author" content="Brianlien">
 <meta property="article:tag" content="網路漏洞">
 <meta name="twitter:card" content="summary">
@@ -71,12 +59,12 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
   
   
     
       
-<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
 
     
   
@@ -88,12 +76,12 @@
   
   
     
-<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
 
   
   
     
-<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
 
   
   
@@ -115,6 +103,10 @@
           </svg>
         
       </div>
+      
+      
+        
+      
       <div class="loading-word">少女祈禱中...</div>
     </div>
   </div>
@@ -156,21 +148,27 @@
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/">首頁</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/archives">歸檔</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/about">關於</a>
         </span>
@@ -237,7 +235,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E6%98%AF%E4%BB%80%E9%BA%BC"><span class="toc-number">1.</span> <span class="toc-text"> 整數溢出是什麼？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%B5%B7%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.</span> <span class="toc-text"> 引起整數溢出的原因：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AF%84%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text"> 範例：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E5%8F%AF%E8%83%BD%E5%B0%8E%E8%87%B4%E7%9A%84%E5%95%8F%E9%A1%8C"><span class="toc-number">4.</span> <span class="toc-text"> 整數溢出可能導致的問題：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E9%98%B2%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E7%9A%84%E6%8E%AA%E6%96%BD"><span class="toc-number">5.</span> <span class="toc-text"> 預防整數溢出的措施：</span></a></li></ol>
       
   </div>
 </div>
@@ -250,7 +248,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">33</div>
+    <div class="sidebar-state-number">32</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -282,7 +280,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">首頁</div>
       </div>
@@ -290,7 +290,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">歸檔</div>
       </div>
@@ -298,7 +300,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">關於</div>
       </div>
@@ -331,7 +335,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2024-08-04T08:12:24.000Z" itemprop="datePublished">2024-08-04</time>
-    <time style="display: none;" id="post-update-time">2025-04-24</time>
+    <time style="display: none;" id="post-update-time">2025-04-30</time>
   </span>
 </div>
 
@@ -348,36 +352,29 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <ol>
-<li>整數溢出是什麼？
+        <h2 id="整數溢出是什麼"><a class="markdownIt-Anchor" href="#整數溢出是什麼"></a> 整數溢出是什麼？</h2>
 <ul>
 <li>整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。</li>
 </ul>
-</li>
-<li>引起整數溢出的原因：
+<h2 id="引起整數溢出的原因"><a class="markdownIt-Anchor" href="#引起整數溢出的原因"></a> 引起整數溢出的原因：</h2>
 <ul>
 <li>當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。</li>
 </ul>
-</li>
-<li>示例：
+<h2 id="範例"><a class="markdownIt-Anchor" href="#範例"></a> 範例：</h2>
 <ul>
 <li>用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。</li>
 </ul>
-</li>
-<li>整數溢出可能導致的問題：
+<h2 id="整數溢出可能導致的問題"><a class="markdownIt-Anchor" href="#整數溢出可能導致的問題"></a> 整數溢出可能導致的問題：</h2>
 <ul>
 <li>可能導致非預期的行為和程序崩潰，進而導致服務拒絕（Denial-of-Service）。</li>
 <li>有時也可能導致任意代碼的執行。</li>
 </ul>
-</li>
-<li>預防整數溢出的措施：
+<h2 id="預防整數溢出的措施"><a class="markdownIt-Anchor" href="#預防整數溢出的措施"></a> 預防整數溢出的措施：</h2>
 <ul>
 <li>開發人員應該選擇能夠容納計算全範圍值的數據類型。</li>
 <li>在對整數進行計算之前，始終執行溢出檢查。</li>
 <li>最後，檢查結果以確定是否存在不一致的行為。</li>
 </ul>
-</li>
-</ol>
 
       
     </div>
@@ -471,7 +468,9 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">說些什么吧！</h2>
+        
+      
+      <h2 class="comment-title">說些什麼吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -519,10 +518,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        20.1k
+        19.6k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:07
+        01:05
       </div>
     
     
@@ -555,7 +554,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E6%98%AF%E4%BB%80%E9%BA%BC"><span class="toc-number">1.</span> <span class="toc-text"> 整數溢出是什麼？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%B5%B7%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.</span> <span class="toc-text"> 引起整數溢出的原因：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AF%84%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text"> 範例：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E5%8F%AF%E8%83%BD%E5%B0%8E%E8%87%B4%E7%9A%84%E5%95%8F%E9%A1%8C"><span class="toc-number">4.</span> <span class="toc-text"> 整數溢出可能導致的問題：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E9%98%B2%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%E7%9A%84%E6%8E%AA%E6%96%BD"><span class="toc-number">5.</span> <span class="toc-text"> 預防整數溢出的措施：</span></a></li></ol>
       
   </div>
 </div>
@@ -568,7 +567,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">33</div>
+    <div class="sidebar-state-number">32</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -600,7 +599,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">首頁</div>
       </div>
@@ -608,7 +609,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">歸檔</div>
       </div>
@@ -616,7 +619,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">關於</div>
       </div>
@@ -734,6 +739,12 @@
             }
             if (script.src) {
               scriptElement.src = script.src;
+              if (script.integrity) {
+                scriptElement.integrity = script.integrity;
+              }
+              if (script.crossOrigin) {
+                scriptElement.crossOrigin = script.crossOrigin;
+              }
               scriptElement.onload = resolve;
               scriptElement.onerror = reject;
             }
@@ -883,9 +894,9 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%EF%BC%88Integer-Overflow%EF%BC%89/",
           excerpt: "",
           description: "",
-          stripContent: " 整數溢出是什麼？  整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。   引起整數溢出的原因：  當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。   示例：  用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。   整數溢出可能導致的問題：  可能導致非預期的行為和程序崩潰，進而導致服務拒絕（Denial-of-Servic",
+          stripContent: " 整數溢出是什麼？  整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。   引起整數溢出的原因：  當整數值增加到超過該整數數據類型所能存儲的最大值時，就會發生整數溢出。   範例：  用戶有賬戶債務，持續購物並增加債務。當債務超過整數數據類型的最大負值（-2147483648）時，系統將債務誤顯示為正值（2147483647），從而破壞了系統的完整性。   整數溢出可能導致的問題：  可能導致非預期的行為和程序崩潰，進而導致服務拒絕（Denial-of-Servic",
           date: "Sun Aug 04 2024 16:12:24 GMT+0800",
-          updated: "Thu Apr 24 2025 23:45:09 GMT+0800",
+          updated: "Wed Apr 30 2025 09:05:19 GMT+0800",
           cover: "/images/banner.jpg",
         };
       </script>
@@ -977,7 +988,7 @@
               placeholder: "Just go go",
               pageSize: '10',
               avatar: 'mp',
-              lang: 'zh-cn',
+              lang: document.documentElement.lang || 'en',
               recordIP: recordIP,
               highlight: highlight,
               visitor: visitor,
@@ -1007,7 +1018,7 @@
         window.walineInstance = walineInit({
           el: '.waline-comment',
           serverURL: 'https://waline-test-topaz-tau.vercel.app/',
-          lang: 'zh-CN',
+          lang: document.documentElement.lang || 'en',
           locale: {},
           emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
           meta: ["nick","mail","link"],
@@ -1028,17 +1039,31 @@
         container.style.display = 'block';
 
         const script = loadScript(
-          'https://npm.webcache.cn/twikoo@1.6.16/dist/twikoo.all.min.js',
-          'sha384-lDHsr5aZmkMS0eKnsUu6e9RWP+dRmn7sgjRAKGOAoXfMyzbUK6Qi86zZK7R+KvRV'
+          'https://npm.webcache.cn/twikoo@1.6.44/dist/twikoo.all.min.js',
+          'sha384-kwWLC0HjeZZnVPqCJ1AncI8tsk+kQqF9TbAmCclcc9Z0hGkfgHRzeQZxmdmZhE0K'
         );
 
         script.onload = () => {
           if (window.twikoo) {
             twikoo.init({
               envId: '',
-              el: '.tcomment',
+              el: '.twikoo-comment',
               region: '',
-            })
+              lang: document.documentElement.lang || 'en',
+            });
+
+            twikoo.getCommentsCount({
+              envId: '',
+              region: '',
+              urls: [
+                '/friend/index.html'
+              ],
+              includeReply: false
+            }).then((res) => {
+              _$('.twikoo-comment-count').innerText = res[0].count;
+            }).catch((err) => {
+              console.error(err);
+            });
           }
         } 
         document.head.appendChild(script);
@@ -1078,8 +1103,9 @@
             repo: '',
             owner: '',
             admin: null,
-            id: gitalkId, // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
+            id: gitalkId,
+            distractionFreeMode: false,
+            language: document.documentElement.lang || 'en',
           })
           gitalk.render('gitalk-comment');
         }
@@ -1111,7 +1137,7 @@
         giscusScript.setAttribute('data-emit-metadata', '0');
         giscusScript.setAttribute('data-input-position', 'bottom');
         giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
-        giscusScript.setAttribute('data-lang', 'zh-CN');
+        giscusScript.setAttribute('data-lang', document.documentElement.lang || 'en');
         giscusScript.setAttribute('crossorigin', 'anonymous');
         giscusScript.async = true;
         container.appendChild(giscusScript);
@@ -1252,7 +1278,7 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.8.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
   </script>
   
 

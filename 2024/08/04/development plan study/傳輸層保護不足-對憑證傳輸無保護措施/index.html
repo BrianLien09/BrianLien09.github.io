@@ -9,24 +9,12 @@
   
   <meta charset="utf-8">
   
-  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
-  <script data-pjax>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'true');
-  </script>
-
 
   
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":"複製成功(*^▽^*)","fail":"複製失敗 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版權：本部落格所有文章除特別聲明外，均採用 BY-NC-SA 許可協議。轉載請註明出處！"}};window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   
   <title>
     傳輸層保護不足 - 對憑證傳輸無保護措施 |
@@ -49,15 +37,15 @@
 
   
   
-    <meta name="description" content="未受保護的憑證傳輸定義：  當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。   問題常見原因：  用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。   風險：  以明文形式發送的憑證可能被竊聽攻擊者捕獲。   實際案例：  一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。   預防措施：  使用強大的TL">
+    <meta name="description" content="未受保護的憑證傳輸定義：  當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。   問題常見原因：  用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。   風險：  以明文形式發送的憑證可能被竊聽攻擊者捕獲。   舉例：  一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。   預防措施：  使用強大的TLS協">
 <meta property="og:type" content="article">
 <meta property="og:title" content="傳輸層保護不足 - 對憑證傳輸無保護措施">
 <meta property="og:url" content="http://example.com/2024/08/04/development%20plan%20study/%E5%82%B3%E8%BC%B8%E5%B1%A4%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3-%E5%B0%8D%E6%86%91%E8%AD%89%E5%82%B3%E8%BC%B8%E7%84%A1%E4%BF%9D%E8%AD%B7%E6%8E%AA%E6%96%BD/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="未受保護的憑證傳輸定義：  當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。   問題常見原因：  用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。   風險：  以明文形式發送的憑證可能被竊聽攻擊者捕獲。   實際案例：  一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。   預防措施：  使用強大的TL">
+<meta property="og:description" content="未受保護的憑證傳輸定義：  當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。   問題常見原因：  用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。   風險：  以明文形式發送的憑證可能被竊聽攻擊者捕獲。   舉例：  一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。   預防措施：  使用強大的TLS協">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-04T08:05:46.000Z">
-<meta property="article:modified_time" content="2025-04-24T15:44:35.963Z">
+<meta property="article:modified_time" content="2025-04-30T00:59:51.053Z">
 <meta property="article:author" content="Brianlien">
 <meta property="article:tag" content="網路漏洞">
 <meta name="twitter:card" content="summary">
@@ -71,12 +59,12 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
   
   
     
       
-<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
 
     
   
@@ -88,12 +76,12 @@
   
   
     
-<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
 
   
   
     
-<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
 
   
   
@@ -115,6 +103,10 @@
           </svg>
         
       </div>
+      
+      
+        
+      
       <div class="loading-word">少女祈禱中...</div>
     </div>
   </div>
@@ -156,21 +148,27 @@
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/">首頁</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/archives">歸檔</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/about">關於</a>
         </span>
@@ -237,7 +235,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AA%E5%8F%97%E4%BF%9D%E8%AD%B7%E7%9A%84%E6%86%91%E8%AD%89%E5%82%B3%E8%BC%B8%E5%AE%9A%E7%BE%A9"><span class="toc-number">1.</span> <span class="toc-text"> 未受保護的憑證傳輸定義：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%95%8F%E9%A1%8C%E5%B8%B8%E8%A6%8B%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.</span> <span class="toc-text"> 問題常見原因：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%A8%E9%9A%AA"><span class="toc-number">3.</span> <span class="toc-text"> 風險：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%88%89%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text"> 舉例：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E9%98%B2%E6%8E%AA%E6%96%BD"><span class="toc-number">5.</span> <span class="toc-text"> 預防措施：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">6.</span> <span class="toc-text"> 例子</span></a></li></ol>
       
   </div>
 </div>
@@ -250,7 +248,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">33</div>
+    <div class="sidebar-state-number">32</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -282,7 +280,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">首頁</div>
       </div>
@@ -290,7 +290,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">歸檔</div>
       </div>
@@ -298,7 +300,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">關於</div>
       </div>
@@ -331,7 +335,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2024-08-04T08:05:46.000Z" itemprop="datePublished">2024-08-04</time>
-    <time style="display: none;" id="post-update-time">2025-04-24</time>
+    <time style="display: none;" id="post-update-time">2025-04-30</time>
   </span>
 </div>
 
@@ -348,37 +352,30 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <ol>
-<li>未受保護的憑證傳輸定義：
+        <h2 id="未受保護的憑證傳輸定義"><a class="markdownIt-Anchor" href="#未受保護的憑證傳輸定義"></a> 未受保護的憑證傳輸定義：</h2>
 <ul>
 <li>當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。</li>
 </ul>
-</li>
-<li>問題常見原因：
+<h2 id="問題常見原因"><a class="markdownIt-Anchor" href="#問題常見原因"></a> 問題常見原因：</h2>
 <ul>
 <li>用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。</li>
 </ul>
-</li>
-<li>風險：
+<h2 id="風險"><a class="markdownIt-Anchor" href="#風險"></a> 風險：</h2>
 <ul>
 <li>以明文形式發送的憑證可能被竊聽攻擊者捕獲。</li>
 </ul>
-</li>
-<li>實際案例：
+<h2 id="舉例"><a class="markdownIt-Anchor" href="#舉例"></a> 舉例：</h2>
 <ul>
 <li>一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。</li>
 </ul>
-</li>
-<li>預防措施：
+<h2 id="預防措施"><a class="markdownIt-Anchor" href="#預防措施"></a> 預防措施：</h2>
 <ul>
 <li>使用強大的TLS協議保護所有登錄頁面。</li>
 <li>確保有強大的加密算法到位。</li>
 <li>使用有效的證書保護會話令牌，並監視證書有效性以確保不中斷的保護。</li>
 <li>不允許在未建立安全通道的情況下提交敏感數據。</li>
 </ul>
-</li>
-</ol>
-<h4 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h4>
+<h2 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SECURE_REDIRECT_EXEMPT = [<span class="string">&#x27;api/login/&#x27;</span>, <span class="string">&#x27;user/login/&#x27;</span>]</span><br></pre></td></tr></table></figure>
 <p>將 [“api/login/,” “user/login/”] 清單設定為 SECURE_REDIRECT_EXEMPT 生產設定變數允許以純文字形式傳輸登入驗證憑證，從而使應用程式容易受到中間人或網路釣魚攻擊。</p>
 
@@ -474,7 +471,9 @@
     <div class="comment-header">
       
       
-      <h2 class="comment-title">說些什么吧！</h2>
+        
+      
+      <h2 class="comment-title">說些什麼吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -522,10 +521,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        20.1k
+        19.6k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:07
+        01:05
       </div>
     
     
@@ -558,7 +557,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AA%E5%8F%97%E4%BF%9D%E8%AD%B7%E7%9A%84%E6%86%91%E8%AD%89%E5%82%B3%E8%BC%B8%E5%AE%9A%E7%BE%A9"><span class="toc-number">1.</span> <span class="toc-text"> 未受保護的憑證傳輸定義：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%95%8F%E9%A1%8C%E5%B8%B8%E8%A6%8B%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.</span> <span class="toc-text"> 問題常見原因：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%A8%E9%9A%AA"><span class="toc-number">3.</span> <span class="toc-text"> 風險：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%88%89%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text"> 舉例：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A0%90%E9%98%B2%E6%8E%AA%E6%96%BD"><span class="toc-number">5.</span> <span class="toc-text"> 預防措施：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">6.</span> <span class="toc-text"> 例子</span></a></li></ol>
       
   </div>
 </div>
@@ -571,7 +570,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">33</div>
+    <div class="sidebar-state-number">32</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -603,7 +602,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">首頁</div>
       </div>
@@ -611,7 +612,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">歸檔</div>
       </div>
@@ -619,7 +622,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">關於</div>
       </div>
@@ -737,6 +742,12 @@
             }
             if (script.src) {
               scriptElement.src = script.src;
+              if (script.integrity) {
+                scriptElement.integrity = script.integrity;
+              }
+              if (script.crossOrigin) {
+                scriptElement.crossOrigin = script.crossOrigin;
+              }
               scriptElement.onload = resolve;
               scriptElement.onerror = reject;
             }
@@ -886,9 +897,9 @@
           url: "http://example.com/2024/08/04/development%20plan%20study/%E5%82%B3%E8%BC%B8%E5%B1%A4%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3-%E5%B0%8D%E6%86%91%E8%AD%89%E5%82%B3%E8%BC%B8%E7%84%A1%E4%BF%9D%E8%AD%B7%E6%8E%AA%E6%96%BD/",
           excerpt: "",
           description: "",
-          stripContent: " 未受保護的憑證傳輸定義：  當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。   問題常見原因：  用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。   風險：  以明文形式發送的憑證可能被竊聽攻擊者捕獲。   實際案例：  一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。   預防措施：  使用強大的TLS協議保護所有登錄頁面。 確保有強大的加密算法到位。 使用有效的證書保護會話令牌，並監視證書有效性以",
+          stripContent: " 未受保護的憑證傳輸定義：  當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。   問題常見原因：  用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。   風險：  以明文形式發送的憑證可能被竊聽攻擊者捕獲。   舉例：  一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。   預防措施：  使用強大的TLS協議保護所有登錄頁面。 確保有強大的加密算法到位。 使用有效的證書保護會話令牌，並監視證書有效性以確保",
           date: "Sun Aug 04 2024 16:05:46 GMT+0800",
-          updated: "Thu Apr 24 2025 23:44:35 GMT+0800",
+          updated: "Wed Apr 30 2025 08:59:51 GMT+0800",
           cover: "/images/banner.jpg",
         };
       </script>
@@ -980,7 +991,7 @@
               placeholder: "Just go go",
               pageSize: '10',
               avatar: 'mp',
-              lang: 'zh-cn',
+              lang: document.documentElement.lang || 'en',
               recordIP: recordIP,
               highlight: highlight,
               visitor: visitor,
@@ -1010,7 +1021,7 @@
         window.walineInstance = walineInit({
           el: '.waline-comment',
           serverURL: 'https://waline-test-topaz-tau.vercel.app/',
-          lang: 'zh-CN',
+          lang: document.documentElement.lang || 'en',
           locale: {},
           emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
           meta: ["nick","mail","link"],
@@ -1031,17 +1042,31 @@
         container.style.display = 'block';
 
         const script = loadScript(
-          'https://npm.webcache.cn/twikoo@1.6.16/dist/twikoo.all.min.js',
-          'sha384-lDHsr5aZmkMS0eKnsUu6e9RWP+dRmn7sgjRAKGOAoXfMyzbUK6Qi86zZK7R+KvRV'
+          'https://npm.webcache.cn/twikoo@1.6.44/dist/twikoo.all.min.js',
+          'sha384-kwWLC0HjeZZnVPqCJ1AncI8tsk+kQqF9TbAmCclcc9Z0hGkfgHRzeQZxmdmZhE0K'
         );
 
         script.onload = () => {
           if (window.twikoo) {
             twikoo.init({
               envId: '',
-              el: '.tcomment',
+              el: '.twikoo-comment',
               region: '',
-            })
+              lang: document.documentElement.lang || 'en',
+            });
+
+            twikoo.getCommentsCount({
+              envId: '',
+              region: '',
+              urls: [
+                '/friend/index.html'
+              ],
+              includeReply: false
+            }).then((res) => {
+              _$('.twikoo-comment-count').innerText = res[0].count;
+            }).catch((err) => {
+              console.error(err);
+            });
           }
         } 
         document.head.appendChild(script);
@@ -1081,8 +1106,9 @@
             repo: '',
             owner: '',
             admin: null,
-            id: gitalkId, // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
+            id: gitalkId,
+            distractionFreeMode: false,
+            language: document.documentElement.lang || 'en',
           })
           gitalk.render('gitalk-comment');
         }
@@ -1114,7 +1140,7 @@
         giscusScript.setAttribute('data-emit-metadata', '0');
         giscusScript.setAttribute('data-input-position', 'bottom');
         giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
-        giscusScript.setAttribute('data-lang', 'zh-CN');
+        giscusScript.setAttribute('data-lang', document.documentElement.lang || 'en');
         giscusScript.setAttribute('crossorigin', 'anonymous');
         giscusScript.async = true;
         container.appendChild(giscusScript);
@@ -1255,7 +1281,7 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.8.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
   </script>
   
 

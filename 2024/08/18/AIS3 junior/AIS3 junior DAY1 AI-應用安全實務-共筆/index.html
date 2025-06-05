@@ -9,24 +9,12 @@
   
   <meta charset="utf-8">
   
-  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
-  <script data-pjax>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'true');
-  </script>
-
 
   
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":"複製成功(*^▽^*)","fail":"複製失敗 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版權：本部落格所有文章除特別聲明外，均採用 BY-NC-SA 許可協議。轉載請註明出處！"}};window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   
   <title>
     AIS3 junior DAY3-AI 應用安全實務 |
@@ -90,12 +78,12 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
   
   
     
       
-<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
 
     
   
@@ -107,12 +95,12 @@
   
   
     
-<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
 
   
   
     
-<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
 
   
   
@@ -134,6 +122,10 @@
           </svg>
         
       </div>
+      
+      
+        
+      
       <div class="loading-word">少女祈禱中...</div>
     </div>
   </div>
@@ -175,21 +167,27 @@
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/">首頁</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/archives">歸檔</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
-            &#xe62b;
+             
+              &#xe62b;
+             
           </div>
           <a class="main-nav-link" href="/about">關於</a>
         </span>
@@ -256,7 +254,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#llm-transformer"><span class="toc-text"> LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-text"> transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#self-attention"><span class="toc-text"> Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#decoder-%E8%99%95%E7%90%86"><span class="toc-text"> Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-text"> Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chatgpt"><span class="toc-text"> ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-text"> Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method-of-attack-llm-web-and-secure"><span class="toc-text"> Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-text"> 攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-injection"><span class="toc-text"> Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#secure-methods"><span class="toc-text"> Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#excessive-agency"><span class="toc-text"> Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unauthorized-code-execution"><span class="toc-text"> Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-text"> 推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text"> reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#day-3-ai%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-text"> Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AFcnn"><span class="toc-text"> 卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text"> 影像辨識的原理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#llm-transformer"><span class="toc-number">1.</span> <span class="toc-text"> LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-number">1.1.</span> <span class="toc-text"> transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#self-attention"><span class="toc-number">1.2.</span> <span class="toc-text"> Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#decoder-%E8%99%95%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text"> Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-number">1.4.</span> <span class="toc-text"> Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chatgpt"><span class="toc-number">1.5.</span> <span class="toc-text"> ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.6.</span> <span class="toc-text"> Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method-of-attack-llm-web-and-secure"><span class="toc-number">2.</span> <span class="toc-text"> Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text"> 攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-injection"><span class="toc-number">3.1.</span> <span class="toc-text"> Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#secure-methods"><span class="toc-number">3.1.1.</span> <span class="toc-text"> Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#excessive-agency"><span class="toc-number">3.2.</span> <span class="toc-text"> Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unauthorized-code-execution"><span class="toc-number">3.3.</span> <span class="toc-text"> Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-number">4.</span> <span class="toc-text"> 推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text"> reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#day-3-ai%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-number">6.</span> <span class="toc-text"> Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AFcnn"><span class="toc-number">7.</span> <span class="toc-text"> 卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text"> 影像辨識的原理</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -269,7 +267,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">33</div>
+    <div class="sidebar-state-number">32</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -301,7 +299,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">首頁</div>
       </div>
@@ -309,7 +309,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">歸檔</div>
       </div>
@@ -317,7 +319,9 @@
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">關於</div>
       </div>
@@ -623,7 +627,9 @@ examples:<br />
     <div class="comment-header">
       
       
-      <h2 class="comment-title">說些什么吧！</h2>
+        
+      
+      <h2 class="comment-title">說些什麼吧！</h2>
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
@@ -671,10 +677,10 @@ examples:<br />
     
       <div>
         <span class="icon-brush"></span>
-        20.1k
+        19.6k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:07
+        01:05
       </div>
     
     
@@ -707,7 +713,7 @@ examples:<br />
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#llm-transformer"><span class="toc-text"> LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-text"> transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#self-attention"><span class="toc-text"> Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#decoder-%E8%99%95%E7%90%86"><span class="toc-text"> Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-text"> Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chatgpt"><span class="toc-text"> ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-text"> Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method-of-attack-llm-web-and-secure"><span class="toc-text"> Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-text"> 攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-injection"><span class="toc-text"> Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#secure-methods"><span class="toc-text"> Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#excessive-agency"><span class="toc-text"> Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unauthorized-code-execution"><span class="toc-text"> Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-text"> 推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-text"> reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#day-3-ai%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-text"> Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AFcnn"><span class="toc-text"> 卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text"> 影像辨識的原理</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#llm-transformer"><span class="toc-number">1.</span> <span class="toc-text"> LLM &amp; transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#transformer"><span class="toc-number">1.1.</span> <span class="toc-text"> transformer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#self-attention"><span class="toc-number">1.2.</span> <span class="toc-text"> Self Attention</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#decoder-%E8%99%95%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text"> Decoder 處理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hallucinations-%E5%B9%BB%E8%A6%BA"><span class="toc-number">1.4.</span> <span class="toc-text"> Hallucinations 幻覺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chatgpt"><span class="toc-number">1.5.</span> <span class="toc-text"> ChatGPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-enginnering-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.6.</span> <span class="toc-text"> Prompt Enginnering 提示工程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#method-of-attack-llm-web-and-secure"><span class="toc-number">2.</span> <span class="toc-text"> Method of attack LLM web and secure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E6%89%8B%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text"> 攻擊手法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prompt-injection"><span class="toc-number">3.1.</span> <span class="toc-text"> Prompt Injection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#secure-methods"><span class="toc-number">3.1.1.</span> <span class="toc-text"> Secure methods</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#excessive-agency"><span class="toc-number">3.2.</span> <span class="toc-text"> Excessive Agency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unauthorized-code-execution"><span class="toc-number">3.3.</span> <span class="toc-text"> Unauthorized Code Execution</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%96%A6%E7%9A%84link"><span class="toc-number">4.</span> <span class="toc-text"> 推薦的link</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text"> reference:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#day-3-ai%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99"><span class="toc-number">6.</span> <span class="toc-text"> Day 3 AI應用安全實務</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AFcnn"><span class="toc-number">7.</span> <span class="toc-text"> 卷積神經網路(CNN)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text"> 影像辨識的原理</span></a></li></ol></li></ol>
       
   </div>
 </div>
@@ -720,7 +726,7 @@ examples:<br />
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">33</div>
+    <div class="sidebar-state-number">32</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -752,7 +758,9 @@ examples:<br />
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">首頁</div>
       </div>
@@ -760,7 +768,9 @@ examples:<br />
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">歸檔</div>
       </div>
@@ -768,7 +778,9 @@ examples:<br />
       <div class="sidebar-menu-link-wrap">
         <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
         <div class="sidebar-menu-icon icon rotate">
-          &#xe62b;
+          
+            &#xe62b;
+          
         </div>
         <div class="sidebar-menu-link">關於</div>
       </div>
@@ -886,6 +898,12 @@ examples:<br />
             }
             if (script.src) {
               scriptElement.src = script.src;
+              if (script.integrity) {
+                scriptElement.integrity = script.integrity;
+              }
+              if (script.crossOrigin) {
+                scriptElement.crossOrigin = script.crossOrigin;
+              }
               scriptElement.onload = resolve;
               scriptElement.onerror = reject;
             }
@@ -1129,7 +1147,7 @@ examples:<br />
               placeholder: "Just go go",
               pageSize: '10',
               avatar: 'mp',
-              lang: 'zh-cn',
+              lang: document.documentElement.lang || 'en',
               recordIP: recordIP,
               highlight: highlight,
               visitor: visitor,
@@ -1159,7 +1177,7 @@ examples:<br />
         window.walineInstance = walineInit({
           el: '.waline-comment',
           serverURL: 'https://waline-test-topaz-tau.vercel.app/',
-          lang: 'zh-CN',
+          lang: document.documentElement.lang || 'en',
           locale: {},
           emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
           meta: ["nick","mail","link"],
@@ -1180,17 +1198,31 @@ examples:<br />
         container.style.display = 'block';
 
         const script = loadScript(
-          'https://npm.webcache.cn/twikoo@1.6.16/dist/twikoo.all.min.js',
-          'sha384-lDHsr5aZmkMS0eKnsUu6e9RWP+dRmn7sgjRAKGOAoXfMyzbUK6Qi86zZK7R+KvRV'
+          'https://npm.webcache.cn/twikoo@1.6.44/dist/twikoo.all.min.js',
+          'sha384-kwWLC0HjeZZnVPqCJ1AncI8tsk+kQqF9TbAmCclcc9Z0hGkfgHRzeQZxmdmZhE0K'
         );
 
         script.onload = () => {
           if (window.twikoo) {
             twikoo.init({
               envId: '',
-              el: '.tcomment',
+              el: '.twikoo-comment',
               region: '',
-            })
+              lang: document.documentElement.lang || 'en',
+            });
+
+            twikoo.getCommentsCount({
+              envId: '',
+              region: '',
+              urls: [
+                '/friend/index.html'
+              ],
+              includeReply: false
+            }).then((res) => {
+              _$('.twikoo-comment-count').innerText = res[0].count;
+            }).catch((err) => {
+              console.error(err);
+            });
           }
         } 
         document.head.appendChild(script);
@@ -1230,8 +1262,9 @@ examples:<br />
             repo: '',
             owner: '',
             admin: null,
-            id: gitalkId, // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
+            id: gitalkId,
+            distractionFreeMode: false,
+            language: document.documentElement.lang || 'en',
           })
           gitalk.render('gitalk-comment');
         }
@@ -1263,7 +1296,7 @@ examples:<br />
         giscusScript.setAttribute('data-emit-metadata', '0');
         giscusScript.setAttribute('data-input-position', 'bottom');
         giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
-        giscusScript.setAttribute('data-lang', 'zh-CN');
+        giscusScript.setAttribute('data-lang', document.documentElement.lang || 'en');
         giscusScript.setAttribute('crossorigin', 'anonymous');
         giscusScript.async = true;
         container.appendChild(giscusScript);
@@ -1404,7 +1437,7 @@ examples:<br />
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.8.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
   </script>
   
 
