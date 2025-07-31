@@ -14,7 +14,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   
   <title>
     AIS3 junior DAY2 網頁安全 writeup |
@@ -404,7 +404,7 @@
 <h2 id="01-broken-access-control"><a class="markdownIt-Anchor" href="#01-broken-access-control"></a> 01 - Broken Access Control</h2>
 <h3 id="bac01"><a class="markdownIt-Anchor" href="#bac01"></a> BAC01</h3>
 <p>隨便打一個名子login<br />
-查看url <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9001/user">http://ctfd-ais3.crazyfirelee.tw:9001/user</a><br />
+查看url <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9001/user">http://ctfd-ais3.crazyfirelee.tw:9001/user</a><br />
 將<code>user</code>改成<code>admin</code><br />
 <img src="https://hackmd.io/_uploads/B1X-5r3cA.png" alt="image" /></p>
 <blockquote>
@@ -412,7 +412,7 @@
 </blockquote>
 <h3 id="bac02"><a class="markdownIt-Anchor" href="#bac02"></a> BAC02</h3>
 <p>到<code>Product List</code>裡面觀察每個 <code>View Details</code>的 url 發現後面都有編號且唯獨少了4<br />
-將4打上去url試試看 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9002/product/4">http://ctfd-ais3.crazyfirelee.tw:9002/product/4</a><br />
+將4打上去url試試看 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9002/product/4">http://ctfd-ais3.crazyfirelee.tw:9002/product/4</a><br />
 <img src="https://hackmd.io/_uploads/HkwJiB39R.png" alt="image" /><br />
 點<code>buy</code>進去拿到flag<br />
 <img src="https://hackmd.io/_uploads/Hk-fsS29R.png" alt="image" /></p>
@@ -436,7 +436,7 @@
 <p>檔名用<code>.php</code>結尾<br />
 將webshell上傳<br />
 <img src="https://hackmd.io/_uploads/rk0KOShqA.png" alt="image" /></p>
-<p>將url改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php</a><br />
+<p>將url改成 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php</a><br />
 利用剛才上傳的webshell<br />
 將命令打在url後面<code>?cmd=ls ../</code><br />
 結果如下圖<em>找到了FLAG</em><br />
@@ -455,7 +455,7 @@
 將<code>Contect -Type </code>後面改成 <code>image/jpg</code><br />
 <code>forward</code>的結果如圖<br />
 <img src="https://hackmd.io/_uploads/B1IyESn50.png" alt="image" /></p>
-<p>將url改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php</a><br />
+<p>將url改成 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php</a><br />
 利用剛才上傳的webshell<br />
 將命令打在url後面<code>?cmd=ls ../</code><br />
 結果如下圖<em>找到了FLAG</em><br />
@@ -468,11 +468,11 @@
 <h2 id="03-local-file-inclusion"><a class="markdownIt-Anchor" href="#03-local-file-inclusion"></a> 03 - Local File Inclusion</h2>
 <h3 id="lfi01"><a class="markdownIt-Anchor" href="#lfi01"></a> LFI01</h3>
 <p>照片很可疑<br />
-將照片url複製 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg</a></p>
+將照片url複製 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg</a></p>
 <p>利用上課所教的<code>php://filter/read=convert.base64-encode/resource=index.php</code></p>
 <p>先把<code>static/bitcoinCat.jpg</code>給刪掉</p>
 <p>把<code>php://filter/read=convert.base64-encode/resource=index.php</code>加進去url中<br />
-改成 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
+改成 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
 <p>獲得一段base64加密過的東西<img src="https://hackmd.io/_uploads/Bk9U6rn5A.png" alt="image" /></p>
 <p>全選複製後去先上平台解密<br />
 <img src="https://hackmd.io/_uploads/Hkv9aBnqC.png" alt="image" /></p>
@@ -490,7 +490,7 @@
 <p>發現檔案在<code>tmp</code>底下 而tmp又在根目錄底下<br />
 所以我們要利用…/…/…/…/ 跳到根目錄<br />
 在將 <code>/tmp/a764c_108.160.138.201.php</code>貼到根目錄後面<br />
-像是這樣 <a target="_blank" rel="noopener" href="http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php</a></p>
+像是這樣 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php</a></p>
 <p>接著再用<code>&amp;cmd=ls</code> 獲得我們想要的檔案 <code>S3Cr3TFLAGGGGG</code></p>
 <p><img src="https://hackmd.io/_uploads/BkBv1Dh9C.png" alt="image" /></p>
 <p>最後用<code>cat S3Cr3TFLAGGGGG</code> 將flag印出</p>
@@ -557,7 +557,7 @@
 <p>AIS3_Junior{SQL’InjectionXDorD=D_–_-}</p>
 </blockquote>
 <h3 id="sql2"><a class="markdownIt-Anchor" href="#sql2"></a> SQL2</h3>
-<p>參考網站: <a target="_blank" rel="noopener" href="https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/">https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/</a><br />
+<p>參考網站: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/">https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/</a><br />
 先用<code>pp'UNION SELECT NULL#</code>去嘗試讓兩個表中有相同的columns<br />
 <img src="https://hackmd.io/_uploads/BJZSV-a9A.png" alt="image" /></p>
 <ul>
@@ -605,8 +605,8 @@
 <h3 id="sti01"><a class="markdownIt-Anchor" href="#sti01"></a> STI01</h3>
 <p>參考資料:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://blog.1997sty.com/archives/5570">https://blog.1997sty.com/archives/5570</a></li>
-<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.1997sty.com/archives/5570">https://blog.1997sty.com/archives/5570</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
 </ul>
 <p><img src="https://hackmd.io/_uploads/S1h1AZ6qA.png" alt="image" /><br />
 裡面有:<code>.__class__.__bases__[0].__subclasses__()[138].__init__.__globals__['popen']('dir').read()</code></p>
@@ -640,8 +640,8 @@
 <h3 id="sti02"><a class="markdownIt-Anchor" href="#sti02"></a> STI02</h3>
 <p>參考資料:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars">https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars</a></li>
-<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars">https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
 </ul>
 <p><img src="https://hackmd.io/_uploads/HJBl8z6q0.png" alt="image" /></p>
 <p>從全域物件中獲取任何函數，可存取<code>__globals__.__builtins__</code>，實現RCE</p>
@@ -668,7 +668,7 @@
 <p>AIS3_Junior{file://SSRF___XDDD}</p>
 </blockquote>
 <h3 id="srf02"><a class="markdownIt-Anchor" href="#srf02"></a> SRF02</h3>
-<p>參考資料 <a target="_blank" rel="noopener" href="https://github.com/w181496/Web-CTF-Cheatsheet">https://github.com/w181496/Web-CTF-Cheatsheet</a><br />
+<p>參考資料 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/w181496/Web-CTF-Cheatsheet">https://github.com/w181496/Web-CTF-Cheatsheet</a><br />
 <img src="https://hackmd.io/_uploads/By27jWaqA.png" alt="image" /></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/proc/self/environ #可查看當下進程的環境變量</span><br></pre></td></tr></table></figure>
 <ul>
@@ -688,7 +688,7 @@
 <img src="https://hackmd.io/_uploads/ByRI2-pcA.png" alt="image" /></li>
 </ul>
 <blockquote>
-<p>AIS3_Junior{<a target="_blank" rel="noopener" href="http://BROAccessLOCAL">http://BROAccessLOCAL</a>}</p>
+<p>AIS3_Junior{<a target="_blank" rel="noopener external nofollow noreferrer" href="http://BROAccessLOCAL">http://BROAccessLOCAL</a>}</p>
 </blockquote>
 
       
@@ -1371,7 +1371,7 @@
               envId: '',
               region: '',
               urls: [
-                '/friend/index.html'
+                '/about/index.html'
               ],
               includeReply: false
             }).then((res) => {

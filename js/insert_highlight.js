@@ -71,8 +71,10 @@
   }
 
   const tips = window.REIMU_CONFIG?.clipboard_tips || {};
+  // 獲取當前頁面語言
+  const lang = document.documentElement.lang || 'zh-TW';
 
-  // 代码复制
+  // 代碼複製
   const clipboard = new ClipboardJS(".code-copy", {
     text: (trigger) => {
       const selection = window.getSelection();
@@ -99,7 +101,8 @@
   clipboard.on("success", (e) => {
     e.trigger.classList.add("icon-check");
     e.trigger.classList.remove("icon-copy");
-    _$("#copy-tooltip").innerText = tips.success;
+    // 根據語言選擇成功提示信息
+    _$("#copy-tooltip").innerText = tips.success[lang] || '複製成功 (*^▽^*)';
     _$("#copy-tooltip").style.opacity = 1;
     setTimeout(() => {
       _$("#copy-tooltip").style.opacity = 0;
@@ -107,6 +110,19 @@
       e.trigger.classList.remove("icon-check");
     }, 1000);
     e.clearSelection();
+  });
+
+  clipboard.on("error", (e) => {
+    e.trigger.classList.add("icon-times");
+    e.trigger.classList.remove("icon-copy");
+    // 根據語言選擇失敗提示信息
+    _$("#copy-tooltip").innerText = tips.fail[lang] || '複製失敗 (ﾟ⊿ﾟ)ﾂ';
+    _$("#copy-tooltip").style.opacity = 1;
+    setTimeout(() => {
+      _$("#copy-tooltip").style.opacity = 0;
+      e.trigger.classList.add("icon-copy");
+      e.trigger.classList.remove("icon-times");
+    }, 1000);
   });
 
   clipboard.on("error", (e) => {

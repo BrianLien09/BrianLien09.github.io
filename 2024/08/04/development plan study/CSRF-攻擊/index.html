@@ -14,7 +14,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   
   <title>
     CSRF 攻擊 |
@@ -366,7 +366,7 @@
 </ul>
 <h2 id="攻擊範例"><a class="markdownIt-Anchor" href="#攻擊範例"></a> 攻擊範例：</h2>
 <ul>
-<li>受害者登錄銀行網站，瀏覽器中設置了 <a target="_blank" rel="noopener" href="http://bank.com">bank.com</a> 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
+<li>受害者登錄銀行網站，瀏覽器中設置了 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://bank.com">bank.com</a> 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
 </ul>
 <h2 id="攻擊預防措施"><a class="markdownIt-Anchor" href="#攻擊預防措施"></a> 攻擊預防措施：</h2>
 <ul>
@@ -1059,7 +1059,7 @@
               envId: '',
               region: '',
               urls: [
-                '/friend/index.html'
+                '/about/index.html'
               ],
               includeReply: false
             }).then((res) => {
