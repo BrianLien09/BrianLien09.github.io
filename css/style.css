@@ -40,22 +40,34 @@
   --highlight-aqua: #479d9d;
   --highlight-blue: #1973b8;
   --highlight-purple: #7135ac;
-  --cursor-default: default;
-  --cursor-pointer: pointer;
-  --cursor-text: text;
+  --md-sys-color-primary-light: #5d53a7;
+  --md-sys-color-primary-dark: #c7bfff;
   --footer-icon: url("../images/taichi.png");
   --sponsor-icon: url("../images/taichi.png");
   --top-icon: url("../images/taichi.png");
 }
+@if cursor-enabled {
+  --cursor-default: url("../images/cursor/reimu-cursor-default.png"), auto;
+  --cursor-pointer: url("../images/cursor/reimu-cursor-pointer.png"), pointer;
+  --cursor-text: url("../images/cursor/reimu-cursor-text.png"), text;
+}
+@else {
+  --cursor-default: default;
+  --cursor-pointer: pointer;
+  --cursor-text: text;
+}
 [data-theme="dark"]:root {
   --red-0: var(--red-1);
-  --red-4: rgba(255, 208, 208, 0.5);
-  --red-5: rgba(255,228,228,0.15);
-  --red-5-5: rgba(255,236,236,0.05);
-  --red-6: rgba(255, 243, 243, 0.2);
+  --red-1: color-mix(in srgb, var(--md-sys-color-primary-dark) 90%, white);
+  --red-2: color-mix(in srgb, var(--md-sys-color-primary-dark) 80%, white);
+  --red-3: color-mix(in srgb, var(--md-sys-color-primary-dark) 75%, white);
+  --red-4: color-mix(in srgb, var(--md-sys-color-primary-dark) 30%, transparent);
+  --red-5: color-mix(in srgb, var(--md-sys-color-primary-dark) 20%, transparent);
+  --red-5-5: color-mix(in srgb, var(--md-sys-color-primary-dark) 10%, transparent);
+  --red-6: color-mix(in srgb, var(--md-sys-color-primary-dark) 5%, transparent);
   --color-archive-year: #999;
   --color-default: #999;
-  --color-border: var(--red-5);
+  --color-border: var(--red-5); /* 保持你设置的边框颜色 */
   --color-background: #21252b;
   --color-code-background: rgba(232,232,232,0.1);
   --color-header-background: #222;
