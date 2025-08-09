@@ -1,18 +1,24 @@
 :root {
-  --red-0: #ff0000;
-  --red-1: #ff5252;
-  --red-2: #ff7c7c;
-  --red-3: #ffafaf;
-  --red-4: #ffd0d0;
-  --red-5: #ffecec;
-  --red-5-5: #fff3f3;
-  --red-6: #fff7f7;
+  --md-sys-color-primary-light: #5d53a7;
+  --md-sys-color-primary-dark: #c7bfff;
+  --red-0: var(--md-sys-color-primary-light);
+  --red-1: color-mix(in srgb, var(--md-sys-color-primary-light) 90%, white);
+  --red-2: color-mix(in srgb, var(--md-sys-color-primary-light) 75%, white);
+  --red-3: color-mix(in srgb, var(--md-sys-color-primary-light) 55%, white);
+  --red-4: color-mix(in srgb, var(--md-sys-color-primary-light) 40%, white);
+  --red-5: color-mix(in srgb, var(--md-sys-color-primary-light) 15%, white);
+  --red-5-5: color-mix(in srgb, var(--md-sys-color-primary-light) 10%, white);
+  --red-6: color-mix(in srgb, var(--md-sys-color-primary-light) 5%, white);
+  --color-border: var(--red-3);
+  --color-link: var(--red-1);
+  --color-meta-shadow: var(--red-6);
+  --color-h2-after: var(--red-1);
+  --color-red-6-shadow: var(--red-2);
+  --color-red-3-shadow: var(--red-3);
   --grey-9: #888;
   --grey-7: var(--color-default);
   --color-archive-year: #000;
   --color-default: #555;
-  --color-border: var(--red-3);
-  --color-link: var(--red-1);
   --color-background: #eee;
   --color-code-background: #f8f8f8;
   --color-header-background: rgba(255,255,255,0.9);
@@ -21,11 +27,7 @@
   --color-wrap: #fff;
   --color-sticky: #fff;
   --color-h2-border: #eee;
-  --color-meta-shadow: var(--red-6);
   --color-hover-shadow: rgba(120,120,120,0.15);
-  --color-h2-after: var(--red-1);
-  --color-red-6-shadow: rgba(255, 78, 78, 0.6);
-  --color-red-3-shadow: rgba(255, 78, 78, 0.3);
   --highlight-nav: #e6e6e6;
   --highlight-scrollbar: #d6d6d6;
   --highlight-background: #f7f7f7;
@@ -40,21 +42,12 @@
   --highlight-aqua: #479d9d;
   --highlight-blue: #1973b8;
   --highlight-purple: #7135ac;
-  --md-sys-color-primary-light: #5d53a7;
-  --md-sys-color-primary-dark: #c7bfff;
-  --footer-icon: url("../images/taichi.png");
-  --sponsor-icon: url("../images/taichi.png");
-  --top-icon: url("../images/taichi.png");
-}
-@if cursor-enabled {
-  --cursor-default: url("../images/cursor/reimu-cursor-default.png"), auto;
-  --cursor-pointer: url("../images/cursor/reimu-cursor-pointer.png"), pointer;
-  --cursor-text: url("../images/cursor/reimu-cursor-text.png"), text;
-}
-@else {
   --cursor-default: default;
   --cursor-pointer: pointer;
   --cursor-text: text;
+  --footer-icon: url("../images/taichi.png");
+  --sponsor-icon: url("../images/taichi.png");
+  --top-icon: url("../images/taichi.png");
 }
 [data-theme="dark"]:root {
   --red-0: var(--red-1);
@@ -67,7 +60,7 @@
   --red-6: color-mix(in srgb, var(--md-sys-color-primary-dark) 5%, transparent);
   --color-archive-year: #999;
   --color-default: #999;
-  --color-border: var(--red-5); /* 保持你设置的边框颜色 */
+  --color-border: var(--red-5);
   --color-background: #21252b;
   --color-code-background: rgba(232,232,232,0.1);
   --color-header-background: #222;
