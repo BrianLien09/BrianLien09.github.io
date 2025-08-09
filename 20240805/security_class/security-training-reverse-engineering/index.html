@@ -1,132 +1,23 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme-mode="true"><head><meta charset="utf-8"><script src="https://www.googletagmanager.com/gtag/js?id=true"></script><script data-pjax>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","true")</script><script>window.REIMU_CONFIG={},window.REIMU_CONFIG.icon_font="4552607_0khxww3tj3q9",window.REIMU_CONFIG.clipboard_tips={success:{en:"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)",ja:"コピー成功 (*^▽^*)"},fail:{en:"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ",ja:"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},copyright:{enable:!0,count:50,license_type:"by-nc-sa"}},window.REIMU_CONFIG.clipboard_tips.copyright.content="本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！",window.REIMU_CONFIG.code_block={expand:!0},window.REIMU_CONFIG.base="https://brianlien09.github.io"</script><title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程 | 冥夜小站</title><meta name="description" content="
+ 課程筆記
+ 基礎 Linux 操作
+終端機基礎操作
 
-  <!DOCTYPE html>
-  <html lang="zh-TW"  
-    
-      data-theme-mode="true"
-    
-  >
-  <head>
-  
-  <meta charset="utf-8">
-  
-  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
-  <script data-pjax>
-    window.dataLayer = window.dataLayer || [];
+打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+命令行提示（Prompt）自定義
 
-    gtag('js', new Date());
-    gtag('config', 'true');
-  </script>
+終端機上，可以⽤來輸入指令的地⽅
+指令執⾏結束後，會再次跳出 Prompt
+
+此時才能繼續輸入下個指令
 
 
-  
 
-  
+快捷鍵操作
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
-  
-  <title>
-    CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程 |
-    
-    冥夜小站
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-    <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
-  
-  
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
-  
-  
-    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  
-  
-    
-<link rel="stylesheet" href="/css/loader.css">
-
-  
-  
-    <meta name="description" content="課程筆記  基礎 Linux 操作 終端機基礎操作  打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。  命令行提示（Prompt）自定義  終端機上，可以⽤來輸入指令的地⽅ 指令執⾏結束後，會再次跳出 Prompt  此時才能繼續輸入下個指令    快捷鍵操作  自動補全：輸入命令時按 Tab 鍵。 歷史指令：使用上箭頭鍵訪問之前輸入的命令。  常用Linux命令示例  列出當前">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程">
-<meta property="og:url" content="https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/index.html">
-<meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="課程筆記  基礎 Linux 操作 終端機基礎操作  打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。  命令行提示（Prompt）自定義  終端機上，可以⽤來輸入指令的地⽅ 指令執⾏結束後，會再次跳出 Prompt  此時才能繼續輸入下個指令    快捷鍵操作  自動補全：輸入命令時按 Tab 鍵。 歷史指令：使用上箭頭鍵訪問之前輸入的命令。  常用Linux命令示例  列出當前">
-<meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/fK2cMA6.png">
-<meta property="article:published_time" content="2024-08-05T13:26:38.000Z">
-<meta property="article:modified_time" content="2024-12-24T14:27:25.548Z">
-<meta property="article:author" content="冥夜">
-<meta property="article:tag" content="逆向工程">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/fK2cMA6.png">
-  
-  
-    <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="https://i.imgur.com/z4gTFiR.png">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
-  
-  
-    
-      
-<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
-
-    
-  
-  
-  
-    
-<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
-
-  
-  
-    
-<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
-
-  
-  
-    
-<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
-
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-  <body>
-    
-    
-  <div id='loader'>
-    <div class="loading-left-bg loading-bg"></div>
-    <div class="loading-right-bg loading-bg"></div>
-    <div class="spinner-box">
-      <div class="loading-taichi rotate">
-        
-          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
-            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
-           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
-          </svg>
-        
-      </div>
-      
-      
-        
-      
-      <div class="loading-word">少女祈禱中...</div>
-    </div>
-  </div>
-  </div>
-  <script>
-    var time = null;
+自動補全：輸入命令"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;"><link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/loader.css"><meta name="description" content="課程筆記  基礎 Linux 操作 終端機基礎操作  打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。  命令行提示（Prompt）自定義  終端機上，可以⽤來輸入指令的地⽅ 指令執⾏結束後，會再次跳出 Prompt  此時才能繼續輸入下個指令    快捷鍵操作  自動補全：輸入命令時按 Tab 鍵。 歷史指令：使用上箭頭鍵訪問之前輸入的命令。  常用Linux命令示例  列出當前"><meta property="og:type" content="article"><meta property="og:title" content="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程"><meta property="og:url" content="https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/index.html"><meta property="og:site_name" content="冥夜小站"><meta property="og:description" content="課程筆記  基礎 Linux 操作 終端機基礎操作  打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。  命令行提示（Prompt）自定義  終端機上，可以⽤來輸入指令的地⽅ 指令執⾏結束後，會再次跳出 Prompt  此時才能繼續輸入下個指令    快捷鍵操作  自動補全：輸入命令時按 Tab 鍵。 歷史指令：使用上箭頭鍵訪問之前輸入的命令。  常用Linux命令示例  列出當前"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://i.imgur.com/fK2cMA6.png"><meta property="article:published_time" content="2024-08-05T13:26:38.000Z"><meta property="article:modified_time" content="2024-12-24T14:27:25.548Z"><meta property="article:author" content="冥夜"><meta property="article:tag" content="逆向工程"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://i.imgur.com/fK2cMA6.png"><link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml"><link rel="shortcut icon" href="/images/dd.ico"><link rel="stylesheet" href="/css/style.css"><link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous"><link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous"><script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous"><link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loader"><div class="loading-left-bg loading-bg"></div><div class="loading-right-bg loading-bg"></div><div class="spinner-box"><div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision"><path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)"/><path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)"/></svg></div><div class="loading-word">少女祈禱中...</div></div></div><script>var time = null;
     var startLoading = () => {
       time = Date.now();
       document.getElementById('loader').classList.remove("loading");
@@ -147,592 +38,7 @@
       }
     }
     window.addEventListener('DOMContentLoaded', endLoading);
-    document.getElementById('loader').addEventListener('click', endLoading);
-  </script>
-
-<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
-</div>
-
-
-    <div id="container">
-      <div id="wrap">
-        <div id="header-nav">
-  <nav id="main-nav">
-    
-      
-        <span class="main-nav-link-wrap">
-          <div class="main-nav-icon icon rotate">
-             
-              &#xe62b;
-             
-          </div>
-          <a class="main-nav-link" href="/">首頁</a>
-        </span>
-      
-        <span class="main-nav-link-wrap">
-          <div class="main-nav-icon icon rotate">
-             
-              &#xe62b;
-             
-          </div>
-          <a class="main-nav-link" href="/archives">歸檔</a>
-        </span>
-      
-        <span class="main-nav-link-wrap">
-          <div class="main-nav-icon icon rotate">
-             
-              &#xe62b;
-             
-          </div>
-          <a class="main-nav-link" href="/about">關於</a>
-        </span>
-      
-    
-    <a id="main-nav-toggle" class="nav-icon"></a>
-  </nav>
-  <nav id="sub-nav">
-    
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 訂閱" target="_blank"></a>
-    
-    
-    
-      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋"></a>
-    
-  </nav>
-  
-</div>
-<header id="header">
-  
-    
-      
-        <picture>
-          
-        </picture>
-        
-          <img  fetchpriority="high" src="/images/banner.jpg" alt="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程">
-        
-      
-    
-  
-  <div id="header-outer">
-    <div id="header-title">
-      
-        
-        
-          <a href="/" id="logo">
-            <h1 data-aos="slide-up">CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</h1>
-          </a>
-        
-      
-      
-        
-        <h2 id="subtitle-wrap" data-aos="slide-down">
-          
-        </h2>
-      
-    </div>
-  </div>
-</header>
-
-        <div id="content" class="sidebar-left"  >
-          <aside id="sidebar">
-  
-  
-    <div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div>
-  
-  
-  <div class="sidebar-wrapper wrap-sticky">
-    <div class="sidebar-wrap" data-aos="fade-up">
-      
-        
-          <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
-  <h3 class="toc-title">文章目錄</h3>
-  <div class="sidebar-toc-wrapper toc-div-class" >
-      
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98"><span class="toc-number">1.</span> <span class="toc-text"> 課程筆記</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A4%8E-linux-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text"> 基礎 Linux 操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 逆向工程簡介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-c-%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E9%96%8B%E7%99%BC%E5%9F%BA%E7%A4%8E"><span class="toc-number">1.3.</span> <span class="toc-text"> Linux C 程式語言開發基礎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E5%9F%B7%E8%A1%8C%E6%AA%94%E5%88%86%E6%9E%90"><span class="toc-number">1.4.</span> <span class="toc-text"> Linux 執行檔分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80"><span class="toc-number">1.5.</span> <span class="toc-text"> 解析組合語言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%AF%A6%E5%8B%99"><span class="toc-number">1.6.</span> <span class="toc-text"> 逆向工程實務</span></a></li></ol></li></ol>
-      
-  </div>
-</div>
-</div>
-          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload">
-  <div class="sidebar-author-name">冥夜</div>
-  <div class="sidebar-description">記錄冥夜的成長軌跡</div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>文章</div>
-    <div class="sidebar-state-number">28</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>分類</div>
-    <div class="sidebar-state-number">6</div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
-  </div>
-</div>
-<div class="sidebar-social">
-  
-    <div class="icon-email sidebar-social-icon">
-      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
-    </div>
-  
-    <div class="icon-github sidebar-social-icon">
-      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
-    </div>
-  
-    <div class="icon-youtube sidebar-social-icon">
-      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
-    </div>
-  
-</div>
-<div class="sidebar-menu">
-  
-    
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
-        <div class="sidebar-menu-icon icon rotate">
-          
-            &#xe62b;
-          
-        </div>
-        <div class="sidebar-menu-link">首頁</div>
-      </div>
-    
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
-        <div class="sidebar-menu-icon icon rotate">
-          
-            &#xe62b;
-          
-        </div>
-        <div class="sidebar-menu-link">歸檔</div>
-      </div>
-    
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
-        <div class="sidebar-menu-icon icon rotate">
-          
-            &#xe62b;
-          
-        </div>
-        <div class="sidebar-menu-link">關於</div>
-      </div>
-    
-  
-</div>
-</div>
-        
-      
-      
-        
-          <div class="sidebar-btn-wrapper" style="position:static">
-            <div class="sidebar-toc-btn current"></div>
-            <div class="sidebar-common-btn"></div>
-          </div>
-        
-      
-    </div>
-  </div>
-
-  <div class="sidebar-widget">
-  
-  </div>
-  
-</aside>
-
-          <section id="main"><article id="post-security_class/security-training-reverse-engineering" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner" data-aos="fade-up">
-    <div class="article-meta">
-      <div class="article-date">
-  <span class="article-date-link" data-aos="zoom-in">
-    <time datetime="2024-08-05T13:26:38.000Z" itemprop="datePublished">2024-08-05</time>
-    <time style="display: none;" id="post-update-time">2024-12-24</time>
-  </span>
-</div>
-
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/security-class/" data-aos="zoom-in">security class</a>
-  </div>
-
-
-    </div>
-    <div class="hr-line"></div>
-    
-
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="https://i.imgur.com/fK2cMA6.png" alt="enter image description here" /></p>
-<h2 id="課程筆記"><a class="markdownIt-Anchor" href="#課程筆記"></a> 課程筆記</h2>
-<h3 id="基礎-linux-操作"><a class="markdownIt-Anchor" href="#基礎-linux-操作"></a> 基礎 Linux 操作</h3>
-<p><strong>終端機基礎操作</strong></p>
-<ul>
-<li>打開終端：通常可以通過快捷鍵 <code>Ctrl + Alt + T</code>。</li>
-</ul>
-<p><strong>命令行提示（Prompt）自定義</strong></p>
-<ul>
-<li>終端機上，可以⽤來輸入指令的地⽅</li>
-<li>指令執⾏結束後，會再次跳出 Prompt
-<ul>
-<li>此時才能繼續輸入下個指令</li>
-</ul>
-</li>
-</ul>
-<p><strong>快捷鍵操作</strong></p>
-<ul>
-<li>自動補全：輸入命令時按 <code>Tab</code> 鍵。</li>
-<li>歷史指令：使用上箭頭鍵訪問之前輸入的命令。</li>
-</ul>
-<p><strong>常用Linux命令示例</strong></p>
-<ul>
-<li>列出當前目錄下的文件和文件夾：<code>ls</code></li>
-<li>更改文件權限，例如給予所有用戶對文件的讀寫執行權限：<code>chmod 777 filename</code></li>
-<li>查看文件類型：<code>file filename</code></li>
-<li>下載文件：<code>wget http://example.com/file.txt</code></li>
-<li>顯示文件內容：<code>cat filename</code></li>
-<li>切換目錄：<code>cd /path/to/directory</code></li>
-<li>複製文件：<code>cp source_file destination_file</code></li>
-<li>移動或重命名文件：<code>mv old_name new_name</code></li>
-<li>刪除文件：<code>rm filename</code></li>
-<li>使用管道連接命令：<code>ls | grep &quot;pattern&quot;</code></li>
-</ul>
-<p><strong>文本編輯器 vim 使用</strong></p>
-<ul>
-<li>打開文件進行編輯：<code>vim filename</code></li>
-<li>保存並退出 vim：在 vim 的命令模式下輸入 <code>:wq</code></li>
-</ul>
-<h3 id="逆向工程簡介"><a class="markdownIt-Anchor" href="#逆向工程簡介"></a> 逆向工程簡介</h3>
-<p><strong>逆向工程過程示例</strong></p>
-<ul>
-<li>反編譯程序：使用工具如 <code>objdump -d ./program</code></li>
-</ul>
-<h3 id="linux-c-程式語言開發基礎"><a class="markdownIt-Anchor" href="#linux-c-程式語言開發基礎"></a> Linux C 程式語言開發基礎</h3>
-<p><strong>C程式的編譯與執行</strong></p>
-<ul>
-<li>編譯 C 程式：<code>gcc -o output program.c</code></li>
-<li>執行編譯後的程式：<code>./output</code></li>
-</ul>
-<h3 id="linux-執行檔分析"><a class="markdownIt-Anchor" href="#linux-執行檔分析"></a> Linux 執行檔分析</h3>
-<p><strong>ELF文件格式分析</strong></p>
-<ul>
-<li>查看 ELF 程式頭：<code>readelf -l filename</code></li>
-</ul>
-<h3 id="解析組合語言"><a class="markdownIt-Anchor" href="#解析組合語言"></a> 解析組合語言</h3>
-<p><strong>組合語言指令示例</strong></p>
-<ul>
-<li>移動數據：<code>mov eax, ebx</code></li>
-<li>減法操作：<code>sub eax, 5</code></li>
-<li>位運算 AND：<code>and eax, 0xFF</code></li>
-<li>條件跳轉如果相等：<code>je label</code></li>
-</ul>
-<h3 id="逆向工程實務"><a class="markdownIt-Anchor" href="#逆向工程實務"></a> 逆向工程實務</h3>
-<p><strong>逆向工程工具使用</strong></p>
-<ul>
-<li>使用 radare2 打開文件：<code>r2 ./binary</code></li>
-<li>使用 gdb 調試程式：<code>gdb ./program</code></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-        <div class="share-wrapper">
-  
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20240805%2Fsecurity_class%2Fsecurity-training-reverse-engineering%2F" target="_blank" rel="noopener noreferrer" title="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程">
-      <div class="share-icon icon icon-facebook">
-        
-      </div>
-    </a>
-  
-</div>
-      
-      
-      
-        <a data-aos="zoom-in" href="/20240805/security_class/security-training-reverse-engineering/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/20240805/security_class/security-training-reverse-engineering/" itemprop="commentCount"></span>
-          留言
-        </a>
-      
-      
-      
-      
-        <span data-aos="zoom-in" class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/20240805/security_class/security-training-reverse-engineering/">0</span>
-          <em class="post-meta-item-text">閲讀量</em>
-        </span>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" rel="tag">逆向工程</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-  <nav id="article-nav" data-aos="fade-up">
-    
-      
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          
-          
-            <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY3 下午-AI 應用安全實務 writeup" class="lazyload">
-          
-        
-        <a href="/20240818/AIS3_junior/ais3-junior-day3-ai-security-practice-writeup/"></a>
-        <div class="article-nav-caption">Newer</div>
-        <h3 class="article-nav-title">
-          
-            AIS3 junior DAY3 下午-AI 應用安全實務 writeup
-          
-        </h3>
-      </div>
-    
-    
-    
-    <div class="article-nav-link-wrap article-nav-link-right">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="資料保護" class="lazyload">
-        
-      
-      <a href="/20240804/development_plan_study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/"></a>
-      <div class="article-nav-caption">Older</div>
-      <h3 class="article-nav-title">
-        
-          資料保護
-        
-      </h3>
-    </div>
-    
-  </nav>
-
-
-</article>
-
-
-
-
-
-
-
-
-
-  <section id="comments" data-aos="fade-up">
-    <div class="comment-header">
-      
-      
-        
-      
-      <h2 class="comment-title">說些什麼吧！</h2>
-      <div class="comment-selector">
-        <div class="comment-selector-wrap">
-            
-            <div class="selector-item" data-selector="waline">
-              <span>waline</span>
-            </div>
-            
-        </div>
-      </div>
-    </div>
-    <div class="comment-content">
-      
-        <div class="comment waline-comment" data-aos="fade-up"
-          id="waline-comment">
-        </div>
-      
-    </div>
-  </section>
-
-
-</section>
-        </div>
-        <footer id="footer">
-  <div style="width: 100%; overflow: hidden">
-    <div class="footer-line"></div>
-  </div>
-  <div id="footer-info">
-    
-    <div>
-      <span class="icon-copyright"></span>
-      
-      
-      
-        2025
-      
-      <span class="footer-info-sep rotate"></span>
-      冥夜
-    </div>
-    
-      <div>
-        基於&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
-        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
-      </div>
-    
-    
-      <div>
-        <span class="icon-brush"></span>
-        13k
-        &nbsp;|&nbsp;
-        <span class="icon-coffee"></span>
-        00:42
-      </div>
-    
-    
-    
-    
-  </div>
-</footer>
-
-        
-          <div class="sidebar-top">
-            <div class="sidebar-top-taichi rotate"></div>
-            <div class="arrow-up"></div>
-          </div>
-        
-        <div id="mask" class="hide"></div>
-      </div>
-      <nav id="mobile-nav">
-  <div class="sidebar-wrap">
-    
-      
-        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
-  <h3 class="toc-title">文章目錄</h3>
-  <div class="sidebar-toc-wrapper toc-div-class" >
-      
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98"><span class="toc-number">1.</span> <span class="toc-text"> 課程筆記</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A4%8E-linux-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text"> 基礎 Linux 操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 逆向工程簡介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-c-%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E9%96%8B%E7%99%BC%E5%9F%BA%E7%A4%8E"><span class="toc-number">1.3.</span> <span class="toc-text"> Linux C 程式語言開發基礎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E5%9F%B7%E8%A1%8C%E6%AA%94%E5%88%86%E6%9E%90"><span class="toc-number">1.4.</span> <span class="toc-text"> Linux 執行檔分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80"><span class="toc-number">1.5.</span> <span class="toc-text"> 解析組合語言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%AF%A6%E5%8B%99"><span class="toc-number">1.6.</span> <span class="toc-text"> 逆向工程實務</span></a></li></ol></li></ol>
-      
-  </div>
-</div>
-</div>
-        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload">
-  <div class="sidebar-author-name">冥夜</div>
-  <div class="sidebar-description">記錄冥夜的成長軌跡</div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>文章</div>
-    <div class="sidebar-state-number">28</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>分類</div>
-    <div class="sidebar-state-number">6</div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
-  </div>
-</div>
-<div class="sidebar-social">
-  
-    <div class="icon-email sidebar-social-icon">
-      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
-    </div>
-  
-    <div class="icon-github sidebar-social-icon">
-      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
-    </div>
-  
-    <div class="icon-youtube sidebar-social-icon">
-      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
-    </div>
-  
-</div>
-<div class="sidebar-menu">
-  
-    
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
-        <div class="sidebar-menu-icon icon rotate">
-          
-            &#xe62b;
-          
-        </div>
-        <div class="sidebar-menu-link">首頁</div>
-      </div>
-    
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
-        <div class="sidebar-menu-icon icon rotate">
-          
-            &#xe62b;
-          
-        </div>
-        <div class="sidebar-menu-link">歸檔</div>
-      </div>
-    
-      <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
-        <div class="sidebar-menu-icon icon rotate">
-          
-            &#xe62b;
-          
-        </div>
-        <div class="sidebar-menu-link">關於</div>
-      </div>
-    
-  
-</div>
-</div>
-      
-    
-  </div>
-  
-    
-      <div class="sidebar-btn-wrapper">
-        <div class="sidebar-toc-btn current"></div>
-        <div class="sidebar-common-btn"></div>
-      </div>
-    
-  
-</nav>
-
-    </div>
-    
-      <div class="site-search">
-        <div class="reimu-popup popup">
-          <div class="reimu-search">
-            <div class="reimu-search-input-icon"></div>
-            <div class="reimu-search-input" id="reimu-search-input"></div>
-            <div class="popup-btn-close"></div>
-          </div>
-          <div class="reimu-results">
-            <div id="reimu-stats"></div>
-            <div id="reimu-hits"></div>
-            <div id="reimu-pagination" class="reimu-pagination"></div>
-          </div>
-          <img class="reimu-bg" src="/images/reimu.png"/>
-        </div>
-      </div>
-    
-    
-    
-    
-<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
-
-
-<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
-
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-  
-<script src="/js/aos.js"></script>
-
-  <script>
-    var aosInit = () => {
+    document.getElementById('loader').addEventListener('click', endLoading);</script><div id="copy-tooltip" style="pointer-events:none;opacity:0;transition:all .2s ease;position:fixed;top:50%;left:50%;z-index:999;transform:translate(-50%,-50%);color:#fff;background:rgba(0,0,0,.5);padding:10px 15px;border-radius:10px"></div><div id="container"><div id="wrap"><div id="header-nav"><nav id="main-nav"><span class="main-nav-link-wrap"><div class="main-nav-icon icon rotate">&#xe62b;</div><a class="main-nav-link" href="/">首頁</a> </span><span class="main-nav-link-wrap"><div class="main-nav-icon icon rotate">&#xe62b;</div><a class="main-nav-link" href="/archives">歸檔</a> </span><span class="main-nav-link-wrap"><div class="main-nav-icon icon rotate">&#xe62b;</div><a class="main-nav-link" href="/about">關於</a> </span><a id="main-nav-toggle" class="nav-icon"></a></nav><nav id="sub-nav"><a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 訂閱" target="_blank"></a> <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋"></a></nav></div><header id="header"><picture></picture><img fetchpriority="high" src="/images/banner.jpg" alt="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程"><div id="header-outer"><div id="header-title"><a href="/" id="logo"><h1 data-aos="slide-up">CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</h1></a><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div></div></header><div id="content" class="sidebar-left"><aside id="sidebar"><div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div><div class="sidebar-wrapper wrap-sticky"><div class="sidebar-wrap" data-aos="fade-up"><div class="sidebar-toc-sidebar"><div class="sidebar-toc"><h3 class="toc-title">文章目錄</h3><div class="sidebar-toc-wrapper toc-div-class"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98"><span class="toc-number">1.</span> <span class="toc-text">課程筆記</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A4%8E-linux-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">基礎 Linux 操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text">逆向工程簡介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-c-%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E9%96%8B%E7%99%BC%E5%9F%BA%E7%A4%8E"><span class="toc-number">1.3.</span> <span class="toc-text">Linux C 程式語言開發基礎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E5%9F%B7%E8%A1%8C%E6%AA%94%E5%88%86%E6%9E%90"><span class="toc-number">1.4.</span> <span class="toc-text">Linux 執行檔分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80"><span class="toc-number">1.5.</span> <span class="toc-text">解析組合語言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%AF%A6%E5%8B%99"><span class="toc-number">1.6.</span> <span class="toc-text">逆向工程實務</span></a></li></ol></li></ol></div></div></div><div class="sidebar-common-sidebar hidden"><div class="sidebar-author"><img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload"><div class="sidebar-author-name">冥夜</div><div class="sidebar-description">記錄冥夜的成長軌跡</div></div><div class="sidebar-state"><div class="sidebar-state-article"><div>文章</div><div class="sidebar-state-number">28</div></div><div class="sidebar-state-category"><div>分類</div><div class="sidebar-state-number">6</div></div><div class="sidebar-state-tag"><div>標籤</div><div class="sidebar-state-number">8</div></div></div><div class="sidebar-social"><div class="icon-email sidebar-social-icon"><a href="mailto:brianlien09@gmail.com" itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a></div><div class="icon-github sidebar-social-icon"><a href="https://github.com/BrianLien09" itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a></div><div class="icon-youtube sidebar-social-icon"><a href="https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q" itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a></div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">首頁</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">歸檔</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">關於</div></div></div></div><div class="sidebar-btn-wrapper" style="position:static"><div class="sidebar-toc-btn current"></div><div class="sidebar-common-btn"></div></div></div></div><div class="sidebar-widget"></div></aside><section id="main"><article id="post-security_class/security-training-reverse-engineering" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting"><div class="article-inner" data-aos="fade-up"><div class="article-meta"><div class="article-date"><span class="article-date-link" data-aos="zoom-in"><time datetime="2024-08-05T13:26:38.000Z" itemprop="datePublished">2024-08-05</time> <time style="display:none" id="post-update-time">2024-12-24</time></span></div><div class="article-category"><a class="article-category-link" href="/categories/security-class/" data-aos="zoom-in">security class</a></div></div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><p><img src="https://i.imgur.com/fK2cMA6.png" alt="enter image description here"></p><h2 id="課程筆記"><a class="markdownIt-Anchor" href="#課程筆記"></a> 課程筆記</h2><h3 id="基礎-linux-操作"><a class="markdownIt-Anchor" href="#基礎-linux-操作"></a> 基礎 Linux 操作</h3><p><strong>終端機基礎操作</strong></p><ul><li>打開終端：通常可以通過快捷鍵 <code>Ctrl + Alt + T</code>。</li></ul><p><strong>命令行提示（Prompt）自定義</strong></p><ul><li>終端機上，可以⽤來輸入指令的地⽅</li><li>指令執⾏結束後，會再次跳出 Prompt<ul><li>此時才能繼續輸入下個指令</li></ul></li></ul><p><strong>快捷鍵操作</strong></p><ul><li>自動補全：輸入命令時按 <code>Tab</code> 鍵。</li><li>歷史指令：使用上箭頭鍵訪問之前輸入的命令。</li></ul><p><strong>常用Linux命令示例</strong></p><ul><li>列出當前目錄下的文件和文件夾：<code>ls</code></li><li>更改文件權限，例如給予所有用戶對文件的讀寫執行權限：<code>chmod 777 filename</code></li><li>查看文件類型：<code>file filename</code></li><li>下載文件：<code>wget http://example.com/file.txt</code></li><li>顯示文件內容：<code>cat filename</code></li><li>切換目錄：<code>cd /path/to/directory</code></li><li>複製文件：<code>cp source_file destination_file</code></li><li>移動或重命名文件：<code>mv old_name new_name</code></li><li>刪除文件：<code>rm filename</code></li><li>使用管道連接命令：<code>ls | grep &quot;pattern&quot;</code></li></ul><p><strong>文本編輯器 vim 使用</strong></p><ul><li>打開文件進行編輯：<code>vim filename</code></li><li>保存並退出 vim：在 vim 的命令模式下輸入 <code>:wq</code></li></ul><h3 id="逆向工程簡介"><a class="markdownIt-Anchor" href="#逆向工程簡介"></a> 逆向工程簡介</h3><p><strong>逆向工程過程示例</strong></p><ul><li>反編譯程序：使用工具如 <code>objdump -d ./program</code></li></ul><h3 id="linux-c-程式語言開發基礎"><a class="markdownIt-Anchor" href="#linux-c-程式語言開發基礎"></a> Linux C 程式語言開發基礎</h3><p><strong>C程式的編譯與執行</strong></p><ul><li>編譯 C 程式：<code>gcc -o output program.c</code></li><li>執行編譯後的程式：<code>./output</code></li></ul><h3 id="linux-執行檔分析"><a class="markdownIt-Anchor" href="#linux-執行檔分析"></a> Linux 執行檔分析</h3><p><strong>ELF文件格式分析</strong></p><ul><li>查看 ELF 程式頭：<code>readelf -l filename</code></li></ul><h3 id="解析組合語言"><a class="markdownIt-Anchor" href="#解析組合語言"></a> 解析組合語言</h3><p><strong>組合語言指令示例</strong></p><ul><li>移動數據：<code>mov eax, ebx</code></li><li>減法操作：<code>sub eax, 5</code></li><li>位運算 AND：<code>and eax, 0xFF</code></li><li>條件跳轉如果相等：<code>je label</code></li></ul><h3 id="逆向工程實務"><a class="markdownIt-Anchor" href="#逆向工程實務"></a> 逆向工程實務</h3><p><strong>逆向工程工具使用</strong></p><ul><li>使用 radare2 打開文件：<code>r2 ./binary</code></li><li>使用 gdb 調試程式：<code>gdb ./program</code></li></ul></div><footer class="article-footer"><div class="share-wrapper"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20240805%2Fsecurity_class%2Fsecurity-training-reverse-engineering%2F" target="_blank" rel="noopener noreferrer" title="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程"><div class="share-icon icon icon-facebook"></div></a></div><a data-aos="zoom-in" href="/20240805/security_class/security-training-reverse-engineering/#comments" class="article-comment-link"><span class="post-comments-count waline-comment-count" data-path="/20240805/security_class/security-training-reverse-engineering/" itemprop="commentCount"></span> 留言 </a><span data-aos="zoom-in" class="article-visitor-link"><span class="waline-pageview-count" data-path="/20240805/security_class/security-training-reverse-engineering/">0</span> <em class="post-meta-item-text">閲讀量</em></span><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" rel="tag">逆向工程</a></li></ul></footer></div><nav id="article-nav" data-aos="fade-up"><div class="article-nav-link-wrap article-nav-link-left"><img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="AIS3 junior DAY3 下午-AI 應用安全實務 writeup" class="lazyload"> <a href="/20240818/AIS3_junior/ais3-junior-day3-ai-security-practice-writeup/"></a><div class="article-nav-caption">Newer</div><h3 class="article-nav-title">AIS3 junior DAY3 下午-AI 應用安全實務 writeup</h3></div><div class="article-nav-link-wrap article-nav-link-right"><img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="應用程式的資料保護策略：從傳輸、使用到儲存" class="lazyload"> <a href="/20240804/development_plan_study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/"></a><div class="article-nav-caption">Older</div><h3 class="article-nav-title">應用程式的資料保護策略：從傳輸、使用到儲存</h3></div></nav></article><section id="comments" data-aos="fade-up"><div class="comment-header"><h2 class="comment-title">說些什麼吧！</h2><div class="comment-selector"><div class="comment-selector-wrap"><div class="selector-item" data-selector="waline"><span>waline</span></div></div></div></div><div class="comment-content"><div class="comment waline-comment" data-aos="fade-up" id="waline-comment"></div></div></section></section></div><footer id="footer"><div style="width:100%;overflow:hidden"><div class="footer-line"></div></div><div id="footer-info"><div><span class="icon-copyright"></span> 2025 <span class="footer-info-sep rotate"></span> 冥夜</div><div>基於&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp; Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a></div><div><span class="icon-brush"></span> 25.4k &nbsp;|&nbsp; <span class="icon-coffee"></span> 01:20</div></div></footer><div class="sidebar-top"><div class="sidebar-top-taichi rotate"></div><div class="arrow-up"></div></div><div id="mask" class="hide"></div></div><nav id="mobile-nav"><div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><div class="sidebar-toc"><h3 class="toc-title">文章目錄</h3><div class="sidebar-toc-wrapper toc-div-class"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98"><span class="toc-number">1.</span> <span class="toc-text">課程筆記</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A4%8E-linux-%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">基礎 Linux 操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%B0%A1%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text">逆向工程簡介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-c-%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E9%96%8B%E7%99%BC%E5%9F%BA%E7%A4%8E"><span class="toc-number">1.3.</span> <span class="toc-text">Linux C 程式語言開發基礎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-%E5%9F%B7%E8%A1%8C%E6%AA%94%E5%88%86%E6%9E%90"><span class="toc-number">1.4.</span> <span class="toc-text">Linux 執行檔分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90%E7%B5%84%E5%90%88%E8%AA%9E%E8%A8%80"><span class="toc-number">1.5.</span> <span class="toc-text">解析組合語言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%AF%A6%E5%8B%99"><span class="toc-number">1.6.</span> <span class="toc-text">逆向工程實務</span></a></li></ol></li></ol></div></div></div><div class="sidebar-common-sidebar hidden"><div class="sidebar-author"><img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload"><div class="sidebar-author-name">冥夜</div><div class="sidebar-description">記錄冥夜的成長軌跡</div></div><div class="sidebar-state"><div class="sidebar-state-article"><div>文章</div><div class="sidebar-state-number">28</div></div><div class="sidebar-state-category"><div>分類</div><div class="sidebar-state-number">6</div></div><div class="sidebar-state-tag"><div>標籤</div><div class="sidebar-state-number">8</div></div></div><div class="sidebar-social"><div class="icon-email sidebar-social-icon"><a href="mailto:brianlien09@gmail.com" itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a></div><div class="icon-github sidebar-social-icon"><a href="https://github.com/BrianLien09" itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a></div><div class="icon-youtube sidebar-social-icon"><a href="https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q" itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a></div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">首頁</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">歸檔</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">關於</div></div></div></div></div><div class="sidebar-btn-wrapper"><div class="sidebar-toc-btn current"></div><div class="sidebar-common-btn"></div></div></nav></div><div class="site-search"><div class="reimu-popup popup"><div class="reimu-search"><div class="reimu-search-input-icon"></div><div class="reimu-search-input" id="reimu-search-input"></div><div class="popup-btn-close"></div></div><div class="reimu-results"><div id="reimu-stats"></div><div id="reimu-hits"></div><div id="reimu-pagination" class="reimu-pagination"></div></div><img class="reimu-bg" src="/images/reimu.png"></div></div><script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script><script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/script.js"></script><script src="/js/aos.js"></script><script>var aosInit = () => {
       AOS.init({
         duration: 1000,
         easing: "ease",
@@ -744,37 +50,7 @@
       document.addEventListener('DOMContentLoaded', aosInit);
     } else {
       aosInit();
-    }
-  </script>
-
-
-
-<script src="/js/pjax_script.js" data-pjax></script>
-
-
-
-  
-<script src="/js/generator_search.js" defer></script>
-
-
-
-
-
-
-  
-<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
-
-  <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
-  </script>
-
-
-
-  
-<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
-
-  <script>
-    function loadScripts(scripts, index) {
+    }</script><script src="/js/pjax_script.js" data-pjax></script><script src="/js/generator_search.js" defer></script><script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script><script>window.firework&&window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))</script><script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script><script>function loadScripts(scripts, index) {
       if (index < scripts.length) {
         const script = scripts[index];
         const src = script.getAttribute('src');
@@ -906,61 +182,11 @@
         },
       },
       cacheBust: false
-    })
-  </script>
-  
-<script src="/js/pjax.js"></script>
-
-
-
-
-
-
-
-
-  
-<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
-
-  <script data-pjax>
-    window.quicklink?.listen({
+    })</script><script src="/js/pjax.js"></script><script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script><script data-pjax>window.quicklink?.listen({
       timeout: 3000,
       priority: true,
       ignores: []
-    });
-  </script>
-
-
-<div id="lazy-script">
-  <div>
-    
-      
-      
-      <script data-pjax>
-        window.REIMU_POST = {
-          author: "冥夜",
-          title: "CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程",
-          url: "https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/",
-          excerpt: "",
-          description: "",
-          stripContent: "  課程筆記  基礎 Linux 操作 終端機基礎操作  打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。  命令行提示（Prompt）自定義  終端機上，可以⽤來輸入指令的地⽅ 指令執⾏結束後，會再次跳出 Prompt  此時才能繼續輸入下個指令    快捷鍵操作  自動補全：輸入命令時按 Tab 鍵。 歷史指令：使用上箭頭鍵訪問之前輸入的命令。  常用Linux命令示例  列出當前目錄下的文件和文件夾：ls 更改文件權限，例如給予所有用戶對文件的讀寫執行權限：chmod 777 ",
-          date: "Mon Aug 05 2024 21:26:38 GMT+0800",
-          updated: "Tue Dec 24 2024 22:27:25 GMT+0800",
-          cover: "/images/banner.jpg",
-        };
-      </script>
-       
-    
-    
-      
-        
-<script src="/js/insert_highlight.js" data-pjax></script>
-
-        
-      
-    
-    
-      <script type="module" data-pjax>
-        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+    });</script><div id="lazy-script"><div><script data-pjax>window.REIMU_POST={author:"冥夜",title:"CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程",url:"https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/",excerpt:"",description:"",stripContent:"  課程筆記  基礎 Linux 操作 終端機基礎操作  打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。  命令行提示（Prompt）自定義  終端機上，可以⽤來輸入指令的地⽅ 指令執⾏結束後，會再次跳出 Prompt  此時才能繼續輸入下個指令    快捷鍵操作  自動補全：輸入命令時按 Tab 鍵。 歷史指令：使用上箭頭鍵訪問之前輸入的命令。  常用Linux命令示例  列出當前目錄下的文件和文件夾：ls 更改文件權限，例如給予所有用戶對文件的讀寫執行權限：chmod 777 ",date:"Mon Aug 05 2024 21:26:38 GMT+0800",updated:"Tue Dec 24 2024 22:27:25 GMT+0800",cover:"/images/banner.jpg"}</script><script src="/js/insert_highlight.js" data-pjax></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
         
         const pswp = () => {
           if (_$$('.article-entry a.article-gallery-item').length > 0) {
@@ -984,20 +210,7 @@
           pswp()
         } else {
           window.addEventListener('lightbox:ready', pswp);
-        }
-      </script>
-      
-        
-
-
-
-
-
-
-
-
-<script data-pjax>
-  var loadScript = (src, integrity) => {
+        }</script><script data-pjax>var loadScript = (src, integrity) => {
     const script = document.createElement('script');
     script.src = src;
     if (integrity) script.integrity = integrity;
@@ -1104,7 +317,7 @@
               envId: '',
               region: '',
               urls: [
-                '/about/index.html'
+                '/friend/index.html'
               ],
               includeReply: false
             }).then((res) => {
@@ -1308,17 +521,7 @@
       commentInit();
     }
   };
-  loadComments();
-</script>
-
-      
-    
-  </div>
-</div>
-
-
-  <script>
-    console.log(String.raw`%c 
+  loadComments();</script></div></div><script>console.log(String.raw`%c 
  ______     ______     __     __    __     __  __    
 /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
 \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
@@ -1326,34 +529,13 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
-  </script>
-  
-
-
-
-
-
-<script>
-  if ('serviceWorker' in navigator) {
+    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')</script><script>if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       for (let registration of registrations) {
         registration.unregister();
       }
     });
-  }
-</script>
-
-
-
-
-
-  
-<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
-
-  
-    <script>
-      var isMobile = window.matchMedia('(max-width: 959px)').matches;
+  }</script><script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script><script>var isMobile = window.matchMedia('(max-width: 959px)').matches;
       if (isMobile) {
       const aplayer = _$('#aplayer');
         if (aplayer) {
@@ -1378,15 +560,4 @@
         mutex: true || true,
         listFolded: false || false,
         lrcType: 0 || 0,
-      });
-    </script>
-  
-
-
-
-
-
-    
-  </body>
-  </html>
-
+      });</script></body></html>

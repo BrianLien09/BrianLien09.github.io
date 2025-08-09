@@ -6,7 +6,7 @@
   <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien09.github.io/"/>
-  <updated>2025-04-25T11:32:37.505Z</updated>
+  <updated>2025-08-09T16:23:55.603Z</updated>
   <id>https://brianlien09.github.io/</id>
   
   <author>
@@ -17,14 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Acer Swift Go 14 Touchpad is updating 充滿屏幕問題</title>
+    <title>如何解決 Acer Swift Go 14 的「Touchpad is updating」全螢幕問題</title>
     <link href="https://brianlien09.github.io/20250425/acer_swift_go_14_touchpad_screen_issues/"/>
     <id>https://brianlien09.github.io/20250425/acer_swift_go_14_touchpad_screen_issues/</id>
     <published>2025-04-25T10:05:54.000Z</published>
-    <updated>2025-04-25T11:32:37.505Z</updated>
+    <updated>2025-08-09T16:23:55.603Z</updated>
     
     
-    <summary type="html">&lt;p&gt;本文針對 Acer Swift Go 14 屏幕充滿 Touchpad is updating 的問題進行解決&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;本文旨在解決 Acer Swift Go 14 筆記型電腦在更新後，出現「Touchpad is updating」訊息佔滿整個螢幕的問題。&lt;/p&gt;</summary>
     
     
     
@@ -36,14 +36,14 @@
   </entry>
   
   <entry>
-    <title>hexo常用指令</title>
+    <title>Hexo 常用指令大全</title>
     <link href="https://brianlien09.github.io/20250425/hexo/hexo_common_commands/"/>
     <id>https://brianlien09.github.io/20250425/hexo/hexo_common_commands/</id>
     <published>2025-04-25T09:56:37.000Z</published>
-    <updated>2025-08-06T17:47:30.373Z</updated>
+    <updated>2025-08-09T16:21:15.284Z</updated>
     
     
-    <summary type="html">hexo 你不可不知的最基礎常用指令</summary>
+    <summary type="html">這是一份給 Hexo 使用者的常用指令速查表，涵蓋了從建立文章到部署網站的完整流程，讓您輕鬆管理您的部落格。</summary>
     
     
     
@@ -55,18 +55,20 @@
   </entry>
   
   <entry>
-    <title>hexo移機教學</title>
+    <title>Hexo 移機與環境設定教學</title>
     <link href="https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/"/>
     <id>https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/</id>
     <published>2024-12-26T02:45:49.000Z</published>
-    <updated>2024-12-29T08:52:47.826Z</updated>
+    <updated>2025-08-09T16:15:32.391Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;第一步安裝-將之前在github備份的原始碼下載下來&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#第一步安裝-將之前在github備份的原始碼下載下來&quot;&gt;&lt;/a&gt; 第一步：安裝</summary>
+    <summary type="html">&lt;p&gt;本教學將引導您如何從 GitHub 上的原始碼備份，快速地在新的電腦環境中還原您的 Hexo 部落格。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;第一步安裝基礎環境&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#第一步安裝基礎環境&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -176,24 +178,14 @@
   </entry>
   
   <entry>
-    <title>資料保護</title>
+    <title>應用程式的資料保護策略：從傳輸、使用到儲存</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/</id>
     <published>2024-08-04T09:36:06.000Z</published>
-    <updated>2025-04-30T01:07:10.507Z</updated>
+    <updated>2025-08-09T16:32:51.187Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;數據保護定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#數據保護定義&quot;&gt;&lt;/a&gt; 數據保護定義：&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;p&gt;一個設計良好的應用程式，必須實施全方位的安全控制，以確保敏感資訊在整個生命週期中的機密性、完整性和可用性。這不僅是技術要求，更是對使用者信任的承諾。本文將探討資料在三個不同狀態下的核心保護策略：傳輸中、靜態儲存和使用中。&lt;/p&gt;</summary>
     
     
     
@@ -205,20 +197,14 @@
   </entry>
   
   <entry>
-    <title>數據轉義不足</title>
+    <title>注入攻擊的根源：不充分的資料轉義</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/</id>
     <published>2024-08-04T08:37:10.000Z</published>
-    <updated>2025-04-30T01:04:09.669Z</updated>
+    <updated>2025-08-09T16:31:53.665Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;資料轉義是什麼&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#資料轉義是什麼&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;幾乎所有注入型攻擊（如 XSS、SQL Injection）的根本原因，都源於同一個問題：&lt;strong&gt;不充分的資料轉義 (Insufficient Data Escaping)&lt;/strong&gt;。當應用程式將使用者提供的資料，直接與後端的指令或標記語言（如 SQL、HTML）拼接在一起，而沒有對其中的特殊字元進行適當處理時，就為攻擊者敞開了大門。&lt;/p&gt;</summary>
     
     
     
@@ -230,20 +216,14 @@
   </entry>
   
   <entry>
-    <title>故障時的安全性</title>
+    <title>Fail-Safe：當錯誤處理成為安全漏洞</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/</id>
     <published>2024-08-04T08:32:08.000Z</published>
-    <updated>2025-04-30T01:02:09.470Z</updated>
+    <updated>2025-08-09T16:31:10.873Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什麼是故障時的安全性的概念&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#什麼是故障時的安全性的概念&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;在設計系統時，我們往往專注於正常運作時的邏輯，但當系統遇到非預期的錯誤或故障時，其處理方式同樣至關重要。「故障時的安全性 (Fail-Safe)」是一個核心的安全設計原則，它要求系統在發生故障時，必須進入並保持在一個安全的狀態，而不是一個充滿風險的未知狀態。&lt;/p&gt;</summary>
     
     
     
@@ -255,20 +235,14 @@
   </entry>
   
   <entry>
-    <title>CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</title>
+    <title>Web 安全基石：CSP、SOP 與 CORS 詳解</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/</id>
     <published>2024-08-04T08:30:25.000Z</published>
-    <updated>2025-04-30T01:09:20.109Z</updated>
+    <updated>2025-08-09T16:26:27.179Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;csp內容安全策略&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#csp內容安全策略&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，&lt;strong&gt;同源策略 (SOP)&lt;/strong&gt;、&lt;strong&gt;內容安全策略 (CSP)&lt;/strong&gt; 和 &lt;strong&gt;跨來源資源共享 (CORS)&lt;/strong&gt; 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。&lt;/p&gt;</summary>
     
     
     
@@ -280,20 +254,14 @@
   </entry>
   
   <entry>
-    <title>存取控制 - 不安全的直接物件引用</title>
+    <title>不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/</id>
     <published>2024-08-04T08:28:36.000Z</published>
-    <updated>2025-04-30T00:37:31.241Z</updated>
+    <updated>2025-08-09T16:30:19.274Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;不安全的直接物件引用定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#不安全的直接物件引用定義&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;不安全的直接物件引用 (Insecure Direct Object References, IDOR) 是最常見也最容易被忽略的存取控制漏洞之一。它發生在當應用程式允許使用者透過一個可預測的識別碼（如使用者 ID、訂單編號）直接存取資料，卻沒有在後端驗證該使用者是否真的有權限存取該筆資料時。&lt;/p&gt;</summary>
     
     
     
@@ -305,20 +273,14 @@
   </entry>
   
   <entry>
-    <title>路徑穿越</title>
+    <title>路徑穿越漏洞：讀取你不該讀取的檔案</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/</id>
     <published>2024-08-04T08:23:00.000Z</published>
-    <updated>2025-04-30T01:02:59.316Z</updated>
+    <updated>2025-08-09T16:33:33.464Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;路徑穿越漏洞定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#路徑穿越漏洞定義&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;路徑穿越 (Path Traversal)，也稱為目錄穿越 (Directory Traversal) 或「點-點-斜線 (dot-dot-slash)」攻擊，是一種允許攻擊者存取網站伺服器上任意檔案的漏洞。透過操縱檔案路徑，攻擊者可以讀取到網站根目錄之外的敏感檔案，例如設定檔、原始碼，甚至是系統層級的密碼檔案。&lt;/p&gt;</summary>
     
     
     
@@ -330,24 +292,14 @@
   </entry>
   
   <entry>
-    <title>不安全的密碼更改功能</title>
+    <title>帳戶接管風險：不安全的密碼變更功能</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/</id>
     <published>2024-08-04T08:22:14.000Z</published>
-    <updated>2025-04-30T00:57:31.624Z</updated>
+    <updated>2025-08-09T16:27:32.366Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#定義&quot;&gt;&lt;/a&gt; 定義：&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;不安全的密碼更改功能是一種認證漏洞，影響需要通過自助「更改密碼」功能創建新密碼的用戶。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;p&gt;密碼變更功能是任何使用者系統的核心部分，但如果設計不當，它可能成為攻擊者接管帳戶的直接途徑。一個不安全的密碼變更功能，會讓攻擊者在未經適當授權的情況下，擅自修改受害者的密碼。&lt;/p&gt;</summary>
     
     
     
@@ -359,20 +311,14 @@
   </entry>
   
   <entry>
-    <title>不當身份驗證</title>
+    <title>不當的身份驗證：當信任可以被偽造</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/</id>
     <published>2024-08-04T08:20:50.000Z</published>
-    <updated>2025-04-30T00:59:11.801Z</updated>
+    <updated>2025-08-09T16:28:44.432Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;不當身份驗證的定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#不當身份驗證的定義&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;身份驗證 (Authentication) 是確認「你是誰」的過程，是所有權限控管的基礎。若應用程式未能正確地、嚴謹地驗證使用者身份，就可能讓攻擊者輕易地冒充他人，甚至提升權限，存取受保護的資源。&lt;/p&gt;</summary>
     
     
     
@@ -384,24 +330,14 @@
   </entry>
   
   <entry>
-    <title>明文儲存敏感資訊</title>
+    <title>明文儲存的災難：為何必須加密敏感資料</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/</id>
     <published>2024-08-04T08:19:13.000Z</published>
-    <updated>2025-04-30T01:03:50.224Z</updated>
+    <updated>2025-08-09T16:32:27.747Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;明文存儲定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#明文存儲定義&quot;&gt;&lt;/a&gt; 明文存儲定義：&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;明文存儲是指將個人信息以純文本格式存儲的漏洞。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;p&gt;將使用者的個人資料、密碼、信用卡號等敏感資訊，以未經加密的明文形式直接儲存在資料庫、檔案或日誌中，是最嚴重且最不可原諒的安全疏失之一。一旦資料庫或伺服器被入侵，所有使用者的敏感資料將瞬間暴露在陽光下，造成毀滅性的後果。&lt;/p&gt;</summary>
     
     
     
@@ -413,24 +349,14 @@
   </entry>
   
   <entry>
-    <title>不安全的密碼術 - 對憑證的保護不足</title>
+    <title>憑證保護不足：當加密形同虛設</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</id>
     <published>2024-08-04T08:18:25.000Z</published>
-    <updated>2025-04-30T00:57:51.935Z</updated>
+    <updated>2025-08-09T16:27:54.129Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;定義&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#定義&quot;&gt;&lt;/a&gt; 定義：&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;「保護不足的憑證」漏洞指的是憑證未得到適當保護，這可能包括以純文本形式存儲或使用弱加密的憑證。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;p&gt;即使開發者對密碼或金鑰進行了加密，但如果儲存這些憑證的檔案或系統本身存在漏洞，導致攻擊者可以輕易存取，那麼再強的加密也形同虛設。這就是「憑證保護不足」漏洞。&lt;/p&gt;</summary>
     
     
     
@@ -442,20 +368,14 @@
   </entry>
   
   <entry>
-    <title>大量賦值漏洞</title>
+    <title>大量賦值漏洞：不應被使用者修改的欄位</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/</id>
     <published>2024-08-04T08:17:07.000Z</published>
-    <updated>2025-04-30T01:00:42.579Z</updated>
+    <updated>2025-08-09T16:29:55.046Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什麼是大量賦值漏洞&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#什麼是大量賦值漏洞&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;許多 Web 框架為了開發方便，提供了「大量賦值 (Mass Assignment)」功能，允許開發者將 HTTP 請求中的參數直接、自動地綁定到後端的物件模型上。然而，若未謹慎過濾，這個便利的功能就可能成為嚴重的安全漏洞，讓攻擊者得以竄改他們本不應有權限修改的資料欄位。&lt;/p&gt;</summary>
     
     
     
@@ -467,20 +387,14 @@
   </entry>
   
   <entry>
-    <title>不安全的密碼術 - 隨機性不安全</title>
+    <title>可預測的隨機性：不安全的密碼學應用</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/</id>
     <published>2024-08-04T08:13:38.000Z</published>
-    <updated>2025-04-30T00:58:45.967Z</updated>
+    <updated>2025-08-09T16:28:20.263Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什麼是不安全隨機性&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#什麼是不安全隨機性&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;在密碼學和許多安全相關的功能中，「隨機性」是不可或缺的基石。如果應用程式在需要不可預測性的情境下（如生成 Session ID、密碼重設權杖），卻使用了可被預測的「隨機」數，就會產生嚴重的安全漏洞。&lt;/p&gt;</summary>
     
     
     
@@ -492,20 +406,14 @@
   </entry>
   
   <entry>
-    <title>整數溢出（Integer Overflow）</title>
+    <title>整數溢位漏洞 (Integer Overflow)：當數字大到無法計算</title>
     <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%EF%BC%88Integer-Overflow%EF%BC%89/"/>
     <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%EF%BC%88Integer-Overflow%EF%BC%89/</id>
     <published>2024-08-04T08:12:24.000Z</published>
-    <updated>2025-04-30T01:05:19.927Z</updated>
+    <updated>2025-08-09T16:31:33.130Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;整數溢出是什麼&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#整數溢出是什麼&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;在電腦程式中，每種類型的整數（Integer）都有其可以儲存的數值上限與下限。當一個計算的結果超出了這個範圍，就像試圖將兩公升的水裝進一公升的瓶子裡，水滿溢出來了，這就是「整數溢位 (Integer Overflow)」。這種溢位可能導致程式行為異常、崩潰，甚至產生嚴重的安全漏洞。&lt;/p&gt;</summary>
     
     
     
