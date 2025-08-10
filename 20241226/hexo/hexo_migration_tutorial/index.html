@@ -29,7 +29,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
   
   <title>
-    Hexo 移機與環境設定教學 |
+    【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格 |
     
     冥夜小站
   </title>
@@ -49,17 +49,21 @@
 
   
   
-    <meta name="description" content="本教學將引導您如何從 GitHub 上的原始碼備份，快速地在新的電腦環境中還原您的 Hexo 部落格。   第一步：安裝基礎環境 在開始之前，您需要先安裝 Node.js、Git 以及 Hexo 命令列工具。   安裝 Node.js 與 Git  前往 Node.js 官網 下載並安裝最新穩定版 (LTS)。 前往 Git 官網 下載並安裝最新版本。 安裝完畢後，開啟您的終端機（命令提示字元或">
+    <meta name="description" content="當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 移機與環境設定教學">
+<meta property="og:title" content="【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格">
 <meta property="og:url" content="https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/index.html">
 <meta property="og:site_name" content="冥夜小站">
-<meta property="og:description" content="本教學將引導您如何從 GitHub 上的原始碼備份，快速地在新的電腦環境中還原您的 Hexo 部落格。   第一步：安裝基礎環境 在開始之前，您需要先安裝 Node.js、Git 以及 Hexo 命令列工具。   安裝 Node.js 與 Git  前往 Node.js 官網 下載並安裝最新穩定版 (LTS)。 前往 Git 官網 下載並安裝最新版本。 安裝完畢後，開啟您的終端機（命令提示字元或">
+<meta property="og:description" content="當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-26T02:45:49.000Z">
-<meta property="article:modified_time" content="2025-08-10T18:00:47.558Z">
+<meta property="article:modified_time" content="2025-08-10T18:50:17.823Z">
 <meta property="article:author" content="冥夜">
 <meta property="article:tag" content="hexo">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="nodejs">
+<meta property="article:tag" content="環境設定">
 <meta name="twitter:card" content="summary">
   
   
@@ -208,7 +212,7 @@
           
         </picture>
         
-          <img  fetchpriority="high" src="/images/banner.jpg" alt="Hexo 移機與環境設定教學">
+          <img  fetchpriority="high" src="/images/banner.jpg" alt="【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格">
         
       
     
@@ -219,7 +223,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">Hexo 移機與環境設定教學</h1>
+            <h1 data-aos="slide-up">【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格</h1>
           </a>
         
       
@@ -248,7 +252,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%9F%BA%E7%A4%8E%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text"> 第一步：安裝基礎環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%BE%9E-github-%E4%B8%8B%E8%BC%89%E9%83%A8%E8%90%BD%E6%A0%BC%E5%8E%9F%E5%A7%8B%E7%A2%BC"><span class="toc-number">2.</span> <span class="toc-text"> 第二步：從 GitHub 下載部落格原始碼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%B0%88%E6%A1%88%E7%9B%B8%E4%BE%9D%E5%A5%97%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> 第三步：安裝專案相依套件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E5%95%9F%E5%8B%95%E8%88%87%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text"> 第四步：啟動與部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number"></span> <span class="toc-text"> 參考資料</span></a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%9F%BA%E7%A4%8E%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text"> 第一步：安裝基礎開發環境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%9D-nodejs-%E8%88%87-git"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.  安裝 Node.js 與 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D-hexo-cli"><span class="toc-number">1.2.</span> <span class="toc-text"> 2.  全域安裝 Hexo CLI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%BE%9E-github-%E4%B8%8B%E8%BC%89clone%E9%83%A8%E8%90%BD%E6%A0%BC%E5%8E%9F%E5%A7%8B%E7%A2%BC"><span class="toc-number">2.</span> <span class="toc-text"> 第二步：從 GitHub 下載（Clone）部落格原始碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%B0%88%E6%A1%88%E7%9B%B8%E4%BE%9D%E5%A5%97%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> 第三步：安裝專案相依套件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A6%96%E5%85%88%E4%BD%BF%E7%94%A8-cd-%E6%8C%87%E4%BB%A4%E9%80%B2%E5%85%A5%E5%89%9B%E5%89%9B-clone-%E4%B8%8B%E4%BE%86%E7%9A%84%E5%B0%88%E6%A1%88%E8%B3%87%E6%96%99%E5%A4%BE"><span class="toc-number">3.1.</span> <span class="toc-text"> 1.  首先，使用 cd 指令進入剛剛 clone 下來的專案資料夾：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8E%A5%E8%91%97%E5%9F%B7%E8%A1%8C-npm-install-%E4%BE%86%E5%AE%89%E8%A3%9D%E6%89%80%E6%9C%89%E7%9B%B8%E4%BE%9D%E5%A5%97%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text"> 2.  接著，執行 npm install 來安裝所有相依套件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E5%95%9F%E5%8B%95%E9%A0%90%E8%A6%BD%E8%88%87%E9%83%A8%E7%BD%B2%E7%99%BC%E5%B8%83"><span class="toc-number">4.</span> <span class="toc-text"> 第四步：啟動預覽與部署發布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9C%A8%E6%9C%AC%E6%A9%9F%E5%95%9F%E5%8B%95%E9%A0%90%E8%A6%BD%E4%BC%BA%E6%9C%8D%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text"> 1.  在本機啟動預覽伺服器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%A2%E7%94%9F%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88%E4%B8%A6%E9%83%A8%E7%BD%B2%E5%88%B0%E7%B6%B2%E7%AB%99"><span class="toc-number">4.2.</span> <span class="toc-text"> 2.  產生靜態檔案並部署到網站：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number">5.</span> <span class="toc-text"> 參考資料</span></a></li></ol>
       
   </div>
 </div>
@@ -261,7 +265,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">28</div>
+    <div class="sidebar-state-number">29</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -269,7 +273,7 @@
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">15</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -354,7 +358,7 @@
 
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/" data-aos="zoom-in">hexo</a>
+    <a class="article-category-link" href="/categories/hexo%E6%95%99%E5%AD%B8/" data-aos="zoom-in">hexo教學</a>
   </div>
 
 
@@ -365,66 +369,78 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p>本教學將引導您如何從 GitHub 上的原始碼備份，快速地在新的電腦環境中還原您的 Hexo 部落格。</p>
+        <blockquote>
+<p>當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。</p>
+</blockquote>
+<span id="more"></span>
+<p>在上一篇 <a href="/hexo/hexo-backup">備份教學</a> 中，我們學會了如何將 Hexo 專案的原始碼完整備份到一個私有的 GitHub 倉庫。現在，我們將利用這個備份，來示範如何在一個全新的環境中，從零開始，將您的部落格完整還原。</p>
+<h2 id="第一步安裝基礎開發環境"><a class="markdownIt-Anchor" href="#第一步安裝基礎開發環境"></a> 第一步：安裝基礎開發環境</h2>
+<p>無論在哪台電腦上，要運行 Hexo，我們都需要 Node.js（執行環境）、Git（版本控制工具）以及 Hexo CLI（命令列工具）。</p>
+<h3 id="1-安裝-nodejs-與-git"><a class="markdownIt-Anchor" href="#1-安裝-nodejs-與-git"></a> 1.  <strong>安裝 Node.js 與 Git</strong></h3>
+<pre><code>  * **Node.js**: 前往 [Node.js 官網](https://nodejs.org/en/) 下載並安裝 **LTS (長期支援)** 版本，這是最穩定且推薦的版本。
+  * **Git**: 前往 [Git 官網](https://git-scm.com/downloads) 下載並安裝適合您作業系統的版本。
+
+安裝完畢後，開啟您的終端機（Terminal、命令提示字元或 PowerShell），輸入以下指令來確認是否安裝成功。如果能成功顯示版本號，代表安裝無誤。
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+&gt; **提示**：在新電腦上，您需要重新設定 Git 與 GitHub 帳號的連接（例如設定 SSH 金鑰），這樣才能順利從您的私有倉庫 `clone` 或 `push`。詳細步驟可參考 [GitHub 官方文件](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)。
+</code></pre>
+<h3 id="2-全域安裝-hexo-cli"><a class="markdownIt-Anchor" href="#2-全域安裝-hexo-cli"></a> 2.  <strong>全域安裝 Hexo CLI</strong></h3>
+<pre><code>Hexo CLI 是操作 Hexo 部落格的核心工具。在終端機中，輸入以下指令來進行全域安裝，這樣您在任何路徑下都能使用 `hexo` 指令。
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+同樣地，使用 `hexo -v` 來確認是否成功安裝。
+</code></pre>
 <hr />
-<h3 id="第一步安裝基礎環境"><a class="markdownIt-Anchor" href="#第一步安裝基礎環境"></a> 第一步：安裝基礎環境</h3>
-<p>在開始之前，您需要先安裝 Node.js、Git 以及 Hexo 命令列工具。</p>
+<h2 id="第二步從-github-下載clone部落格原始碼"><a class="markdownIt-Anchor" href="#第二步從-github-下載clone部落格原始碼"></a> 第二步：從 GitHub 下載（Clone）部落格原始碼</h2>
+<p>基礎環境準備就緒後，現在我們要將備份在 GitHub 上的原始碼下載到新電腦。</p>
 <ol>
 <li>
-<p><strong>安裝 Node.js 與 Git</strong></p>
-<ul>
-<li>前往 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://nodejs.org/en/">Node.js 官網</a> 下載並安裝最新穩定版 (LTS)。</li>
-<li>前往 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/downloads">Git 官網</a> 下載並安裝最新版本。</li>
-<li>安裝完畢後，開啟您的終端機（命令提示字元或 PowerShell），輸入以下指令來確認是否安裝成功：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-</li>
-<li><strong>提示</strong>：若要從 GitHub 下載原始碼，請確保您的 Git 已與 GitHub 帳號<a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.blog.cmliussss.com/p/HexoBlogNo1/">完成綁定</a>。</li>
-</ul>
+<p>前往您備份用的<strong>私有倉庫</strong> GitHub 頁面。</p>
 </li>
 <li>
-<p><strong>安裝 Hexo CLI</strong></p>
-<ul>
-<li>在終端機中，輸入以下指令來全域安裝 Hexo CLI：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>點擊綠色的 <strong>“&lt;&gt; Code”</strong> 按鈕，複製倉庫的 URL（建議使用 SSH 或 HTTPS）。</p>
 </li>
-<li>安裝完畢後，輸入 <code>hexo -v</code> 確認是否成功。</li>
-</ul>
+<li>
+<p>開啟終端機，切換到您想要存放部落格專案的資料夾，然後執行 <code>git clone</code> 指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 將 [你的倉庫URL] 替換成上一步複製的網址</span></span><br><span class="line">git <span class="built_in">clone</span> [你的倉庫URL]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>分支說明</strong>：在上一篇教學中，我們是將程式碼推送到 <code>master</code> 或 <code>main</code> 分支。如果您的備份分支有特殊名稱（例如 <code>source</code> 或 <code>dev</code>），您需要使用 <code>-b</code> 參數來指定分支，例如：<br />
+<code>git clone -b source [你的倉庫URL]</code></p>
+</blockquote>
+<p>執行完畢後，Git 會將您的整個專案下載到一個與倉庫同名的資料夾中。</p>
 </li>
 </ol>
 <hr />
-<h3 id="第二步從-github-下載部落格原始碼"><a class="markdownIt-Anchor" href="#第二步從-github-下載部落格原始碼"></a> 第二步：從 GitHub 下載部落格原始碼</h3>
-<p>使用 <code>git clone</code> 指令將您備份在 GitHub 上的部落格原始碼下載到本機。</p>
-<ul>
-<li>開啟終端機，輸入以下指令：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b hexo https://github.com/[您的 GitHub 帳號]/hexo_reimu_backup</span><br></pre></td></tr></table></figure>
-</li>
-<li>這會將您的專案下載到名為 <code>hexo_reimu_backup</code> 的資料夾中</li>
-</ul>
+<h2 id="第三步安裝專案相依套件"><a class="markdownIt-Anchor" href="#第三步安裝專案相依套件"></a> 第三步：安裝專案相依套件</h2>
+<p>原始碼雖然下載下來了，但還缺少運作時所需的各種套件（例如主題、渲染器、部署工具等）。這些套件的資訊都記錄在 <code>package.json</code> 檔案中。</p>
+<h3 id="1-首先使用-cd-指令進入剛剛-clone-下來的專案資料夾"><a class="markdownIt-Anchor" href="#1-首先使用-cd-指令進入剛剛-clone-下來的專案資料夾"></a> 1.  首先，使用 <code>cd</code> 指令進入剛剛 <code>clone</code> 下來的專案資料夾：</h3>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 將 [專案資料夾名稱] 換成你自己的</span></span><br><span class="line"><span class="built_in">cd</span> [專案資料夾名稱]</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="2-接著執行-npm-install-來安裝所有相依套件"><a class="markdownIt-Anchor" href="#2-接著執行-npm-install-來安裝所有相依套件"></a> 2.  接著，執行 <code>npm install</code> 來安裝所有相依套件：</h3>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+npm 會讀取 `package.json` 與 `package-lock.json` 檔案，下載並安裝所有被記錄下來的、版本完全相同的套件，確保新環境與舊環境的依賴關係一致。
+</code></pre>
 <hr />
-<h3 id="第三步安裝專案相依套件"><a class="markdownIt-Anchor" href="#第三步安裝專案相依套件"></a> 第三步：安裝專案相依套件</h3>
-<p>下載原始碼後，需要安裝所有必要的套件才能讓部落格正常運作。</p>
-<ul>
-<li>在剛剛 <code>clone</code> 下來的專案資料夾中，執行以下指令：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --force</span><br></pre></td></tr></table></figure>
-</li>
-<li><strong>指令說明</strong>：
-<ul>
-<li><code>npm install</code> 會根據專案中的 <code>package.json</code> 檔案，自動下載所有需要的相依套件。</li>
-<li><code>--force</code> 參數會強制重新安裝，有助於解決不同環境間可能發生的套件版本衝突或快取問題。</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h3 id="第四步啟動與部署"><a class="markdownIt-Anchor" href="#第四步啟動與部署"></a> 第四步：啟動與部署</h3>
-<p>安裝完所有套件後，您的部落格就準備好了！</p>
-<ul>
-<li>
-<p><strong>在本機預覽</strong>：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>執行後，在瀏覽器開啟 <code>http://localhost:4000</code> 即可看到您的部落格。</p>
-</li>
-<li>
-<p><strong>部署到 GitHub Pages</strong>：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<p>此指令會產生靜態檔案並將其推送到您設定好的 GitHub 儲存庫。</p>
-</li>
-</ul>
+<h2 id="第四步啟動預覽與部署發布"><a class="markdownIt-Anchor" href="#第四步啟動預覽與部署發布"></a> 第四步：啟動預覽與部署發布</h2>
+<p>恭喜！您的部落格至此已完全還原。現在來驗證一下成果吧。</p>
+<h3 id="1-在本機啟動預覽伺服器"><a class="markdownIt-Anchor" href="#1-在本機啟動預覽伺服器"></a> 1.  <strong>在本機啟動預覽伺服器</strong>：</h3>
+<pre><code>在專案資料夾中執行以下指令：
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line"><span class="comment"># 或簡寫</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+終端機將顯示服務已啟動。此時在瀏覽器中開啟 `http://localhost:4000`，您應該能看到與舊電腦上完全一樣的部落格。
+</code></pre>
+<h3 id="2-產生靜態檔案並部署到網站"><a class="markdownIt-Anchor" href="#2-產生靜態檔案並部署到網站"></a> 2.  <strong>產生靜態檔案並部署到網站</strong>：</h3>
+<pre><code>確認本機預覽無誤後，即可執行標準的部署指令，將部落格發布到您的 GitHub Pages 或其他託管平台。
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --deploy</span><br><span class="line"><span class="comment"># 或簡寫</span></span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>此指令會先清除舊的檔案、重新產生最新的靜態網站內容，然後將其部署到您在 <code>_config.yml</code> 中設定好的公開倉庫。</p>
+<p>至此，您已經成功完成了整個部落格的無痛轉移與還原！</p>
 <hr />
 <h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
 <ul>
@@ -439,7 +455,7 @@
       
         <div class="share-wrapper">
   
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20241226%2Fhexo%2Fhexo_migration_tutorial%2F" target="_blank" rel="noopener noreferrer" title="Hexo 移機與環境設定教學">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20241226%2Fhexo%2Fhexo_migration_tutorial%2F" target="_blank" rel="noopener noreferrer" title="【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格">
       <div class="share-icon icon icon-facebook">
         
       </div>
@@ -463,7 +479,7 @@
         </span>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/" rel="tag">環境設定</a></li></ul>
 
 
     </footer>
@@ -474,13 +490,13 @@
       
       <div class="article-nav-link-wrap article-nav-link-left">
         
-          <img data-src="https://repository-images.githubusercontent.com/5923215/ae16280b-260d-4167-8fa4-c533dad06177" data-sizes="auto" alt="Hexo 常用指令大全" class="lazyload">
+          <img data-src="https://repository-images.githubusercontent.com/5923215/ae16280b-260d-4167-8fa4-c533dad06177" data-sizes="auto" alt="Hexo 常用指令大全 (Cheatsheet)" class="lazyload">
         
         <a href="/20250425/hexo/hexo_common_commands/"></a>
         <div class="article-nav-caption">Newer</div>
         <h3 class="article-nav-title">
           
-            Hexo 常用指令大全
+            Hexo 常用指令大全 (Cheatsheet)
           
         </h3>
       </div>
@@ -570,10 +586,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        25.4k
+        27.6k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:19
+        01:27
       </div>
     
     
@@ -598,7 +614,7 @@
   <h3 class="toc-title">文章目錄</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%9F%BA%E7%A4%8E%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text"> 第一步：安裝基礎環境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%BE%9E-github-%E4%B8%8B%E8%BC%89%E9%83%A8%E8%90%BD%E6%A0%BC%E5%8E%9F%E5%A7%8B%E7%A2%BC"><span class="toc-number">2.</span> <span class="toc-text"> 第二步：從 GitHub 下載部落格原始碼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%B0%88%E6%A1%88%E7%9B%B8%E4%BE%9D%E5%A5%97%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> 第三步：安裝專案相依套件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E5%95%9F%E5%8B%95%E8%88%87%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text"> 第四步：啟動與部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number"></span> <span class="toc-text"> 參考資料</span></a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%9F%BA%E7%A4%8E%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text"> 第一步：安裝基礎開發環境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%9D-nodejs-%E8%88%87-git"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.  安裝 Node.js 與 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D-hexo-cli"><span class="toc-number">1.2.</span> <span class="toc-text"> 2.  全域安裝 Hexo CLI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%BE%9E-github-%E4%B8%8B%E8%BC%89clone%E9%83%A8%E8%90%BD%E6%A0%BC%E5%8E%9F%E5%A7%8B%E7%A2%BC"><span class="toc-number">2.</span> <span class="toc-text"> 第二步：從 GitHub 下載（Clone）部落格原始碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E5%AE%89%E8%A3%9D%E5%B0%88%E6%A1%88%E7%9B%B8%E4%BE%9D%E5%A5%97%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> 第三步：安裝專案相依套件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A6%96%E5%85%88%E4%BD%BF%E7%94%A8-cd-%E6%8C%87%E4%BB%A4%E9%80%B2%E5%85%A5%E5%89%9B%E5%89%9B-clone-%E4%B8%8B%E4%BE%86%E7%9A%84%E5%B0%88%E6%A1%88%E8%B3%87%E6%96%99%E5%A4%BE"><span class="toc-number">3.1.</span> <span class="toc-text"> 1.  首先，使用 cd 指令進入剛剛 clone 下來的專案資料夾：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8E%A5%E8%91%97%E5%9F%B7%E8%A1%8C-npm-install-%E4%BE%86%E5%AE%89%E8%A3%9D%E6%89%80%E6%9C%89%E7%9B%B8%E4%BE%9D%E5%A5%97%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text"> 2.  接著，執行 npm install 來安裝所有相依套件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E5%95%9F%E5%8B%95%E9%A0%90%E8%A6%BD%E8%88%87%E9%83%A8%E7%BD%B2%E7%99%BC%E5%B8%83"><span class="toc-number">4.</span> <span class="toc-text"> 第四步：啟動預覽與部署發布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9C%A8%E6%9C%AC%E6%A9%9F%E5%95%9F%E5%8B%95%E9%A0%90%E8%A6%BD%E4%BC%BA%E6%9C%8D%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text"> 1.  在本機啟動預覽伺服器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%94%A2%E7%94%9F%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88%E4%B8%A6%E9%83%A8%E7%BD%B2%E5%88%B0%E7%B6%B2%E7%AB%99"><span class="toc-number">4.2.</span> <span class="toc-text"> 2.  產生靜態檔案並部署到網站：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-number">5.</span> <span class="toc-text"> 參考資料</span></a></li></ol>
       
   </div>
 </div>
@@ -611,7 +627,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">28</div>
+    <div class="sidebar-state-number">29</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -619,7 +635,7 @@
   </div>
   <div class="sidebar-state-tag">
     <div>標籤</div>
-    <div class="sidebar-state-number">8</div>
+    <div class="sidebar-state-number">15</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -930,13 +946,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "冥夜",
-          title: "Hexo 移機與環境設定教學",
+          title: "【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格",
           url: "https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/",
-          excerpt: "",
+          excerpt: " 當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。 ",
           description: "",
-          stripContent: "本教學將引導您如何從 GitHub 上的原始碼備份，快速地在新的電腦環境中還原您的 Hexo 部落格。   第一步：安裝基礎環境 在開始之前，您需要先安裝 Node.js、Git 以及 Hexo 命令列工具。   安裝 Node.js 與 Git  前往 Node.js 官網 下載並安裝最新穩定版 (LTS)。 前往 Git 官網 下載並安裝最新版本。 安裝完畢後，開啟您的終端機（命令提示字元或 PowerShell），輸入以下指令來確認是否安裝成功：12node -vgit --version",
+          stripContent: " 當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。   在上一篇 備份教學 中，我們學會了如何將 Hexo 專案的原始碼完整備份到一個私有的 GitHub 倉庫。現在，我們將利用這個備份，來示範如何在一個全新的環境中，從零開始，將您的部落格完整還原。  第一步：安裝基礎開發環境 無論在哪台電腦上，要運行 Hexo，我們都需要 Node.js（執行環境）、Git（版本控制工具）以及 Hexo CLI（",
           date: "Thu Dec 26 2024 10:45:49 GMT+0800",
-          updated: "Mon Aug 11 2025 02:00:47 GMT+0800",
+          updated: "Mon Aug 11 2025 02:50:17 GMT+0800",
           cover: "/images/banner.jpg",
         };
       </script>

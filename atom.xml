@@ -6,7 +6,7 @@
   <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien09.github.io/"/>
-  <updated>2025-08-10T16:51:24.930Z</updated>
+  <updated>2025-08-10T18:50:48.858Z</updated>
   <id>https://brianlien09.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Hexo 教學】萬無一失！使用 GitHub 私有倉庫備份你的 Hexo 部落格原始碼</title>
+    <link href="https://brianlien09.github.io/20250811/hexo/hexo-backup/"/>
+    <id>https://brianlien09.github.io/20250811/hexo/hexo-backup/</id>
+    <published>2025-08-10T18:11:02.000Z</published>
+    <updated>2025-08-10T18:50:48.858Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;這是一篇關於如何使用 GitHub 私有倉庫，完整備份 Hexo 部落格原始碼的教學。學會這招，無論更換電腦或系統重灌，都能輕鬆還原你的心血結晶！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="hexo教學" scheme="https://brianlien09.github.io/categories/hexo%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="hexo" scheme="https://brianlien09.github.io/tags/hexo/"/>
+    
+    <category term="git" scheme="https://brianlien09.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://brianlien09.github.io/tags/github/"/>
+    
+    <category term="backup" scheme="https://brianlien09.github.io/tags/backup/"/>
+    
+  </entry>
   
   <entry>
     <title>如何解決 Acer Swift Go 14 的「Touchpad is updating」全螢幕問題</title>
@@ -36,48 +63,58 @@
   </entry>
   
   <entry>
-    <title>Hexo 常用指令大全</title>
+    <title>Hexo 常用指令大全 (Cheatsheet)</title>
     <link href="https://brianlien09.github.io/20250425/hexo/hexo_common_commands/"/>
     <id>https://brianlien09.github.io/20250425/hexo/hexo_common_commands/</id>
     <published>2025-04-25T09:56:37.000Z</published>
-    <updated>2025-08-10T16:51:24.936Z</updated>
+    <updated>2025-08-10T18:47:53.477Z</updated>
     
     
-    <summary type="html">這是一份給 Hexo 使用者的常用指令速查表，涵蓋了從建立文章到部署網站的完整流程，讓您輕鬆管理您的部落格。</summary>
+    <summary type="html">一份給 Hexo 使用者的終極常用指令速查表，涵蓋從建立文章到部署網站的完整流程。無論是新手還是老手，都能在這裡找到需要的指令，大幅提升部落格管理效率。</summary>
     
     
     
-    <category term="hexo" scheme="https://brianlien09.github.io/categories/hexo/"/>
+    <category term="hexo教學" scheme="https://brianlien09.github.io/categories/hexo%E6%95%99%E5%AD%B8/"/>
     
+    
+    <category term="hexo" scheme="https://brianlien09.github.io/tags/hexo/"/>
     
     <category term="hexo教學" scheme="https://brianlien09.github.io/tags/hexo%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="git" scheme="https://brianlien09.github.io/tags/git/"/>
+    
+    <category term="指令大全" scheme="https://brianlien09.github.io/tags/%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    
+    <category term="速查表" scheme="https://brianlien09.github.io/tags/%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo 移機與環境設定教學</title>
+    <title>【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格</title>
     <link href="https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/"/>
     <id>https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/</id>
     <published>2024-12-26T02:45:49.000Z</published>
-    <updated>2025-08-10T18:00:47.558Z</updated>
+    <updated>2025-08-10T18:50:17.823Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本教學將引導您如何從 GitHub 上的原始碼備份，快速地在新的電腦環境中還原您的 Hexo 部落格。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;第一步安裝基礎環境&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#第一步安裝基礎環境&quot;&gt;&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="hexo" scheme="https://brianlien09.github.io/categories/hexo/"/>
+    <category term="hexo教學" scheme="https://brianlien09.github.io/categories/hexo%E6%95%99%E5%AD%B8/"/>
     
     
     <category term="hexo" scheme="https://brianlien09.github.io/tags/hexo/"/>
+    
+    <category term="git" scheme="https://brianlien09.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://brianlien09.github.io/tags/github/"/>
+    
+    <category term="nodejs" scheme="https://brianlien09.github.io/tags/nodejs/"/>
+    
+    <category term="環境設定" scheme="https://brianlien09.github.io/tags/%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/"/>
     
   </entry>
   
@@ -395,25 +432,6 @@
     
     
     <summary type="html">&lt;p&gt;在密碼學和許多安全相關的功能中，「隨機性」是不可或缺的基石。如果應用程式在需要不可預測性的情境下（如生成 Session ID、密碼重設權杖），卻使用了可被預測的「隨機」數，就會產生嚴重的安全漏洞。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
-    
-    
-    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>整數溢位漏洞 (Integer Overflow)：當數字大到無法計算</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%EF%BC%88Integer-Overflow%EF%BC%89/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B4%E6%95%B8%E6%BA%A2%E5%87%BA%EF%BC%88Integer-Overflow%EF%BC%89/</id>
-    <published>2024-08-04T08:12:24.000Z</published>
-    <updated>2025-08-10T16:51:24.934Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在電腦程式中，每種類型的整數（Integer）都有其可以儲存的數值上限與下限。當一個計算的結果超出了這個範圍，就像試圖將兩公升的水裝進一公升的瓶子裡，水滿溢出來了，這就是「整數溢位 (Integer Overflow)」。這種溢位可能導致程式行為異常、崩潰，甚至產生嚴重的安全漏洞。&lt;/p&gt;</summary>
     
     
     
