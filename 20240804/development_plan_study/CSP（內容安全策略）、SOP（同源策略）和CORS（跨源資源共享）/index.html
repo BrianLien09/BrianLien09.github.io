@@ -1,5 +1,130 @@
-<!DOCTYPE html><html lang="zh-TW" data-theme-mode="true"><head><meta charset="utf-8"><script src="https://www.googletagmanager.com/gtag/js?id=true"></script><script data-pjax>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","true")</script><script>window.REIMU_CONFIG={},window.REIMU_CONFIG.icon_font="4552607_0khxww3tj3q9",window.REIMU_CONFIG.clipboard_tips={success:{en:"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)",ja:"コピー成功 (*^▽^*)"},fail:{en:"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ",ja:"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},copyright:{enable:!0,count:50,license_type:"by-nc-sa"}},window.REIMU_CONFIG.clipboard_tips.copyright.content="本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！",window.REIMU_CONFIG.code_block={expand:!0},window.REIMU_CONFIG.base="https://brianlien09.github.io"</script><title>Web 安全基石：CSP、SOP 與 CORS 詳解 | 冥夜小站</title><meta name="description" content="在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;"><link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/loader.css"><meta name="description" content="在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。"><meta property="og:type" content="article"><meta property="og:title" content="Web 安全基石：CSP、SOP 與 CORS 詳解"><meta property="og:url" content="https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/index.html"><meta property="og:site_name" content="冥夜小站"><meta property="og:description" content="在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。"><meta property="og:locale" content="zh_TW"><meta property="article:published_time" content="2024-08-04T08:30:25.000Z"><meta property="article:modified_time" content="2025-08-09T16:26:27.179Z"><meta property="article:author" content="冥夜"><meta property="article:tag" content="網路漏洞"><meta name="twitter:card" content="summary"><link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml"><link rel="shortcut icon" href="/images/dd.ico"><link rel="stylesheet" href="/css/style.css"><link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous"><link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous"><script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous"><link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loader"><div class="loading-left-bg loading-bg"></div><div class="loading-right-bg loading-bg"></div><div class="spinner-box"><div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision"><path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)"/><path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
-           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)"/></svg></div><div class="loading-word">少女祈禱中...</div></div></div><script>var time = null;
+
+  <!DOCTYPE html>
+  <html lang="zh-TW"  
+    
+      data-theme-mode="true"
+    
+  >
+  <head>
+  
+  <meta charset="utf-8">
+  
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
+  
+  <title>
+    Web 安全基石：CSP、SOP 與 CORS 詳解 |
+    
+    冥夜小站
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web 安全基石：CSP、SOP 與 CORS 詳解">
+<meta property="og:url" content="https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/index.html">
+<meta property="og:site_name" content="冥夜小站">
+<meta property="og:description" content="在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-08-04T08:30:25.000Z">
+<meta property="article:modified_time" content="2025-08-10T16:51:24.931Z">
+<meta property="article:author" content="冥夜">
+<meta property="article:tag" content="網路漏洞">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/dd.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
+  
+  
+    
+      
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+
+    
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      
+      
+        
+      
+      <div class="loading-word">少女祈禱中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
     var startLoading = () => {
       time = Date.now();
       document.getElementById('loader').classList.remove("loading");
@@ -20,7 +145,618 @@
       }
     }
     window.addEventListener('DOMContentLoaded', endLoading);
-    document.getElementById('loader').addEventListener('click', endLoading);</script><div id="copy-tooltip" style="pointer-events:none;opacity:0;transition:all .2s ease;position:fixed;top:50%;left:50%;z-index:999;transform:translate(-50%,-50%);color:#fff;background:rgba(0,0,0,.5);padding:10px 15px;border-radius:10px"></div><div id="container"><div id="wrap"><div id="header-nav"><nav id="main-nav"><span class="main-nav-link-wrap"><div class="main-nav-icon icon rotate">&#xe62b;</div><a class="main-nav-link" href="/">首頁</a> </span><span class="main-nav-link-wrap"><div class="main-nav-icon icon rotate">&#xe62b;</div><a class="main-nav-link" href="/archives">歸檔</a> </span><span class="main-nav-link-wrap"><div class="main-nav-icon icon rotate">&#xe62b;</div><a class="main-nav-link" href="/about">關於</a> </span><a id="main-nav-toggle" class="nav-icon"></a></nav><nav id="sub-nav"><a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 訂閱" target="_blank"></a> <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋"></a></nav></div><header id="header"><picture></picture><img fetchpriority="high" src="/images/banner.jpg" alt="Web 安全基石：CSP、SOP 與 CORS 詳解"><div id="header-outer"><div id="header-title"><a href="/" id="logo"><h1 data-aos="slide-up">Web 安全基石：CSP、SOP 與 CORS 詳解</h1></a><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div></div></header><div id="content" class="sidebar-left"><aside id="sidebar"><div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div><div class="sidebar-wrapper wrap-sticky"><div class="sidebar-wrap" data-aos="fade-up"><div class="sidebar-toc-sidebar"><div class="sidebar-toc"><h3 class="toc-title">文章目錄</h3><div class="sidebar-toc-wrapper toc-div-class"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-sop-same-origin-policy-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="toc-number">1.</span> <span class="toc-text">1. SOP (Same-Origin Policy) - 同源策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cors-cross-origin-resource-sharing-%E8%B7%A8%E4%BE%86%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB"><span class="toc-number">2.</span> <span class="toc-text">2. CORS (Cross-Origin Resource Sharing) - 跨來源資源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-csp-content-security-policy-%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5"><span class="toc-number">3.</span> <span class="toc-text">3. CSP (Content Security Policy) - 內容安全策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%88%87%E9%A0%90%E9%98%B2%E6%8E%AA%E6%96%BD"><span class="toc-number">4.</span> <span class="toc-text">安全風險與預防措施</span></a></li></ol></div></div></div><div class="sidebar-common-sidebar hidden"><div class="sidebar-author"><img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload"><div class="sidebar-author-name">冥夜</div><div class="sidebar-description">記錄冥夜的成長軌跡</div></div><div class="sidebar-state"><div class="sidebar-state-article"><div>文章</div><div class="sidebar-state-number">28</div></div><div class="sidebar-state-category"><div>分類</div><div class="sidebar-state-number">6</div></div><div class="sidebar-state-tag"><div>標籤</div><div class="sidebar-state-number">8</div></div></div><div class="sidebar-social"><div class="icon-email sidebar-social-icon"><a href="mailto:brianlien09@gmail.com" itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a></div><div class="icon-github sidebar-social-icon"><a href="https://github.com/BrianLien09" itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a></div><div class="icon-youtube sidebar-social-icon"><a href="https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q" itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a></div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">首頁</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">歸檔</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">關於</div></div></div></div><div class="sidebar-btn-wrapper" style="position:static"><div class="sidebar-toc-btn current"></div><div class="sidebar-common-btn"></div></div></div></div><div class="sidebar-widget"></div></aside><section id="main"><article id="post-development_plan_study/CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting"><div class="article-inner" data-aos="fade-up"><div class="article-meta"><div class="article-date"><span class="article-date-link" data-aos="zoom-in"><time datetime="2024-08-04T08:30:25.000Z" itemprop="datePublished">2024-08-04</time> <time style="display:none" id="post-update-time">2025-08-10</time></span></div><div class="article-category"><a class="article-category-link" href="/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/" data-aos="zoom-in">安全達人養成計劃</a></div></div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><p>在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，<strong>同源策略 (SOP)</strong>、<strong>內容安全策略 (CSP)</strong> 和 <strong>跨來源資源共享 (CORS)</strong> 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。</p><span id="more"></span><hr><h3 id="1-sop-same-origin-policy-同源策略"><a class="markdownIt-Anchor" href="#1-sop-same-origin-policy-同源策略"></a> 1. SOP (Same-Origin Policy) - 同源策略</h3><p><strong>什麼是 SOP？</strong><br>同源策略是瀏覽器最核心的安全策略，用於隔離來自不同「來源 (Origin)」的文件或腳本，限制它們之間的互動。簡單來說，一個來源的腳本，在未經允許的情況下，不能讀取或修改另一個來源的資源。</p><p><strong>「同源」的定義</strong><br>當兩個 URL 的 <strong>通訊協定 (Protocol)</strong>、<strong>主機 (Host)</strong> 和 <strong>通訊埠 (Port)</strong> 三者完全相同時，才被視為同源。</p><table><thead><tr><th style="text-align:left">URL</th><th style="text-align:left">與 <code>http://example.com/</code> 比較</th><th style="text-align:left">結果</th></tr></thead><tbody><tr><td style="text-align:left"><code>http://example.com/page.html</code></td><td style="text-align:left">三者皆同</td><td style="text-align:left">同源</td></tr><tr><td style="text-align:left"><code>https://example.com/</code></td><td style="text-align:left">協定不同 (https)</td><td style="text-align:left">不同源</td></tr><tr><td style="text-align:left"><code>http://www.example.com/</code></td><td style="text-align:left">主機不同 (www)</td><td style="text-align:left">不同源</td></tr><tr><td style="text-align:left"><code>http://example.com:8080/</code></td><td style="text-align:left">通訊埠不同 (8080)</td><td style="text-align:left">不同源</td></tr></tbody></table><p>SOP 主要限制了對 Cookie、LocalStorage 和 DOM 的存取，是防禦多種攻擊的基礎。</p><hr><h3 id="2-cors-cross-origin-resource-sharing-跨來源資源共享"><a class="markdownIt-Anchor" href="#2-cors-cross-origin-resource-sharing-跨來源資源共享"></a> 2. CORS (Cross-Origin Resource Sharing) - 跨來源資源共享</h3><p><strong>什麼是 CORS？</strong><br>SOP 雖然安全，但也限制了 Web 應用的靈活性（例如，前端應用需要呼叫不同網域的 API）。CORS 是一種官方的「例外機制」，它允許伺服器在 HTTP 標頭中聲明，哪些外部來源有權限存取其資源，從而安全地放寬同源策略的限制。</p><p><strong>運作方式</strong></p><ul><li><strong>客戶端</strong>：當瀏覽器發起跨來源請求時，會自動在 HTTP 請求標頭中加入 <code>Origin</code> 欄位，標明請求的來源。</li><li><strong>伺服器</strong>：伺服器收到請求後，根據預設的策略，在 HTTP 回應標頭中加入 <code>Access-Control-Allow-Origin</code> 等欄位，告訴瀏覽器是否允許這次請求。</li></ul><p><strong>常見的 CORS 標頭</strong></p><ul><li><code>Access-Control-Allow-Origin</code>: 指定允許存取資源的來源 URL。</li><li><code>Access-Control-Allow-Methods</code>: 指定允許的 HTTP 方法 (GET, POST 等)。</li><li><code>Access-Control-Allow-Headers</code>: 指定允許的自訂請求標頭。</li></ul><hr><h3 id="3-csp-content-security-policy-內容安全策略"><a class="markdownIt-Anchor" href="#3-csp-content-security-policy-內容安全策略"></a> 3. CSP (Content Security Policy) - 內容安全策略</h3><p><strong>什麼是 CSP？</strong><br>CSP 是一種額外的安全層，主要目標是防止 <strong>跨站腳本攻擊 (XSS)</strong> 和其他內容注入攻擊。它允許網站管理者定義一份「白名單」，明確告知瀏覽器只允許載入和執行來自這些指定來源的資源（如 JavaScript、CSS、圖片、<code>&lt;iframe&gt;</code> 等）。</p><p><strong>運作方式</strong><br>CSP 透過 HTTP 回應標頭 <code>Content-Security-Policy</code> 來實作。管理者可以在這個標頭中定義多種指令。</p><p><strong>常見的 CSP 指令</strong></p><ul><li><code>default-src</code>: 為其他未設定的指令提供預設值。</li><li><code>script-src</code>: 定義允許執行的 JavaScript 來源。</li><li><code>style-src</code>: 定義允許載入的 CSS 來源。</li><li><code>img-src</code>: 定義允許載入的圖片來源。</li><li><code>form-action</code>: 限制 <code>&lt;form&gt;</code> 提交的目標 URL。</li><li><code>child-src</code>: 定義允許嵌入的 <code>&lt;iframe&gt;</code> 來源。</li></ul><hr><h3 id="安全風險與預防措施"><a class="markdownIt-Anchor" href="#安全風險與預防措施"></a> 安全風險與預防措施</h3><p><strong>1. CORS 設定不當</strong></p><ul><li><strong>風險</strong>: 如果 <code>Access-Control-Allow-Origin</code> 標頭被設為萬用字元 <code>*</code>，意味著任何外部網站都能存取您的 API 或資源，可能導致敏感資訊洩漏。</li><li><strong>預防</strong>:<ul><li>精確設定 <code>Access-Control-Allow-Origin</code>，只列出受信任的網域。</li><li>避免在需要身分驗證的 API 上使用 <code>*</code>。</li></ul></li></ul><p><strong>2. CSP 設定不當</strong></p><ul><li><strong>風險</strong>: 如果 CSP 規則設定得過於寬鬆（例如，允許 <code>unsafe-inline</code> 或 <code>unsafe-eval</code>），或者白名單包含了惡意來源，將無法有效防禦 XSS 攻擊。</li><li><strong>預防</strong>:<ul><li>盡可能詳細地列出每個資源的合法來源。</li><li>優先設定 <code>default-src</code> 作為基礎防線。</li><li>避免使用 <code>unsafe-inline</code> 和 <code>unsafe-eval</code>，改用 nonce 或 hash 的方式。</li><li>定期審查和更新您的 CSP 規則。</li></ul></li></ul></div><footer class="article-footer"><div class="share-wrapper"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20240804%2Fdevelopment_plan_study%2FCSP%25EF%25BC%2588%25E5%2585%25A7%25E5%25AE%25B9%25E5%25AE%2589%25E5%2585%25A8%25E7%25AD%2596%25E7%2595%25A5%25EF%25BC%2589%25E3%2580%2581SOP%25EF%25BC%2588%25E5%2590%258C%25E6%25BA%2590%25E7%25AD%2596%25E7%2595%25A5%25EF%25BC%2589%25E5%2592%258CCORS%25EF%25BC%2588%25E8%25B7%25A8%25E6%25BA%2590%25E8%25B3%2587%25E6%25BA%2590%25E5%2585%25B1%25E4%25BA%25AB%25EF%25BC%2589%2F" target="_blank" rel="noopener noreferrer" title="Web 安全基石：CSP、SOP 與 CORS 詳解"><div class="share-icon icon icon-facebook"></div></a></div><a data-aos="zoom-in" href="/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/#comments" class="article-comment-link"><span class="post-comments-count waline-comment-count" data-path="/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/" itemprop="commentCount"></span> 留言 </a><span data-aos="zoom-in" class="article-visitor-link"><span class="waline-pageview-count" data-path="/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/">0</span> <em class="post-meta-item-text">閲讀量</em></span><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" rel="tag">網路漏洞</a></li></ul></footer></div><nav id="article-nav" data-aos="fade-up"><div class="article-nav-link-wrap article-nav-link-left"><img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="Fail-Safe：當錯誤處理成為安全漏洞" class="lazyload"> <a href="/20240804/development_plan_study/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/"></a><div class="article-nav-caption">Newer</div><h3 class="article-nav-title">Fail-Safe：當錯誤處理成為安全漏洞</h3></div><div class="article-nav-link-wrap article-nav-link-right"><img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？" class="lazyload"> <a href="/20240804/development_plan_study/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/"></a><div class="article-nav-caption">Older</div><h3 class="article-nav-title">不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？</h3></div></nav></article><section id="comments" data-aos="fade-up"><div class="comment-header"><h2 class="comment-title">說些什麼吧！</h2><div class="comment-selector"><div class="comment-selector-wrap"><div class="selector-item" data-selector="waline"><span>waline</span></div></div></div></div><div class="comment-content"><div class="comment waline-comment" data-aos="fade-up" id="waline-comment"></div></div></section></section></div><footer id="footer"><div style="width:100%;overflow:hidden"><div class="footer-line"></div></div><div id="footer-info"><div><span class="icon-copyright"></span> 2025 <span class="footer-info-sep rotate"></span> 冥夜</div><div>基於&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp; Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a></div><div><span class="icon-brush"></span> 25.4k &nbsp;|&nbsp; <span class="icon-coffee"></span> 01:20</div></div></footer><div class="sidebar-top"><div class="sidebar-top-taichi rotate"></div><div class="arrow-up"></div></div><div id="mask" class="hide"></div></div><nav id="mobile-nav"><div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><div class="sidebar-toc"><h3 class="toc-title">文章目錄</h3><div class="sidebar-toc-wrapper toc-div-class"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-sop-same-origin-policy-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="toc-number">1.</span> <span class="toc-text">1. SOP (Same-Origin Policy) - 同源策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cors-cross-origin-resource-sharing-%E8%B7%A8%E4%BE%86%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB"><span class="toc-number">2.</span> <span class="toc-text">2. CORS (Cross-Origin Resource Sharing) - 跨來源資源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-csp-content-security-policy-%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5"><span class="toc-number">3.</span> <span class="toc-text">3. CSP (Content Security Policy) - 內容安全策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%88%87%E9%A0%90%E9%98%B2%E6%8E%AA%E6%96%BD"><span class="toc-number">4.</span> <span class="toc-text">安全風險與預防措施</span></a></li></ol></div></div></div><div class="sidebar-common-sidebar hidden"><div class="sidebar-author"><img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload"><div class="sidebar-author-name">冥夜</div><div class="sidebar-description">記錄冥夜的成長軌跡</div></div><div class="sidebar-state"><div class="sidebar-state-article"><div>文章</div><div class="sidebar-state-number">28</div></div><div class="sidebar-state-category"><div>分類</div><div class="sidebar-state-number">6</div></div><div class="sidebar-state-tag"><div>標籤</div><div class="sidebar-state-number">8</div></div></div><div class="sidebar-social"><div class="icon-email sidebar-social-icon"><a href="mailto:brianlien09@gmail.com" itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a></div><div class="icon-github sidebar-social-icon"><a href="https://github.com/BrianLien09" itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a></div><div class="icon-youtube sidebar-social-icon"><a href="https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q" itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a></div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">首頁</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">歸檔</div></div><div class="sidebar-menu-link-wrap"><a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a><div class="sidebar-menu-icon icon rotate">&#xe62b;</div><div class="sidebar-menu-link">關於</div></div></div></div></div><div class="sidebar-btn-wrapper"><div class="sidebar-toc-btn current"></div><div class="sidebar-common-btn"></div></div></nav></div><div class="site-search"><div class="reimu-popup popup"><div class="reimu-search"><div class="reimu-search-input-icon"></div><div class="reimu-search-input" id="reimu-search-input"></div><div class="popup-btn-close"></div></div><div class="reimu-results"><div id="reimu-stats"></div><div id="reimu-hits"></div><div id="reimu-pagination" class="reimu-pagination"></div></div><img class="reimu-bg" src="/images/reimu.png"></div></div><script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script><script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/script.js"></script><script src="/js/aos.js"></script><script>var aosInit = () => {
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/">首頁</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/archives">歸檔</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/about">關於</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 訂閱" target="_blank"></a>
+    
+    
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋"></a>
+    
+  </nav>
+  
+</div>
+<header id="header">
+  
+    
+      
+        <picture>
+          
+        </picture>
+        
+          <img  fetchpriority="high" src="/images/banner.jpg" alt="Web 安全基石：CSP、SOP 與 CORS 詳解">
+        
+      
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">Web 安全基石：CSP、SOP 與 CORS 詳解</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="sidebar-left"  >
+          <aside id="sidebar">
+  
+  
+    <div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div>
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        
+          <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目錄</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-sop-same-origin-policy-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="toc-number">1.</span> <span class="toc-text"> 1. SOP (Same-Origin Policy) - 同源策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cors-cross-origin-resource-sharing-%E8%B7%A8%E4%BE%86%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB"><span class="toc-number">2.</span> <span class="toc-text"> 2. CORS (Cross-Origin Resource Sharing) - 跨來源資源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-csp-content-security-policy-%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5"><span class="toc-number">3.</span> <span class="toc-text"> 3. CSP (Content Security Policy) - 內容安全策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%88%87%E9%A0%90%E9%98%B2%E6%8E%AA%E6%96%BD"><span class="toc-number">4.</span> <span class="toc-text"> 安全風險與預防措施</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload">
+  <div class="sidebar-author-name">冥夜</div>
+  <div class="sidebar-description">記錄冥夜的成長軌跡</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">28</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分類</div>
+    <div class="sidebar-state-number">6</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>標籤</div>
+    <div class="sidebar-state-number">8</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">首頁</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">歸檔</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">關於</div>
+      </div>
+    
+  
+</div>
+</div>
+        
+      
+      
+        
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+        
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+  
+</aside>
+
+          <section id="main"><article id="post-development_plan_study/CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-08-04T08:30:25.000Z" itemprop="datePublished">2024-08-04</time>
+    <time style="display: none;" id="post-update-time">2025-08-11</time>
+  </span>
+</div>
+
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/" data-aos="zoom-in">安全達人養成計劃</a>
+  </div>
+
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <p>在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，<strong>同源策略 (SOP)</strong>、<strong>內容安全策略 (CSP)</strong> 和 <strong>跨來源資源共享 (CORS)</strong> 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。</p>
+<span id="more"></span>
+<hr />
+<h3 id="1-sop-same-origin-policy-同源策略"><a class="markdownIt-Anchor" href="#1-sop-same-origin-policy-同源策略"></a> 1. SOP (Same-Origin Policy) - 同源策略</h3>
+<p><strong>什麼是 SOP？</strong><br />
+同源策略是瀏覽器最核心的安全策略，用於隔離來自不同「來源 (Origin)」的文件或腳本，限制它們之間的互動。簡單來說，一個來源的腳本，在未經允許的情況下，不能讀取或修改另一個來源的資源。</p>
+<p><strong>「同源」的定義</strong><br />
+當兩個 URL 的 <strong>通訊協定 (Protocol)</strong>、<strong>主機 (Host)</strong> 和 <strong>通訊埠 (Port)</strong> 三者完全相同時，才被視為同源。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">URL</th>
+<th style="text-align:left">與 <code>http://example.com/</code> 比較</th>
+<th style="text-align:left">結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>http://example.com/page.html</code></td>
+<td style="text-align:left">三者皆同</td>
+<td style="text-align:left">同源</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>https://example.com/</code></td>
+<td style="text-align:left">協定不同 (https)</td>
+<td style="text-align:left">不同源</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http://www.example.com/</code></td>
+<td style="text-align:left">主機不同 (www)</td>
+<td style="text-align:left">不同源</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http://example.com:8080/</code></td>
+<td style="text-align:left">通訊埠不同 (8080)</td>
+<td style="text-align:left">不同源</td>
+</tr>
+</tbody>
+</table>
+<p>SOP 主要限制了對 Cookie、LocalStorage 和 DOM 的存取，是防禦多種攻擊的基礎。</p>
+<hr />
+<h3 id="2-cors-cross-origin-resource-sharing-跨來源資源共享"><a class="markdownIt-Anchor" href="#2-cors-cross-origin-resource-sharing-跨來源資源共享"></a> 2. CORS (Cross-Origin Resource Sharing) - 跨來源資源共享</h3>
+<p><strong>什麼是 CORS？</strong><br />
+SOP 雖然安全，但也限制了 Web 應用的靈活性（例如，前端應用需要呼叫不同網域的 API）。CORS 是一種官方的「例外機制」，它允許伺服器在 HTTP 標頭中聲明，哪些外部來源有權限存取其資源，從而安全地放寬同源策略的限制。</p>
+<p><strong>運作方式</strong></p>
+<ul>
+<li><strong>客戶端</strong>：當瀏覽器發起跨來源請求時，會自動在 HTTP 請求標頭中加入 <code>Origin</code> 欄位，標明請求的來源。</li>
+<li><strong>伺服器</strong>：伺服器收到請求後，根據預設的策略，在 HTTP 回應標頭中加入 <code>Access-Control-Allow-Origin</code> 等欄位，告訴瀏覽器是否允許這次請求。</li>
+</ul>
+<p><strong>常見的 CORS 標頭</strong></p>
+<ul>
+<li><code>Access-Control-Allow-Origin</code>: 指定允許存取資源的來源 URL。</li>
+<li><code>Access-Control-Allow-Methods</code>: 指定允許的 HTTP 方法 (GET, POST 等)。</li>
+<li><code>Access-Control-Allow-Headers</code>: 指定允許的自訂請求標頭。</li>
+</ul>
+<hr />
+<h3 id="3-csp-content-security-policy-內容安全策略"><a class="markdownIt-Anchor" href="#3-csp-content-security-policy-內容安全策略"></a> 3. CSP (Content Security Policy) - 內容安全策略</h3>
+<p><strong>什麼是 CSP？</strong><br />
+CSP 是一種額外的安全層，主要目標是防止 <strong>跨站腳本攻擊 (XSS)</strong> 和其他內容注入攻擊。它允許網站管理者定義一份「白名單」，明確告知瀏覽器只允許載入和執行來自這些指定來源的資源（如 JavaScript、CSS、圖片、<code>&lt;iframe&gt;</code> 等）。</p>
+<p><strong>運作方式</strong><br />
+CSP 透過 HTTP 回應標頭 <code>Content-Security-Policy</code> 來實作。管理者可以在這個標頭中定義多種指令。</p>
+<p><strong>常見的 CSP 指令</strong></p>
+<ul>
+<li><code>default-src</code>: 為其他未設定的指令提供預設值。</li>
+<li><code>script-src</code>: 定義允許執行的 JavaScript 來源。</li>
+<li><code>style-src</code>: 定義允許載入的 CSS 來源。</li>
+<li><code>img-src</code>: 定義允許載入的圖片來源。</li>
+<li><code>form-action</code>: 限制 <code>&lt;form&gt;</code> 提交的目標 URL。</li>
+<li><code>child-src</code>: 定義允許嵌入的 <code>&lt;iframe&gt;</code> 來源。</li>
+</ul>
+<hr />
+<h3 id="安全風險與預防措施"><a class="markdownIt-Anchor" href="#安全風險與預防措施"></a> 安全風險與預防措施</h3>
+<p><strong>1. CORS 設定不當</strong></p>
+<ul>
+<li><strong>風險</strong>: 如果 <code>Access-Control-Allow-Origin</code> 標頭被設為萬用字元 <code>*</code>，意味著任何外部網站都能存取您的 API 或資源，可能導致敏感資訊洩漏。</li>
+<li><strong>預防</strong>:
+<ul>
+<li>精確設定 <code>Access-Control-Allow-Origin</code>，只列出受信任的網域。</li>
+<li>避免在需要身分驗證的 API 上使用 <code>*</code>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. CSP 設定不當</strong></p>
+<ul>
+<li><strong>風險</strong>: 如果 CSP 規則設定得過於寬鬆（例如，允許 <code>unsafe-inline</code> 或 <code>unsafe-eval</code>），或者白名單包含了惡意來源，將無法有效防禦 XSS 攻擊。</li>
+<li><strong>預防</strong>:
+<ul>
+<li>盡可能詳細地列出每個資源的合法來源。</li>
+<li>優先設定 <code>default-src</code> 作為基礎防線。</li>
+<li>避免使用 <code>unsafe-inline</code> 和 <code>unsafe-eval</code>，改用 nonce 或 hash 的方式。</li>
+<li>定期審查和更新您的 CSP 規則。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+        <div class="share-wrapper">
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20240804%2Fdevelopment_plan_study%2FCSP%25EF%25BC%2588%25E5%2585%25A7%25E5%25AE%25B9%25E5%25AE%2589%25E5%2585%25A8%25E7%25AD%2596%25E7%2595%25A5%25EF%25BC%2589%25E3%2580%2581SOP%25EF%25BC%2588%25E5%2590%258C%25E6%25BA%2590%25E7%25AD%2596%25E7%2595%25A5%25EF%25BC%2589%25E5%2592%258CCORS%25EF%25BC%2588%25E8%25B7%25A8%25E6%25BA%2590%25E8%25B3%2587%25E6%25BA%2590%25E5%2585%25B1%25E4%25BA%25AB%25EF%25BC%2589%2F" target="_blank" rel="noopener noreferrer" title="Web 安全基石：CSP、SOP 與 CORS 詳解">
+      <div class="share-icon icon icon-facebook">
+        
+      </div>
+    </a>
+  
+</div>
+      
+      
+      
+        <a data-aos="zoom-in" href="/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+      
+      
+        <span data-aos="zoom-in" class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/">0</span>
+          <em class="post-meta-item-text">閲讀量</em>
+        </span>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" rel="tag">網路漏洞</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+      
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="Fail-Safe：當錯誤處理成為安全漏洞" class="lazyload">
+          
+        
+        <a href="/20240804/development_plan_study/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            Fail-Safe：當錯誤處理成為安全漏洞
+          
+        </h3>
+      </div>
+    
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？" class="lazyload">
+        
+      
+      <a href="/20240804/development_plan_study/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+      
+      
+        
+      
+      <h2 class="comment-title">說些什麼吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            
+            <div class="selector-item" data-selector="waline">
+              <span>waline</span>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+      
+        <div class="comment waline-comment" data-aos="fade-up"
+          id="waline-comment">
+        </div>
+      
+    </div>
+  </section>
+
+
+</section>
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      
+      
+      
+        2025
+      
+      <span class="footer-info-sep rotate"></span>
+      冥夜
+    </div>
+    
+      <div>
+        基於&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        25.4k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        01:19
+      </div>
+    
+    
+    
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目錄</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-sop-same-origin-policy-%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="toc-number">1.</span> <span class="toc-text"> 1. SOP (Same-Origin Policy) - 同源策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cors-cross-origin-resource-sharing-%E8%B7%A8%E4%BE%86%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB"><span class="toc-number">2.</span> <span class="toc-text"> 2. CORS (Cross-Origin Resource Sharing) - 跨來源資源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-csp-content-security-policy-%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5"><span class="toc-number">3.</span> <span class="toc-text"> 3. CSP (Content Security Policy) - 內容安全策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%A2%A8%E9%9A%AA%E8%88%87%E9%A0%90%E9%98%B2%E6%8E%AA%E6%96%BD"><span class="toc-number">4.</span> <span class="toc-text"> 安全風險與預防措施</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload">
+  <div class="sidebar-author-name">冥夜</div>
+  <div class="sidebar-description">記錄冥夜的成長軌跡</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">28</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分類</div>
+    <div class="sidebar-state-number">6</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>標籤</div>
+    <div class="sidebar-state-number">8</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">首頁</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">歸檔</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">關於</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+    
+  </div>
+  
+    
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  
+</nav>
+
+    </div>
+    
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+    
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
       AOS.init({
         duration: 1000,
         easing: "ease",
@@ -32,7 +768,37 @@
       document.addEventListener('DOMContentLoaded', aosInit);
     } else {
       aosInit();
-    }</script><script src="/js/pjax_script.js" data-pjax></script><script src="/js/generator_search.js" defer></script><script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script><script>window.firework&&window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))</script><script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script><script>function loadScripts(scripts, index) {
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  <script>
+    function loadScripts(scripts, index) {
       if (index < scripts.length) {
         const script = scripts[index];
         const src = script.getAttribute('src');
@@ -164,11 +930,61 @@
         },
       },
       cacheBust: false
-    })</script><script src="/js/pjax.js"></script><script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script><script data-pjax>window.quicklink?.listen({
+    })
+  </script>
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
       timeout: 3000,
       priority: true,
       ignores: []
-    });</script><div id="lazy-script"><div><script data-pjax>window.REIMU_POST={author:"冥夜",title:"Web 安全基石：CSP、SOP 與 CORS 詳解",url:"https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/",excerpt:"在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。",description:"",stripContent:"在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。    1. SOP (Same-Origin Policy) - 同源策略 什麼是 SOP？ 同源策略是瀏覽器最核心的安全策略，用於隔離來自不同「來源 (Origin)」的文件或腳本，限制它們之間的互動。簡單來說，一個來源的腳本，在未經允許的情況下，不能讀取",date:"Sun Aug 04 2024 16:30:25 GMT+0800",updated:"Sun Aug 10 2025 00:26:27 GMT+0800",cover:"/images/banner.jpg"}</script><script src="/js/insert_highlight.js" data-pjax></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+    });
+  </script>
+
+
+<div id="lazy-script">
+  <div>
+    
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "冥夜",
+          title: "Web 安全基石：CSP、SOP 與 CORS 詳解",
+          url: "https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/",
+          excerpt: "在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。",
+          description: "",
+          stripContent: "在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。    1. SOP (Same-Origin Policy) - 同源策略 什麼是 SOP？ 同源策略是瀏覽器最核心的安全策略，用於隔離來自不同「來源 (Origin)」的文件或腳本，限制它們之間的互動。簡單來說，一個來源的腳本，在未經允許的情況下，不能讀取",
+          date: "Sun Aug 04 2024 16:30:25 GMT+0800",
+          updated: "Mon Aug 11 2025 00:51:24 GMT+0800",
+          cover: "/images/banner.jpg",
+        };
+      </script>
+       
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+        
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
         
         const pswp = () => {
           if (_$$('.article-entry a.article-gallery-item').length > 0) {
@@ -192,7 +1008,20 @@
           pswp()
         } else {
           window.addEventListener('lightbox:ready', pswp);
-        }</script><script data-pjax>var loadScript = (src, integrity) => {
+        }
+      </script>
+      
+        
+
+
+
+
+
+
+
+
+<script data-pjax>
+  var loadScript = (src, integrity) => {
     const script = document.createElement('script');
     script.src = src;
     if (integrity) script.integrity = integrity;
@@ -299,7 +1128,7 @@
               envId: '',
               region: '',
               urls: [
-                '/friend/index.html'
+                '/about/index.html'
               ],
               includeReply: false
             }).then((res) => {
@@ -369,6 +1198,14 @@
 
         const giscusScript = document.createElement('script');
         const domMode = document.documentElement.getAttribute("data-theme");
+
+        const docLang = document.documentElement.lang || 'en';
+        const langBase = docLang.split('-')[0];
+        const supportedLangs = ['ar', 'be', 'bg', 'ca', 'cs', 'da', 'de', 'en', 
+        'eo', 'es', 'eu', 'fa', 'fr', 'gr', 'hbs', 'he', 'hu', 'id', 'it', 'ja', 
+        'kh', 'ko', 'nl', 'pl', 'pt', 'ro', 'ru', 'th', 'tr', 'uk', 'uz', 'vi', 'zh-CN', 'zh-HK', 'zh-TW'];
+        const giscusLang = supportedLangs.includes(docLang) ? docLang : supportedLangs.includes(langBase) ? langBase : 'en';
+
         giscusScript.src = 'https://giscus.app/client.js';
         giscusScript.setAttribute('data-repo', '');
         giscusScript.setAttribute('data-repo-id', '');
@@ -380,7 +1217,7 @@
         giscusScript.setAttribute('data-emit-metadata', '0');
         giscusScript.setAttribute('data-input-position', 'bottom');
         giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
-        giscusScript.setAttribute('data-lang', document.documentElement.lang || 'en');
+        giscusScript.setAttribute('data-lang', giscusLang);
         giscusScript.setAttribute('crossorigin', 'anonymous');
         giscusScript.async = true;
         container.appendChild(giscusScript);
@@ -503,7 +1340,17 @@
       commentInit();
     }
   };
-  loadComments();</script></div></div><script>console.log(String.raw`%c 
+  loadComments();
+</script>
+
+      
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
  ______     ______     __     __    __     __  __    
 /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
 \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
@@ -511,13 +1358,34 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')</script><script>if ('serviceWorker' in navigator) {
+    console.log('%c Theme.Reimu v' + '1.9.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       for (let registration of registrations) {
         registration.unregister();
       }
     });
-  }</script><script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script><script>var isMobile = window.matchMedia('(max-width: 959px)').matches;
+  }
+</script>
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
+
+  
+    <script>
+      var isMobile = window.matchMedia('(max-width: 959px)').matches;
       if (isMobile) {
       const aplayer = _$('#aplayer');
         if (aplayer) {
@@ -542,4 +1410,15 @@
         mutex: true || true,
         listFolded: false || false,
         lrcType: 0 || 0,
-      });</script></body></html>
+      });
+    </script>
+  
+
+
+
+
+
+    
+  </body>
+  </html>
+

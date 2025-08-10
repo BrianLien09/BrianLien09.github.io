@@ -35,6 +35,10 @@
           element.querySelectorAll("td.code .line").length > expandThreshold)
       ) {
         element.classList.add("code-closed");
+        // force rerender element to refresh AOS
+        element.style.display = "none";
+        void element.offsetWidth;
+        element.style.display = "";
       }
     }
   });
@@ -71,10 +75,8 @@
   }
 
   const tips = window.REIMU_CONFIG?.clipboard_tips || {};
-  // 獲取當前頁面語言
-  const lang = document.documentElement.lang || 'zh-TW';
 
-  // 代碼複製
+  // 代码复制
   const clipboard = new ClipboardJS(".code-copy", {
     text: (trigger) => {
       const selection = window.getSelection();
@@ -101,8 +103,18 @@
   clipboard.on("success", (e) => {
     e.trigger.classList.add("icon-check");
     e.trigger.classList.remove("icon-copy");
-    // 根據語言選擇成功提示信息
-    _$("#copy-tooltip").innerText = tips.success[lang] || '複製成功 (*^▽^*)';
+    const successConfig = tips.success;
+    let successText = "Copy successfully (*^▽^*)";
+    if (typeof successConfig === "string") {
+      successText = successConfig;
+    } else if (typeof successConfig === "object") {
+      const lang = document.documentElement.lang;
+      const key = Object.keys(successConfig).find(key => key.toLowerCase() === lang.toLowerCase());
+      if (key && successConfig[key]) {
+        successText = successConfig[key];
+      }
+    }
+    _$("#copy-tooltip").innerText = successText;
     _$("#copy-tooltip").style.opacity = 1;
     setTimeout(() => {
       _$("#copy-tooltip").style.opacity = 0;
@@ -115,20 +127,18 @@
   clipboard.on("error", (e) => {
     e.trigger.classList.add("icon-times");
     e.trigger.classList.remove("icon-copy");
-    // 根據語言選擇失敗提示信息
-    _$("#copy-tooltip").innerText = tips.fail[lang] || '複製失敗 (ﾟ⊿ﾟ)ﾂ';
-    _$("#copy-tooltip").style.opacity = 1;
-    setTimeout(() => {
-      _$("#copy-tooltip").style.opacity = 0;
-      e.trigger.classList.add("icon-copy");
-      e.trigger.classList.remove("icon-times");
-    }, 1000);
-  });
-
-  clipboard.on("error", (e) => {
-    e.trigger.classList.add("icon-times");
-    e.trigger.classList.remove("icon-copy");
-    _$("#copy-tooltip").innerText = tips.fail;
+    const failConfig = tips.fail;
+    let failText = "Copy failed (ﾟ⊿ﾟ)ﾂ";
+    if (typeof failConfig === "string") {
+      failText = failConfig;
+    } else if (typeof failConfig === "object") {
+      const lang = document.documentElement.lang;
+      const key = Object.keys(failConfig).find(key => key.toLowerCase() === lang.toLowerCase());
+      if (key && failConfig[key]) {
+        failText = failConfig[key];
+      }
+    }
+    _$("#copy-tooltip").innerText = failText;
     _$("#copy-tooltip").style.opacity = 1;
     setTimeout(() => {
       _$("#copy-tooltip").style.opacity = 0;
@@ -146,5 +156,10 @@
       },
       { once: true }
     );
+  }
+
+  // Since we add code-closed class to the figure element, we need to refresh AOS
+  if (window.AOS) {
+    AOS.refresh();
   }
 })();
