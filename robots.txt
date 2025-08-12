@@ -7,4 +7,3 @@ Disallow: /vendors/
 Disallow: /fonts/
 Disallow: /fancybox/
 Sitemap: https://brianlien09.github.io/sitemap.xml
-
