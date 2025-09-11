@@ -6,7 +6,7 @@
   <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien09.github.io/"/>
-  <updated>2025-08-10T18:50:48.858Z</updated>
+  <updated>2025-09-11T15:33:48.569Z</updated>
   <id>https://brianlien09.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>exam1_summary</title>
+    <link href="https://brianlien09.github.io/20250911/java_class/exam1_summary/"/>
+    <id>https://brianlien09.github.io/20250911/java_class/exam1_summary/</id>
+    <published>2025-09-11T15:28:49.000Z</published>
+    <updated>2025-09-11T15:33:48.569Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;9/10 本週考試重點總結 (題目分析與Java實作)&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="java_class" scheme="https://brianlien09.github.io/categories/java-class/"/>
+    
+    
+    <category term="java" scheme="https://brianlien09.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>【Hexo 教學】萬無一失！使用 GitHub 私有倉庫備份你的 Hexo 部落格原始碼</title>
@@ -216,8 +237,8 @@
   
   <entry>
     <title>應用程式的資料保護策略：從傳輸、使用到儲存</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/data-protection-strategies/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/data-protection-strategies/</id>
     <published>2024-08-04T09:36:06.000Z</published>
     <updated>2025-08-10T16:51:24.935Z</updated>
     
@@ -235,8 +256,8 @@
   
   <entry>
     <title>注入攻擊的根源：不充分的資料轉義</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insufficient-data-escaping/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insufficient-data-escaping/</id>
     <published>2024-08-04T08:37:10.000Z</published>
     <updated>2025-08-10T16:51:24.935Z</updated>
     
@@ -254,8 +275,8 @@
   
   <entry>
     <title>Fail-Safe：當錯誤處理成為安全漏洞</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/fail-safe-security/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/fail-safe-security/</id>
     <published>2024-08-04T08:32:08.000Z</published>
     <updated>2025-08-10T16:51:24.934Z</updated>
     
@@ -273,8 +294,8 @@
   
   <entry>
     <title>Web 安全基石：CSP、SOP 與 CORS 詳解</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/csp-sop-cors/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/csp-sop-cors/</id>
     <published>2024-08-04T08:30:25.000Z</published>
     <updated>2025-08-10T16:51:24.931Z</updated>
     
@@ -292,8 +313,8 @@
   
   <entry>
     <title>不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insecure-direct-object-reference/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insecure-direct-object-reference/</id>
     <published>2024-08-04T08:28:36.000Z</published>
     <updated>2025-08-10T16:51:24.934Z</updated>
     
@@ -311,8 +332,8 @@
   
   <entry>
     <title>路徑穿越漏洞：讀取你不該讀取的檔案</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/path-traversal/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/path-traversal/</id>
     <published>2024-08-04T08:23:00.000Z</published>
     <updated>2025-08-10T16:51:24.936Z</updated>
     
@@ -330,8 +351,8 @@
   
   <entry>
     <title>帳戶接管風險：不安全的密碼變更功能</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insecure-password-change-function/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insecure-password-change-function/</id>
     <published>2024-08-04T08:22:14.000Z</published>
     <updated>2025-08-10T16:51:24.931Z</updated>
     
@@ -349,8 +370,8 @@
   
   <entry>
     <title>不當的身份驗證：當信任可以被偽造</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/improper-authentication/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/improper-authentication/</id>
     <published>2024-08-04T08:20:50.000Z</published>
     <updated>2025-08-10T16:51:24.933Z</updated>
     
@@ -368,8 +389,8 @@
   
   <entry>
     <title>明文儲存的災難：為何必須加密敏感資料</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/cleartext-storage-of-sensitive-data/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/cleartext-storage-of-sensitive-data/</id>
     <published>2024-08-04T08:19:13.000Z</published>
     <updated>2025-08-10T16:51:24.935Z</updated>
     
@@ -387,8 +408,8 @@
   
   <entry>
     <title>憑證保護不足：當加密形同虛設</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insecure-credential-storage/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insecure-credential-storage/</id>
     <published>2024-08-04T08:18:25.000Z</published>
     <updated>2025-08-10T16:51:24.933Z</updated>
     
@@ -406,32 +427,13 @@
   
   <entry>
     <title>大量賦值漏洞：不應被使用者修改的欄位</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/</id>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/mass-assignment-vulnerability/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/mass-assignment-vulnerability/</id>
     <published>2024-08-04T08:17:07.000Z</published>
     <updated>2025-08-10T16:51:24.934Z</updated>
     
     
     <summary type="html">&lt;p&gt;許多 Web 框架為了開發方便，提供了「大量賦值 (Mass Assignment)」功能，允許開發者將 HTTP 請求中的參數直接、自動地綁定到後端的物件模型上。然而，若未謹慎過濾，這個便利的功能就可能成為嚴重的安全漏洞，讓攻擊者得以竄改他們本不應有權限修改的資料欄位。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
-    
-    
-    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>可預測的隨機性：不安全的密碼學應用</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/</id>
-    <published>2024-08-04T08:13:38.000Z</published>
-    <updated>2025-08-10T16:51:24.933Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在密碼學和許多安全相關的功能中，「隨機性」是不可或缺的基石。如果應用程式在需要不可預測性的情境下（如生成 Session ID、密碼重設權杖），卻使用了可被預測的「隨機」數，就會產生嚴重的安全漏洞。&lt;/p&gt;</summary>
     
     
     
