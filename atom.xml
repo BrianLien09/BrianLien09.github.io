@@ -6,7 +6,7 @@
   <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien09.github.io/"/>
-  <updated>2025-09-11T15:33:48.569Z</updated>
+  <updated>2025-10-05T02:09:22.684Z</updated>
   <id>https://brianlien09.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java_exam4</title>
+    <link href="https://brianlien09.github.io/20251005/java-exam4/"/>
+    <id>https://brianlien09.github.io/20251005/java-exam4/</id>
+    <published>2025-10-05T01:55:18.000Z</published>
+    <updated>2025-10-05T02:09:22.684Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;10/1 java_class 第四次考試題目總結 (題目分析與Java實作)&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>exam1_summary</title>
@@ -415,25 +432,6 @@
     
     
     <summary type="html">&lt;p&gt;即使開發者對密碼或金鑰進行了加密，但如果儲存這些憑證的檔案或系統本身存在漏洞，導致攻擊者可以輕易存取，那麼再強的加密也形同虛設。這就是「憑證保護不足」漏洞。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
-    
-    
-    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大量賦值漏洞：不應被使用者修改的欄位</title>
-    <link href="https://brianlien09.github.io/20240804/development_plan_study/mass-assignment-vulnerability/"/>
-    <id>https://brianlien09.github.io/20240804/development_plan_study/mass-assignment-vulnerability/</id>
-    <published>2024-08-04T08:17:07.000Z</published>
-    <updated>2025-08-10T16:51:24.934Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;許多 Web 框架為了開發方便，提供了「大量賦值 (Mass Assignment)」功能，允許開發者將 HTTP 請求中的參數直接、自動地綁定到後端的物件模型上。然而，若未謹慎過濾，這個便利的功能就可能成為嚴重的安全漏洞，讓攻擊者得以竄改他們本不應有權限修改的資料欄位。&lt;/p&gt;</summary>
     
     
     

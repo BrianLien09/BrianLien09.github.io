@@ -1,0 +1,1507 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-TW"  
+    
+      data-theme-mode="true"
+    
+  >
+  <head>
+  
+  <meta charset="utf-8">
+  
+  <script src="https://www.googletagmanager.com/gtag/js?id=true"></script>
+  <script data-pjax>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'true');
+  </script>
+
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
+  
+  <title>
+    java_exam4 |
+    
+    冥夜小站
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="10&#x2F;1 java_class 第四次考試題目總結 (題目分析與Java實作)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java_exam4">
+<meta property="og:url" content="https://brianlien09.github.io/20251005/java-exam4/index.html">
+<meta property="og:site_name" content="冥夜小站">
+<meta property="og:description" content="10&#x2F;1 java_class 第四次考試題目總結 (題目分析與Java實作)">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-10-05T01:55:18.000Z">
+<meta property="article:modified_time" content="2025-10-05T02:09:22.684Z">
+<meta property="article:author" content="冥夜">
+<meta property="article:tag" content="冥夜, 部落格, 資訊安全, 網路安全, Hexo教程, 逆向工程, 學習筆記, AIS3, 金融科技">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="冥夜小站" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/dd.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
+  
+  
+    
+      
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+
+    
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      
+      
+        
+      
+      <div class="loading-word">少女祈禱中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/">首頁</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/archives">歸檔</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/about">關於</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 訂閱" target="_blank"></a>
+    
+    
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋"></a>
+    
+  </nav>
+  
+</div>
+<header id="header">
+  
+    
+      
+        <picture>
+          
+        </picture>
+        
+          <img  fetchpriority="high" src="/images/banner.jpg" alt="java_exam4">
+        
+      
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">java_exam4</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content" class="sidebar-left"  >
+          <aside id="sidebar">
+  
+  
+    <div id="aplayer" theme="var(--color-link)" data-aos="fade-up"></div>
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        
+          <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目錄</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E9%8C%84"><span class="toc-number">1.</span> <span class="toc-text"> 目錄</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pa-a-very-cool-calculator"><span class="toc-number">2.</span> <span class="toc-text"> PA: A Very Cool Calculator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="toc-number">2.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E"><span class="toc-number">2.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="toc-number">2.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pb-bar"><span class="toc-number">3.</span> <span class="toc-text"> PB: Bar</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-2"><span class="toc-number">3.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-2"><span class="toc-number">3.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-2"><span class="toc-number">3.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-2"><span class="toc-number">3.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pc-jims-magical-coffee-spill-i"><span class="toc-number">4.</span> <span class="toc-text"> PC: Jims Magical Coffee Spill I</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-3"><span class="toc-number">4.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-3"><span class="toc-number">4.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-3"><span class="toc-number">4.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-3"><span class="toc-number">4.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pe-shot-eagle-eye"><span class="toc-number">5.</span> <span class="toc-text"> PE: Shot Eagle Eye</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-4"><span class="toc-number">5.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-4"><span class="toc-number">5.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-4"><span class="toc-number">5.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-4"><span class="toc-number">5.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pf-what-is-the-day-of-week"><span class="toc-number">6.</span> <span class="toc-text"> PF: What is the day of week</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-5"><span class="toc-number">6.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-5"><span class="toc-number">6.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-5"><span class="toc-number">6.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-5"><span class="toc-number">6.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pg-the-definition-of-doom"><span class="toc-number">7.</span> <span class="toc-text"> PG: The Definition of Doom</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-6"><span class="toc-number">7.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-6"><span class="toc-number">7.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-6"><span class="toc-number">7.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-6"><span class="toc-number">7.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ph-stock-baron"><span class="toc-number">8.</span> <span class="toc-text"> PH: Stock Baron</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-7"><span class="toc-number">8.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-7"><span class="toc-number">8.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-7"><span class="toc-number">8.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-7"><span class="toc-number">8.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload">
+  <div class="sidebar-author-name">冥夜</div>
+  <div class="sidebar-description">記錄冥夜的成長軌跡</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">31</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分類</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>標籤</div>
+    <div class="sidebar-state-number">16</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">首頁</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">歸檔</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">關於</div>
+      </div>
+    
+  
+</div>
+</div>
+        
+      
+      
+        
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+        
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+  
+</aside>
+
+          <section id="main"><article id="post-java-exam4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-10-05T01:55:18.000Z" itemprop="datePublished">2025-10-05</time>
+    <time style="display: none;" id="post-update-time">2025-10-05</time>
+  </span>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <blockquote>
+<p>10/1 java_class 第四次考試題目總結 (題目分析與Java實作)</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="目錄"><a class="markdownIt-Anchor" href="#目錄"></a> 目錄</h2>
+<ul>
+<li><a href="#pa-a-very-cool-calculator">PA: A Very Cool Calculator</a></li>
+<li><a href="#pb-bar">PB: Bar</a></li>
+<li><a href="#pc-jims-magical-coffee-spill-i">PC: Jim’s Magical Coffee Spill I</a></li>
+<li><a href="#pd-intersecting-lines">PD: Intersecting Lines</a></li>
+<li><a href="#pe-shot-eagle-eye">PE: Shot Eagle Eye</a></li>
+<li><a href="#pf-stock-baron">PF: Stock Baron</a></li>
+<li><a href="#pg-the-definition-of-doom">PG: The Definition of Doom</a></li>
+<li><a href="#ph-what-is-the-day-of-week">PH: What is the day of week</a></li>
+</ul>
+<h2 id="pa-a-very-cool-calculator"><a class="markdownIt-Anchor" href="#pa-a-very-cool-calculator"></a> PA: A Very Cool Calculator</h2>
+<h3 id="題目概述"><a class="markdownIt-Anchor" href="#題目概述"></a> 題目概述</h3>
+<p>計算折扣後的價格。</p>
+<h3 id="解題思路"><a class="markdownIt-Anchor" href="#解題思路"></a> 解題思路</h3>
+<ol>
+<li>輸入折扣百分比(k)和原價(w)</li>
+<li>計算折扣後價格：<code>(k / 100.0) * w</code></li>
+<li>使用浮點數確保計算精確度</li>
+</ol>
+<h3 id="程式碼重點"><a class="markdownIt-Anchor" href="#程式碼重點"></a> 程式碼重點</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> <span class="variable">ans</span> <span class="operator">=</span> (<span class="type">float</span>)(k / <span class="number">100.0</span>) * w;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 <code>long</code> 處理可能的大數輸入</li>
+<li>使用浮點數運算確保精確度</li>
+</ul>
+<h3 id="完整程式碼"><a class="markdownIt-Anchor" href="#完整程式碼"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PA</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cases</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span> (cases-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">long</span> <span class="variable">k</span> <span class="operator">=</span> sc.nextLong();</span><br><span class="line">            <span class="type">long</span> <span class="variable">w</span> <span class="operator">=</span> sc.nextLong();</span><br><span class="line">            <span class="type">float</span> <span class="variable">ans</span> <span class="operator">=</span> (<span class="type">float</span>)(k / <span class="number">100.0</span>) * w;</span><br><span class="line">            System.out.println(ans);</span><br><span class="line">        &#125;</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pb-bar"><a class="markdownIt-Anchor" href="#pb-bar"></a> PB: Bar</h2>
+<h3 id="題目概述-2"><a class="markdownIt-Anchor" href="#題目概述-2"></a> 題目概述</h3>
+<p>根據輸入的三個數字組合輸出對應的句子。</p>
+<h3 id="解題思路-2"><a class="markdownIt-Anchor" href="#解題思路-2"></a> 解題思路</h3>
+<ol>
+<li>輸入三個數字 a, b, c</li>
+<li>根據每個數字選擇對應的字串：
+<ul>
+<li>a: 形容詞 (1:handsome, 2:rich, 3:smart)</li>
+<li>b: 名字 (1:Allcky, 2:Jimmy, 3:Chen)</li>
+<li>c: 動作 (1:dances, 2:eats, 3:writes)</li>
+</ul>
+</li>
+<li>將三個字串組合輸出</li>
+</ol>
+<h3 id="程式碼重點-2"><a class="markdownIt-Anchor" href="#程式碼重點-2"></a> 程式碼重點</h3>
+<p>使用 if-else 結構進行字串映射，確保每個數字都有對應的輸出。</p>
+<h3 id="完整程式碼-2"><a class="markdownIt-Anchor" href="#完整程式碼-2"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PB</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cases</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span> (cases-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">String</span> <span class="variable">adj</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="keyword">if</span> (a == <span class="number">1</span>) adj = <span class="string">&quot;handsome&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (a == <span class="number">2</span>) adj = <span class="string">&quot;rich&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (a == <span class="number">3</span>) adj = <span class="string">&quot;smart&quot;</span>;</span><br><span class="line">            <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="keyword">if</span> (b == <span class="number">1</span>) name = <span class="string">&quot;Allcky&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (b == <span class="number">2</span>) name = <span class="string">&quot;Jimmy&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (b == <span class="number">3</span>) name = <span class="string">&quot;Chen&quot;</span>;</span><br><span class="line">            <span class="type">String</span> <span class="variable">act</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="number">1</span>) act = <span class="string">&quot;dances&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="number">2</span>) act = <span class="string">&quot;eats&quot;</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="number">3</span>) act = <span class="string">&quot;writes&quot;</span>;</span><br><span class="line">            System.out.println(adj + <span class="string">&quot; &quot;</span> + name + <span class="string">&quot; &quot;</span> + act);</span><br><span class="line">        &#125;</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pc-jims-magical-coffee-spill-i"><a class="markdownIt-Anchor" href="#pc-jims-magical-coffee-spill-i"></a> PC: Jims Magical Coffee Spill I</h2>
+<h3 id="題目概述-3"><a class="markdownIt-Anchor" href="#題目概述-3"></a> 題目概述</h3>
+<p>計算連續喝咖啡的最長時間。</p>
+<h3 id="解題思路-3"><a class="markdownIt-Anchor" href="#解題思路-3"></a> 解題思路</h3>
+<ol>
+<li>記錄當前的最大時間點 (stop)</li>
+<li>對每次喝咖啡：
+<ul>
+<li>讀入開始時間 p 和持續時間 v</li>
+<li>更新最大時間點：<code>stop = Math.max(stop, p) + v</code></li>
+</ul>
+</li>
+<li>輸出最終的時間點</li>
+</ol>
+<h3 id="程式碼重點-3"><a class="markdownIt-Anchor" href="#程式碼重點-3"></a> 程式碼重點</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stop = Math.max(stop, p) + v;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 Math.max 確保時間連續性</li>
+<li>考慮之前的醉酒時間是否已結束</li>
+</ul>
+<h3 id="完整程式碼-3"><a class="markdownIt-Anchor" href="#完整程式碼-3"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PC</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cases</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">stop</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (cases-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">v</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            stop = Math.max(stop, p) + v;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(stop);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pe-shot-eagle-eye"><a class="markdownIt-Anchor" href="#pe-shot-eagle-eye"></a> PE: Shot Eagle Eye</h2>
+<h3 id="題目概述-4"><a class="markdownIt-Anchor" href="#題目概述-4"></a> 題目概述</h3>
+<p>找出包含所有1的最小矩形面積。</p>
+<h3 id="解題思路-4"><a class="markdownIt-Anchor" href="#解題思路-4"></a> 解題思路</h3>
+<ol>
+<li>讀取矩陣大小 r x c 和矩陣內容</li>
+<li>找出所有1的最大最小行列座標</li>
+<li>計算最小矩形面積</li>
+</ol>
+<h3 id="程式碼重點-4"><a class="markdownIt-Anchor" href="#程式碼重點-4"></a> 程式碼重點</h3>
+<ul>
+<li>使用四個變數記錄1出現的範圍</li>
+<li>面積計算：<code>(maxr - minr + 1) * (maxc - minc + 1)</code></li>
+</ul>
+<h3 id="完整程式碼-4"><a class="markdownIt-Anchor" href="#完整程式碼-4"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PE</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cases</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span> (cases-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">maxr</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">minr</span> <span class="operator">=</span> r;</span><br><span class="line">            <span class="type">int</span> <span class="variable">maxc</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">minc</span> <span class="operator">=</span> c;</span><br><span class="line">            <span class="type">int</span>[][] map = <span class="keyword">new</span> <span class="title class_">int</span>[r][c];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; r; i++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; c; j++) &#123;</span><br><span class="line">                    map[i][j] = sc.nextInt();</span><br><span class="line">                    <span class="keyword">if</span> (map[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                        maxr = Math.max(maxr, i);</span><br><span class="line">                        minr = Math.min(minr, i);</span><br><span class="line">                        maxc = Math.max(maxc, j);</span><br><span class="line">                        minc = Math.min(minc, j);</span><br><span class="line">                    &#125; </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> (maxr - minr + <span class="number">1</span>) * (maxc - minc + <span class="number">1</span>);</span><br><span class="line">            System.out.println(ans);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pf-what-is-the-day-of-week"><a class="markdownIt-Anchor" href="#pf-what-is-the-day-of-week"></a> PF: What is the day of week</h2>
+<h3 id="題目概述-5"><a class="markdownIt-Anchor" href="#題目概述-5"></a> 題目概述</h3>
+<p>給定起始日和經過的天數，計算最後是星期幾。</p>
+<h3 id="解題思路-5"><a class="markdownIt-Anchor" href="#解題思路-5"></a> 解題思路</h3>
+<ol>
+<li>讀取起始日(day)</li>
+<li>讀取所有數字並加總(N)</li>
+<li>計算 (N + day) % 7 決定星期幾</li>
+</ol>
+<h3 id="程式碼重點-5"><a class="markdownIt-Anchor" href="#程式碼重點-5"></a> 程式碼重點</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">N = (N + day) % <span class="number">7</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用模運算處理循環天數</li>
+<li>使用 if-else 輸出對應的星期名稱</li>
+</ul>
+<h3 id="完整程式碼-5"><a class="markdownIt-Anchor" href="#完整程式碼-5"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PF</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">day</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">N</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (sc.hasNext()) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            N += n;</span><br><span class="line">        &#125;</span><br><span class="line">        N = (N + day) % <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">if</span> (N == <span class="number">0</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot;Sunday&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (N==<span class="number">1</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot;Monday&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (N==<span class="number">2</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot;Tuesday&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (N==<span class="number">3</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot;Wednesday&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (N==<span class="number">4</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot;Thursday&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (N==<span class="number">5</span>)  </span><br><span class="line">            System.out.println(<span class="string">&quot;Friday&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (N==<span class="number">6</span>)</span><br><span class="line">            System.out.println(<span class="string">&quot;Saturday&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pg-the-definition-of-doom"><a class="markdownIt-Anchor" href="#pg-the-definition-of-doom"></a> PG: The Definition of Doom</h2>
+<h3 id="題目概述-6"><a class="markdownIt-Anchor" href="#題目概述-6"></a> 題目概述</h3>
+<p>根據四個分數判斷是否達到標準。</p>
+<h3 id="解題思路-6"><a class="markdownIt-Anchor" href="#解題思路-6"></a> 解題思路</h3>
+<ol>
+<li>讀取四個分數</li>
+<li>計算：
+<ul>
+<li>總和是否 &gt;= 350</li>
+<li>最高分和最低分差 &lt;= 25</li>
+</ul>
+</li>
+<li>同時滿足則輸出 “In”，否則 “Nah”</li>
+</ol>
+<h3 id="程式碼重點-6"><a class="markdownIt-Anchor" href="#程式碼重點-6"></a> 程式碼重點</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">Max</span> <span class="operator">=</span> Math.max(Math.max(a, b), Math.max(c, d));</span><br><span class="line"><span class="type">int</span> <span class="variable">Min</span> <span class="operator">=</span> Math.min(Math.min(a, b), Math.min(c, d));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用巢狀 Math.max/min 找出最值</li>
+<li>使用 -1 作為結束條件</li>
+</ul>
+<h3 id="完整程式碼-6"><a class="markdownIt-Anchor" href="#完整程式碼-6"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PG</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 建立輸入Scanner</span></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="comment">// 持續處理輸入直到遇到-1</span></span><br><span class="line">        <span class="keyword">while</span> (sc.hasNext()) &#123;</span><br><span class="line">            <span class="comment">// 讀取四個分數</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="comment">// 如果第一個數是-1則結束程式</span></span><br><span class="line">            <span class="keyword">if</span> (a == -<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 計算總分</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> a + b + c + d;</span><br><span class="line">            <span class="comment">// 找出最高分和最低分</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">Max</span> <span class="operator">=</span> Math.max(Math.max(a, b), Math.max(c, d));</span><br><span class="line">            <span class="type">int</span> <span class="variable">Min</span> <span class="operator">=</span> Math.min(Math.min(a, b), Math.min(c, d));</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 判斷條件：</span></span><br><span class="line">            <span class="comment">// 1. 總分&gt;=350</span></span><br><span class="line">            <span class="comment">// 2. 最高分和最低分差&lt;=25</span></span><br><span class="line">            <span class="keyword">if</span> (sum&gt;=<span class="number">350</span> &amp;&amp; Max-Min&lt;=<span class="number">25</span>)</span><br><span class="line">                System.out.println(<span class="string">&quot;In&quot;</span>);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                System.out.println(<span class="string">&quot;Nah&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ph-stock-baron"><a class="markdownIt-Anchor" href="#ph-stock-baron"></a> PH: Stock Baron</h2>
+<h3 id="題目概述-7"><a class="markdownIt-Anchor" href="#題目概述-7"></a> 題目概述</h3>
+<p>計算股票交易的最大獲利。</p>
+<h3 id="解題思路-7"><a class="markdownIt-Anchor" href="#解題思路-7"></a> 解題思路</h3>
+<ol>
+<li>讀取價格序列</li>
+<li>維護目前看到的最低價格</li>
+<li>對每個價格計算：
+<ul>
+<li>如果當前價格低於最低價，更新最低價</li>
+<li>否則計算可能的獲利，更新最大獲利</li>
+</ul>
+</li>
+</ol>
+<h3 id="程式碼重點-7"><a class="markdownIt-Anchor" href="#程式碼重點-7"></a> 程式碼重點</h3>
+<ul>
+<li>一次遍歷完成計算</li>
+<li>動態更新最低價格和最大獲利</li>
+</ul>
+<h3 id="完整程式碼-7"><a class="markdownIt-Anchor" href="#完整程式碼-7"></a> 完整程式碼</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (prices[i] &lt; minPrice) &#123;</span><br><span class="line">    minPrice = prices[i];</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    maxProfit = Math.max(maxProfit, prices[i] - minPrice);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>一次遍歷完成計算</li>
+<li>動態更新最低價格和最大獲利</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PH</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 建立輸入Scanner</span></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="comment">// 讀取測試案例數量</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">cases</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (cases-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 讀取每日股價數量</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">N</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="comment">// 建立陣列儲存每日股價</span></span><br><span class="line">            <span class="type">int</span>[] prices = <span class="keyword">new</span> <span class="title class_">int</span>[N];</span><br><span class="line">            <span class="comment">// 讀取所有股價資料</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">                prices[i] = sc.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 初始化最低價格為第一天的價格</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">minPrice</span> <span class="operator">=</span> prices[<span class="number">0</span>];</span><br><span class="line">            <span class="comment">// 初始化最大獲利為0</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">maxProfit</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 從第二天開始遍歷每日股價</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; N; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (prices[i] &lt; minPrice) &#123;</span><br><span class="line">                    <span class="comment">// 如果找到更低的價格，更新最低價格</span></span><br><span class="line">                    minPrice = prices[i];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 否則計算當前可能的獲利，並更新最大獲利</span></span><br><span class="line">                    maxProfit = Math.max(maxProfit, prices[i] - minPrice);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 輸出此測試案例的最大獲利</span></span><br><span class="line">            System.out.println(maxProfit);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 關閉Scanner</span></span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <blockquote class="article-copyright">
+    <p><strong><span class="icon-user icon"></span>本文作者：</strong>冥夜 @ 冥夜小站</p>
+    <p><strong><span class="icon-link icon"></span>本文連結：</strong><a href="https://brianlien09.github.io/20251005/java-exam4/">https://brianlien09.github.io/20251005/java-exam4/</a></p>
+    
+    
+    
+    <p><strong><span class="icon-copyright icon"></span>本文版權：</strong>本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"><span class="icon-creative-commons"></span>BY-NC-SA</a> 授權協議。轉載請註明出處！</p>
+    <span class="icon-creative-commons article-copyright-bg"></span>
+  </blockquote>
+      
+      
+      
+        <div class="share-wrapper">
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrianlien09.github.io%2F20251005%2Fjava-exam4%2F" target="_blank" rel="noopener noreferrer" title="java_exam4">
+      <div class="share-icon icon icon-facebook">
+        
+      </div>
+    </a>
+  
+    <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fbrianlien09.github.io%2F20251005%2Fjava-exam4%2F&amp;title=java_exam4" target="_blank" rel="noopener noreferrer" title="java_exam4">
+      <div class="share-icon icon icon-reddit">
+        
+      </div>
+    </a>
+  
+    <a href="javascript:;" rel="external nofollow noreferrer"  title="java_exam4">
+      <div class="share-icon icon icon-weixin">
+        
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hexo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+        
+      </div>
+    </a>
+  
+</div>
+      
+      
+      
+        <a data-aos="zoom-in" href="/20251005/java-exam4/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/20251005/java-exam4/" itemprop="commentCount"></span>
+          留言
+        </a>
+      
+      
+      
+      
+        <span data-aos="zoom-in" class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/20251005/java-exam4/">0</span>
+          <em class="post-meta-item-text">閲讀量</em>
+        </span>
+      
+      
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="exam1_summary" class="lazyload">
+        
+      
+      <a href="/20250911/java_class/exam1_summary/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          exam1_summary
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+      
+      
+        
+      
+      <h2 class="comment-title">說些什麼吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            
+            <div class="selector-item" data-selector="waline">
+              <span>waline</span>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+      
+        <div class="comment waline-comment" data-aos="fade-up"
+          id="waline-comment">
+        </div>
+      
+    </div>
+  </section>
+
+
+</section>
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      
+      
+      
+        2025
+      
+      <span class="footer-info-sep rotate"></span>
+      冥夜
+    </div>
+    
+      <div>
+        基於&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        31k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        01:42
+      </div>
+    
+    
+    
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目錄</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E9%8C%84"><span class="toc-number">1.</span> <span class="toc-text"> 目錄</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pa-a-very-cool-calculator"><span class="toc-number">2.</span> <span class="toc-text"> PA: A Very Cool Calculator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF"><span class="toc-number">2.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E"><span class="toc-number">2.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="toc-number">2.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pb-bar"><span class="toc-number">3.</span> <span class="toc-text"> PB: Bar</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-2"><span class="toc-number">3.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-2"><span class="toc-number">3.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-2"><span class="toc-number">3.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-2"><span class="toc-number">3.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pc-jims-magical-coffee-spill-i"><span class="toc-number">4.</span> <span class="toc-text"> PC: Jims Magical Coffee Spill I</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-3"><span class="toc-number">4.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-3"><span class="toc-number">4.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-3"><span class="toc-number">4.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-3"><span class="toc-number">4.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pe-shot-eagle-eye"><span class="toc-number">5.</span> <span class="toc-text"> PE: Shot Eagle Eye</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-4"><span class="toc-number">5.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-4"><span class="toc-number">5.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-4"><span class="toc-number">5.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-4"><span class="toc-number">5.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pf-what-is-the-day-of-week"><span class="toc-number">6.</span> <span class="toc-text"> PF: What is the day of week</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-5"><span class="toc-number">6.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-5"><span class="toc-number">6.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-5"><span class="toc-number">6.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-5"><span class="toc-number">6.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pg-the-definition-of-doom"><span class="toc-number">7.</span> <span class="toc-text"> PG: The Definition of Doom</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-6"><span class="toc-number">7.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-6"><span class="toc-number">7.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-6"><span class="toc-number">7.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-6"><span class="toc-number">7.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ph-stock-baron"><span class="toc-number">8.</span> <span class="toc-text"> PH: Stock Baron</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%8C%E7%9B%AE%E6%A6%82%E8%BF%B0-7"><span class="toc-number">8.1.</span> <span class="toc-text"> 題目概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF-7"><span class="toc-number">8.2.</span> <span class="toc-text"> 解題思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%87%8D%E9%BB%9E-7"><span class="toc-number">8.3.</span> <span class="toc-text"> 程式碼重點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC-7"><span class="toc-number">8.4.</span> <span class="toc-text"> 完整程式碼</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="冥夜" class="lazyload">
+  <div class="sidebar-author-name">冥夜</div>
+  <div class="sidebar-description">記錄冥夜的成長軌跡</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">31</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分類</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>標籤</div>
+    <div class="sidebar-state-number">16</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-email sidebar-social-icon">
+      <a href=mailto:brianlien09@gmail.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/BrianLien09 itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+    <div class="icon-youtube sidebar-social-icon">
+      <a href=https://www.youtube.com/channel/UCqpzDQDs3cFGtcTtvwF152Q itemprop="url" target="_blank" aria-label="youtube" rel="noopener external nofollow noreferrer"></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首頁"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">首頁</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="歸檔"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">歸檔</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="關於"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">關於</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+    
+  </div>
+  
+    
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  
+</nav>
+
+    </div>
+    
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div class="reimu-search-input" id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+    
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  <script>
+    function loadScripts(scripts, index) {
+      if (index < scripts.length) {
+        const script = scripts[index];
+        const src = script.getAttribute('src');
+
+        const loadScript = (scriptContent) => {
+          return new Promise((resolve, reject) => {
+            const scriptElement = document.createElement('script');
+            if (script.type) {
+              scriptElement.type = script.type;
+            }
+            if (script.src) {
+              scriptElement.src = script.src;
+              if (script.integrity) {
+                scriptElement.integrity = script.integrity;
+              }
+              if (script.crossOrigin) {
+                scriptElement.crossOrigin = script.crossOrigin;
+              }
+              scriptElement.onload = resolve;
+              scriptElement.onerror = reject;
+            }
+            if (scriptContent) {
+              scriptElement.text = scriptContent;
+            }
+            document.head.appendChild(scriptElement);
+            if (!script.src) {
+              resolve();
+            }
+          })
+          
+        }
+
+        ;(src ? loadScript() : loadScript(script.text))
+          .then(() => loadScripts(scripts, index + 1))
+          .catch(error => {
+            console.error(`Failed to load script: ${src || 'inline script'}`, error);
+            loadScripts(scripts, index + 1);
+          });
+      }
+    }
+    if (window.Pjax) {
+      Pjax.prototype.getElements = function() {
+        const i18nLanguages = window.REIMU_CONFIG.i18n_languages;
+        const baseUrl = window.REIMU_CONFIG.base;
+        let basePathname = new URL(baseUrl).pathname;
+        if (!basePathname.endsWith('/')) {
+          basePathname += '/';  
+        }
+        const currentUrl = window.location.href;
+        const currentPathname = new URL(currentUrl).pathname.replace(basePathname, '');
+        const aLinks = document.querySelectorAll('a[href]');
+        const pjaxLinks = [];
+        for(let i = 0; i < aLinks.length; i++) {
+          const aLink = aLinks[i];
+          const aLinkHref = aLink.getAttribute('href');
+          const isExternal = aLink.getAttribute('target') === '_blank' || aLink.getAttribute('rel')?.includes('noopener');
+          if (isExternal || aLinkHref.startsWith('mailto:') || aLinkHref.startsWith('tel:') || aLinkHref.startsWith('javascript:') || aLinkHref.startsWith("data:") || aLinkHref.startsWith("vbscript:")) {
+            continue;
+          }
+          if (!i18nLanguages) {
+            // 多语言功能未打开
+            pjaxLinks.push(aLink);
+            continue;
+          }
+
+          const absoluteUrl = new URL(aLinkHref, currentUrl).href;
+          const absolutePathname = new URL(absoluteUrl).pathname.replace(basePathname, '');
+
+          if (!absolutePathname || !currentPathname) {
+            pjaxLinks.push(aLink);
+            continue;
+          }
+
+          const currentLangIndex = i18nLanguages.findIndex(lang => currentPathname.startsWith(lang));
+          if (currentLangIndex > -1) {
+            // 当前属于多语言站点
+            const absoluteLangIndex = i18nLanguages.findIndex(lang => absolutePathname.startsWith(lang));
+            if (absoluteLangIndex === currentLangIndex) {
+              // 同一语言站点，可以使用 pjax
+              pjaxLinks.push(aLink);
+            }
+          } else {
+            // 当前属于默认语言站点
+            const absoluteLangIndex = i18nLanguages.findIndex(lang => absolutePathname.startsWith(lang));
+            if (absoluteLangIndex === -1) {
+              // 同一语言站点，可以使用 pjax
+              pjaxLinks.push(aLink);
+            }
+          }
+        }
+        return pjaxLinks;
+      }
+    }
+    window.Pjax && new window.Pjax({
+      selectors: [
+        "#header>img",
+        "#header>picture",
+        "head title",
+        "#header-title",
+        "#subtitle-wrap",
+        "#main",
+        "#content",
+        ".sidebar-widget",
+        ".sidebar-wrapper",
+        '#mobile-nav',
+        '#lazy-script',
+        '#i18n-nav'
+      ],
+      switches: {
+        "#content": function(oldEl, newEl) {
+          // for sidebar change
+          oldEl.className = newEl.className;
+          this.onSwitch();
+        },
+        "#header-title": Pjax.switches.outerHTML,
+        "#subtitle-wrap": Pjax.switches.outerHTML,
+        "#main": function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.outerHTML = newEl.outerHTML
+          this.onSwitch()
+        },
+        "#mobile-nav": Pjax.switches.outerHTML,
+        '#lazy-script': function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.innerHTML = newEl.innerHTML
+          this.onSwitch()
+        },
+      },
+      cacheBust: false
+    })
+  </script>
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
+
+
+<div id="lazy-script">
+  <div>
+    
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "冥夜",
+          title: "java_exam4",
+          url: "https://brianlien09.github.io/20251005/java-exam4/",
+          excerpt: " 10/1 java_class 第四次考試題目總結 (題目分析與Java實作) ",
+          description: "",
+          stripContent: " 10/1 java_class 第四次考試題目總結 (題目分析與Java實作)    目錄  PA: A Very Cool Calculator PB: Bar PC: Jim’s Magical Coffee Spill I PD: Intersecting Lines PE: Shot Eagle Eye PF: Stock Baron PG: The Definition of Doom PH: What is the day of week   PA: A Very Cool Cal",
+          date: "Sun Oct 05 2025 09:55:18 GMT+0800",
+          updated: "Sun Oct 05 2025 10:09:22 GMT+0800",
+          cover: "/images/banner.jpg",
+        };
+      </script>
+       
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+        
+          
+<script src="https://npm.webcache.cn/html-to-image@1.11.11/dist/html-to-image.js" integrity="sha384-UbfRVKN3&#x2F;elS1r7JcK2FhmPP+KlJ4CvYwbyYD7tH+uTkbT9bNJr9eJeQ0FoFbAgz" crossorigin="anonymous" defer data-pjax></script>
+
+          
+<script src="https://npm.webcache.cn/qrcode@1.4.4/build/qrcode.min.js" integrity="sha384-0RsG1yo&#x2F;crf&#x2F;1Qc14sho26SXXOTngNCjgJw7fuvXBt9W&#x2F;OChF&#x2F;Ijx+aUuBDqQwEk" crossorigin="anonymous" defer data-pjax></script>
+
+        
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+        
+
+
+
+
+
+
+
+
+<script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+
+  var commentConfigKeys = ['valine', 'waline', 'twikoo', 'gitalk', 'giscus'];
+  var commentConfig = {
+    valine: {
+      enable: false,
+      load: () => {
+        const container = document.querySelector('.valine-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        const script = loadScript(
+          'https://npm.webcache.cn/valine@1.5.1/dist/Valine.min.js',
+          'sha384-3ma91AExDeMAZ1rjTjaP8V2A2obQE+s5ltKRwYlwdpArz9xVbp0tF3b0VV2ACNPn'
+        );
+        script.onload = () => {
+          var GUEST_INFO = ['nick', 'mail', 'link'];
+          var guest_info = 'nick,mail,link'.split(',').filter((item) => {
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          var recordIP = JSON.parse('true');
+          var highlight = JSON.parse('true');
+          var visitor = JSON.parse('false');
+          var serverURLs = undefined;
+
+          if (window.Valine) {
+            new Valine({
+              el: '.valine-comment',
+              appId: "",
+              appKey: "",
+              placeholder: "Just go go",
+              pageSize: '10',
+              avatar: 'mp',
+              lang: document.documentElement.lang || 'en',
+              recordIP: recordIP,
+              highlight: highlight,
+              visitor: visitor,
+              requiredFields: guest_info,
+              path: window.location.pathname,
+              serverURLs
+            });
+          }
+        };
+        document.head.appendChild(script);
+      }
+    },
+    waline: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.mjs';
+        const walineIntegrity = 'sha384-9sbqJjrfGjbkI6/PI4nU/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH/KinBEAZII/5';
+
+        const module = await safeImport(walineCdn, walineIntegrity);
+        walineInit = module.init;
+
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: 'https://waline-test-topaz-tau.vercel.app/',
+          lang: document.documentElement.lang || 'en',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick","mail"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]',
+          pageview: JSON.parse('true'),
+        });
+      }
+    },
+    twikoo: {
+      enable: false,
+      load: () => {
+        const container = document.querySelector('.twikoo-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        const script = loadScript(
+          'https://npm.webcache.cn/twikoo@1.6.44/dist/twikoo.all.min.js',
+          'sha384-kwWLC0HjeZZnVPqCJ1AncI8tsk+kQqF9TbAmCclcc9Z0hGkfgHRzeQZxmdmZhE0K'
+        );
+
+        script.onload = () => {
+          if (window.twikoo) {
+            twikoo.init({
+              envId: '',
+              el: '.twikoo-comment',
+              region: '',
+              lang: document.documentElement.lang || 'en',
+            });
+
+            twikoo.getCommentsCount({
+              envId: '',
+              region: '',
+              urls: [
+                '/friend/index.html'
+              ],
+              includeReply: false
+            }).then((res) => {
+              _$('.twikoo-comment-count').innerText = res[0].count;
+            }).catch((err) => {
+              console.error(err);
+            });
+          }
+        } 
+        document.head.appendChild(script);
+      }
+    },
+    gitalk: {
+      enable: false,
+      load: () => {
+        const container = document.querySelector('.gitalk-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        const script = loadScript(
+          'https://npm.webcache.cn/gitalk@1.8.0/dist/gitalk.min.js',
+          'sha384-kspnZUWBoSWwoJHa0hBCXYbHGbhvU/lcEH5O8eVbSDhbPwsiVUTp/aGX/z/5EuMA'
+        );
+
+        script.onload = () => {
+          if (false) {
+            const md5Script = loadScript(
+              'https://npm.webcache.cn/blueimp-md5@2.19.0/js/md5.min.js',
+              'sha384-JmVtRz6RWiXnA14QbIOJzPuU3MidULOpBP66deeLLyyoF4Tr/gZlbkHkL6vTthxH'
+            );
+            md5Script.onload = initGitalk;
+            document.head.appendChild(md5Script);
+          } else {
+            initGitalk();
+          }
+        }
+        document.head.appendChild(script);
+
+        function initGitalk() {
+          var gitalkId = location.pathname;
+          var gitalk = new Gitalk({
+            clientID: '',
+            clientSecret: '',
+            repo: '',
+            owner: '',
+            admin: null,
+            id: gitalkId,
+            distractionFreeMode: false,
+            language: document.documentElement.lang || 'en',
+          })
+          gitalk.render('gitalk-comment');
+        }
+      }
+    },
+    giscus: {
+      enable: false,
+      load: () => {
+        const container = document.querySelector('.giscus-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        // 删除可能已存在的 giscus 脚本和 iframe
+        const existingScript = container.querySelector('script[src*="giscus.app/client.js"]');
+        if (existingScript) existingScript.remove();
+        const existingFrame = document.querySelector('iframe.giscus-frame');
+        if (existingFrame) existingFrame.remove();
+
+        const giscusScript = document.createElement('script');
+        const domMode = document.documentElement.getAttribute("data-theme");
+
+        const docLang = document.documentElement.lang || 'en';
+        const langBase = docLang.split('-')[0];
+        const supportedLangs = ['ar', 'be', 'bg', 'ca', 'cs', 'da', 'de', 'en', 
+        'eo', 'es', 'eu', 'fa', 'fr', 'gr', 'hbs', 'he', 'hu', 'id', 'it', 'ja', 
+        'kh', 'ko', 'nl', 'pl', 'pt', 'ro', 'ru', 'th', 'tr', 'uk', 'uz', 'vi', 'zh-CN', 'zh-HK', 'zh-TW'];
+        const giscusLang = supportedLangs.includes(docLang) ? docLang : supportedLangs.includes(langBase) ? langBase : 'en';
+
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.setAttribute('data-repo', '');
+        giscusScript.setAttribute('data-repo-id', '');
+        giscusScript.setAttribute('data-category', ''); 
+        giscusScript.setAttribute('data-category-id', '');
+        giscusScript.setAttribute('data-mapping', '0');
+        giscusScript.setAttribute('data-strict', '0');
+        giscusScript.setAttribute('data-reactions-enabled', '1');
+        giscusScript.setAttribute('data-emit-metadata', '0');
+        giscusScript.setAttribute('data-input-position', 'bottom');
+        giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
+        giscusScript.setAttribute('data-lang', giscusLang);
+        giscusScript.setAttribute('crossorigin', 'anonymous');
+        giscusScript.async = true;
+        container.appendChild(giscusScript);
+        document.body.addEventListener('light-theme-set', () => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: 'light' } } }, 'https://giscus.app');
+        });
+        document.body.addEventListener('dark-theme-set', () => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: 'dark' } } }, 'https://giscus.app');
+        });
+      }
+    }
+  }
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    // 1. 首先检查localStorage中是否有保存的评论类型
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    // 2. 如果localStorage中有值且对应的评论系统可用，就使用它
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    // 3. 如果localStorage无效，检查配置的默认评论系统
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    // 4. 如果前两项都无效，按指定顺序找到第一个可用的评论系统
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    // 评论组件加载状态跟踪
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    // 隐藏所有评论容器
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    // 按需加载评论系统
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        // 如果已加载，只需显示对应容器
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      // 根据类型加载对应的脚本
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    // 评论组件选择器
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      // 获取要加载的评论系统类型
+      const commentType = item.getAttribute('data-selector');
+
+      // 隐藏所有评论系统
+      hideAllComments();
+
+      // 加载选中的评论系统
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      // 评论组件选择器点击事件
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          // 保存选择器状态
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          // 切换选中状态
+          changeActiveCommentItems(item);
+        });
+      }
+
+      // 检查是否需要加载默认评论系统
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script>
+
+      
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.9.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
+
+  
+    <script>
+      var isMobile = window.matchMedia('(max-width: 959px)').matches;
+      if (isMobile) {
+      const aplayer = _$('#aplayer');
+        if (aplayer) {
+          const aside = aplayer.parentNode;
+          if (aside?.tagName === 'ASIDE') {
+            aplayer.removeAttribute('data-aos');
+            aside.removeChild(aplayer);
+            document.body.appendChild(aplayer);
+          }
+        }
+      }
+      const ap = new APlayer({
+        theme: "var(--color-link)",
+        container: document.getElementById('aplayer'),
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"疑心病","artist":"任然","url":"/music/任然_-_疑心病.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"Tell Your World","artist":"初音ミク","url":"/music/初音ミク_-_Tell Your World_piano.mp3","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
+        fixed: isMobile ? true : (false || false),
+        autoplay: false || false,
+        loop: 'all' || 'all',
+        order: 'list' || 'list',
+        preload: 'auto' || 'auto',
+        volume: 0.7 || 0.7,
+        mutex: true || true,
+        listFolded: false || false,
+        lrcType: 0 || 0,
+      });
+    </script>
+  
+
+
+
+
+
+    
+  </body>
+  </html>
+
