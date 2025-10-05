@@ -57,9 +57,9 @@
 <meta property="og:description" content="10&#x2F;1 java_class 第四次考試題目總結 (題目分析與Java實作)">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-10-05T01:55:18.000Z">
-<meta property="article:modified_time" content="2025-10-05T02:09:22.684Z">
+<meta property="article:modified_time" content="2025-10-05T02:40:19.149Z">
 <meta property="article:author" content="冥夜">
-<meta property="article:tag" content="冥夜, 部落格, 資訊安全, 網路安全, Hexo教程, 逆向工程, 學習筆記, AIS3, 金融科技">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
   
   
@@ -353,6 +353,10 @@
 </div>
 
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java-class/" data-aos="zoom-in">java_class</a>
+  </div>
+
 
     </div>
     <div class="hr-line"></div>
@@ -372,9 +376,9 @@
 <li><a href="#pc-jims-magical-coffee-spill-i">PC: Jim’s Magical Coffee Spill I</a></li>
 <li><a href="#pd-intersecting-lines">PD: Intersecting Lines</a></li>
 <li><a href="#pe-shot-eagle-eye">PE: Shot Eagle Eye</a></li>
-<li><a href="#pf-stock-baron">PF: Stock Baron</a></li>
+<li><a href="#pf-what-is-the-day-of-week">PF: What is the day of week</a></li>
 <li><a href="#pg-the-definition-of-doom">PG: The Definition of Doom</a></li>
-<li><a href="#ph-what-is-the-day-of-week">PH: What is the day of week</a></li>
+<li><a href="#ph-stock-baron">PH: Stock Baron</a></li>
 </ul>
 <h2 id="pa-a-very-cool-calculator"><a class="markdownIt-Anchor" href="#pa-a-very-cool-calculator"></a> PA: A Very Cool Calculator</h2>
 <h3 id="題目概述"><a class="markdownIt-Anchor" href="#題目概述"></a> 題目概述</h3>
@@ -508,12 +512,8 @@
 <li>一次遍歷完成計算</li>
 <li>動態更新最低價格和最大獲利</li>
 </ul>
-<h3 id="完整程式碼-7"><a class="markdownIt-Anchor" href="#完整程式碼-7"></a> 完整程式碼</h3>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (prices[i] &lt; minPrice) &#123;</span><br><span class="line">    minPrice = prices[i];</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    maxProfit = Math.max(maxProfit, prices[i] - minPrice);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>一次遍歷完成計算</li>
-<li>動態更新最低價格和最大獲利</li>
-</ul>
+<h3 id="完整程式碼-7"><a class="markdownIt-Anchor" href="#完整程式碼-7"></a> 完整程式碼</h3>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PH</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 建立輸入Scanner</span></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="comment">// 讀取測試案例數量</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">cases</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (cases-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 讀取每日股價數量</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">N</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="comment">// 建立陣列儲存每日股價</span></span><br><span class="line">            <span class="type">int</span>[] prices = <span class="keyword">new</span> <span class="title class_">int</span>[N];</span><br><span class="line">            <span class="comment">// 讀取所有股價資料</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">                prices[i] = sc.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 初始化最低價格為第一天的價格</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">minPrice</span> <span class="operator">=</span> prices[<span class="number">0</span>];</span><br><span class="line">            <span class="comment">// 初始化最大獲利為0</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">maxProfit</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 從第二天開始遍歷每日股價</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; N; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (prices[i] &lt; minPrice) &#123;</span><br><span class="line">                    <span class="comment">// 如果找到更低的價格，更新最低價格</span></span><br><span class="line">                    minPrice = prices[i];</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 否則計算當前可能的獲利，並更新最大獲利</span></span><br><span class="line">                    maxProfit = Math.max(maxProfit, prices[i] - minPrice);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 輸出此測試案例的最大獲利</span></span><br><span class="line">            System.out.println(maxProfit);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 關閉Scanner</span></span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -587,6 +587,8 @@
         </span>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
 
     </footer>
   </div>
@@ -1042,9 +1044,9 @@
           url: "https://brianlien09.github.io/20251005/java-exam4/",
           excerpt: " 10/1 java_class 第四次考試題目總結 (題目分析與Java實作) ",
           description: "",
-          stripContent: " 10/1 java_class 第四次考試題目總結 (題目分析與Java實作)    目錄  PA: A Very Cool Calculator PB: Bar PC: Jim’s Magical Coffee Spill I PD: Intersecting Lines PE: Shot Eagle Eye PF: Stock Baron PG: The Definition of Doom PH: What is the day of week   PA: A Very Cool Cal",
+          stripContent: " 10/1 java_class 第四次考試題目總結 (題目分析與Java實作)    目錄  PA: A Very Cool Calculator PB: Bar PC: Jim’s Magical Coffee Spill I PD: Intersecting Lines PE: Shot Eagle Eye PF: What is the day of week PG: The Definition of Doom PH: Stock Baron   PA: A Very Cool Cal",
           date: "Sun Oct 05 2025 09:55:18 GMT+0800",
-          updated: "Sun Oct 05 2025 10:09:22 GMT+0800",
+          updated: "Sun Oct 05 2025 10:40:19 GMT+0800",
           cover: "/images/banner.jpg",
         };
       </script>

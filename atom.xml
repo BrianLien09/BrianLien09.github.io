@@ -6,7 +6,7 @@
   <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien09.github.io/"/>
-  <updated>2025-10-05T02:09:22.684Z</updated>
+  <updated>2025-10-05T02:40:19.149Z</updated>
   <id>https://brianlien09.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://brianlien09.github.io/20251005/java-exam4/"/>
     <id>https://brianlien09.github.io/20251005/java-exam4/</id>
     <published>2025-10-05T01:55:18.000Z</published>
-    <updated>2025-10-05T02:09:22.684Z</updated>
+    <updated>2025-10-05T02:40:19.149Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -30,6 +30,10 @@
     
     
     
+    <category term="java_class" scheme="https://brianlien09.github.io/categories/java-class/"/>
+    
+    
+    <category term="java" scheme="https://brianlien09.github.io/tags/java/"/>
     
   </entry>
   
