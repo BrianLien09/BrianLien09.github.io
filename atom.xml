@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>冥夜小站</title>
+  <icon>https://brianlien09.github.io/icon.png</icon>
+  <subtitle>分享資安學習、技術實踐與成長軌跡的個人部落格</subtitle>
+  <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://brianlien09.github.io/"/>
+  <updated>2025-10-12T15:47:20.278Z</updated>
+  <id>https://brianlien09.github.io/</id>
+  
+  <author>
+    <name>冥夜</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://brianlien09.github.io/20251012/hello-world/"/>
+    <id>https://brianlien09.github.io/20251012/hello-world/</id>
+    <published>2025-10-12T15:47:20.278Z</published>
+    <updated>2025-10-12T15:47:20.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>exam1_summary</title>
+    <link href="https://brianlien09.github.io/20250911/java_class/exam1_summary/"/>
+    <id>https://brianlien09.github.io/20250911/java_class/exam1_summary/</id>
+    <published>2025-09-11T15:28:49.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;9/10 本週考試重點總結 (題目分析與Java實作)&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="java_class" scheme="https://brianlien09.github.io/categories/java-class/"/>
+    
+    
+    <category term="java" scheme="https://brianlien09.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hexo 教學】萬無一失！使用 GitHub 私有倉庫備份你的 Hexo 部落格原始碼</title>
+    <link href="https://brianlien09.github.io/20250811/hexo/hexo-backup/"/>
+    <id>https://brianlien09.github.io/20250811/hexo/hexo-backup/</id>
+    <published>2025-08-10T18:11:02.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;這是一篇關於如何使用 GitHub 私有倉庫，完整備份 Hexo 部落格原始碼的教學。學會這招，無論更換電腦或系統重灌，都能輕鬆還原你的心血結晶！&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="hexo教學" scheme="https://brianlien09.github.io/categories/hexo%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="hexo" scheme="https://brianlien09.github.io/tags/hexo/"/>
+    
+    <category term="git" scheme="https://brianlien09.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://brianlien09.github.io/tags/github/"/>
+    
+    <category term="backup" scheme="https://brianlien09.github.io/tags/backup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何解決 Acer Swift Go 14 的「Touchpad is updating」全螢幕問題</title>
+    <link href="https://brianlien09.github.io/20250425/acer_swift_go_14_touchpad_screen_issues/"/>
+    <id>https://brianlien09.github.io/20250425/acer_swift_go_14_touchpad_screen_issues/</id>
+    <published>2025-04-25T10:05:54.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文旨在解決 Acer Swift Go 14 筆記型電腦在更新後，出現「Touchpad is updating」訊息佔滿整個螢幕的問題。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Acer筆電" scheme="https://brianlien09.github.io/categories/Acer%E7%AD%86%E9%9B%BB/"/>
+    
+    
+    <category term="Acer筆電" scheme="https://brianlien09.github.io/tags/Acer%E7%AD%86%E9%9B%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 常用指令大全 (Cheatsheet)</title>
+    <link href="https://brianlien09.github.io/20250425/hexo/hexo_common_commands/"/>
+    <id>https://brianlien09.github.io/20250425/hexo/hexo_common_commands/</id>
+    <published>2025-04-25T09:56:37.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">一份給 Hexo 使用者的終極常用指令速查表，涵蓋從建立文章到部署網站的完整流程。無論是新手還是老手，都能在這裡找到需要的指令，大幅提升部落格管理效率。</summary>
+    
+    
+    
+    <category term="hexo教學" scheme="https://brianlien09.github.io/categories/hexo%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="hexo" scheme="https://brianlien09.github.io/tags/hexo/"/>
+    
+    <category term="git" scheme="https://brianlien09.github.io/tags/git/"/>
+    
+    <category term="hexo教學" scheme="https://brianlien09.github.io/tags/hexo%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="指令大全" scheme="https://brianlien09.github.io/tags/%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    
+    <category term="速查表" scheme="https://brianlien09.github.io/tags/%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格</title>
+    <link href="https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/"/>
+    <id>https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/</id>
+    <published>2024-12-26T02:45:49.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;當您更換電腦或重灌系統後，如何快速還原您的 Hexo 部落格？本教學將引導您利用先前在 GitHub 上的原始碼備份，在新環境中完美重建所有內容。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="hexo教學" scheme="https://brianlien09.github.io/categories/hexo%E6%95%99%E5%AD%B8/"/>
+    
+    
+    <category term="hexo" scheme="https://brianlien09.github.io/tags/hexo/"/>
+    
+    <category term="git" scheme="https://brianlien09.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://brianlien09.github.io/tags/github/"/>
+    
+    <category term="nodejs" scheme="https://brianlien09.github.io/tags/nodejs/"/>
+    
+    <category term="環境設定" scheme="https://brianlien09.github.io/tags/%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>進階文法W7</title>
+    <link href="https://brianlien09.github.io/20241112/advanced_grammar_W7/"/>
+    <id>https://brianlien09.github.io/20241112/advanced_grammar_W7/</id>
+    <published>2024-11-11T16:00:00.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;進階文法課程-第七周&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="文法學習" scheme="https://brianlien09.github.io/categories/%E6%96%87%E6%B3%95%E5%AD%B8%E7%BF%92/"/>
+    
+    
+    <category term="進階文法" scheme="https://brianlien09.github.io/tags/%E9%80%B2%E9%9A%8E%E6%96%87%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AIS3 junior DAY2 網頁安全 writeup</title>
+    <link href="https://brianlien09.github.io/20241007/AIS3_junior/ais3-junior-day2-web-security-writeup/"/>
+    <id>https://brianlien09.github.io/20241007/AIS3_junior/ais3-junior-day2-web-security-writeup/</id>
+    <published>2024-10-06T17:15:33.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ais3-junior-day2-上午-網頁安全&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#ais3-junior-day2-上午-網頁安全&quot;&gt;&lt;/a&gt; AIS3 junior DAY2 上午</summary>
+        
+      
+    
+    
+    
+    <category term="2024 AIS3 junior" scheme="https://brianlien09.github.io/categories/2024-AIS3-junior/"/>
+    
+    
+    <category term="writeup" scheme="https://brianlien09.github.io/tags/writeup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AIS3 junior DAY3 下午-AI 應用安全實務 writeup</title>
+    <link href="https://brianlien09.github.io/20240818/AIS3_junior/ais3-junior-day3-ai-security-practice-writeup/"/>
+    <id>https://brianlien09.github.io/20240818/AIS3_junior/ais3-junior-day3-ai-security-practice-writeup/</id>
+    <published>2024-08-18T05:55:22.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;llm-探討說話的藝術&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#llm-探討說話的藝術&quot;&gt;&lt;/a&gt; LLM 探討說話的藝術&lt;/h2&gt;
+&lt;h3 id=&quot;感受gptㄉ魔力吧&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="2024 AIS3 junior" scheme="https://brianlien09.github.io/categories/2024-AIS3-junior/"/>
+    
+    
+    <category term="writeup" scheme="https://brianlien09.github.io/tags/writeup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
+    <link href="https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/"/>
+    <id>https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/</id>
+    <published>2024-08-05T13:26:38.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/fK2cMA6.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;課程筆記&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="security class" scheme="https://brianlien09.github.io/categories/security-class/"/>
+    
+    
+    <category term="逆向工程" scheme="https://brianlien09.github.io/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>應用程式的資料保護策略：從傳輸、使用到儲存</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/data-protection-strategies/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/data-protection-strategies/</id>
+    <published>2024-08-04T09:36:06.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一個設計良好的應用程式，必須實施全方位的安全控制，以確保敏感資訊在整個生命週期中的機密性、完整性和可用性。這不僅是技術要求，更是對使用者信任的承諾。本文將探討資料在三個不同狀態下的核心保護策略：傳輸中、靜態儲存和使用中。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注入攻擊的根源：不充分的資料轉義</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insufficient-data-escaping/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insufficient-data-escaping/</id>
+    <published>2024-08-04T08:37:10.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;幾乎所有注入型攻擊（如 XSS、SQL Injection）的根本原因，都源於同一個問題：&lt;strong&gt;不充分的資料轉義 (Insufficient Data Escaping)&lt;/strong&gt;。當應用程式將使用者提供的資料，直接與後端的指令或標記語言（如 SQL、HTML）拼接在一起，而沒有對其中的特殊字元進行適當處理時，就為攻擊者敞開了大門。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fail-Safe：當錯誤處理成為安全漏洞</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/fail-safe-security/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/fail-safe-security/</id>
+    <published>2024-08-04T08:32:08.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在設計系統時，我們往往專注於正常運作時的邏輯，但當系統遇到非預期的錯誤或故障時，其處理方式同樣至關重要。「故障時的安全性 (Fail-Safe)」是一個核心的安全設計原則，它要求系統在發生故障時，必須進入並保持在一個安全的狀態，而不是一個充滿風險的未知狀態。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web 安全基石：CSP、SOP 與 CORS 詳解</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/csp-sop-cors/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/csp-sop-cors/</id>
+    <published>2024-08-04T08:30:25.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，&lt;strong&gt;同源策略 (SOP)&lt;/strong&gt;、&lt;strong&gt;內容安全策略 (CSP)&lt;/strong&gt; 和 &lt;strong&gt;跨來源資源共享 (CORS)&lt;/strong&gt; 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insecure-direct-object-reference/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insecure-direct-object-reference/</id>
+    <published>2024-08-04T08:28:36.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;不安全的直接物件引用 (Insecure Direct Object References, IDOR) 是最常見也最容易被忽略的存取控制漏洞之一。它發生在當應用程式允許使用者透過一個可預測的識別碼（如使用者 ID、訂單編號）直接存取資料，卻沒有在後端驗證該使用者是否真的有權限存取該筆資料時。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>路徑穿越漏洞：讀取你不該讀取的檔案</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/path-traversal/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/path-traversal/</id>
+    <published>2024-08-04T08:23:00.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;路徑穿越 (Path Traversal)，也稱為目錄穿越 (Directory Traversal) 或「點-點-斜線 (dot-dot-slash)」攻擊，是一種允許攻擊者存取網站伺服器上任意檔案的漏洞。透過操縱檔案路徑，攻擊者可以讀取到網站根目錄之外的敏感檔案，例如設定檔、原始碼，甚至是系統層級的密碼檔案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>帳戶接管風險：不安全的密碼變更功能</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insecure-password-change-function/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insecure-password-change-function/</id>
+    <published>2024-08-04T08:22:14.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;密碼變更功能是任何使用者系統的核心部分，但如果設計不當，它可能成為攻擊者接管帳戶的直接途徑。一個不安全的密碼變更功能，會讓攻擊者在未經適當授權的情況下，擅自修改受害者的密碼。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不當的身份驗證：當信任可以被偽造</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/improper-authentication/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/improper-authentication/</id>
+    <published>2024-08-04T08:20:50.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;身份驗證 (Authentication) 是確認「你是誰」的過程，是所有權限控管的基礎。若應用程式未能正確地、嚴謹地驗證使用者身份，就可能讓攻擊者輕易地冒充他人，甚至提升權限，存取受保護的資源。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>明文儲存的災難：為何必須加密敏感資料</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/cleartext-storage-of-sensitive-data/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/cleartext-storage-of-sensitive-data/</id>
+    <published>2024-08-04T08:19:13.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;將使用者的個人資料、密碼、信用卡號等敏感資訊，以未經加密的明文形式直接儲存在資料庫、檔案或日誌中，是最嚴重且最不可原諒的安全疏失之一。一旦資料庫或伺服器被入侵，所有使用者的敏感資料將瞬間暴露在陽光下，造成毀滅性的後果。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>憑證保護不足：當加密形同虛設</title>
+    <link href="https://brianlien09.github.io/20240804/development_plan_study/insecure-credential-storage/"/>
+    <id>https://brianlien09.github.io/20240804/development_plan_study/insecure-credential-storage/</id>
+    <published>2024-08-04T08:18:25.000Z</published>
+    <updated>2025-09-11T15:44:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;即使開發者對密碼或金鑰進行了加密，但如果儲存這些憑證的檔案或系統本身存在漏洞，導致攻擊者可以輕易存取，那麼再強的加密也形同虛設。這就是「憑證保護不足」漏洞。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安全達人養成計劃" scheme="https://brianlien09.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien09.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+</feed>

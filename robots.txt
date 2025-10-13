@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/ 
+Disallow: /vendors/
+Disallow: /fonts/
+Disallow: /fancybox/
+Sitemap: https://brianlien09.github.io/sitemap.xml
