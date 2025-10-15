@@ -6,7 +6,7 @@
   <link href="https://brianlien09.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien09.github.io/"/>
-  <updated>2025-10-12T15:47:20.278Z</updated>
+  <updated>2025-10-15T14:13:54.213Z</updated>
   <id>https://brianlien09.github.io/</id>
   
   <author>
@@ -17,23 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://brianlien09.github.io/20251012/hello-world/"/>
-    <id>https://brianlien09.github.io/20251012/hello-world/</id>
-    <published>2025-10-12T15:47:20.278Z</published>
-    <updated>2025-10-12T15:47:20.278Z</updated>
+    <title>exam6_WP</title>
+    <link href="https://brianlien09.github.io/20251015/java_class/exam6-WP/"/>
+    <id>https://brianlien09.github.io/20251015/java_class/exam6-WP/</id>
+    <published>2025-10-15T13:40:43.000Z</published>
+    <updated>2025-10-15T14:13:54.213Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;第六次平時考WP&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
+    <category term="java_class" scheme="https://brianlien09.github.io/categories/java-class/"/>
+    
+    
+    <category term="java" scheme="https://brianlien09.github.io/tags/java/"/>
     
   </entry>
   

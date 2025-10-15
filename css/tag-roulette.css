@@ -33,6 +33,32 @@
 .roll-tags span.removing {
   animation: tag-removing 0.1s ease-in-out;
 }
+/* --- 調整程式碼區塊 (Code Block) 的間距 --- */
+/* 針對整個程式碼區塊 <figure> */
+figure.highlight {
+/* * [最重要] 取消寫死的 height，讓高度由內容自動決定。
+   * !important 是為了確保能覆蓋主題原有的樣式。
+   */
+  height: auto !important;
+/* * 減少區塊「上下方」的外部間距 (margin)，
+   * 您可以根據喜好調整 10px 這個數值。
+   */
+  margin-top: 10px;
+  margin-bottom: 10px;
+/* * 有些主題可能也有內邊距 (padding)，也可以視情況調整。
+   * 例如 padding: 10px;
+   */
+}
+/* 針對程式碼本身，減少「每一行之間」的行距 */
+figure.highlight pre,
+figure.highlight .code-area {
+/* 有些主題的 class 是 .code-area */
+/*
+   * 調整行高，1.4 或 1.5 通常是比較舒服的數值。
+   * 原本的 36px 可能太大了。
+   */
+  line-height: 1.4;
+}
 @-moz-keyframes tag-removing {
   0% {
     transform: translateY(0px);
