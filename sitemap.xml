@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>https://brianlien09.github.io/20250811/hexo/hexo-backup/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://brianlien09.github.io/20250425/acer_swift_go_14_touchpad_screen_issues/</loc>
     
     <lastmod>2025-09-11</lastmod>
@@ -38,223 +29,7 @@
   </url>
   
   <url>
-    <loc>https://brianlien09.github.io/20250425/hexo/hexo_common_commands/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/broken-function-level-authorization/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/csp-sop-cors/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/fail-safe-security/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-credential-storage/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-direct-object-reference/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/csrf/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/cleartext-storage-of-sensitive-data/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-randomness/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-password-change-function/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/insufficient-transport-layer-protection/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/integer-overflow/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/path-traversal/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/data-protection-strategies/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/mass-assignment-vulnerability/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/sensitive-data-exposure/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240803/development_plan_study/insufficient-credential-protection/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/insufficient-data-escaping/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/url-caching-vulnerability/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/security_class/security_forensics_course/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/improper-authentication/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://brianlien09.github.io/20241007/AIS3_junior/ais3-junior-day2-web-security-writeup/</loc>
-    
-    <lastmod>2025-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://brianlien09.github.io/20240804/development_plan_study/side-channel-data-leakage/</loc>
     
     <lastmod>2025-09-11</lastmod>
     
@@ -281,7 +56,223 @@
   </url>
   
   <url>
-    <loc>https://brianlien09.github.io/about/index.html</loc>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/broken-function-level-authorization/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/cleartext-storage-of-sensitive-data/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/csp-sop-cors/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/csrf/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/fail-safe-security/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/data-protection-strategies/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/improper-authentication/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-credential-storage/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-direct-object-reference/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-password-change-function/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/insecure-randomness/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/insufficient-data-escaping/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/insufficient-transport-layer-protection/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240803/development_plan_study/insufficient-credential-protection/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/integer-overflow/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/mass-assignment-vulnerability/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/path-traversal/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/sensitive-data-exposure/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/side-channel-data-leakage/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/development_plan_study/url-caching-vulnerability/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20250811/hexo/hexo-backup/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20250425/hexo/hexo_common_commands/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20241226/hexo/hexo_migration_tutorial/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240804/security_class/security_forensics_course/</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://brianlien09.github.io/20240805/security_class/security-training-reverse-engineering/</loc>
     
     <lastmod>2025-09-11</lastmod>
     
@@ -298,10 +289,19 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://brianlien09.github.io/about/index.html</loc>
+    
+    <lastmod>2025-09-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://brianlien09.github.io/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

@@ -2203,7 +2203,7 @@ button {
   padding: 0 20px 15px;
   border-radius: 10px;
   color: var(--highlight-foreground);
-  line-height: 36px;
+  line-height: 24px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -2308,7 +2308,7 @@ button {
   padding-right: 20px;
 }
 .article-entry .highlight .line {
-  height: 36px;
+  height: 24px;
 }
 .article-entry .highlight .line.marked {
   background: var(--highlight-selection);
