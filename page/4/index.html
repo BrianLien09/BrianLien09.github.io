@@ -26,7 +26,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.swPath = '/sw.js';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
   
   <title>
     
@@ -36,8 +36,6 @@
   
     <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
   
-  
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
   
   
     <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -94,6 +92,44 @@
 
   
   
+    <style>
+  /* 調整文章字體大小與明亮度 */
+  .post-content,
+  .post-content p,
+  .post-content li {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    color: #2c3e50 !important;
+  }
+  
+  /* 深色模式調整 */
+  [data-theme="dark"] .post-content,
+  [data-theme="dark"] .post-content p,
+  [data-theme="dark"] .post-content li {
+    font-weight: 450 !important;
+    color: #e8e8e8 !important;
+  }
+  
+  /* 標題字體調整 */
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    font-weight: 600 !important;
+  }
+  
+  /* 程式碼區塊保持原有字體 */
+  .post-content code,
+  .post-content pre {
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace !important;
+    font-weight: 400 !important;
+  }
+</style>
+
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
   <body>
@@ -149,6 +185,15 @@
 </div>
 <div id="heatmap-tooltip"></div>
 
+
+  <div class="notification-wrapper">
+    <h1>發現新版本</h1>
+    <p>網站好像有新內容，是否更新？</p>
+    <div class="notification-btn">
+      <button id="notification-update-btn">更新</button>
+      <button id="notification-close-btn">取消</button>
+    </div>
+  </div>
 
     <div id="container">
       <div id="wrap">
@@ -387,27 +432,151 @@
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/20240803/development_plan_study/insufficient-credential-protection/" aria-label="密碼學應用錯誤：從硬編碼到弱雜湊演算法"></a>
+      <a class="post-link" href="/20240804/development_plan_study/path-traversal/" aria-label="路徑穿越漏洞：讀取你不該讀取的檔案"></a>
     
     
     <div class="post-cover-left">
       
         
         
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="密碼學應用錯誤：從硬編碼到弱雜湊演算法" class="lazyload">
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="路徑穿越漏洞：讀取你不該讀取的檔案" class="lazyload">
         
       
     </div>
     <div class="post-info">
       <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-03</span>
-        <span><span class="icon-pencil"></span>1k 字</span>
+        <span><span class="icon-calendar"></span>2024-08-04</span>
+        <span><span class="icon-pencil"></span>1.1k 字</span>
         <span><span class="icon-clock"></span>3 分鐘</span>
       </div>
-      <h2 class="post-title">密碼學應用錯誤：從硬編碼到弱雜湊演算法</h2>
+      <h2 class="post-title">路徑穿越漏洞：讀取你不該讀取的檔案</h2>
       <article class="post-article">
         
-          在應用程式開發中，「秘密 (Secret)」是指任何用於身份驗證或授權的敏感資訊，例如密碼、API 金鑰、加密金鑰等。若對這些秘密的保護不足，將會對系統安全造成毀滅性的打擊。本文將探討兩種最常見的憑證保護漏洞：硬編碼秘密與使用弱密碼雜湊。
+          路徑穿越 (Path Traversal)，也稱為目錄穿越 (Directory Traversal) 或「點-點-斜線 (dot-dot-slash)」攻擊，是一種允許攻擊者存取網站伺服器上任意檔案的漏洞。透過操縱檔案路徑，攻擊者可以讀取到網站根目錄之外的敏感檔案，例如設定檔、原始碼，甚至是系統層級的密碼檔案。
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/20240804/development_plan_study/insecure-password-change-function/" aria-label="帳戶接管風險：不安全的密碼變更功能"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="帳戶接管風險：不安全的密碼變更功能" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-04</span>
+        <span><span class="icon-pencil"></span>757 字</span>
+        <span><span class="icon-clock"></span>2 分鐘</span>
+      </div>
+      <h2 class="post-title">帳戶接管風險：不安全的密碼變更功能</h2>
+      <article class="post-article">
+        
+          密碼變更功能是任何使用者系統的核心部分，但如果設計不當，它可能成為攻擊者接管帳戶的直接途徑。一個不安全的密碼變更功能，會讓攻擊者在未經適當授權的情況下，擅自修改受害者的密碼。
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/20240804/development_plan_study/improper-authentication/" aria-label="不當的身份驗證：當信任可以被偽造"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="不當的身份驗證：當信任可以被偽造" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-04</span>
+        <span><span class="icon-pencil"></span>937 字</span>
+        <span><span class="icon-clock"></span>3 分鐘</span>
+      </div>
+      <h2 class="post-title">不當的身份驗證：當信任可以被偽造</h2>
+      <article class="post-article">
+        
+          身份驗證 (Authentication) 是確認「你是誰」的過程，是所有權限控管的基礎。若應用程式未能正確地、嚴謹地驗證使用者身份，就可能讓攻擊者輕易地冒充他人，甚至提升權限，存取受保護的資源。
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/20240804/development_plan_study/cleartext-storage-of-sensitive-data/" aria-label="明文儲存的災難：為何必須加密敏感資料"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="明文儲存的災難：為何必須加密敏感資料" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-04</span>
+        <span><span class="icon-pencil"></span>1.2k 字</span>
+        <span><span class="icon-clock"></span>4 分鐘</span>
+      </div>
+      <h2 class="post-title">明文儲存的災難：為何必須加密敏感資料</h2>
+      <article class="post-article">
+        
+          將使用者的個人資料、密碼、信用卡號等敏感資訊，以未經加密的明文形式直接儲存在資料庫、檔案或日誌中，是最嚴重且最不可原諒的安全疏失之一。一旦資料庫或伺服器被入侵，所有使用者的敏感資料將瞬間暴露在陽光下，造成毀滅性的後果。
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/20240804/development_plan_study/insecure-credential-storage/" aria-label="憑證保護不足：當加密形同虛設"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="憑證保護不足：當加密形同虛設" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-04</span>
+        <span><span class="icon-pencil"></span>821 字</span>
+        <span><span class="icon-clock"></span>2 分鐘</span>
+      </div>
+      <h2 class="post-title">憑證保護不足：當加密形同虛設</h2>
+      <article class="post-article">
+        
+          即使開發者對密碼或金鑰進行了加密，但如果儲存這些憑證的檔案或系統本身存在漏洞，導致攻擊者可以輕易存取，那麼再強的加密也形同虛設。這就是「憑證保護不足」漏洞。
         
       </article>
     </div>
@@ -420,7 +589,7 @@
 
   <nav id="page-nav" data-aos="fade-up">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">下一頁 &raquo;</a>
   </nav>
 
 
@@ -616,13 +785,6 @@
 
 
 
-  
-<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
-
-  <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
-  </script>
-
 
 
   
@@ -814,15 +976,9 @@
 
 
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
+  
+<script src="/js/service_worker.js"></script>
+
 
 
 
@@ -848,7 +1004,7 @@
       const ap = new APlayer({
         theme: "var(--color-link)",
         container: document.getElementById('aplayer'),
-        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"疑心病","artist":"任然","url":"/music/任然_-_疑心病.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"Tell Your World","artist":"初音ミク","url":"/music/初音ミク_-_Tell Your World_piano.mp3","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
         fixed: isMobile ? true : (false || false),
         autoplay: false || false,
         loop: 'all' || 'all',

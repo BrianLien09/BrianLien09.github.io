@@ -26,7 +26,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.swPath = '/sw.js';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
   
   <title>
     
@@ -36,8 +36,6 @@
   
     <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
   
-  
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
   
   
     <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -94,6 +92,44 @@
 
   
   
+    <style>
+  /* 調整文章字體大小與明亮度 */
+  .post-content,
+  .post-content p,
+  .post-content li {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    color: #2c3e50 !important;
+  }
+  
+  /* 深色模式調整 */
+  [data-theme="dark"] .post-content,
+  [data-theme="dark"] .post-content p,
+  [data-theme="dark"] .post-content li {
+    font-weight: 450 !important;
+    color: #e8e8e8 !important;
+  }
+  
+  /* 標題字體調整 */
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    font-weight: 600 !important;
+  }
+  
+  /* 程式碼區塊保持原有字體 */
+  .post-content code,
+  .post-content pre {
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace !important;
+    font-weight: 400 !important;
+  }
+</style>
+
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
   <body>
@@ -149,6 +185,15 @@
 </div>
 <div id="heatmap-tooltip"></div>
 
+
+  <div class="notification-wrapper">
+    <h1>發現新版本</h1>
+    <p>網站好像有新內容，是否更新？</p>
+    <div class="notification-btn">
+      <button id="notification-update-btn">更新</button>
+      <button id="notification-close-btn">取消</button>
+    </div>
+  </div>
 
     <div id="container">
       <div id="wrap">
@@ -387,14 +432,45 @@
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/20240804/development_plan_study/mass-assignment-vulnerability/" aria-label="大量賦值漏洞：不應被使用者修改的欄位"></a>
+      <a class="post-link" href="/20240804/development_plan_study/data-protection-strategies/" aria-label="應用程式的資料保護策略：從傳輸、使用到儲存"></a>
     
     
     <div class="post-cover-left">
       
         
         
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="大量賦值漏洞：不應被使用者修改的欄位" class="lazyload">
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="應用程式的資料保護策略：從傳輸、使用到儲存" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-04</span>
+        <span><span class="icon-pencil"></span>979 字</span>
+        <span><span class="icon-clock"></span>3 分鐘</span>
+      </div>
+      <h2 class="post-title">應用程式的資料保護策略：從傳輸、使用到儲存</h2>
+      <article class="post-article">
+        
+          一個設計良好的應用程式，必須實施全方位的安全控制，以確保敏感資訊在整個生命週期中的機密性、完整性和可用性。這不僅是技術要求，更是對使用者信任的承諾。本文將探討資料在三個不同狀態下的核心保護策略：傳輸中、靜態儲存和使用中。
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/20240804/development_plan_study/insufficient-data-escaping/" aria-label="注入攻擊的根源：不充分的資料轉義"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="注入攻擊的根源：不充分的資料轉義" class="lazyload">
         
       
     </div>
@@ -404,10 +480,10 @@
         <span><span class="icon-pencil"></span>1k 字</span>
         <span><span class="icon-clock"></span>3 分鐘</span>
       </div>
-      <h2 class="post-title">大量賦值漏洞：不應被使用者修改的欄位</h2>
+      <h2 class="post-title">注入攻擊的根源：不充分的資料轉義</h2>
       <article class="post-article">
         
-          許多 Web 框架為了開發方便，提供了「大量賦值 (Mass Assignment)」功能，允許開發者將 HTTP 請求中的參數直接、自動地綁定到後端的物件模型上。然而，若未謹慎過濾，這個便利的功能就可能成為嚴重的安全漏洞，讓攻擊者得以竄改他們本不應有權限修改的資料欄位。
+          幾乎所有注入型攻擊（如 XSS、SQL Injection）的根本原因，都源於同一個問題：不充分的資料轉義 (Insufficient Data Escaping)。當應用程式將使用者提供的資料，直接與後端的指令或標記語言（如 SQL、HTML）拼接在一起，而沒有對其中的特殊字元進行適當處理時，就為攻擊者敞開了大門。
         
       </article>
     </div>
@@ -416,16 +492,16 @@
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
+  <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/20240804/development_plan_study/insecure-randomness/" aria-label="可預測的隨機性：不安全的密碼學應用"></a>
+      <a class="post-link" href="/20240804/development_plan_study/fail-safe-security/" aria-label="Fail-Safe：當錯誤處理成為安全漏洞"></a>
     
     
-    <div class="post-cover-right">
+    <div class="post-cover-left">
       
         
         
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="可預測的隨機性：不安全的密碼學應用" class="lazyload">
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="Fail-Safe：當錯誤處理成為安全漏洞" class="lazyload">
         
       
     </div>
@@ -435,41 +511,10 @@
         <span><span class="icon-pencil"></span>1k 字</span>
         <span><span class="icon-clock"></span>3 分鐘</span>
       </div>
-      <h2 class="post-title">可預測的隨機性：不安全的密碼學應用</h2>
+      <h2 class="post-title">Fail-Safe：當錯誤處理成為安全漏洞</h2>
       <article class="post-article">
         
-          在密碼學和許多安全相關的功能中，「隨機性」是不可或缺的基石。如果應用程式在需要不可預測性的情境下（如生成 Session ID、密碼重設權杖），卻使用了可被預測的「隨機」數，就會產生嚴重的安全漏洞。
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/20240804/development_plan_study/integer-overflow/" aria-label="整數溢位漏洞 (Integer Overflow)：當數字大到無法計算"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="整數溢位漏洞 (Integer Overflow)：當數字大到無法計算" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>984 字</span>
-        <span><span class="icon-clock"></span>3 分鐘</span>
-      </div>
-      <h2 class="post-title">整數溢位漏洞 (Integer Overflow)：當數字大到無法計算</h2>
-      <article class="post-article">
-        
-          在電腦程式中，每種類型的整數（Integer）都有其可以儲存的數值上限與下限。當一個計算的結果超出了這個範圍，就像試圖將兩公升的水裝進一公升的瓶子裡，水滿溢出來了，這就是「整數溢位 (Integer Overflow)」。這種溢位可能導致程式行為異常、崩潰，甚至產生嚴重的安全漏洞。
+          在設計系統時，我們往往專注於正常運作時的邏輯，但當系統遇到非預期的錯誤或故障時，其處理方式同樣至關重要。「故障時的安全性 (Fail-Safe)」是一個核心的安全設計原則，它要求系統在發生故障時，必須進入並保持在一個安全的狀態，而不是一個充滿風險的未知狀態。
         
       </article>
     </div>
@@ -480,27 +525,27 @@
       <div class="post-wrapper">
   <div class="post-wrap-right" data-aos="fade-up">
     
-      <a class="post-link" href="/20240804/development_plan_study/side-channel-data-leakage/" aria-label="第三方服務的隱私風險：側通道資料洩漏"></a>
+      <a class="post-link" href="/20240804/development_plan_study/csp-sop-cors/" aria-label="Web 安全基石：CSP、SOP 與 CORS 詳解"></a>
     
     
     <div class="post-cover-right">
       
         
         
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="第三方服務的隱私風險：側通道資料洩漏" class="lazyload">
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="Web 安全基石：CSP、SOP 與 CORS 詳解" class="lazyload">
         
       
     </div>
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>917 字</span>
+        <span><span class="icon-pencil"></span>960 字</span>
         <span><span class="icon-clock"></span>3 分鐘</span>
       </div>
-      <h2 class="post-title">第三方服務的隱私風險：側通道資料洩漏</h2>
+      <h2 class="post-title">Web 安全基石：CSP、SOP 與 CORS 詳解</h2>
       <article class="post-article">
         
-          現代 Web 應用程式高度依賴第三方服務來提供分析、廣告、錯誤追蹤、客戶支援等功能。然而，如果在整合這些服務時未謹慎處理，就可能在無意中將敏感的使用者資料傳送給第三方，形成「側通道資料洩漏」漏洞。
+          在現代 Web 開發中，為了保護使用者免於惡意攻擊，瀏覽器內建了多種安全機制。其中，同源策略 (SOP)、內容安全策略 (CSP) 和 跨來源資源共享 (CORS) 是三個最核心、最關鍵的概念。理解它們的運作原理，是打造安全應用程式的基礎。
         
       </article>
     </div>
@@ -511,202 +556,27 @@
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/20240804/development_plan_study/sensitive-data-exposure/" aria-label="過度曝露的 API：不應傳送的敏感資料"></a>
+      <a class="post-link" href="/20240804/development_plan_study/insecure-direct-object-reference/" aria-label="不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？"></a>
     
     
     <div class="post-cover-left">
       
         
         
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="過度曝露的 API：不應傳送的敏感資料" class="lazyload">
+          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？" class="lazyload">
         
       
     </div>
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>937 字</span>
+        <span><span class="icon-pencil"></span>1k 字</span>
         <span><span class="icon-clock"></span>3 分鐘</span>
       </div>
-      <h2 class="post-title">過度曝露的 API：不應傳送的敏感資料</h2>
+      <h2 class="post-title">不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？</h2>
       <article class="post-article">
         
-          在設計 API 時，一個常見的錯誤是為了開發方便，將後端的資料庫物件模型 (Entity) 直接序列化後，完整地傳送給前端。這種做法雖然省事，但常常會導致「敏感資料曝露 (Sensitive Data Exposure)」漏洞，即 API 的回應中包含了前端根本不需要、但卻高度敏感的資訊。
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/20240804/development_plan_study/insufficient-transport-layer-protection/" aria-label="傳輸層保護不足：在不安全的連線中傳輸憑證"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="傳輸層保護不足：在不安全的連線中傳輸憑證" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>888 字</span>
-        <span><span class="icon-clock"></span>3 分鐘</span>
-      </div>
-      <h2 class="post-title">傳輸層保護不足：在不安全的連線中傳輸憑證</h2>
-      <article class="post-article">
-        
-          當應用程式透過未加密的通道（如 HTTP）來傳輸使用者名稱、密碼、Session Token 等敏感憑證時，就犯了「傳輸層保護不足」的錯誤。這相當於將一個裝滿現金的透明袋子交給快遞員，運送過程中的任何人都可能窺視甚至取走裡面的內容。
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/20240804/development_plan_study/broken-function-level-authorization/" aria-label="功能級別的存取控制漏洞 (BFLA)：你怎麼能執行管理員操作？"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="功能級別的存取控制漏洞 (BFLA)：你怎麼能執行管理員操作？" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>1.1k 字</span>
-        <span><span class="icon-clock"></span>3 分鐘</span>
-      </div>
-      <h2 class="post-title">功能級別的存取控制漏洞 (BFLA)：你怎麼能執行管理員操作？</h2>
-      <article class="post-article">
-        
-          功能級別的存取控制漏洞 (Broken Function Level Authorization, BFLA)，有時也稱作「遺漏功能級別存取控制」，是一種極其常見且危險的授權 (Authorization) 漏洞。它發生在當應用程式未能對每個功能或 API 端點，都進行嚴格的權限檢查時，導致低權限使用者可以執行他們本不應有權限的高權限操作。
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/20240804/security_class/security_forensics_course/" aria-label="資安鑑識課程"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="資安鑑識課程" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>519 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">資安鑑識課程</h2>
-      <article class="post-article">
-        
-          
-資訊安全七大需求：
-
-
-包括稽核(Audit)
-機密(Confidentiality)
-鑑別(Authentication)
-完整性(Integrity)
-不可否認(Non-repudiation)
-存取控制(Access Control)
-可用性(Availability)
-
-
-資訊安全七大需求詳解：
-
-
-機密性：確保資訊不被未授權使用者獲取，可透過資料加密實現。
-完整性：確保資料在傳輸過程中不會被竄改，可透過數位簽章或雜湊函數保證。
-鑑別性：確認資訊來源和使用者身份，防止惡意發送者假冒。
-不可否認性：確保傳輸雙方不能否認資料傳輸或接收行為，通常透過數位簽章和PKI實現。
-可用性：確保資訊
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/20240804/development_plan_study/csrf/" aria-label="CSRF (跨站請求偽造) 攻擊詳解"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="CSRF (跨站請求偽造) 攻擊詳解" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>961 字</span>
-        <span><span class="icon-clock"></span>3 分鐘</span>
-      </div>
-      <h2 class="post-title">CSRF (跨站請求偽造) 攻擊詳解</h2>
-      <article class="post-article">
-        
-          跨站請求偽造 (Cross-Site Request Forgery, CSRF) 是一種常見的 Web 安全漏洞，它誘騙使用者在他們已經登入的網站上，執行非自願的惡意操作。
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/20240804/development_plan_study/url-caching-vulnerability/" aria-label="URL 快取漏洞與敏感資訊洩漏風險"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="https://i.imgur.com/bU2QlBs.gif" data-sizes="auto" alt="URL 快取漏洞與敏感資訊洩漏風險" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-08-04</span>
-        <span><span class="icon-pencil"></span>889 字</span>
-        <span><span class="icon-clock"></span>3 分鐘</span>
-      </div>
-      <h2 class="post-title">URL 快取漏洞與敏感資訊洩漏風險</h2>
-      <article class="post-article">
-        
-          瀏覽器快取 (Cache) 是一種提升網站載入速度的常見技術，但若設定不當，它也可能成為洩漏使用者敏感資訊的途徑，這就是所謂的「URL 快取漏洞」。
+          不安全的直接物件引用 (Insecure Direct Object References, IDOR) 是最常見也最容易被忽略的存取控制漏洞之一。它發生在當應用程式允許使用者透過一個可預測的識別碼（如使用者 ID、訂單編號）直接存取資料，卻沒有在後端驗證該使用者是否真的有權限存取該筆資料時。
         
       </article>
     </div>
@@ -719,7 +589,7 @@
 
   <nav id="page-nav" data-aos="fade-up">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一頁 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">下一頁 &raquo;</a>
   </nav>
 
 
@@ -915,13 +785,6 @@
 
 
 
-  
-<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
-
-  <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
-  </script>
-
 
 
   
@@ -1113,15 +976,9 @@
 
 
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
+  
+<script src="/js/service_worker.js"></script>
+
 
 
 
@@ -1147,7 +1004,7 @@
       const ap = new APlayer({
         theme: "var(--color-link)",
         container: document.getElementById('aplayer'),
-        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"疑心病","artist":"任然","url":"/music/任然_-_疑心病.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"Tell Your World","artist":"初音ミク","url":"/music/初音ミク_-_Tell Your World_piano.mp3","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
         fixed: isMobile ? true : (false || false),
         autoplay: false || false,
         loop: 'all' || 'all',

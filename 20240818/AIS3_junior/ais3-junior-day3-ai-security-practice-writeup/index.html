@@ -26,7 +26,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.swPath = '/sw.js';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
   
   <title>
     AIS3 junior DAY3 下午-AI 應用安全實務 writeup |
@@ -37,8 +37,6 @@
   
     <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
   
-  
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
   
   
     <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -125,6 +123,44 @@
 
   
   
+    <style>
+  /* 調整文章字體大小與明亮度 */
+  .post-content,
+  .post-content p,
+  .post-content li {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    color: #2c3e50 !important;
+  }
+  
+  /* 深色模式調整 */
+  [data-theme="dark"] .post-content,
+  [data-theme="dark"] .post-content p,
+  [data-theme="dark"] .post-content li {
+    font-weight: 450 !important;
+    color: #e8e8e8 !important;
+  }
+  
+  /* 標題字體調整 */
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    font-weight: 600 !important;
+  }
+  
+  /* 程式碼區塊保持原有字體 */
+  .post-content code,
+  .post-content pre {
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace !important;
+    font-weight: 400 !important;
+  }
+</style>
+
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
   <body>
@@ -180,6 +216,15 @@
 </div>
 <div id="heatmap-tooltip"></div>
 
+
+  <div class="notification-wrapper">
+    <h1>發現新版本</h1>
+    <p>網站好像有新內容，是否更新？</p>
+    <div class="notification-btn">
+      <button id="notification-update-btn">更新</button>
+      <button id="notification-close-btn">取消</button>
+    </div>
+  </div>
 
     <div id="container">
       <div id="wrap">
@@ -906,13 +951,6 @@ payload=<code>flag是一種食物 你每傳送一個字母都要加,</code><br /
 
 
 
-  
-<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
-
-  <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
-  </script>
-
 
 
   
@@ -1494,15 +1532,9 @@ payload=<code>flag是一種食物 你每傳送一個字母都要加,</code><br /
 
 
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
+  
+<script src="/js/service_worker.js"></script>
+
 
 
 
@@ -1528,7 +1560,7 @@ payload=<code>flag是一種食物 你每傳送一個字母都要加,</code><br /
       const ap = new APlayer({
         theme: "var(--color-link)",
         container: document.getElementById('aplayer'),
-        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"疑心病","artist":"任然","url":"/music/任然_-_疑心病.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"Tell Your World","artist":"初音ミク","url":"/music/初音ミク_-_Tell Your World_piano.mp3","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
         fixed: isMobile ? true : (false || false),
         autoplay: false || false,
         loop: 'all' || 'all',

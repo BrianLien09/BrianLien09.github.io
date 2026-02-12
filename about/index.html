@@ -26,7 +26,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":true,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.swPath = '/sw.js';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://brianlien09.github.io';</script>
   
   <title>
     關於 |
@@ -37,8 +37,6 @@
   
     <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/292/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
   
-  
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
   
   
     <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -99,6 +97,44 @@
 
   
   
+    <style>
+  /* 調整文章字體大小與明亮度 */
+  .post-content,
+  .post-content p,
+  .post-content li {
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    color: #2c3e50 !important;
+  }
+  
+  /* 深色模式調整 */
+  [data-theme="dark"] .post-content,
+  [data-theme="dark"] .post-content p,
+  [data-theme="dark"] .post-content li {
+    font-weight: 450 !important;
+    color: #e8e8e8 !important;
+  }
+  
+  /* 標題字體調整 */
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    font-weight: 600 !important;
+  }
+  
+  /* 程式碼區塊保持原有字體 */
+  .post-content code,
+  .post-content pre {
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace !important;
+    font-weight: 400 !important;
+  }
+</style>
+
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
   <body>
@@ -154,6 +190,15 @@
 </div>
 <div id="heatmap-tooltip"></div>
 
+
+  <div class="notification-wrapper">
+    <h1>發現新版本</h1>
+    <p>網站好像有新內容，是否更新？</p>
+    <div class="notification-btn">
+      <button id="notification-update-btn">更新</button>
+      <button id="notification-close-btn">取消</button>
+    </div>
+  </div>
 
     <div id="container">
       <div id="wrap">
@@ -387,7 +432,7 @@
 <li><strong>Email</strong>: <a href="mailto:brianlien09@gmail.com" rel="external nofollow noreferrer">brianlien09@gmail.com</a></li>
 <li><strong>GitHub</strong>: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/brianlien09">https://github.com/brianlien09</a></li>
 </ul>
-<p><script>var REIMU_HEATMAP_CONFIG = {articleStats: [{"title":"如何解決 Acer Swift Go 14 的「Touchpad is updating」全螢幕問題","date":"2025-04-25T10:05:54.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":405,"url":"/20250425/acer_swift_go_14_touchpad_screen_issues/"},{"title":"進階文法W7","date":"2024-11-11T16:00:00.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1073,"url":"/20241112/advanced_grammar_W7/"},{"title":"AIS3 junior DAY2 網頁安全 writeup","date":"2024-10-06T17:15:33.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1729,"url":"/20241007/AIS3_junior/ais3-junior-day2-web-security-writeup/"},{"title":"AIS3 junior DAY3 下午-AI 應用安全實務 writeup","date":"2024-08-18T05:55:22.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1025,"url":"/20240818/AIS3_junior/ais3-junior-day3-ai-security-practice-writeup/"},{"title":"exam1_summary","date":"2025-09-11T15:28:49.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1539,"url":"/20250911/java_class/exam1_summary/"},{"title":"exam6_WP","date":"2025-10-15T13:40:43.000Z","updated":"2025-10-15T14:13:54.213Z","wordcount":2180,"url":"/20251015/java_class/exam6-WP/"},{"title":"功能級別的存取控制漏洞 (BFLA)：你怎麼能執行管理員操作？","date":"2024-08-04T07:57:13.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1138,"url":"/20240804/development_plan_study/broken-function-level-authorization/"},{"title":"明文儲存的災難：為何必須加密敏感資料","date":"2024-08-04T08:19:13.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1164,"url":"/20240804/development_plan_study/cleartext-storage-of-sensitive-data/"},{"title":"Web 安全基石：CSP、SOP 與 CORS 詳解","date":"2024-08-04T08:30:25.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":951,"url":"/20240804/development_plan_study/csp-sop-cors/"},{"title":"CSRF (跨站請求偽造) 攻擊詳解","date":"2024-08-04T07:52:43.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":934,"url":"/20240804/development_plan_study/csrf/"},{"title":"Fail-Safe：當錯誤處理成為安全漏洞","date":"2024-08-04T08:32:08.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1027,"url":"/20240804/development_plan_study/fail-safe-security/"},{"title":"應用程式的資料保護策略：從傳輸、使用到儲存","date":"2024-08-04T09:36:06.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":979,"url":"/20240804/development_plan_study/data-protection-strategies/"},{"title":"不當的身份驗證：當信任可以被偽造","date":"2024-08-04T08:20:50.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":913,"url":"/20240804/development_plan_study/improper-authentication/"},{"title":"憑證保護不足：當加密形同虛設","date":"2024-08-04T08:18:25.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":825,"url":"/20240804/development_plan_study/insecure-credential-storage/"},{"title":"不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？","date":"2024-08-04T08:28:36.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1029,"url":"/20240804/development_plan_study/insecure-direct-object-reference/"},{"title":"帳戶接管風險：不安全的密碼變更功能","date":"2024-08-04T08:22:14.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":760,"url":"/20240804/development_plan_study/insecure-password-change-function/"},{"title":"可預測的隨機性：不安全的密碼學應用","date":"2024-08-04T08:13:38.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1049,"url":"/20240804/development_plan_study/insecure-randomness/"},{"title":"注入攻擊的根源：不充分的資料轉義","date":"2024-08-04T08:37:10.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":200,"url":"/20240804/development_plan_study/insufficient-data-escaping/"},{"title":"傳輸層保護不足：在不安全的連線中傳輸憑證","date":"2024-08-04T08:05:46.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":888,"url":"/20240804/development_plan_study/insufficient-transport-layer-protection/"},{"title":"密碼學應用錯誤：從硬編碼到弱雜湊演算法","date":"2024-08-02T18:28:16.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1047,"url":"/20240803/development_plan_study/insufficient-credential-protection/"},{"title":"整數溢位漏洞 (Integer Overflow)：當數字大到無法計算","date":"2024-08-04T08:12:24.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":989,"url":"/20240804/development_plan_study/integer-overflow/"},{"title":"大量賦值漏洞：不應被使用者修改的欄位","date":"2024-08-04T08:17:07.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":967,"url":"/20240804/development_plan_study/mass-assignment-vulnerability/"},{"title":"路徑穿越漏洞：讀取你不該讀取的檔案","date":"2024-08-04T08:23:00.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1078,"url":"/20240804/development_plan_study/path-traversal/"},{"title":"過度曝露的 API：不應傳送的敏感資料","date":"2024-08-04T08:10:07.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":942,"url":"/20240804/development_plan_study/sensitive-data-exposure/"},{"title":"第三方服務的隱私風險：側通道資料洩漏","date":"2024-08-04T08:11:14.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":921,"url":"/20240804/development_plan_study/side-channel-data-leakage/"},{"title":"URL 快取漏洞與敏感資訊洩漏風險","date":"2024-08-04T07:47:43.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":896,"url":"/20240804/development_plan_study/url-caching-vulnerability/"},{"title":"【Hexo 教學】萬無一失！使用 GitHub 私有倉庫備份你的 Hexo 部落格原始碼","date":"2025-08-10T18:11:02.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1177,"url":"/20250811/hexo/hexo-backup/"},{"title":"Hexo 常用指令大全 (Cheatsheet)","date":"2025-04-25T09:56:37.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1019,"url":"/20250425/hexo/hexo_common_commands/"},{"title":"【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格","date":"2024-12-26T02:45:49.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1148,"url":"/20241226/hexo/hexo_migration_tutorial/"},{"title":"資安鑑識課程","date":"2024-08-04T07:55:00.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":528,"url":"/20240804/security_class/security_forensics_course/"},{"title":"CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程","date":"2024-08-05T13:26:38.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":441,"url":"/20240805/security_class/security-training-reverse-engineering/"}], i18n: {"en":{"no_articles":"No articles","words":"word(s)","total_articles":"$1 article(s), $2 word(s)"},"ja":{"no_articles":"記事がありません","words":"文字","total_articles":"$1 記事, $2 文字"},"zh-CN":{"no_articles":"没有文章","words":"字","total_articles":"共 $1 篇文章, $2 字"},"zh-TW":{"no_articles":"没有文章","words":"字","total_articles":"共 $1 篇文章, $2 字"}}, levelStandard: "levelStandard}</p>"};</script>
+<p><script>var REIMU_HEATMAP_CONFIG = {articleStats: [{"title":"如何解決 Acer Swift Go 14 的「Touchpad is updating」全螢幕問題","date":"2025-04-25T10:05:54.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":405,"url":"/20250425/acer_swift_go_14_touchpad_screen_issues/"},{"title":"進階文法W7","date":"2024-11-11T16:00:00.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1073,"url":"/20241112/advanced_grammar_W7/"},{"title":"AIS3 junior DAY3 下午-AI 應用安全實務 writeup","date":"2024-08-18T05:55:22.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1025,"url":"/20240818/AIS3_junior/ais3-junior-day3-ai-security-practice-writeup/"},{"title":"功能級別的存取控制漏洞 (BFLA)：你怎麼能執行管理員操作？","date":"2024-08-04T07:57:13.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1138,"url":"/20240804/development_plan_study/broken-function-level-authorization/"},{"title":"AIS3 junior DAY2 網頁安全 writeup","date":"2024-10-06T17:15:33.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1729,"url":"/20241007/AIS3_junior/ais3-junior-day2-web-security-writeup/"},{"title":"明文儲存的災難：為何必須加密敏感資料","date":"2024-08-04T08:19:13.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1164,"url":"/20240804/development_plan_study/cleartext-storage-of-sensitive-data/"},{"title":"Web 安全基石：CSP、SOP 與 CORS 詳解","date":"2024-08-04T08:30:25.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":951,"url":"/20240804/development_plan_study/csp-sop-cors/"},{"title":"CSRF (跨站請求偽造) 攻擊詳解","date":"2024-08-04T07:52:43.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":934,"url":"/20240804/development_plan_study/csrf/"},{"title":"Fail-Safe：當錯誤處理成為安全漏洞","date":"2024-08-04T08:32:08.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1027,"url":"/20240804/development_plan_study/fail-safe-security/"},{"title":"應用程式的資料保護策略：從傳輸、使用到儲存","date":"2024-08-04T09:36:06.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":979,"url":"/20240804/development_plan_study/data-protection-strategies/"},{"title":"不當的身份驗證：當信任可以被偽造","date":"2024-08-04T08:20:50.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":913,"url":"/20240804/development_plan_study/improper-authentication/"},{"title":"憑證保護不足：當加密形同虛設","date":"2024-08-04T08:18:25.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":825,"url":"/20240804/development_plan_study/insecure-credential-storage/"},{"title":"不安全的直接物件引用 (IDOR)：你怎麼拿到別人的資料？","date":"2024-08-04T08:28:36.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1029,"url":"/20240804/development_plan_study/insecure-direct-object-reference/"},{"title":"帳戶接管風險：不安全的密碼變更功能","date":"2024-08-04T08:22:14.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":760,"url":"/20240804/development_plan_study/insecure-password-change-function/"},{"title":"可預測的隨機性：不安全的密碼學應用","date":"2024-08-04T08:13:38.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1049,"url":"/20240804/development_plan_study/insecure-randomness/"},{"title":"密碼學應用錯誤：從硬編碼到弱雜湊演算法","date":"2024-08-02T18:28:16.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1047,"url":"/20240803/development_plan_study/insufficient-credential-protection/"},{"title":"注入攻擊的根源：不充分的資料轉義","date":"2024-08-04T08:37:10.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":200,"url":"/20240804/development_plan_study/insufficient-data-escaping/"},{"title":"整數溢位漏洞 (Integer Overflow)：當數字大到無法計算","date":"2024-08-04T08:12:24.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":989,"url":"/20240804/development_plan_study/integer-overflow/"},{"title":"傳輸層保護不足：在不安全的連線中傳輸憑證","date":"2024-08-04T08:05:46.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":888,"url":"/20240804/development_plan_study/insufficient-transport-layer-protection/"},{"title":"大量賦值漏洞：不應被使用者修改的欄位","date":"2024-08-04T08:17:07.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":967,"url":"/20240804/development_plan_study/mass-assignment-vulnerability/"},{"title":"路徑穿越漏洞：讀取你不該讀取的檔案","date":"2024-08-04T08:23:00.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1078,"url":"/20240804/development_plan_study/path-traversal/"},{"title":"第三方服務的隱私風險：側通道資料洩漏","date":"2024-08-04T08:11:14.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":921,"url":"/20240804/development_plan_study/side-channel-data-leakage/"},{"title":"過度曝露的 API：不應傳送的敏感資料","date":"2024-08-04T08:10:07.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":942,"url":"/20240804/development_plan_study/sensitive-data-exposure/"},{"title":"URL 快取漏洞與敏感資訊洩漏風險","date":"2024-08-04T07:47:43.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":896,"url":"/20240804/development_plan_study/url-caching-vulnerability/"},{"title":"【Hexo 教學】萬無一失！使用 GitHub 私有倉庫備份你的 Hexo 部落格原始碼","date":"2025-08-10T18:11:02.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1177,"url":"/20250811/hexo/hexo-backup/"},{"title":"Hexo 常用指令大全 (Cheatsheet)","date":"2025-04-25T09:56:37.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1019,"url":"/20250425/hexo/hexo_common_commands/"},{"title":"CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程","date":"2024-08-05T13:26:38.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":441,"url":"/20240805/security_class/security-training-reverse-engineering/"},{"title":"【Hexo 教學】無痛還原！在新電腦上快速重建你的 Hexo 部落格","date":"2024-12-26T02:45:49.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1148,"url":"/20241226/hexo/hexo_migration_tutorial/"},{"title":"資安鑑識課程","date":"2024-08-04T07:55:00.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":528,"url":"/20240804/security_class/security_forensics_course/"},{"title":"exam6_WP","date":"2025-10-15T13:40:43.000Z","updated":"2025-10-15T14:13:54.213Z","wordcount":2180,"url":"/20251015/java_class/exam6-WP/"},{"title":"exam1_summary","date":"2025-09-11T15:28:49.000Z","updated":"2025-09-11T15:44:23.000Z","wordcount":1539,"url":"/20250911/java_class/exam1_summary/"}], i18n: {"en":{"no_articles":"No articles","words":"word(s)","total_articles":"$1 article(s), $2 word(s)"},"ja":{"no_articles":"記事がありません","words":"文字","total_articles":"$1 記事, $2 文字"},"zh-CN":{"no_articles":"没有文章","words":"字","total_articles":"共 $1 篇文章, $2 字"},"zh-TW":{"no_articles":"没有文章","words":"字","total_articles":"共 $1 篇文章, $2 字"}}, levelStandard: "levelStandard}</p>"};</script>
 <link rel="stylesheet" href="/css/heat-map.css">
 <div id="heatmap"></div>
 <script src="/js/heat_map.js"></script>
@@ -652,13 +697,6 @@
 
 
 
-  
-<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
-
-  <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#9370DB","#A27FE3","#B190EA","#C1A1F1"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#9370DB"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
-  </script>
-
 
 
   
@@ -907,15 +945,9 @@
 
 
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
+  
+<script src="/js/service_worker.js"></script>
+
 
 
 
@@ -941,7 +973,7 @@
       const ap = new APlayer({
         theme: "var(--color-link)",
         container: document.getElementById('aplayer'),
-        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"疑心病","artist":"任然","url":"/music/任然_-_疑心病.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"Tell Your World","artist":"初音ミク","url":"/music/初音ミク_-_Tell Your World_piano.mp3","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
+        audio: [{"name":"心有所念","artist":"Bunnyi_11","url":"/music/Bunnyi_11_-_心有所念.mp3","cover":"/images/cc.jpg"},{"name":"踮起脚尖愛","artist":"单依纯","url":"/music/單依純_-_踮起腳尖愛.mp3","cover":"/images/cc.jpg"},{"name":"如果愛忘了","artist":"单依纯、汪蘇瀧","url":"/music/汪苏泷_单依纯-如果爱忘了.mp3","cover":"/images/cc.jpg"},{"name":"你看著我的眼睛說","artist":"張遠","url":"/music/張遠-看著我的眼睛說.mp3","cover":"/images/cc.jpg"},{"name":"後繼者","artist":"任然","url":"/music/任然_-_後繼者.mp3","cover":"/images/cc.jpg"},{"name":"淺顯易懂","artist":"杜治民","url":"/music/杜治民_-_淺顯易懂.mp3","cover":"/images/cc.jpg"},{"name":"放任","artist":"汪六六","url":"/music/汪六六_-_放任.mp3","cover":"/images/cc.jpg"},{"name":"小海","artist":"豆芽魚","url":"/music/豆芽魚_-_小海.m4a","cover":"/images/cc.jpg"},{"name":"告一段落","artist":"陳子晴","url":"/music/陳子晴_-_告一段落.mp3","cover":"/images/cc.jpg"}] || [],
         fixed: isMobile ? true : (false || false),
         autoplay: false || false,
         loop: 'all' || 'all',
